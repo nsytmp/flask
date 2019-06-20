@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>前言 &#8212; Flask Documentation (1.1.x)</title>
+    <link rel="stylesheet" href="_static/flask.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="shortcut icon" href="_static/flask-icon.png"/>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="有经验的程序员的前言" href="advanced_foreword.html" />
+    <link rel="prev" title="Welcome to Flask" href="index.html" />
+  <script>DOCUMENTATION_OPTIONS.URL_ROOT = './';</script>
+   
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="advanced_foreword.html" title="有经验的程序员的前言"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Flask"
+             accesskey="P">上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Flask Documentation (1.1.x)</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="foreword">
+<h1>前言<a class="headerlink" href="#foreword" title="永久链接至标题">¶</a></h1>
+<p>在开始使用Flask之前，请先阅读此内容。这有希望回答一些关于项目的目的和目标的问题，以及何时应该或不应该使用它。</p>
+<div class="section" id="what-does-micro-mean">
+<h2>“micro” 是什么意思？<a class="headerlink" href="#what-does-micro-mean" title="永久链接至标题">¶</a></h2>
+<p>“Micro” does not mean that your whole web application has to fit into a single
+Python file (although it certainly can), nor does it mean that Flask is lacking
+in functionality. The “micro” in microframework means Flask aims to keep the
+core simple but extensible. Flask won’t make many decisions for you, such as
+what database to use. Those decisions that it does make, such as what
+templating engine to use, are easy to change.  Everything else is up to you, so
+that Flask can be everything you need and nothing you don’t.</p>
+<p>By default, Flask does not include a database abstraction layer, form
+validation or anything else where different libraries already exist that can
+handle that. Instead, Flask supports extensions to add such functionality to
+your application as if it was implemented in Flask itself. Numerous extensions
+provide database integration, form validation, upload handling, various open
+authentication technologies, and more. Flask may be “micro”, but it’s ready for
+production use on a variety of needs.</p>
+</div>
+<div class="section" id="configuration-and-conventions">
+<h2>配置和约定<a class="headerlink" href="#configuration-and-conventions" title="永久链接至标题">¶</a></h2>
+<p>Flask has many configuration values, with sensible defaults, and a few
+conventions when getting started.  By convention, templates and static files are
+stored in subdirectories within the application’s Python source tree, with the
+names <code class="file docutils literal notranslate"><span class="pre">templates</span></code> and <code class="file docutils literal notranslate"><span class="pre">static</span></code> respectively. While this can be changed, you
+usually don’t have to, especially when getting started.</p>
+</div>
+<div class="section" id="growing-with-flask">
+<h2>与 Flask 一起成长<a class="headerlink" href="#growing-with-flask" title="永久链接至标题">¶</a></h2>
+<p>Once you have Flask up and running, you’ll find a variety of extensions
+available in the community to integrate your project for production. The Flask
+core team reviews extensions and ensures approved extensions do not break with
+future releases.</p>
+<p>As your codebase grows, you are free to make the design decisions appropriate
+for your project.  Flask will continue to provide a very simple glue layer to
+the best that Python has to offer.  You can implement advanced patterns in
+SQLAlchemy or another database tool, introduce non-relational data persistence
+as appropriate, and take advantage of framework-agnostic tools built for WSGI,
+the Python web interface.</p>
+<p>Flask includes many hooks to customize its behavior. Should you need more
+customization, the Flask class is built for subclassing. If you are interested
+in that, check out the <a class="reference internal" href="becomingbig.html#becomingbig"><span class="std std-ref">变得很大</span></a> chapter.  If you are curious about
+the Flask design principles, head over to the section about <a class="reference internal" href="design.html#design"><span class="std std-ref">Flask中的设计决策</span></a>.</p>
+<p>继续 <a class="reference internal" href="installation.html#installation"><span class="std std-ref">安装</span></a>, <a class="reference internal" href="quickstart.html#quickstart"><span class="std std-ref">快速开始</span></a>, 或者 <a class="reference internal" href="advanced_foreword.html#advanced-foreword"><span class="std std-ref">有经验的程序员的前言</span></a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <span id="sidebar-top"></span>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  
+    
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/flask-logo-sidebar.png" alt="Logo"/>
+            </a></p>
+  
+
+  <h3>Contents</h3>
+  <ul>
+<li><a class="reference internal" href="#">前言</a><ul>
+<li><a class="reference internal" href="#what-does-micro-mean">“micro” 是什么意思？</a></li>
+<li><a class="reference internal" href="#configuration-and-conventions">配置和约定</a></li>
+<li><a class="reference internal" href="#growing-with-flask">与 Flask 一起成长</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+  <li><a href="index.html">Overview</a>
+    <ul>
+          <li>Previous: <a href="index.html" title="上一章">Welcome to Flask</a>
+          <li>Next: <a href="advanced_foreword.html" title="下一章">有经验的程序员的前言</a>
+    </ul>
+  </li>
+</ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2010 Pallets Team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+    </div>
+
+  </body>
+</html>

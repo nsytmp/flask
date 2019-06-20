@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>安装 &#8212; Flask Documentation (1.1.x)</title>
+    <link rel="stylesheet" href="_static/flask.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="shortcut icon" href="_static/flask-icon.png"/>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="快速开始" href="quickstart.html" />
+    <link rel="prev" title="有经验的程序员的前言" href="advanced_foreword.html" />
+  <script>DOCUMENTATION_OPTIONS.URL_ROOT = './';</script>
+   
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="quickstart.html" title="快速开始"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="advanced_foreword.html" title="有经验的程序员的前言"
+             accesskey="P">上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Flask Documentation (1.1.x)</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="installation">
+<span id="id1"></span><h1>安装<a class="headerlink" href="#installation" title="永久链接至标题">¶</a></h1>
+<div class="section" id="python-version">
+<h2>Python 版本<a class="headerlink" href="#python-version" title="永久链接至标题">¶</a></h2>
+<p>我们建议使用最新版本的Python 3. Flask支持Python 3.4及更新版本，Python 2.7和PyPy。</p>
+</div>
+<div class="section" id="dependencies">
+<h2>依赖<a class="headerlink" href="#dependencies" title="永久链接至标题">¶</a></h2>
+<p>安装Flask时将自动安装这些发行版。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://werkzeug.pocoo.org/">Werkzeug</a> 实现了WSGI，它是应用程序和服务器之间的标准Python接口。</p></li>
+<li><p><a class="reference external" href="http://jinja.pocoo.org/">Jinja</a> 是一种模板语言，用于呈现应用程序所服务的页面。</p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/MarkupSafe/">MarkupSafe</a> 与Jinja一起来。它在渲染模板时逃避不受信任的输入以避免注入攻击。</p></li>
+<li><p><a class="reference external" href="https://pythonhosted.org/itsdangerous/">ItsDangerous</a> 安全地签署数据以确保其完整性。这用于保护Flask的会话cookie。</p></li>
+<li><p><a class="reference external" href="http://click.pocoo.org/">Click</a> 是一个用于编写命令行应用程序的框架。它提供``flask``命令并允许添加自定义管理命令。</p></li>
+</ul>
+<div class="section" id="optional-dependencies">
+<h3>可选的依赖项<a class="headerlink" href="#optional-dependencies" title="永久链接至标题">¶</a></h3>
+<p>这些发行版不会自动安装。如果安装它们，Flask将检测并使用它们。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pythonhosted.org/blinker/">Blinker</a> 支持 <a class="reference internal" href="signals.html#signals"><span class="std std-ref">信号</span></a> 。</p></li>
+<li><p><a class="reference external" href="https://simplejson.readthedocs.io/">SimpleJSON</a> 是一个快速的JSON实现，与Python的 <code class="docutils literal notranslate"><span class="pre">json</span></code> 模块兼容。如果安装了JSON操作，则首选它。</p></li>
+<li><p><a class="reference external" href="https://github.com/theskumar/python-dotenv#readme">python-dotenv</a> 在运行 <code class="docutils literal notranslate"><span class="pre">flask</span></code> 命令时支持 <a class="reference internal" href="cli.html#dotenv"><span class="std std-ref">Environment Variables From dotenv</span></a> 。</p></li>
+<li><p><a class="reference external" href="https://pythonhosted.org/watchdog/">Watchdog</a> 为开发服务器提供更快，更高效的重新加载器。</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="virtual-environments">
+<h2>虚拟环境<a class="headerlink" href="#virtual-environments" title="永久链接至标题">¶</a></h2>
+<p>使用虚拟环境在开发和生产中管理项目的依赖关系。</p>
+<p>虚拟环境解决了什么问题？您拥有的Python项目越多，您就越有可能需要使用不同版本的Python库，甚至Python本身。一个项目的较新版本的库可能会破坏另一个项目的兼容性。</p>
+<p>虚拟环境是独立的Python库组，每个项目一个。为一个项目安装的软件包不会影响其他项目或操作系统的软件包。</p>
+<p>Python 3捆绑了 <a class="reference external" href="https://docs.python.org/3/library/venv.html#module-venv" title="(在 Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">venv</span></code></a> 模块来创建虚拟环境。如果您使用的是现代版本的Python，则可以继续下一部分。</p>
+<p>如果您使用的是Python 2，请首先参阅 <a class="reference internal" href="#install-install-virtualenv"><span class="std std-ref">安装 virtualenv</span></a> 。</p>
+<div class="section" id="create-an-environment">
+<span id="install-create-env"></span><h3>创建一个环境<a class="headerlink" href="#create-an-environment" title="永久链接至标题">¶</a></h3>
+<p>在其中创建一个项目文件夹和一个 <code class="file docutils literal notranslate"><span class="pre">venv</span></code> 文件夹:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ mkdir myproject
+$ <span class="nb">cd</span> myproject
+$ python3 -m venv venv
+</pre></div>
+</div>
+<p>在Windows上:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>$ py -3 -m venv venv
+</pre></div>
+</div>
+<p>如果您因为使用Python 2而需要安装virtualenv，请改用以下命令:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ python2 -m virtualenv venv
+</pre></div>
+</div>
+<p>在Windows上:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">&gt;</span> \Python27\Scripts\virtualenv.exe venv
+</pre></div>
+</div>
+</div>
+<div class="section" id="activate-the-environment">
+<span id="install-activate-env"></span><h3>Activate the environment<a class="headerlink" href="#activate-the-environment" title="永久链接至标题">¶</a></h3>
+<p>在处理项目之前，请激活相应的环境:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ . venv/bin/activate
+</pre></div>
+</div>
+<p>在Windows上:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">&gt;</span> venv\Scripts\activate
+</pre></div>
+</div>
+<p>您的shell提示符将更改为显示激活环境的名称。</p>
+</div>
+</div>
+<div class="section" id="install-flask">
+<h2>安装 Flask<a class="headerlink" href="#install-flask" title="永久链接至标题">¶</a></h2>
+<p>在激活的环境中，使用以下命令安装Flask:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pip install Flask
+</pre></div>
+</div>
+<p>Flask现已安装。查看 <span class="xref std std-doc">/ quickstart</span> 或转到 <span class="xref std std-doc">Documentation Overview</span> 。</p>
+<div class="section" id="living-on-the-edge">
+<h3>生活在边缘<a class="headerlink" href="#living-on-the-edge" title="永久链接至标题">¶</a></h3>
+<p>如果您希望在发布之前使用最新的Flask代码，请安装或更新主分支中的代码:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pip install -U https://github.com/pallets/flask/archive/master.tar.gz
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="install-virtualenv">
+<span id="install-install-virtualenv"></span><h2>安装 virtualenv<a class="headerlink" href="#install-virtualenv" title="永久链接至标题">¶</a></h2>
+<p>如果您使用的是Python 2，则无法使用venv模块。相反，安装 <a class="reference external" href="https://virtualenv.pypa.io/">virtualenv</a>.</p>
+<p>在Linux上，virtualenv由包管理器提供:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Debian, Ubuntu</span>
+$ sudo apt-get install python-virtualenv
+
+<span class="c1"># CentOS, Fedora</span>
+$ sudo yum install python-virtualenv
+
+<span class="c1"># Arch</span>
+$ sudo pacman -S python-virtualenv
+</pre></div>
+</div>
+<p>如果您使用的是Mac OS X或Windows，请下载 <a class="reference external" href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a> ，然后:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo python2 Downloads/get-pip.py
+$ sudo python2 -m pip install virtualenv
+</pre></div>
+</div>
+<p>在Windows上，以管理员身份:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">&gt;</span> \Python27\python.exe Downloads\get-pip.py
+<span class="p">&gt;</span> \Python27\python.exe -m pip install virtualenv
+</pre></div>
+</div>
+<p>现在你可以返回上面和 <a class="reference internal" href="#install-create-env"><span class="std std-ref">创建一个环境</span></a> 。</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <span id="sidebar-top"></span>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  
+    
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/flask-logo-sidebar.png" alt="Logo"/>
+            </a></p>
+  
+
+  <h3>Contents</h3>
+  <ul>
+<li><a class="reference internal" href="#">安装</a><ul>
+<li><a class="reference internal" href="#python-version">Python 版本</a></li>
+<li><a class="reference internal" href="#dependencies">依赖</a><ul>
+<li><a class="reference internal" href="#optional-dependencies">可选的依赖项</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#virtual-environments">虚拟环境</a><ul>
+<li><a class="reference internal" href="#create-an-environment">创建一个环境</a></li>
+<li><a class="reference internal" href="#activate-the-environment">Activate the environment</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#install-flask">安装 Flask</a><ul>
+<li><a class="reference internal" href="#living-on-the-edge">生活在边缘</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#install-virtualenv">安装 virtualenv</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+  <li><a href="index.html">Overview</a>
+    <ul>
+          <li>Previous: <a href="advanced_foreword.html" title="上一章">有经验的程序员的前言</a>
+          <li>Next: <a href="quickstart.html" title="下一章">快速开始</a>
+    </ul>
+  </li>
+</ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2010 Pallets Team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+    </div>
+
+  </body>
+</html>

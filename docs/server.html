@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>开发服务器 &#8212; Flask Documentation (1.1.x)</title>
+    <link rel="stylesheet" href="_static/flask.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="shortcut icon" href="_static/flask-icon.png"/>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="与壳牌合作" href="shell.html" />
+    <link rel="prev" title="命令行界面" href="cli.html" />
+  <script>DOCUMENTATION_OPTIONS.URL_ROOT = './';</script>
+   
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="shell.html" title="与壳牌合作"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="cli.html" title="命令行界面"
+             accesskey="P">上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Flask Documentation (1.1.x)</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="development-server">
+<span id="server"></span><h1>开发服务器<a class="headerlink" href="#development-server" title="永久链接至标题">¶</a></h1>
+<p>Starting with Flask 0.11 there are multiple built-in ways to run a
+development server.  The best one is the <strong class="command">flask</strong> command line utility
+but you can also continue using the <a class="reference internal" href="api.html#flask.Flask.run" title="flask.Flask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Flask.run()</span></code></a> method.</p>
+<div class="section" id="command-line">
+<h2>Command Line<a class="headerlink" href="#command-line" title="永久链接至标题">¶</a></h2>
+<p>The <strong class="command">flask</strong> command line script (<a class="reference internal" href="cli.html#cli"><span class="std std-ref">命令行界面</span></a>) is strongly
+recommended for development because it provides a superior reload
+experience due to how it loads the application.  The basic usage is like
+this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ export FLASK_APP=my_application
+$ export FLASK_ENV=development
+$ flask run
+</pre></div>
+</div>
+<p>This enables the development environment, including the interactive
+debugger and reloader, and then starts the server on
+<em>http://localhost:5000/</em>.</p>
+<p>The individual features of the server can be controlled by passing more
+arguments to the <code class="docutils literal notranslate"><span class="pre">run</span></code> option. For instance the reloader can be
+disabled:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ flask run --no-reload
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>Prior to Flask 1.0 the <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">FLASK_ENV</span></code> environment variable was
+not supported and you needed to enable debug mode by exporting
+<code class="docutils literal notranslate"><span class="pre">FLASK_DEBUG=1</span></code>. This can still be used to control debug mode, but
+you should prefer setting the development environment as shown
+above.</p>
+</div>
+</div>
+<div class="section" id="in-code">
+<h2>In Code<a class="headerlink" href="#in-code" title="永久链接至标题">¶</a></h2>
+<p>The alternative way to start the application is through the
+<a class="reference internal" href="api.html#flask.Flask.run" title="flask.Flask.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Flask.run()</span></code></a> method.  This will immediately launch a local server
+exactly the same way the <strong class="command">flask</strong> script does.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This works well for the common case but it does not work well for
+development which is why from Flask 0.11 onwards the <strong class="command">flask</strong>
+method is recommended.  The reason for this is that due to how the reload
+mechanism works there are some bizarre side-effects (like executing
+certain code twice, sometimes crashing without message or dying when a
+syntax or import error happens).</p>
+<p>It is however still a perfectly valid method for invoking a non automatic
+reloading application.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <span id="sidebar-top"></span>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  
+    
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/flask-logo-sidebar.png" alt="Logo"/>
+            </a></p>
+  
+
+  <h3>Contents</h3>
+  <ul>
+<li><a class="reference internal" href="#">开发服务器</a><ul>
+<li><a class="reference internal" href="#command-line">Command Line</a></li>
+<li><a class="reference internal" href="#in-code">In Code</a></li>
+</ul>
+</li>
+</ul>
+<h3>Navigation</h3>
+<ul>
+  <li><a href="index.html">Overview</a>
+    <ul>
+          <li>Previous: <a href="cli.html" title="上一章">命令行界面</a>
+          <li>Next: <a href="shell.html" title="下一章">与壳牌合作</a>
+    </ul>
+  </li>
+</ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2010 Pallets Team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+    </div>
+
+  </body>
+</html>

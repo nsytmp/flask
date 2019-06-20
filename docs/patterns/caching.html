@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>高速缓存 &#8212; Flask Documentation (1.1.x)</title>
+    <link rel="stylesheet" href="../_static/flask.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/flask-icon.png"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="查看装饰器" href="viewdecorators.html" />
+    <link rel="prev" title="上传文件" href="fileuploads.html" />
+  <script>DOCUMENTATION_OPTIONS.URL_ROOT = '../';</script>
+   
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="viewdecorators.html" title="查看装饰器"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="fileuploads.html" title="上传文件"
+             accesskey="P">上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Flask Documentation (1.1.x)</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">烧瓶的模式</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="caching">
+<span id="caching-pattern"></span><h1>高速缓存<a class="headerlink" href="#caching" title="永久链接至标题">¶</a></h1>
+<p>When your application runs slow, throw some caches in.  Well, at least
+it’s the easiest way to speed up things.  What does a cache do?  Say you
+have a function that takes some time to complete but the results would
+still be good enough if they were 5 minutes old.  So then the idea is that
+you actually put the result of that calculation into a cache for some
+time.</p>
+<p>Flask itself does not provide caching for you, but <a class="reference external" href="https://flask-caching.readthedocs.io/en/latest/">Flask-Caching</a>, an
+extension for Flask does. Flask-Caching supports various backends, and it is
+even possible to develop your own caching backend.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <span id="sidebar-top"></span>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  
+    
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/flask-logo-sidebar.png" alt="Logo"/>
+            </a></p>
+  
+<h3>Navigation</h3>
+<ul>
+  <li><a href="../index.html">Overview</a>
+    <ul>
+      <li><a href="index.html">烧瓶的模式</a>
+        <ul>
+          <li>Previous: <a href="fileuploads.html" title="上一章">上传文件</a>
+          <li>Next: <a href="viewdecorators.html" title="下一章">查看装饰器</a></ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2010 Pallets Team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+    </div>
+
+  </body>
+</html>

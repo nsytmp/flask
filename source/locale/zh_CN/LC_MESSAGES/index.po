@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets Team
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-20 10:49+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../index.rst:6
+msgid "Welcome to Flask"
+msgstr "欢迎来到Flask"
+
+#: ../../index.rst:13
+msgid ""
+"Welcome to Flask's documentation. Get started with :ref:`installation` "
+"and then get an overview with the :ref:`quickstart`. There is also a more"
+" detailed :ref:`tutorial` that shows how to create a small but complete "
+"application with Flask. Common patterns are described in the "
+":ref:`patterns` section. The rest of the docs describe each component of "
+"Flask in detail, with a full reference in the :ref:`api` section."
+msgstr "欢迎来到Flask的文档. 开始使用 :ref:`installation`, 然后使用 :ref:`quickstart` 获得概述. 还有一个更详细的 :ref:`tutorial`, 展示了如何使用Flask创建一个小而完整的应用程序. 常见的模式在 :ref:`patterns` 部分中描述. 其余的文档详细描述了Flask的每个组件, 并在 :ref:`api` 部分中有完整的参考. "
+
+#: ../../index.rst:20
+msgid ""
+"Flask depends on the `Jinja`_ template engine and the `Werkzeug`_ WSGI "
+"toolkit. The documentation for these libraries can be found at:"
+msgstr "Flask依赖于 `Jinja`_ 模板引擎和 `Werkzeug`_ WSGI工具包. 可以在以下位置找到这些库的文档:"
+
+#: ../../index.rst:23
+msgid "`Jinja documentation <http://jinja.pocoo.org/docs>`_"
+msgstr "`Jinja 文档 <http://jinja.pocoo.org/docs>`_"
+
+#: ../../index.rst:24
+msgid "`Werkzeug documentation <http://werkzeug.pocoo.org/docs>`_"
+msgstr "`Werkzeug 文档 <http://werkzeug.pocoo.org/docs>`_"
+
+#: ../../contents.rst.inc:2
+msgid "User's Guide"
+msgstr "用户指导"
+
+#: ../../contents.rst.inc:4
+msgid ""
+"This part of the documentation, which is mostly prose, begins with some "
+"background information about Flask, then focuses on step-by-step "
+"instructions for web development with Flask."
+msgstr "这部分文档主要是散文, 首先介绍Flask的一些背景信息, 然后重点介绍使用Flask进行Web开发的分步说明. "
+
+#: ../../contents.rst.inc:35
+msgid "API Reference"
+msgstr "API参考"
+
+#: ../../contents.rst.inc:37
+msgid ""
+"If you are looking for information on a specific function, class or "
+"method, this part of the documentation is for you."
+msgstr "如果您正在寻找有关特定功能, 类或方法的信息, 本文档的这一部分适合您. "
+
+#: ../../contents.rst.inc:46
+msgid "Additional Notes"
+msgstr "补充说明"
+
+#: ../../contents.rst.inc:48
+msgid "Design notes, legal information and changelog are here for the interested."
+msgstr "有兴趣的设计说明, 法律信息和更改日志. "
+

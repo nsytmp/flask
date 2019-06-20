@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>项目布局 &#8212; Flask Documentation (1.1.x)</title>
+    <link rel="stylesheet" href="../_static/flask.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/flask-icon.png"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="应用程序设置" href="factory.html" />
+    <link rel="prev" title="教程" href="index.html" />
+  <script>DOCUMENTATION_OPTIONS.URL_ROOT = '../';</script>
+   
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="factory.html" title="应用程序设置"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="教程"
+             accesskey="P">上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Flask Documentation (1.1.x)</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">教程</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="project-layout">
+<h1>项目布局<a class="headerlink" href="#project-layout" title="永久链接至标题">¶</a></h1>
+<p>创建一个项目目录并输入它:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ mkdir flask-tutorial
+$ cd flask-tutorial
+</pre></div>
+</div>
+<p>Then follow the <a class="reference internal" href="../installation.html"><span class="doc">installation instructions</span></a> to set
+up a Python virtual environment and install Flask for your project.</p>
+<p>The tutorial will assume you’re working from the <code class="docutils literal notranslate"><span class="pre">flask-tutorial</span></code>
+directory from now on. The file names at the top of each code block are
+relative to this directory.</p>
+<hr class="docutils" />
+<p>A Flask application can be as simple as a single file.</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">hello.py</span></code></span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello, World!&#39;</span>
+</pre></div>
+</div>
+</div>
+<p>However, as a project gets bigger, it becomes overwhelming to keep all
+the code in one file. Python projects use <em>packages</em> to organize code
+into multiple modules that can be imported where needed, and the
+tutorial will do this as well.</p>
+<p>The project directory will contain:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">flaskr/</span></code>, a Python package containing your application code and
+files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tests/</span></code>, a directory containing test modules.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">venv/</span></code>, a Python virtual environment where Flask and other
+dependencies are installed.</p></li>
+<li><p>Installation files telling Python how to install your project.</p></li>
+<li><p>Version control config, such as <a class="reference external" href="https://git-scm.com/">git</a>. You should make a habit of
+using some type of version control for all your projects, no matter
+the size.</p></li>
+<li><p>Any other project files you might add in the future.</p></li>
+</ul>
+<p>By the end, your project layout will look like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>/home/user/Projects/flask-tutorial
+├── flaskr/
+│   ├── __init__.py
+│   ├── db.py
+│   ├── schema.sql
+│   ├── auth.py
+│   ├── blog.py
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── auth/
+│   │   │   ├── login.html
+│   │   │   └── register.html
+│   │   └── blog/
+│   │       ├── create.html
+│   │       ├── index.html
+│   │       └── update.html
+│   └── static/
+│       └── style.css
+├── tests/
+│   ├── conftest.py
+│   ├── data.sql
+│   ├── test_factory.py
+│   ├── test_db.py
+│   ├── test_auth.py
+│   └── test_blog.py
+├── venv/
+├── setup.py
+└── MANIFEST.in
+</pre></div>
+</div>
+<p>If you’re using version control, the following files that are generated
+while running your project should be ignored. There may be other files
+based on the editor you use. In general, ignore files that you didn’t
+write. For example, with git:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>venv/
+
+*.pyc
+__pycache__/
+
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/
+</pre></div>
+</div>
+</div>
+<p>Continue to <a class="reference internal" href="factory.html"><span class="doc">应用程序设置</span></a>.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <span id="sidebar-top"></span>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  
+    
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/flask-logo-sidebar.png" alt="Logo"/>
+            </a></p>
+  
+<h3>Navigation</h3>
+<ul>
+  <li><a href="../index.html">Overview</a>
+    <ul>
+      <li><a href="index.html">教程</a>
+        <ul>
+          <li>Previous: <a href="index.html" title="上一章">教程</a>
+          <li>Next: <a href="factory.html" title="下一章">应用程序设置</a></ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2010 Pallets Team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+    </div>
+
+  </body>
+</html>

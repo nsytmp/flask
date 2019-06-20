@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets Team
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-20 10:49+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../patterns/subclassing.rst:2
+msgid "Subclassing Flask"
+msgstr "继承烧瓶"
+
+#: ../../patterns/subclassing.rst:4
+msgid "The :class:`~flask.Flask` class is designed for subclassing."
+msgstr "The :class:`~flask.Flask` class is designed for subclassing."
+
+#: ../../patterns/subclassing.rst:6
+msgid ""
+"For example, you may want to override how request parameters are handled "
+"to preserve their order::"
+msgstr ""
+
+#: ../../patterns/subclassing.rst:17
+msgid ""
+"This is the recommended approach for overriding or augmenting Flask's "
+"internal functionality."
+msgstr ""
+

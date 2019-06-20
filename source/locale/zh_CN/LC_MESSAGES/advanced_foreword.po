@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets Team
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-20 10:49+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../advanced_foreword.rst:4
+msgid "Foreword for Experienced Programmers"
+msgstr "有经验的程序员的前言"
+
+#: ../../advanced_foreword.rst:7
+msgid "Thread-Locals in Flask"
+msgstr "Flask中的线程局部变量"
+
+#: ../../advanced_foreword.rst:9
+msgid ""
+"One of the design decisions in Flask was that simple tasks should be "
+"simple; they should not take a lot of code and yet they should not limit "
+"you. Because of that, Flask has a few design choices that some people "
+"might find surprising or unorthodox. For example, Flask uses thread-local"
+" objects internally so that you don’t have to pass objects around from "
+"function to function within a request in order to stay threadsafe. This "
+"approach is convenient, but requires a valid request context for "
+"dependency injection or when attempting to reuse code which uses a value "
+"pegged to the request.  The Flask project is honest about thread-locals, "
+"does not hide them, and calls out in the code and documentation where "
+"they are used."
+msgstr "Flask的设计决策之一就是简单的任务应该很简单;他们不应该采取大量的代码，但他们不应该限制你。因此，Flask有一些设计选择，有些人可能会发现令人惊讶或非正统。例如，Flask在内部使用线程局部对象，因此您不必在请求中将函数从函数传递到函数以保持线程安全。这种方法很方便，但需要有效的请求上下文来进行依赖注入，或者在尝试重用使用与请求挂钩的值的代码时。 Flask项目是诚实的线程本地，不隐藏它们，并在代码和文档中调用它们使用它们。"
+
+#: ../../advanced_foreword.rst:21
+msgid "Develop for the Web with Caution"
+msgstr "谨慎开发Web"
+
+#: ../../advanced_foreword.rst:23
+msgid "Always keep security in mind when building web applications."
+msgstr "在构建Web应用程序时始终牢记安全性。"
+
+#: ../../advanced_foreword.rst:25
+msgid ""
+"If you write a web application, you are probably allowing users to "
+"register and leave their data on your server.  The users are entrusting "
+"you with data. And even if you are the only user that might leave data in"
+" your application, you still want that data to be stored securely."
+msgstr "如果您编写Web应用程序，则可能允许用户注册并将其数据保留在服务器上。用户委托您提供数据。即使您是唯一可能在您的应用程序中保留数据的用户，您仍然希望安全地存储这些数据。"
+
+#: ../../advanced_foreword.rst:30
+msgid ""
+"Unfortunately, there are many ways the security of a web application can "
+"be compromised.  Flask protects you against one of the most common "
+"security problems of modern web applications: cross-site scripting (XSS)."
+"  Unless you deliberately mark insecure HTML as secure, Flask and the "
+"underlying Jinja2 template engine have you covered.  But there are many "
+"more ways to cause security problems."
+msgstr "不幸的是，有很多方法可以危及Web应用程序的安全性。 Flask可以保护您免受现代Web应用程序最常见的安全问题之一：跨站点脚本（XSS）。除非您故意将不安全的HTML标记为安全，否则Flask和底层的Jinja2模板引擎会为您提供帮助。但是还有很多方法可以解决安全问题。"
+
+#: ../../advanced_foreword.rst:37
+msgid ""
+"The documentation will warn you about aspects of web development that "
+"require attention to security.  Some of these security concerns are far "
+"more complex than one might think, and we all sometimes underestimate the"
+" likelihood that a vulnerability will be exploited - until a clever "
+"attacker figures out a way to exploit our applications.  And don't think "
+"that your application is not important enough to attract an attacker.  "
+"Depending on the kind of attack, chances are that automated bots are "
+"probing for ways to fill your database with spam, links to malicious "
+"software, and the like."
+msgstr "该文档将警告您需要注意安全性的Web开发方面。其中一些安全问题远比人们想象的要复杂得多，我们有时会低估漏洞利用的可能性 - 直到一个聪明的攻击者找到利用我们的应用程序的方法。并且不要认为您的应用程序不足以吸引攻击者。根据攻击的类型，自动机器人可能正在探索用垃圾邮件填充数据库的方法，恶意软件的链接等。"
+
+#: ../../advanced_foreword.rst:46
+msgid ""
+"Flask is no different from any other framework in that you the developer "
+"must build with caution, watching for exploits when building to your "
+"requirements."
+msgstr "Flask与任何其他框架没有区别，因为开发人员必须谨慎构建，在构建满足需求时查看漏洞。"
+

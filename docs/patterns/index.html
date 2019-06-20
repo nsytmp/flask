@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>烧瓶的模式 &#8212; Flask Documentation (1.1.x)</title>
+    <link rel="stylesheet" href="../_static/flask.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/flask-icon.png"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="更大的应用程序" href="packages.html" />
+    <link rel="prev" title="与壳牌合作" href="../shell.html" />
+  <script>DOCUMENTATION_OPTIONS.URL_ROOT = '../';</script>
+   
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="packages.html" title="更大的应用程序"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="../shell.html" title="与壳牌合作"
+             accesskey="P">上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Flask Documentation (1.1.x)</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="patterns-for-flask">
+<span id="patterns"></span><h1>烧瓶的模式<a class="headerlink" href="#patterns-for-flask" title="永久链接至标题">¶</a></h1>
+<p>Certain things are common enough that the chances are high you will find
+them in most web applications.  For example quite a lot of applications
+are using relational databases and user authentication.  In that case,
+chances are they will open a database connection at the beginning of the
+request and get the information of the currently logged in user.  At the
+end of the request, the database connection is closed again.</p>
+<p>There are more user contributed snippets and patterns in the <a class="reference external" href="http://flask.pocoo.org/snippets/">Flask
+Snippet Archives</a>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">更大的应用程序</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#simple-packages">Simple Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html#working-with-blueprints">Working with Blueprints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appfactories.html">应用工厂</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appfactories.html#basic-factories">Basic Factories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appfactories.html#factories-extensions">Factories &amp; Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appfactories.html#using-applications">Using Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appfactories.html#factory-improvements">Factory Improvements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appdispatch.html">应用程序调度</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appdispatch.html#working-with-this-document">Working with this Document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appdispatch.html#combining-applications">Combining Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appdispatch.html#dispatch-by-subdomain">Dispatch by Subdomain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appdispatch.html#dispatch-by-path">Dispatch by Path</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="apierrors.html">实现API异常</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="apierrors.html#simple-exception-class">Simple Exception Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apierrors.html#registering-an-error-handler">Registering an Error Handler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apierrors.html#usage-in-views">Usage in Views</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="urlprocessors.html">使用URL处理器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="urlprocessors.html#internationalized-application-urls">Internationalized Application URLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="urlprocessors.html#internationalized-blueprint-urls">Internationalized Blueprint URLs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="distribute.html">使用Setuptools进行部署</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="distribute.html#basic-setup-script">Basic Setup Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distribute.html#tagging-builds">Tagging Builds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distribute.html#distributing-resources">Distributing Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distribute.html#declaring-dependencies">Declaring Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distribute.html#installing-developing">Installing / Developing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fabric.html">使用Fabric进行部署</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fabric.html#creating-the-first-fabfile">Creating the first Fabfile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fabric.html#running-fabfiles">Running Fabfiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fabric.html#the-wsgi-file">The WSGI File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fabric.html#the-configuration-file">The Configuration File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fabric.html#first-deployment">First Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fabric.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sqlite3.html">在Flask中使用SQLite 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sqlite3.html#connect-on-demand">Connect on Demand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sqlite3.html#easy-querying">Easy Querying</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sqlite3.html#initial-schemas">Initial Schemas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sqlalchemy.html">Flask中的SQLAlchemy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sqlalchemy.html#flask-sqlalchemy-extension">Flask-SQLAlchemy Extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sqlalchemy.html#declarative">Declarative</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sqlalchemy.html#manual-object-relational-mapping">Manual Object Relational Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sqlalchemy.html#sql-abstraction-layer">SQL Abstraction Layer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fileuploads.html">上传文件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fileuploads.html#a-gentle-introduction">A Gentle Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileuploads.html#improving-uploads">Improving Uploads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileuploads.html#upload-progress-bars">Upload Progress Bars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fileuploads.html#an-easier-solution">An Easier Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="caching.html">高速缓存</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewdecorators.html">查看装饰器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="viewdecorators.html#login-required-decorator">Login Required Decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="viewdecorators.html#caching-decorator">Caching Decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="viewdecorators.html#templating-decorator">Templating Decorator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="viewdecorators.html#endpoint-decorator">Endpoint Decorator</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wtforms.html">使用WTForms进行表单验证</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wtforms.html#the-forms">The Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wtforms.html#in-the-view">In the View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wtforms.html#forms-in-templates">Forms in Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="templateinheritance.html">模板继承</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="templateinheritance.html#base-template">Base Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="templateinheritance.html#child-template">Child Template</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flashing.html">消息闪烁</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flashing.html#simple-flashing">Simple Flashing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flashing.html#flashing-with-categories">Flashing With Categories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flashing.html#filtering-flash-messages">Filtering Flash Messages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jquery.html">AJAX与jQuery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jquery.html#loading-jquery">Loading jQuery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jquery.html#where-is-my-site">Where is My Site?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jquery.html#json-view-functions">JSON View Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jquery.html#the-html">The HTML</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="errorpages.html">自定义错误页面</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="errorpages.html#common-error-codes">Common Error Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="errorpages.html#error-handlers">Error Handlers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lazyloading.html">懒洋洋地加载视图</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lazyloading.html#converting-to-centralized-url-map">Converting to Centralized URL Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lazyloading.html#loading-late">Loading Late</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mongoengine.html">使用MongoEngine的MongoDB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mongoengine.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mongoengine.html#mapping-documents">Mapping Documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mongoengine.html#creating-data">Creating Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mongoengine.html#queries">Queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mongoengine.html#documentation">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="favicon.html">添加图标</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="favicon.html#see-also">See also</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="streaming.html">流媒体内容</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html#basic-usage">Basic Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html#streaming-from-templates">Streaming from Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="streaming.html#streaming-with-context">Streaming with Context</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deferredcallbacks.html">延期请求回调</a></li>
+<li class="toctree-l1"><a class="reference internal" href="methodoverrides.html">添加HTTP方法覆盖</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requestchecksum.html">请求内容校验和</a></li>
+<li class="toctree-l1"><a class="reference internal" href="celery.html">芹菜背景任务</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="celery.html#install">Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="celery.html#configure">Configure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="celery.html#an-example-task">An example task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="celery.html#run-a-worker">Run a worker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="subclassing.html">继承烧瓶</a></li>
+<li class="toctree-l1"><a class="reference internal" href="singlepageapplications.html">单页应用程序</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+  <span id="sidebar-top"></span>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  
+    
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/flask-logo-sidebar.png" alt="Logo"/>
+            </a></p>
+  
+<h3>Navigation</h3>
+<ul>
+  <li><a href="../index.html">Overview</a>
+    <ul>
+          <li>Previous: <a href="../shell.html" title="上一章">与壳牌合作</a>
+          <li>Next: <a href="packages.html" title="下一章">更大的应用程序</a>
+    </ul>
+  </li>
+</ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2010 Pallets Team.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+    </div>
+
+  </body>
+</html>

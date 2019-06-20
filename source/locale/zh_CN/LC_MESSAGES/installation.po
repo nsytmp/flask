@@ -1,0 +1,226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets Team
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-20 10:49+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../installation.rst:4
+msgid "Installation"
+msgstr "安装"
+
+#: ../../installation.rst:7
+msgid "Python Version"
+msgstr "Python 版本"
+
+#: ../../installation.rst:9
+msgid ""
+"We recommend using the latest version of Python 3. Flask supports Python "
+"3.4 and newer, Python 2.7, and PyPy."
+msgstr "我们建议使用最新版本的Python 3. Flask支持Python 3.4及更新版本，Python 2.7和PyPy。"
+
+#: ../../installation.rst:13
+msgid "Dependencies"
+msgstr "依赖"
+
+#: ../../installation.rst:15
+msgid "These distributions will be installed automatically when installing Flask."
+msgstr "安装Flask时将自动安装这些发行版。"
+
+#: ../../installation.rst:17
+msgid ""
+"`Werkzeug`_ implements WSGI, the standard Python interface between "
+"applications and servers."
+msgstr "`Werkzeug`_ 实现了WSGI，它是应用程序和服务器之间的标准Python接口。"
+
+#: ../../installation.rst:19
+msgid ""
+"`Jinja`_ is a template language that renders the pages your application "
+"serves."
+msgstr "`Jinja`_ 是一种模板语言，用于呈现应用程序所服务的页面。"
+
+#: ../../installation.rst:21
+msgid ""
+"`MarkupSafe`_ comes with Jinja. It escapes untrusted input when rendering"
+" templates to avoid injection attacks."
+msgstr "`MarkupSafe`_ 与Jinja一起来。它在渲染模板时逃避不受信任的输入以避免注入攻击。"
+
+#: ../../installation.rst:23
+msgid ""
+"`ItsDangerous`_ securely signs data to ensure its integrity. This is used"
+" to protect Flask's session cookie."
+msgstr "`ItsDangerous`_ 安全地签署数据以确保其完整性。这用于保护Flask的会话cookie。"
+
+#: ../../installation.rst:25
+msgid ""
+"`Click`_ is a framework for writing command line applications. It "
+"provides the ``flask`` command and allows adding custom management "
+"commands."
+msgstr "`Click`_ 是一个用于编写命令行应用程序的框架。它提供``flask``命令并允许添加自定义管理命令。"
+
+#: ../../installation.rst:35
+msgid "Optional dependencies"
+msgstr "可选的依赖项"
+
+#: ../../installation.rst:37
+msgid ""
+"These distributions will not be installed automatically. Flask will "
+"detect and use them if you install them."
+msgstr "这些发行版不会自动安装。如果安装它们，Flask将检测并使用它们。"
+
+#: ../../installation.rst:40
+msgid "`Blinker`_ provides support for :ref:`signals`."
+msgstr "`Blinker`_ 支持 :ref:`signals` 。"
+
+#: ../../installation.rst:41
+msgid ""
+"`SimpleJSON`_ is a fast JSON implementation that is compatible with "
+"Python's ``json`` module. It is preferred for JSON operations if it is "
+"installed."
+msgstr "`SimpleJSON`_ 是一个快速的JSON实现，与Python的 ``json`` 模块兼容。如果安装了JSON操作，则首选它。"
+
+#: ../../installation.rst:44
+msgid ""
+"`python-dotenv`_ enables support for :ref:`dotenv` when running ``flask``"
+" commands."
+msgstr "`python-dotenv`_ 在运行 ``flask`` 命令时支持 :ref:`dotenv` 。"
+
+#: ../../installation.rst:46
+msgid ""
+"`Watchdog`_ provides a faster, more efficient reloader for the "
+"development server."
+msgstr "`Watchdog`_ 为开发服务器提供更快，更高效的重新加载器。"
+
+#: ../../installation.rst:55
+msgid "Virtual environments"
+msgstr "虚拟环境"
+
+#: ../../installation.rst:57
+msgid ""
+"Use a virtual environment to manage the dependencies for your project, "
+"both in development and in production."
+msgstr "使用虚拟环境在开发和生产中管理项目的依赖关系。"
+
+#: ../../installation.rst:60
+msgid ""
+"What problem does a virtual environment solve? The more Python projects "
+"you have, the more likely it is that you need to work with different "
+"versions of Python libraries, or even Python itself. Newer versions of "
+"libraries for one project can break compatibility in another project."
+msgstr "虚拟环境解决了什么问题？您拥有的Python项目越多，您就越有可能需要使用不同版本的Python库，甚至Python本身。一个项目的较新版本的库可能会破坏另一个项目的兼容性。"
+
+#: ../../installation.rst:65
+msgid ""
+"Virtual environments are independent groups of Python libraries, one for "
+"each project. Packages installed for one project will not affect other "
+"projects or the operating system's packages."
+msgstr "虚拟环境是独立的Python库组，每个项目一个。为一个项目安装的软件包不会影响其他项目或操作系统的软件包。"
+
+#: ../../installation.rst:69
+msgid ""
+"Python 3 comes bundled with the :mod:`venv` module to create virtual "
+"environments. If you're using a modern version of Python, you can "
+"continue on to the next section."
+msgstr "Python 3捆绑了 :mod:`venv` 模块来创建虚拟环境。如果您使用的是现代版本的Python，则可以继续下一部分。"
+
+#: ../../installation.rst:73
+msgid "If you're using Python 2, see :ref:`install-install-virtualenv` first."
+msgstr "如果您使用的是Python 2，请首先参阅 :ref:`install-install-virtualenv` 。"
+
+#: ../../installation.rst:78
+msgid "Create an environment"
+msgstr "创建一个环境"
+
+#: ../../installation.rst:80
+msgid "Create a project folder and a :file:`venv` folder within:"
+msgstr "在其中创建一个项目文件夹和一个 :file:`venv` 文件夹:"
+
+#: ../../installation.rst:88 ../../installation.rst:101
+#: ../../installation.rst:118
+msgid "On Windows:"
+msgstr "在Windows上:"
+
+#: ../../installation.rst:94
+msgid ""
+"If you needed to install virtualenv because you are using Python 2, use "
+"the following command instead:"
+msgstr "如果您因为使用Python 2而需要安装virtualenv，请改用以下命令:"
+
+#: ../../installation.rst:110
+msgid "Activate the environment"
+msgstr "Activate the environment"
+
+#: ../../installation.rst:112
+msgid "Before you work on your project, activate the corresponding environment:"
+msgstr "在处理项目之前，请激活相应的环境:"
+
+#: ../../installation.rst:124
+msgid ""
+"Your shell prompt will change to show the name of the activated "
+"environment."
+msgstr "您的shell提示符将更改为显示激活环境的名称。"
+
+#: ../../installation.rst:127
+msgid "Install Flask"
+msgstr "安装 Flask"
+
+#: ../../installation.rst:129
+msgid ""
+"Within the activated environment, use the following command to install "
+"Flask:"
+msgstr "在激活的环境中，使用以下命令安装Flask:"
+
+#: ../../installation.rst:135
+msgid ""
+"Flask is now installed. Check out the :doc:`/quickstart` or go to the "
+":doc:`Documentation Overview </index>`."
+msgstr "Flask现已安装。查看 :doc:`/ quickstart` 或转到 :doc:`Documentation Overview </ index>` 。"
+
+#: ../../installation.rst:139
+msgid "Living on the edge"
+msgstr "生活在边缘"
+
+#: ../../installation.rst:141
+msgid ""
+"If you want to work with the latest Flask code before it's released, "
+"install or update the code from the master branch:"
+msgstr "如果您希望在发布之前使用最新的Flask代码，请安装或更新主分支中的代码:"
+
+#: ../../installation.rst:151
+msgid "Install virtualenv"
+msgstr "安装 virtualenv"
+
+#: ../../installation.rst:153
+msgid ""
+"If you are using Python 2, the venv module is not available. Instead, "
+"install `virtualenv`_."
+msgstr "如果您使用的是Python 2，则无法使用venv模块。相反，安装 `virtualenv`_."
+
+#: ../../installation.rst:156
+msgid "On Linux, virtualenv is provided by your package manager:"
+msgstr "在Linux上，virtualenv由包管理器提供:"
+
+#: ../../installation.rst:169
+msgid "If you are on Mac OS X or Windows, download `get-pip.py`_, then:"
+msgstr "如果您使用的是Mac OS X或Windows，请下载 `get-pip.py`_ ，然后:"
+
+#: ../../installation.rst:176
+msgid "On Windows, as an administrator:"
+msgstr "在Windows上，以管理员身份:"
+
+#: ../../installation.rst:183
+msgid "Now you can return above and :ref:`install-create-env`."
+msgstr "现在你可以返回上面和 :ref:`install-create-env` 。"
+

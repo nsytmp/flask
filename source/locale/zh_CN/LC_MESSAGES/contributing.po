@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets Team
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 1.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-20 10:49+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../../CONTRIBUTING.rst:2
+msgid "How to contribute to Flask"
+msgstr "如何为Flask做贡献"
+
+#: ../../../CONTRIBUTING.rst:4
+msgid "Thank you for considering contributing to Flask!"
+msgstr "Thank you for considering contributing to Flask!"
+
+#: ../../../CONTRIBUTING.rst:7
+msgid "Support questions"
+msgstr "Support questions"
+
+#: ../../../CONTRIBUTING.rst:9
+msgid ""
+"Please, don't use the issue tracker for this. Use one of the following "
+"resources for questions about your own code:"
+msgstr "Please, don't use the issue tracker for this. Use one of the following resources for questions about your own code:"
+
+#: ../../../CONTRIBUTING.rst:12
+msgid "The IRC channel ``#pocoo`` on FreeNode."
+msgstr "The IRC channel ``#pocoo`` on FreeNode."
+
+#: ../../../CONTRIBUTING.rst:13
+msgid "The IRC channel ``#python`` on FreeNode for more general questions."
+msgstr "The IRC channel ``#python`` on FreeNode for more general questions."
+
+#: ../../../CONTRIBUTING.rst:14
+msgid ""
+"The mailing list flask@python.org for long term discussion or larger "
+"issues."
+msgstr "The mailing list flask@python.org for long term discussion or larger issues."
+
+#: ../../../CONTRIBUTING.rst:15
+msgid ""
+"Ask on `Stack Overflow`_. Search with Google first using: "
+"``site:stackoverflow.com flask {search term, exception message, etc.}``"
+msgstr "Ask on `Stack Overflow`_. Search with Google first using: ``site:stackoverflow.com flask {search term, exception message, etc.}``"
+
+#: ../../../CONTRIBUTING.rst:21
+msgid "Reporting issues"
+msgstr "Reporting issues"
+
+#: ../../../CONTRIBUTING.rst:23
+msgid "Describe what you expected to happen."
+msgstr "Describe what you expected to happen."
+
+#: ../../../CONTRIBUTING.rst:24
+msgid ""
+"If possible, include a `minimal, complete, and verifiable example`_ to "
+"help us identify the issue. This also helps check that the issue is not "
+"with your own code."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:27
+msgid ""
+"Describe what actually happened. Include the full traceback if there was "
+"an exception."
+msgstr "Describe what actually happened. Include the full traceback if there was an exception."
+
+#: ../../../CONTRIBUTING.rst:29
+msgid ""
+"List your Python, Flask, and Werkzeug versions. If possible, check if "
+"this issue is already fixed in the repository."
+msgstr "List your Python, Flask, and Werkzeug versions. If possible, check if this issue is already fixed in the repository."
+
+#: ../../../CONTRIBUTING.rst:35
+msgid "Submitting patches"
+msgstr "Submitting patches"
+
+#: ../../../CONTRIBUTING.rst:37
+msgid ""
+"Include tests if your patch is supposed to solve a bug, and explain "
+"clearly under which circumstances the bug happens. Make sure the test "
+"fails without your patch."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:40 ../../../CONTRIBUTING.rst:87
+msgid ""
+"Try to follow `PEP8`_, but you may ignore the line length limit if "
+"following it would make the code uglier."
+msgstr "Try to follow `PEP8`_, but you may ignore the line length limit if following it would make the code uglier."
+
+#: ../../../CONTRIBUTING.rst:44
+msgid "First time setup"
+msgstr "First time setup"
+
+#: ../../../CONTRIBUTING.rst:46
+msgid "Download and install the `latest version of git`_."
+msgstr "Download and install the `latest version of git`_."
+
+#: ../../../CONTRIBUTING.rst:47
+msgid "Configure git with your `username`_ and `email`_::"
+msgstr "Configure git with your `username`_ and `email`_::"
+
+#: ../../../CONTRIBUTING.rst:52
+msgid "Make sure you have a `GitHub account`_."
+msgstr "Make sure you have a `GitHub account`_."
+
+#: ../../../CONTRIBUTING.rst:53
+msgid "Fork Flask to your GitHub account by clicking the `Fork`_ button."
+msgstr "Fork Flask to your GitHub account by clicking the `Fork`_ button."
+
+#: ../../../CONTRIBUTING.rst:54
+msgid "`Clone`_ your GitHub fork locally::"
+msgstr "`Clone`_ your GitHub fork locally::"
+
+#: ../../../CONTRIBUTING.rst:59
+msgid "Add the main repository as a remote to update later::"
+msgstr "Add the main repository as a remote to update later::"
+
+#: ../../../CONTRIBUTING.rst:64
+msgid "Create a virtualenv::"
+msgstr "Create a virtualenv::"
+
+#: ../../../CONTRIBUTING.rst:70
+msgid "Install Flask in editable mode with development dependencies::"
+msgstr "Install Flask in editable mode with development dependencies::"
+
+#: ../../../CONTRIBUTING.rst:82
+msgid "Start coding"
+msgstr "Start coding"
+
+#: ../../../CONTRIBUTING.rst:84
+msgid ""
+"Create a branch to identify the issue you would like to work on (e.g. "
+"``2287-dry-test-suite``)"
+msgstr "Create a branch to identify the issue you would like to work on (e.g. ``2287-dry-test-suite``)"
+
+#: ../../../CONTRIBUTING.rst:86
+msgid "Using your favorite editor, make your changes, `committing as you go`_."
+msgstr "Using your favorite editor, make your changes, `committing as you go`_."
+
+#: ../../../CONTRIBUTING.rst:89
+msgid ""
+"Include tests that cover any code changes you make. Make sure the test "
+"fails without your patch. `Run the tests. <contributing-testsuite_>`_."
+msgstr "Include tests that cover any code changes you make. Make sure the test fails without your patch. `Run the tests. <contributing-testsuite_>`_."
+
+#: ../../../CONTRIBUTING.rst:91
+msgid "Push your commits to GitHub and `create a pull request`_."
+msgstr "Push your commits to GitHub and `create a pull request`_."
+
+#: ../../../CONTRIBUTING.rst:92
+msgid "Celebrate 🎉"
+msgstr "Celebrate 🎉"
+
+#: ../../../CONTRIBUTING.rst:101
+msgid "Running the tests"
+msgstr "Running the tests"
+
+#: ../../../CONTRIBUTING.rst:103
+msgid "Run the basic test suite with::"
+msgstr "Run the basic test suite with::"
+
+#: ../../../CONTRIBUTING.rst:107
+msgid ""
+"This only runs the tests for the current environment. Whether this is "
+"relevant depends on which part of Flask you're working on. Travis-CI will"
+" run the full suite when you submit your pull request."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:111
+msgid ""
+"The full test suite takes a long time to run because it tests multiple "
+"combinations of Python and dependencies. You need to have Python 2.7, "
+"3.4, 3.5 3.6, and PyPy 2.7 installed to run all of the environments. Then"
+" run::"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:118
+msgid "Running test coverage"
+msgstr "Running test coverage"
+
+#: ../../../CONTRIBUTING.rst:120
+msgid ""
+"Generating a report of lines that do not have test coverage can indicate "
+"where to start contributing. Run ``pytest`` using ``coverage`` and "
+"generate a report on the terminal and as an interactive HTML document::"
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:129
+msgid "Read more about `coverage <https://coverage.readthedocs.io>`_."
+msgstr "Read more about `coverage <https://coverage.readthedocs.io>`_."
+
+#: ../../../CONTRIBUTING.rst:131
+msgid ""
+"Running the full test suite with ``tox`` will combine the coverage "
+"reports from all runs."
+msgstr "Running the full test suite with ``tox`` will combine the coverage reports from all runs."
+
+#: ../../../CONTRIBUTING.rst:136
+msgid "Building the docs"
+msgstr "Building the docs"
+
+#: ../../../CONTRIBUTING.rst:138
+msgid "Build the docs in the ``docs`` directory using Sphinx::"
+msgstr "Build the docs in the ``docs`` directory using Sphinx::"
+
+#: ../../../CONTRIBUTING.rst:143
+msgid "Open ``_build/html/index.html`` in your browser to view the docs."
+msgstr "Open ``_build/html/index.html`` in your browser to view the docs."
+
+#: ../../../CONTRIBUTING.rst:145
+msgid "Read more about `Sphinx <https://www.sphinx-doc.org>`_."
+msgstr "Read more about `Sphinx <https://www.sphinx-doc.org>`_."
+
+#: ../../../CONTRIBUTING.rst:149
+msgid "make targets"
+msgstr "make targets"
+
+#: ../../../CONTRIBUTING.rst:151
+msgid ""
+"Flask provides a ``Makefile`` with various shortcuts. They will ensure "
+"that all dependencies are installed."
+msgstr "Flask provides a ``Makefile`` with various shortcuts. They will ensure that all dependencies are installed."
+
+#: ../../../CONTRIBUTING.rst:154
+msgid "``make test`` runs the basic test suite with ``pytest``"
+msgstr "``make test`` runs the basic test suite with ``pytest``"
+
+#: ../../../CONTRIBUTING.rst:155
+msgid "``make cov`` runs the basic test suite with ``coverage``"
+msgstr "``make cov`` runs the basic test suite with ``coverage``"
+
+#: ../../../CONTRIBUTING.rst:156
+msgid "``make test-all`` runs the full test suite with ``tox``"
+msgstr "``make test-all`` runs the full test suite with ``tox``"
+
+#: ../../../CONTRIBUTING.rst:157
+msgid "``make docs`` builds the HTML documentation"
+msgstr "``make docs`` builds the HTML documentation"
+
+#: ../../../CONTRIBUTING.rst:160
+msgid "Caution: zero-padded file modes"
+msgstr "Caution: zero-padded file modes"
+
+#: ../../../CONTRIBUTING.rst:162
+msgid ""
+"This repository contains several zero-padded file modes that may cause "
+"issues when pushing this repository to git hosts other than GitHub. "
+"Fixing this is destructive to the commit history, so we suggest ignoring "
+"these warnings. If it fails to push and you're using a self-hosted git "
+"service like GitLab, you can turn off repository checks in the admin "
+"panel."
+msgstr ""
+
+#: ../../../CONTRIBUTING.rst:168
+msgid "These files can also cause issues while cloning. If you have ::"
+msgstr "These files can also cause issues while cloning. If you have ::"
+
+#: ../../../CONTRIBUTING.rst:173
+msgid "or ::"
+msgstr "or ::"
+
+#: ../../../CONTRIBUTING.rst:178
+msgid ""
+"set in your git configuration file, cloning this repository will fail. "
+"The only solution is to set both of the above settings to false while "
+"cloning, and then setting them back to true after the cloning is "
+"finished."
+msgstr ""
+

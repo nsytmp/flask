@@ -29,6 +29,9 @@ intersphinx_mapping = {
     "wtforms": ("https://wtforms.readthedocs.io/en/stable/", None),
     "blinker": ("https://pythonhosted.org/blinker/", None),
 }
+language = 'zh_CN'
+locale_dirs = ['locale/']
+gettext_compact = False
 
 # HTML -----------------------------------------------------------------
 
@@ -40,14 +43,16 @@ html_context = {
         ProjectLink("Flask Website", "https://palletsprojects.com/p/flask/"),
         ProjectLink("PyPI releases", "https://pypi.org/project/Flask/"),
         ProjectLink("Source Code", "https://github.com/pallets/flask/"),
-        ProjectLink("Issue Tracker", "https://github.com/pallets/flask/issues/"),
+        ProjectLink("Issue Tracker",
+                    "https://github.com/pallets/flask/issues/"),
     ]
 }
 html_sidebars = {
     "index": ["project.html", "localtoc.html", "versions.html", "searchbox.html"],
     "**": ["localtoc.html", "relations.html", "versions.html", "searchbox.html"],
 }
-singlehtml_sidebars = {"index": ["project.html", "versions.html", "localtoc.html"]}
+singlehtml_sidebars = {
+    "index": ["project.html", "versions.html", "localtoc.html"]}
 html_static_path = ["_static"]
 html_favicon = "_static/flask-icon.png"
 html_logo = "_static/flask-logo-sidebar.png"
