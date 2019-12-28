@@ -17,10 +17,10 @@
     <link rel="shortcut icon" href="_static/flask-icon.png"/>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Configuration Handling" href="config.html" />
+    <link rel="next" title="配置处理" href="config.html" />
     <link rel="prev" title="应用程序错误" href="errorhandling.html" />
   <script>DOCUMENTATION_OPTIONS.URL_ROOT = './';</script>
-   
+
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
@@ -29,20 +29,20 @@
           <a href="genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="config.html" title="Configuration Handling"
+          <a href="config.html" title="配置处理"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="errorhandling.html" title="应用程序错误"
              accesskey="P">上一页</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Flask Documentation (1.1.x)</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Flask Documentation (1.1.x)</a> &#187;</li>
       </ul>
-    </div>  
+    </div>
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
-            
+
   <div class="section" id="logging">
 <span id="id1"></span><h1>记录<a class="headerlink" href="#logging" title="永久链接至标题">¶</a></h1>
 <p>Flask uses standard Python <a class="reference external" href="https://docs.python.org/3/library/logging.html#module-logging" title="(在 Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">logging</span></code></a>. All Flask-related messages are
@@ -63,13 +63,12 @@ logged under the <code class="docutils literal notranslate"><span class="pre">'f
 </pre></div>
 </div>
 <div class="section" id="basic-configuration">
-<h2>Basic Configuration<a class="headerlink" href="#basic-configuration" title="永久链接至标题">¶</a></h2>
+<h2>基本配置<a class="headerlink" href="#basic-configuration" title="永久链接至标题">¶</a></h2>
 <p>When you want to configure logging for your project, you should do it as soon
 as possible when the program starts. If <a class="reference internal" href="api.html#flask.Flask.logger" title="flask.Flask.logger"><code class="xref py py-meth docutils literal notranslate"><span class="pre">app.logger</span></code></a>
 is accessed before logging is configured, it will add a default handler. If
 possible, configure logging before creating the application object.</p>
-<p>This example uses <a class="reference external" href="https://docs.python.org/3/library/logging.config.html#logging.config.dictConfig" title="(在 Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictConfig()</span></code></a> to create a logging
-configuration similar to Flask’s default, except for all logs:</p>
+<p>此示例使用:func:<a href="#id1"><span class="problematic" id="id2">`</span></a>~logging.config.dictConfig`创建类似于Flask默认的日志记录配置, 但所有日志除外:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">logging.config</span> <span class="k">import</span> <span class="n">dictConfig</span>
 
 <span class="n">dictConfig</span><span class="p">({</span>
@@ -92,7 +91,7 @@ configuration similar to Flask’s default, except for all logs:</p>
 </pre></div>
 </div>
 <div class="section" id="default-configuration">
-<h3>Default Configuration<a class="headerlink" href="#default-configuration" title="永久链接至标题">¶</a></h3>
+<h3>默认配置<a class="headerlink" href="#default-configuration" title="永久链接至标题">¶</a></h3>
 <p>If you do not configure logging yourself, Flask will add a
 <a class="reference external" href="https://docs.python.org/3/library/logging.handlers.html#logging.StreamHandler" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a> to <a class="reference internal" href="api.html#flask.Flask.logger" title="flask.Flask.logger"><code class="xref py py-meth docutils literal notranslate"><span class="pre">app.logger</span></code></a>
 automatically. During requests, it will write to the stream specified by the
@@ -100,7 +99,7 @@ WSGI server in <code class="docutils literal notranslate"><span class="pre">envi
 <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(在 Python v3.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stderr</span></code></a>). Outside a request, it will log to <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.stderr" title="(在 Python v3.7)"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.stderr</span></code></a>.</p>
 </div>
 <div class="section" id="removing-the-default-handler">
-<h3>Removing the Default Handler<a class="headerlink" href="#removing-the-default-handler" title="永久链接至标题">¶</a></h3>
+<h3>删除默认处理程序<a class="headerlink" href="#removing-the-default-handler" title="永久链接至标题">¶</a></h3>
 <p>If you configured logging after accessing
 <a class="reference internal" href="api.html#flask.Flask.logger" title="flask.Flask.logger"><code class="xref py py-meth docutils literal notranslate"><span class="pre">app.logger</span></code></a>, and need to remove the default
 handler, you can import and remove it:</p>
@@ -112,7 +111,7 @@ handler, you can import and remove it:</p>
 </div>
 </div>
 <div class="section" id="email-errors-to-admins">
-<h2>Email Errors to Admins<a class="headerlink" href="#email-errors-to-admins" title="永久链接至标题">¶</a></h2>
+<h2>向管理员发送电子邮件错误<a class="headerlink" href="#email-errors-to-admins" title="永久链接至标题">¶</a></h2>
 <p>When running the application on a remote server for production, you probably
 won’t be looking at the log messages very often. The WSGI server will probably
 send log messages to a file, and you’ll only check that file if a user tells
@@ -142,7 +141,7 @@ are logged.</p>
 Python docs for more information about configuring the handler.</p>
 </div>
 <div class="section" id="injecting-request-information">
-<h2>Injecting Request Information<a class="headerlink" href="#injecting-request-information" title="永久链接至标题">¶</a></h2>
+<h2>注入请求信息<a class="headerlink" href="#injecting-request-information" title="永久链接至标题">¶</a></h2>
 <p>Seeing more information about the request, such as the IP address, may help
 debugging some errors. You can subclass <a class="reference external" href="https://docs.python.org/3/library/logging.html#logging.Formatter" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Formatter</span></code></a> to inject
 your own fields that can be used in messages. You can change the formatter for
@@ -167,7 +166,7 @@ handler.</p>
 </div>
 </div>
 <div class="section" id="other-libraries">
-<h2>Other Libraries<a class="headerlink" href="#other-libraries" title="永久链接至标题">¶</a></h2>
+<h2>其他图书馆<a class="headerlink" href="#other-libraries" title="永久链接至标题">¶</a></h2>
 <p>Other libraries may use logging extensively, and you want to see relevant
 messages from those logs too. The simplest way to do this is to add handlers
 to the root logger instead of only the app logger.</p>
@@ -196,7 +195,7 @@ If the root logger has no handlers configured, Werkzeug adds a
 <a class="reference external" href="https://docs.python.org/3/library/logging.handlers.html#logging.StreamHandler" title="(在 Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamHandler</span></code></a> to its logger.</p>
 </div>
 <div class="section" id="flask-extensions">
-<h3>Flask Extensions<a class="headerlink" href="#flask-extensions" title="永久链接至标题">¶</a></h3>
+<h3>Flask 扩展<a class="headerlink" href="#flask-extensions" title="永久链接至标题">¶</a></h3>
 <p>Depending on the situation, an extension may choose to log to
 <a class="reference internal" href="api.html#flask.Flask.logger" title="flask.Flask.logger"><code class="xref py py-meth docutils literal notranslate"><span class="pre">app.logger</span></code></a> or its own named logger. Consult each
 extension’s documentation for details.</p>
@@ -211,26 +210,26 @@ extension’s documentation for details.</p>
   <span id="sidebar-top"></span>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  
-    
+
+
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/flask-logo-sidebar.png" alt="Logo"/>
             </a></p>
-  
+
 
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">记录</a><ul>
-<li><a class="reference internal" href="#basic-configuration">Basic Configuration</a><ul>
-<li><a class="reference internal" href="#default-configuration">Default Configuration</a></li>
-<li><a class="reference internal" href="#removing-the-default-handler">Removing the Default Handler</a></li>
+<li><a class="reference internal" href="#basic-configuration">基本配置</a><ul>
+<li><a class="reference internal" href="#default-configuration">默认配置</a></li>
+<li><a class="reference internal" href="#removing-the-default-handler">删除默认处理程序</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#email-errors-to-admins">Email Errors to Admins</a></li>
-<li><a class="reference internal" href="#injecting-request-information">Injecting Request Information</a></li>
-<li><a class="reference internal" href="#other-libraries">Other Libraries</a><ul>
+<li><a class="reference internal" href="#email-errors-to-admins">向管理员发送电子邮件错误</a></li>
+<li><a class="reference internal" href="#injecting-request-information">注入请求信息</a></li>
+<li><a class="reference internal" href="#other-libraries">其他图书馆</a><ul>
 <li><a class="reference internal" href="#werkzeug">Werkzeug</a></li>
-<li><a class="reference internal" href="#flask-extensions">Flask Extensions</a></li>
+<li><a class="reference internal" href="#flask-extensions">Flask 扩展</a></li>
 </ul>
 </li>
 </ul>
@@ -241,7 +240,7 @@ extension’s documentation for details.</p>
   <li><a href="index.html">Overview</a>
     <ul>
           <li>Previous: <a href="errorhandling.html" title="上一章">应用程序错误</a>
-          <li>Next: <a href="config.html" title="下一章">Configuration Handling</a>
+          <li>Next: <a href="config.html" title="下一章">配置处理</a>
     </ul>
   </li>
 </ul>
@@ -259,10 +258,10 @@ extension’s documentation for details.</p>
       </div>
       <div class="clearer"></div>
     </div>
-  
+
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建.
     </div>
 
   </body>

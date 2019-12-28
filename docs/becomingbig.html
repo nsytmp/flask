@@ -45,9 +45,9 @@
             
   <div class="section" id="becoming-big">
 <span id="becomingbig"></span><h1>变得很大<a class="headerlink" href="#becoming-big" title="永久链接至标题">¶</a></h1>
-<p>Here are your options when growing your codebase or scaling your application.</p>
+<p>在扩展代码库或扩展应用程序时, 您可以选择以下选项.</p>
 <div class="section" id="read-the-source">
-<h2>Read the Source.<a class="headerlink" href="#read-the-source" title="永久链接至标题">¶</a></h2>
+<h2>阅读来源.<a class="headerlink" href="#read-the-source" title="永久链接至标题">¶</a></h2>
 <p>Flask started in part to demonstrate how to build your own framework on top of
 existing well-used tools Werkzeug (WSGI) and Jinja (templating), and as it
 developed, it became useful to a wide audience.  As you grow your codebase,
@@ -58,7 +58,7 @@ internal utilities so that you can find the hook points needed for your
 project.</p>
 </div>
 <div class="section" id="hook-extend">
-<h2>Hook. Extend.<a class="headerlink" href="#hook-extend" title="永久链接至标题">¶</a></h2>
+<h2>钩. 延伸.<a class="headerlink" href="#hook-extend" title="永久链接至标题">¶</a></h2>
 <p>The <a class="reference internal" href="api.html#api"><span class="std std-ref">API</span></a> docs are full of available overrides, hook points, and
 <a class="reference internal" href="signals.html#signals"><span class="std std-ref">信号</span></a>. You can provide custom classes for things like the request and
 response objects.  Dig deeper on the APIs you use, and look for the
@@ -68,21 +68,21 @@ Flask extensions.  Explore the many <a class="reference external" href="http://f
 build your own extensions if you do not find the tools you need.</p>
 </div>
 <div class="section" id="subclass">
-<h2>Subclass.<a class="headerlink" href="#subclass" title="永久链接至标题">¶</a></h2>
+<h2>子类.<a class="headerlink" href="#subclass" title="永久链接至标题">¶</a></h2>
 <p>The <a class="reference internal" href="api.html#flask.Flask" title="flask.Flask"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flask</span></code></a> class has many methods designed for subclassing. You
 can quickly add or customize behavior by subclassing <a class="reference internal" href="api.html#flask.Flask" title="flask.Flask"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flask</span></code></a> (see
 the linked method docs) and using that subclass wherever you instantiate an
-application class. This works well with <a class="reference internal" href="patterns/appfactories.html#app-factories"><span class="std std-ref">Application Factories</span></a>. See <a class="reference internal" href="patterns/subclassing.html"><span class="doc">Subclassing Flask</span></a> for an example.</p>
+application class. This works well with <a class="reference internal" href="patterns/appfactories.html#app-factories"><span class="std std-ref">应用工厂</span></a>. See <a class="reference internal" href="patterns/subclassing.html"><span class="doc">继承 Flask</span></a> for an example.</p>
 </div>
 <div class="section" id="wrap-with-middleware">
-<h2>Wrap with middleware.<a class="headerlink" href="#wrap-with-middleware" title="永久链接至标题">¶</a></h2>
-<p>The <a class="reference internal" href="patterns/appdispatch.html#app-dispatch"><span class="std std-ref">Application Dispatching</span></a> chapter shows in detail how to apply middleware. You
+<h2>用中间件包装.<a class="headerlink" href="#wrap-with-middleware" title="永久链接至标题">¶</a></h2>
+<p>The <a class="reference internal" href="patterns/appdispatch.html#app-dispatch"><span class="std std-ref">应用程序调度</span></a> chapter shows in detail how to apply middleware. You
 can introduce WSGI middleware to wrap your Flask instances and introduce fixes
 and changes at the layer between your Flask application and your HTTP
 server. Werkzeug includes several <a class="reference external" href="http://werkzeug.pocoo.org/docs/middlewares/">middlewares</a>.</p>
 </div>
 <div class="section" id="fork">
-<h2>Fork.<a class="headerlink" href="#fork" title="永久链接至标题">¶</a></h2>
+<h2>叉子.<a class="headerlink" href="#fork" title="永久链接至标题">¶</a></h2>
 <p>If none of the above options work, fork Flask.  The majority of code of Flask
 is within Werkzeug and Jinja2.  These libraries do the majority of the work.
 Flask is just the paste that glues those together.  For every project there is
@@ -101,7 +101,7 @@ depending on the number of changes.  Because of that, forking should be
 the very last resort.</p>
 </div>
 <div class="section" id="scale-like-a-pro">
-<h2>Scale like a pro.<a class="headerlink" href="#scale-like-a-pro" title="永久链接至标题">¶</a></h2>
+<h2>像专业人士一样扩展.<a class="headerlink" href="#scale-like-a-pro" title="永久链接至标题">¶</a></h2>
 <p>For many web applications the complexity of the code is less an issue than
 the scaling for the number of users or data entries expected.  Flask by
 itself is only limited in terms of scaling by your application code, the
@@ -111,22 +111,11 @@ are running on.</p>
 you get about twice the performance.  Scaling bad means that if you add a
 new server the application won’t perform any better or would not even
 support a second server.</p>
-<p>There is only one limiting factor regarding scaling in Flask which are
-the context local proxies.  They depend on context which in Flask is
-defined as being either a thread, process or greenlet.  If your server
-uses some kind of concurrency that is not based on threads or greenlets,
-Flask will no longer be able to support these global proxies.  However the
-majority of servers are using either threads, greenlets or separate
-processes to achieve concurrency which are all methods well supported by
-the underlying Werkzeug library.</p>
+<p>关于Flask中缩放的唯一限制因素是上下文本地代理. 它们取决于Flask中被定义为线程, 进程或greenlet的上下文. 如果您的服务器使用某种不基于线程或greenlet的并发, Flask将无法再支持这些全局代理. 但是, 大多数服务器使用线程, greenlet或单独的进程来实现并发性, 这些都是底层Werkzeug库所支持的所有方法.</p>
 </div>
 <div class="section" id="discuss-with-the-community">
-<h2>Discuss with the community.<a class="headerlink" href="#discuss-with-the-community" title="永久链接至标题">¶</a></h2>
-<p>The Flask developers keep the framework accessible to users with codebases big
-and small. If you find an obstacle in your way, caused by Flask, don’t hesitate
-to contact the developers on the mailinglist or IRC channel.  The best way for
-the Flask and Flask extension developers to improve the tools for larger
-applications is getting feedback from users.</p>
+<h2>与社区讨论.<a class="headerlink" href="#discuss-with-the-community" title="永久链接至标题">¶</a></h2>
+<p>Flask开发人员使用大小代码的用户可以访问框架. 如果您发现由Flask引起的障碍, 请不要犹豫与邮件列表或IRC频道上的开发人员联系.  Flask和Flask扩展开发人员改进大型应用程序工具的最佳方法是从用户那里获得反馈.</p>
 </div>
 </div>
 
@@ -147,13 +136,13 @@ applications is getting feedback from users.</p>
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">变得很大</a><ul>
-<li><a class="reference internal" href="#read-the-source">Read the Source.</a></li>
-<li><a class="reference internal" href="#hook-extend">Hook. Extend.</a></li>
-<li><a class="reference internal" href="#subclass">Subclass.</a></li>
-<li><a class="reference internal" href="#wrap-with-middleware">Wrap with middleware.</a></li>
-<li><a class="reference internal" href="#fork">Fork.</a></li>
-<li><a class="reference internal" href="#scale-like-a-pro">Scale like a pro.</a></li>
-<li><a class="reference internal" href="#discuss-with-the-community">Discuss with the community.</a></li>
+<li><a class="reference internal" href="#read-the-source">阅读来源.</a></li>
+<li><a class="reference internal" href="#hook-extend">钩. 延伸.</a></li>
+<li><a class="reference internal" href="#subclass">子类.</a></li>
+<li><a class="reference internal" href="#wrap-with-middleware">用中间件包装.</a></li>
+<li><a class="reference internal" href="#fork">叉子.</a></li>
+<li><a class="reference internal" href="#scale-like-a-pro">像专业人士一样扩展.</a></li>
+<li><a class="reference internal" href="#discuss-with-the-community">与社区讨论.</a></li>
 </ul>
 </li>
 </ul>
@@ -183,7 +172,7 @@ applications is getting feedback from users.</p>
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

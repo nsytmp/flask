@@ -23,7 +23,7 @@ msgstr "更大的应用程序"
 
 #: ../../patterns/packages.rst:6
 msgid "Imagine a simple flask application structure that looks like this::"
-msgstr "想象一个简单的烧瓶应用程序结构，看起来像这样::"
+msgstr "想象一个简单的 Flask 应用程序结构, 看起来像这样::"
 
 #: ../../patterns/packages.rst:18
 msgid ""

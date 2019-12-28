@@ -35,31 +35,31 @@ msgstr ""
 msgid ""
 "the client terminated the request early and the application was still "
 "reading from the incoming data"
-msgstr "the client terminated the request early and the application was still reading from the incoming data"
+msgstr "客户端提前终止了请求, 应用程序仍然从传入的数据中读取"
 
 #: ../../errorhandling.rst:16
 msgid "the database server was overloaded and could not handle the query"
-msgstr "the database server was overloaded and could not handle the query"
+msgstr "数据库服务器已重载, 无法处理查询"
 
 #: ../../errorhandling.rst:17
 msgid "a filesystem is full"
-msgstr "a filesystem is full"
+msgstr "文件系统已满"
 
 #: ../../errorhandling.rst:18
 msgid "a harddrive crashed"
-msgstr "a harddrive crashed"
+msgstr "一个硬盘崩溃了"
 
 #: ../../errorhandling.rst:19
 msgid "a backend server overloaded"
-msgstr "a backend server overloaded"
+msgstr "后端服务器重载"
 
 #: ../../errorhandling.rst:20
 msgid "a programming error in a library you are using"
-msgstr "a programming error in a library you are using"
+msgstr "您正在使用的库中的编程错误"
 
 #: ../../errorhandling.rst:21
 msgid "network connection of the server to another system failed"
-msgstr "network connection of the server to another system failed"
+msgstr "服务器与另一个系统的网络连接失败"
 
 #: ../../errorhandling.rst:23
 msgid ""
@@ -73,11 +73,11 @@ msgstr ""
 msgid ""
 "But there is more you can do, and we will cover some better setups to "
 "deal with errors."
-msgstr "But there is more you can do, and we will cover some better setups to deal with errors."
+msgstr "但是你可以做的更多, 我们将介绍一些更好的设置来处理错误. "
 
 #: ../../errorhandling.rst:32
 msgid "Error Logging Tools"
-msgstr "Error Logging Tools"
+msgstr "错误记录工具"
 
 #: ../../errorhandling.rst:34
 msgid ""
@@ -97,17 +97,17 @@ msgstr ""
 msgid ""
 "To use Sentry you need to install the `sentry-sdk` client with extra "
 "`flask` dependencies::"
-msgstr "To use Sentry you need to install the `sentry-sdk` client with extra `flask` dependencies::"
+msgstr "要使用Sentry, 您需要安装带有额外`fla​​sk`依赖项的`sentry-sdk`客户端::"
 
 #: ../../errorhandling.rst:49
 msgid "And then add this to your Flask app::"
-msgstr "And then add this to your Flask app::"
+msgstr "然后将其添加到Flask应用程序中::"
 
 #: ../../errorhandling.rst:56
 msgid ""
 "The `YOUR_DSN_HERE` value needs to be replaced with the DSN value you get"
 " from your Sentry installation."
-msgstr "The `YOUR_DSN_HERE` value needs to be replaced with the DSN value you get from your Sentry installation."
+msgstr "`YOUR_DSN_HERE`值需要替换为从Sentry安装中获得的DSN值. "
 
 #: ../../errorhandling.rst:59
 msgid ""
@@ -118,7 +118,7 @@ msgstr ""
 
 #: ../../errorhandling.rst:62
 msgid "Follow-up reads:"
-msgstr "Follow-up reads:"
+msgstr "后续读取:"
 
 #: ../../errorhandling.rst:64
 msgid ""
@@ -141,13 +141,13 @@ msgstr "`Flask-specific documentation <https://docs.sentry.io/platforms/python/f
 
 #: ../../errorhandling.rst:73
 msgid "Error handlers"
-msgstr "Error handlers"
+msgstr "错误处理程序"
 
 #: ../../errorhandling.rst:75
 msgid ""
 "You might want to show custom error pages to the user when an error "
 "occurs. This can be done by registering error handlers."
-msgstr "You might want to show custom error pages to the user when an error occurs. This can be done by registering error handlers."
+msgstr "您可能希望在发生错误时向用户显示自定义错误页面. 这可以通过注册错误处理程序来完成. "
 
 #: ../../errorhandling.rst:78
 msgid ""
@@ -159,7 +159,7 @@ msgstr ""
 
 #: ../../errorhandling.rst:83
 msgid "Registering"
-msgstr "Registering"
+msgstr "注册"
 
 #: ../../errorhandling.rst:85
 msgid ""
@@ -194,7 +194,7 @@ msgstr ""
 
 #: ../../errorhandling.rst:120
 msgid "Handling"
-msgstr "Handling"
+msgstr "处理"
 
 #: ../../errorhandling.rst:122
 msgid ""
@@ -228,21 +228,21 @@ msgstr ""
 msgid ""
 "Handlers are prioritized by specificity of the exception classes they are"
 " registered for instead of the order they are registered in."
-msgstr "Handlers are prioritized by specificity of the exception classes they are registered for instead of the order they are registered in."
+msgstr "处理程序的优先级取决于它们注册的异常类的特殊性, 而不是它们注册的顺序. "
 
 #: ../../errorhandling.rst:146
 msgid "Logging"
-msgstr "Logging"
+msgstr "记录"
 
 #: ../../errorhandling.rst:148
 msgid ""
 "See :ref:`logging` for information on how to log exceptions, such as by "
 "emailing them to admins."
-msgstr "See :ref:`logging` for information on how to log exceptions, such as by emailing them to admins."
+msgstr "有关如何记录异常的信息, 请参阅:ref:`logging`, 例如通过电子邮件将其发送给管理员. "
 
 #: ../../errorhandling.rst:153
 msgid "Debugging Application Errors"
-msgstr "Debugging Application Errors"
+msgstr "调试应用程序错误"
 
 #: ../../errorhandling.rst:155
 msgid ""
@@ -254,7 +254,7 @@ msgstr ""
 
 #: ../../errorhandling.rst:162
 msgid "When in Doubt, Run Manually"
-msgstr "When in Doubt, Run Manually"
+msgstr "在怀疑中, 手动运行"
 
 #: ../../errorhandling.rst:164
 msgid ""
@@ -270,7 +270,7 @@ msgstr ""
 
 #: ../../errorhandling.rst:177
 msgid "Working with Debuggers"
-msgstr "Working with Debuggers"
+msgstr "使用调试器"
 
 #: ../../errorhandling.rst:179
 msgid ""
@@ -283,17 +283,17 @@ msgstr ""
 
 #: ../../errorhandling.rst:184
 msgid "``debug``        - whether to enable debug mode and catch exceptions"
-msgstr "``debug``        - whether to enable debug mode and catch exceptions"
+msgstr "``debug``        - 是否启用调试模式和捕获异常"
 
 #: ../../errorhandling.rst:185
 msgid "``use_debugger`` - whether to use the internal Flask debugger"
-msgstr "``use_debugger`` - whether to use the internal Flask debugger"
+msgstr "``use_debugger`` - 是否使用内部Flask调试器"
 
 #: ../../errorhandling.rst:186
 msgid ""
 "``use_reloader`` - whether to reload and fork the process if modules were"
 " changed"
-msgstr "``use_reloader`` - whether to reload and fork the process if modules were changed"
+msgstr "``use_reloader`` - 如果模块被更改, 是否重新加载和分叉进程"
 
 #: ../../errorhandling.rst:188
 msgid ""
@@ -305,7 +305,7 @@ msgstr "``debug`` must be True (i.e., exceptions must be caught) in order for th
 msgid ""
 "If you're using Aptana/Eclipse for debugging you'll need to set both "
 "``use_debugger`` and ``use_reloader`` to False."
-msgstr "If you're using Aptana/Eclipse for debugging you'll need to set both ``use_debugger`` and ``use_reloader`` to False."
+msgstr "如果你使用Aptana / Eclipse进行调试, 你需要将``use_debugger``和``use_reloader``都设置为False. "
 
 #: ../../errorhandling.rst:194
 msgid ""
@@ -318,5 +318,5 @@ msgstr ""
 msgid ""
 "Then in your application's entry-point (main.py), you could have "
 "something like::"
-msgstr "Then in your application's entry-point (main.py), you could have something like::"
+msgstr "然后在你的应用程序的入口点(main.py), 你可以有类似的东西::"
 

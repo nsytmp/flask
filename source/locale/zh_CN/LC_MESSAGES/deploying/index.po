@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../deploying/index.rst:17
 msgid "Hosted options"
-msgstr "Hosted options"
+msgstr "托管选项"
 
 #: ../../deploying/index.rst:19
 msgid ""
@@ -91,5 +91,5 @@ msgstr ""
 
 #: ../../deploying/index.rst:29
 msgid "Self-hosted options"
-msgstr "Self-hosted options"
+msgstr "自托管选项"
 

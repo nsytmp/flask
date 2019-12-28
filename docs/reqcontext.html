@@ -53,7 +53,7 @@ are accessed instead.</p>
 application-level data independent of a request. A corresponding
 application context is pushed when a request context is pushed.</p>
 <div class="section" id="purpose-of-the-context">
-<h2>Purpose of the Context<a class="headerlink" href="#purpose-of-the-context" title="永久链接至标题">¶</a></h2>
+<h2>语境的目的<a class="headerlink" href="#purpose-of-the-context" title="永久链接至标题">¶</a></h2>
 <p>When the <a class="reference internal" href="api.html#flask.Flask" title="flask.Flask"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flask</span></code></a> application handles a request, it creates a
 <a class="reference internal" href="api.html#flask.Request" title="flask.Request"><code class="xref py py-class docutils literal notranslate"><span class="pre">Request</span></code></a> object based on the environment it received from the
 WSGI server. Because a <em>worker</em> (thread, process, or coroutine depending
@@ -66,7 +66,7 @@ request will have access to the <a class="reference internal" href="api.html#fla
 the request object for the current request.</p>
 </div>
 <div class="section" id="lifetime-of-the-context">
-<h2>Lifetime of the Context<a class="headerlink" href="#lifetime-of-the-context" title="永久链接至标题">¶</a></h2>
+<h2>语境的生命周期<a class="headerlink" href="#lifetime-of-the-context" title="永久链接至标题">¶</a></h2>
 <p>When a Flask application begins handling a request, it pushes a request
 context, which also pushes an <a class="reference internal" href="appcontext.html"><span class="doc">应用程序上下文</span></a>. When the request ends
 it pops the request context then the application context.</p>
@@ -74,13 +74,11 @@ it pops the request context then the application context.</p>
 <a class="reference internal" href="api.html#flask.request" title="flask.request"><code class="xref py py-data docutils literal notranslate"><span class="pre">request</span></code></a> cannot be passed to another thread, the other thread
 will have a different context stack and will not know about the request
 the parent thread was pointing to.</p>
-<p>Context locals are implemented in Werkzeug. See <a class="reference external" href="https://werkzeug.palletsprojects.com/en/0.15.x/local/" title="(在 Werkzeug v0.15.x)"><span>Context Locals</span></a>
-for more information on how this works internally.</p>
+<p>上下文本地在Werkzeug中实现. 有关内部如何工作的更多信息, 请参阅:doc:<cite>werkzeug:local</cite>.</p>
 </div>
 <div class="section" id="manually-push-a-context">
-<h2>Manually Push a Context<a class="headerlink" href="#manually-push-a-context" title="永久链接至标题">¶</a></h2>
-<p>If you try to access <a class="reference internal" href="api.html#flask.request" title="flask.request"><code class="xref py py-data docutils literal notranslate"><span class="pre">request</span></code></a>, or anything that uses it, outside
-a request context, you’ll get this error message:</p>
+<h2>手动推送上下文<a class="headerlink" href="#manually-push-a-context" title="永久链接至标题">¶</a></h2>
+<p>如果您尝试访问:data:<cite>request</cite>, 或者在请求上下文之外使用它的任何内容, 您将收到此错误消息:</p>
 <div class="highlight-pytb notranslate"><div class="highlight"><pre><span></span><span class="x">RuntimeError: Working outside of request context.</span>
 
 <span class="x">This typically means that you attempted to use functionality that</span>
@@ -106,11 +104,10 @@ populated with your test data.</p>
 <p>If you see that error somewhere else in your code not related to
 testing, it most likely indicates that you should move that code into a
 view function.</p>
-<p>For information on how to use the request context from the interactive
-Python shell, see <a class="reference internal" href="shell.html"><span class="doc">与壳牌合作</span></a>.</p>
+<p>有关如何使用交互式Python shell中的请求上下文的信息, 请参阅:doc:<cite>/ shell</cite>.</p>
 </div>
 <div class="section" id="how-the-context-works">
-<h2>How the Context Works<a class="headerlink" href="#how-the-context-works" title="永久链接至标题">¶</a></h2>
+<h2>语境如何运作<a class="headerlink" href="#how-the-context-works" title="永久链接至标题">¶</a></h2>
 <p>The <a class="reference internal" href="api.html#flask.Flask.wsgi_app" title="flask.Flask.wsgi_app"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Flask.wsgi_app()</span></code></a> method is called to handle each request. It
 manages the contexts during the request. Internally, the request and
 application contexts work as stacks, <a class="reference internal" href="api.html#flask._request_ctx_stack" title="flask._request_ctx_stack"><code class="xref py py-data docutils literal notranslate"><span class="pre">_request_ctx_stack</span></code></a> and
@@ -134,7 +131,7 @@ and <a class="reference internal" href="api.html#flask.Flask.teardown_appcontext
 execute even if an unhandled exception occurred during dispatch.</p>
 </div>
 <div class="section" id="callbacks-and-errors">
-<span id="id1"></span><h2>Callbacks and Errors<a class="headerlink" href="#callbacks-and-errors" title="永久链接至标题">¶</a></h2>
+<span id="id1"></span><h2>回调和错误<a class="headerlink" href="#callbacks-and-errors" title="永久链接至标题">¶</a></h2>
 <p>Flask dispatches a request in multiple stages which can affect the
 request, response, and how errors are handled. The contexts are active
 during all of these stages.</p>
@@ -168,7 +165,7 @@ called, and are passed the exception object.</p>
 allows the development server to present the interactive debugger with
 the traceback.</p>
 <div class="section" id="teardown-callbacks">
-<h3>Teardown Callbacks<a class="headerlink" href="#teardown-callbacks" title="永久链接至标题">¶</a></h3>
+<h3>拆解回调<a class="headerlink" href="#teardown-callbacks" title="永久链接至标题">¶</a></h3>
 <p>The teardown callbacks are independent of the request dispatch, and are
 instead called by the contexts when they are popped. The functions are
 called even if there is an unhandled exception during dispatch, and for
@@ -209,24 +206,21 @@ contexts until the with block exits.</p>
 </div>
 </div>
 <div class="section" id="signals">
-<h3>Signals<a class="headerlink" href="#signals" title="永久链接至标题">¶</a></h3>
+<h3>信号<a class="headerlink" href="#signals" title="永久链接至标题">¶</a></h3>
 <p>If <a class="reference internal" href="api.html#flask.signals.signals_available" title="flask.signals.signals_available"><code class="xref py py-data docutils literal notranslate"><span class="pre">signals_available</span></code></a> is true, the following signals are
 sent:</p>
 <ol class="arabic simple">
-<li><p><a class="reference internal" href="api.html#flask.request_started" title="flask.request_started"><code class="xref py py-data docutils literal notranslate"><span class="pre">request_started</span></code></a> is sent before the
-<a class="reference internal" href="api.html#flask.Flask.before_request" title="flask.Flask.before_request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">before_request()</span></code></a> functions are called.</p></li>
-<li><p><a class="reference internal" href="api.html#flask.request_finished" title="flask.request_finished"><code class="xref py py-data docutils literal notranslate"><span class="pre">request_finished</span></code></a> is sent after the
-<a class="reference internal" href="api.html#flask.Flask.after_request" title="flask.Flask.after_request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">after_request()</span></code></a> functions are called.</p></li>
+<li><p>:data:<a href="#id1"><span class="problematic" id="id2">`</span></a>request_started`在调用:meth:<a href="#id3"><span class="problematic" id="id4">`</span></a>~Flask.before_request`函数之前发送.</p></li>
+<li><p>:data:<a href="#id1"><span class="problematic" id="id2">`</span></a>request_finished`在调用:meth:<a href="#id3"><span class="problematic" id="id4">`</span></a>~Flask.after_request`函数后发送.</p></li>
 <li><p><a class="reference internal" href="api.html#flask.got_request_exception" title="flask.got_request_exception"><code class="xref py py-data docutils literal notranslate"><span class="pre">got_request_exception</span></code></a> is sent when an exception begins to
 be handled, but before an <a class="reference internal" href="api.html#flask.Flask.errorhandler" title="flask.Flask.errorhandler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">errorhandler()</span></code></a> is looked up or
 called.</p></li>
-<li><p><a class="reference internal" href="api.html#flask.request_tearing_down" title="flask.request_tearing_down"><code class="xref py py-data docutils literal notranslate"><span class="pre">request_tearing_down</span></code></a> is sent after the
-<a class="reference internal" href="api.html#flask.Flask.teardown_request" title="flask.Flask.teardown_request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">teardown_request()</span></code></a> functions are called.</p></li>
+<li><p>:data:<a href="#id1"><span class="problematic" id="id2">`</span></a>request_tearing_down`在调用:meth:<a href="#id3"><span class="problematic" id="id4">`</span></a>~Flask.teardown_request`函数后发送.</p></li>
 </ol>
 </div>
 </div>
 <div class="section" id="context-preservation-on-error">
-<h2>Context Preservation on Error<a class="headerlink" href="#context-preservation-on-error" title="永久链接至标题">¶</a></h2>
+<h2>上下文保留错误<a class="headerlink" href="#context-preservation-on-error" title="永久链接至标题">¶</a></h2>
 <p>At the end of a request, the request context is popped and all data
 associated with it is destroyed. If an error occurs during development,
 it is useful to delay destroying the data for debugging purposes.</p>
@@ -236,26 +230,22 @@ error and data will be preserved and shown in the interactive debugger.</p>
 <p>This behavior can be controlled with the
 <a class="reference internal" href="config.html#PRESERVE_CONTEXT_ON_EXCEPTION" title="PRESERVE_CONTEXT_ON_EXCEPTION"><code class="xref py py-data docutils literal notranslate"><span class="pre">PRESERVE_CONTEXT_ON_EXCEPTION</span></code></a> config. As described above, it
 defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code> in the development environment.</p>
-<p>Do not enable <a class="reference internal" href="config.html#PRESERVE_CONTEXT_ON_EXCEPTION" title="PRESERVE_CONTEXT_ON_EXCEPTION"><code class="xref py py-data docutils literal notranslate"><span class="pre">PRESERVE_CONTEXT_ON_EXCEPTION</span></code></a> in production, as it
-will cause your application to leak memory on exceptions.</p>
+<p>不要在生产中启用:data:<cite>PRESERVE_CONTEXT_ON_EXCEPTION</cite>, 因为它会导致应用程序在异常时泄漏内存.</p>
 </div>
 <div class="section" id="notes-on-proxies">
-<span id="id2"></span><h2>Notes On Proxies<a class="headerlink" href="#notes-on-proxies" title="永久链接至标题">¶</a></h2>
+<span id="id2"></span><h2>关于代理的注释<a class="headerlink" href="#notes-on-proxies" title="永久链接至标题">¶</a></h2>
 <p>Some of the objects provided by Flask are proxies to other objects. The
 proxies are accessed in the same way for each worker thread, but
 point to the unique object bound to each worker behind the scenes as
 described on this page.</p>
-<p>Most of the time you don’t have to care about that, but there are some
-exceptions where it is good to know that this object is an actual proxy:</p>
+<p>大多数情况下你不必关心它, 但有一些例外情况, 知道这个对象是一个真正的代理是很好的:</p>
 <ul class="simple">
 <li><p>The proxy objects cannot fake their type as the actual object types.
 If you want to perform instance checks, you have to do that on the
 object being proxied.</p></li>
-<li><p>If the specific object reference is important, for example for
-sending <a class="reference internal" href="signals.html#signals"><span class="std std-ref">信号</span></a> or passing data to a background thread.</p></li>
+<li><p>如果特定对象引用很重要, 例如发送:ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>signals`或将数据传递给后台线程.</p></li>
 </ul>
-<p>If you need to access the underlying object that is proxied, use the
-<a class="reference external" href="https://werkzeug.palletsprojects.com/en/0.15.x/local/#werkzeug.local.LocalProxy._get_current_object" title="(在 Werkzeug v0.15.x)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">_get_current_object()</span></code></a> method:</p>
+<p>如果需要访问代理的基础对象, 请使用:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>~werkzeug.local.LocalProxy._get_current_object`方法:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span> <span class="o">=</span> <span class="n">current_app</span><span class="o">.</span><span class="n">_get_current_object</span><span class="p">()</span>
 <span class="n">my_signal</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
 </pre></div>
@@ -280,17 +270,17 @@ sending <a class="reference internal" href="signals.html#signals"><span class="s
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">请求上下文</a><ul>
-<li><a class="reference internal" href="#purpose-of-the-context">Purpose of the Context</a></li>
-<li><a class="reference internal" href="#lifetime-of-the-context">Lifetime of the Context</a></li>
-<li><a class="reference internal" href="#manually-push-a-context">Manually Push a Context</a></li>
-<li><a class="reference internal" href="#how-the-context-works">How the Context Works</a></li>
-<li><a class="reference internal" href="#callbacks-and-errors">Callbacks and Errors</a><ul>
-<li><a class="reference internal" href="#teardown-callbacks">Teardown Callbacks</a></li>
-<li><a class="reference internal" href="#signals">Signals</a></li>
+<li><a class="reference internal" href="#purpose-of-the-context">语境的目的</a></li>
+<li><a class="reference internal" href="#lifetime-of-the-context">语境的生命周期</a></li>
+<li><a class="reference internal" href="#manually-push-a-context">手动推送上下文</a></li>
+<li><a class="reference internal" href="#how-the-context-works">语境如何运作</a></li>
+<li><a class="reference internal" href="#callbacks-and-errors">回调和错误</a><ul>
+<li><a class="reference internal" href="#teardown-callbacks">拆解回调</a></li>
+<li><a class="reference internal" href="#signals">信号</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#context-preservation-on-error">Context Preservation on Error</a></li>
-<li><a class="reference internal" href="#notes-on-proxies">Notes On Proxies</a></li>
+<li><a class="reference internal" href="#context-preservation-on-error">上下文保留错误</a></li>
+<li><a class="reference internal" href="#notes-on-proxies">关于代理的注释</a></li>
 </ul>
 </li>
 </ul>
@@ -320,7 +310,7 @@ sending <a class="reference internal" href="signals.html#signals"><span class="s
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

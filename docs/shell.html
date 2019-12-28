@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="_static/flask-icon.png"/>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Patterns for Flask" href="patterns/index.html" />
+    <link rel="next" title="Flask 的模式" href="patterns/index.html" />
     <link rel="prev" title="开发服务器" href="server.html" />
   <script>DOCUMENTATION_OPTIONS.URL_ROOT = './';</script>
    
@@ -29,7 +29,7 @@
           <a href="genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="patterns/index.html" title="Patterns for Flask"
+          <a href="patterns/index.html" title="Flask 的模式"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="server.html" title="开发服务器"
@@ -67,15 +67,15 @@ context.</p>
 <p>Generally it’s recommended that you read the <a class="reference internal" href="reqcontext.html#request-context"><span class="std std-ref">请求上下文</span></a>
 chapter of the documentation first.</p>
 <div class="section" id="command-line-interface">
-<h2>Command Line Interface<a class="headerlink" href="#command-line-interface" title="永久链接至标题">¶</a></h2>
+<h2>命令行界面<a class="headerlink" href="#command-line-interface" title="永久链接至标题">¶</a></h2>
 <p>Starting with Flask 0.11 the recommended way to work with the shell is the
 <code class="docutils literal notranslate"><span class="pre">flask</span> <span class="pre">shell</span></code> command which does a lot of this automatically for you.
 For instance the shell is automatically initialized with a loaded
 application context.</p>
-<p>For more information see <a class="reference internal" href="cli.html#cli"><span class="std std-ref">命令行界面</span></a>.</p>
+<p>有关更多信息，请参阅:ref:<cite>cli</cite>.</p>
 </div>
 <div class="section" id="creating-a-request-context">
-<h2>Creating a Request Context<a class="headerlink" href="#creating-a-request-context" title="永久链接至标题">¶</a></h2>
+<h2>创建请求上下文<a class="headerlink" href="#creating-a-request-context" title="永久链接至标题">¶</a></h2>
 <p>The easiest way to create a proper request context from the shell is by
 using the <a class="reference internal" href="api.html#flask.Flask.test_request_context" title="flask.Flask.test_request_context"><code class="xref py py-attr docutils literal notranslate"><span class="pre">test_request_context</span></code></a> method which creates
 us a <a class="reference internal" href="api.html#flask.ctx.RequestContext" title="flask.ctx.RequestContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">RequestContext</span></code></a>:</p>
@@ -89,28 +89,25 @@ active, but in the shell it’s easier to use the
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">push</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>From that point onwards you can work with the request object until you
-call <cite>pop</cite>:</p>
+<p>从那时起，您可以使用请求对象，直到您调用`pop`:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="firing-before-after-request">
-<h2>Firing Before/After Request<a class="headerlink" href="#firing-before-after-request" title="永久链接至标题">¶</a></h2>
+<h2>在请求之前/之后发射<a class="headerlink" href="#firing-before-after-request" title="永久链接至标题">¶</a></h2>
 <p>By just creating a request context, you still don’t have run the code that
 is normally run before a request.  This might result in your database
 being unavailable if you are connecting to the database in a
 before-request callback or the current user not being stored on the
 <a class="reference internal" href="api.html#flask.g" title="flask.g"><code class="xref py py-data docutils literal notranslate"><span class="pre">g</span></code></a> object etc.</p>
-<p>This however can easily be done yourself.  Just call
-<a class="reference internal" href="api.html#flask.Flask.preprocess_request" title="flask.Flask.preprocess_request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">preprocess_request()</span></code></a>:</p>
+<p>然而，这可以很容易地自己完成. 只需调用:meth:<cite>~flask.Flask.preprocess_request</cite>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">test_request_context</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ctx</span><span class="o">.</span><span class="n">push</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">app</span><span class="o">.</span><span class="n">preprocess_request</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Keep in mind that the <a class="reference internal" href="api.html#flask.Flask.preprocess_request" title="flask.Flask.preprocess_request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">preprocess_request()</span></code></a> function
-might return a response object, in that case just ignore it.</p>
+<p>请记住:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>~flask.Flask.preprocess_request`函数可能会返回一个响应对象，在这种情况下只需忽略它.</p>
 <p>To shutdown a request, you need to trick a bit before the after request
 functions (triggered by <a class="reference internal" href="api.html#flask.Flask.process_response" title="flask.Flask.process_response"><code class="xref py py-meth docutils literal notranslate"><span class="pre">process_response()</span></code></a>) operate on
 a response object:</p>
@@ -125,12 +122,12 @@ place to automatically tear down resources that were needed by the request
 context (such as database connections).</p>
 </div>
 <div class="section" id="further-improving-the-shell-experience">
-<h2>Further Improving the Shell Experience<a class="headerlink" href="#further-improving-the-shell-experience" title="永久链接至标题">¶</a></h2>
+<h2>进一步改善壳牌体验<a class="headerlink" href="#further-improving-the-shell-experience" title="永久链接至标题">¶</a></h2>
 <p>If you like the idea of experimenting in a shell, create yourself a module
 with stuff you want to star import into your interactive session.  There
 you could also define some more helper methods for common things such as
 initializing the database, dropping tables etc.</p>
-<p>Just put them into a module (like <cite>shelltools</cite>) and import from there:</p>
+<p>只需将它们放入一个模块(如`shelltools`)并从那里导入:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">shelltools</span> <span class="k">import</span> <span class="o">*</span>
 </pre></div>
 </div>
@@ -154,10 +151,10 @@ initializing the database, dropping tables etc.</p>
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">与壳牌合作</a><ul>
-<li><a class="reference internal" href="#command-line-interface">Command Line Interface</a></li>
-<li><a class="reference internal" href="#creating-a-request-context">Creating a Request Context</a></li>
-<li><a class="reference internal" href="#firing-before-after-request">Firing Before/After Request</a></li>
-<li><a class="reference internal" href="#further-improving-the-shell-experience">Further Improving the Shell Experience</a></li>
+<li><a class="reference internal" href="#command-line-interface">命令行界面</a></li>
+<li><a class="reference internal" href="#creating-a-request-context">创建请求上下文</a></li>
+<li><a class="reference internal" href="#firing-before-after-request">在请求之前/之后发射</a></li>
+<li><a class="reference internal" href="#further-improving-the-shell-experience">进一步改善壳牌体验</a></li>
 </ul>
 </li>
 </ul>
@@ -166,7 +163,7 @@ initializing the database, dropping tables etc.</p>
   <li><a href="index.html">Overview</a>
     <ul>
           <li>Previous: <a href="server.html" title="上一章">开发服务器</a>
-          <li>Next: <a href="patterns/index.html" title="下一章">Patterns for Flask</a>
+          <li>Next: <a href="patterns/index.html" title="下一章">Flask 的模式</a>
     </ul>
   </li>
 </ul>
@@ -187,7 +184,7 @@ initializing the database, dropping tables etc.</p>
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

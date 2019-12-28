@@ -41,73 +41,68 @@
             
   <div class="section" id="how-to-contribute-to-flask">
 <h1>如何为Flask做贡献<a class="headerlink" href="#how-to-contribute-to-flask" title="永久链接至标题">¶</a></h1>
-<p>Thank you for considering contributing to Flask!</p>
+<p>感谢您考虑为Flask做出贡献！</p>
 <div class="section" id="support-questions">
-<h2>Support questions<a class="headerlink" href="#support-questions" title="永久链接至标题">¶</a></h2>
-<p>Please, don’t use the issue tracker for this. Use one of the following
-resources for questions about your own code:</p>
+<h2>支持问题<a class="headerlink" href="#support-questions" title="永久链接至标题">¶</a></h2>
+<p>请不要使用问题跟踪器. 使用以下资源之一来解决有关您自己的代码的问题:</p>
 <ul class="simple">
-<li><p>The IRC channel <code class="docutils literal notranslate"><span class="pre">#pocoo</span></code> on FreeNode.</p></li>
-<li><p>The IRC channel <code class="docutils literal notranslate"><span class="pre">#python</span></code> on FreeNode for more general questions.</p></li>
-<li><p>The mailing list <a class="reference external" href="mailto:flask&#37;&#52;&#48;python&#46;org">flask<span>&#64;</span>python<span>&#46;</span>org</a> for long term discussion or larger issues.</p></li>
-<li><p>Ask on <a class="reference external" href="https://stackoverflow.com/questions/tagged/flask?sort=linked">Stack Overflow</a>. Search with Google first using:
-<code class="docutils literal notranslate"><span class="pre">site:stackoverflow.com</span> <span class="pre">flask</span> <span class="pre">{search</span> <span class="pre">term,</span> <span class="pre">exception</span> <span class="pre">message,</span> <span class="pre">etc.}</span></code></p></li>
+<li><p>FreeNode上的IRC频道``#pocoo``.</p></li>
+<li><p>关于FreeNode的IRC频道``#python``用于更一般的问题.</p></li>
+<li><p>邮件列表flask&#64;python.org用于长期讨论或更大的问题.</p></li>
+<li><p>询问`Stack Overflow`_. 首先使用Google搜索:<code class="docutils literal notranslate"><span class="pre">site:stackoverflow.com</span> <span class="pre">flask</span> <span class="pre">{搜索词，异常消息等}</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="reporting-issues">
-<h2>Reporting issues<a class="headerlink" href="#reporting-issues" title="永久链接至标题">¶</a></h2>
+<h2>报告问题<a class="headerlink" href="#reporting-issues" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
-<li><p>Describe what you expected to happen.</p></li>
+<li><p>描述您期望发生的事情.</p></li>
 <li><p>If possible, include a <a class="reference external" href="https://stackoverflow.com/help/mcve">minimal, complete, and verifiable example</a> to help
 us identify the issue. This also helps check that the issue is not with your
 own code.</p></li>
-<li><p>Describe what actually happened. Include the full traceback if there was an
-exception.</p></li>
-<li><p>List your Python, Flask, and Werkzeug versions. If possible, check if this
-issue is already fixed in the repository.</p></li>
+<li><p>描述实际发生的事情. 如果有异常，请包括完整的回溯.</p></li>
+<li><p>列出您的Python，Flask和Werkzeug版本. 如果可能，请检查存储库中是否已修复此问题.</p></li>
 </ul>
 </div>
 <div class="section" id="submitting-patches">
-<h2>Submitting patches<a class="headerlink" href="#submitting-patches" title="永久链接至标题">¶</a></h2>
+<h2>提交补丁<a class="headerlink" href="#submitting-patches" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>Include tests if your patch is supposed to solve a bug, and explain
 clearly under which circumstances the bug happens. Make sure the test fails
 without your patch.</p></li>
-<li><p>Try to follow <a class="reference external" href="https://pep8.org/">PEP8</a>, but you may ignore the line length limit if following
-it would make the code uglier.</p></li>
+<li><p>尝试遵循`PEP8`_，但是你可以忽略行长度限制，如果遵循它将使代码更加丑陋.</p></li>
 </ul>
 <div class="section" id="first-time-setup">
-<h3>First time setup<a class="headerlink" href="#first-time-setup" title="永久链接至标题">¶</a></h3>
+<h3>第一次设置<a class="headerlink" href="#first-time-setup" title="永久链接至标题">¶</a></h3>
 <ul>
-<li><p>Download and install the <a class="reference external" href="https://git-scm.com/downloads">latest version of git</a>.</p></li>
-<li><p>Configure git with your <a class="reference external" href="https://help.github.com/articles/setting-your-username-in-git/">username</a> and <a class="reference external" href="https://help.github.com/articles/setting-your-email-in-git/">email</a>:</p>
+<li><p>下载并安装最新版本的git`_.</p></li>
+<li><p>用你的`username`_和`email`_配置git:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s1">&#39;your name&#39;</span>
 <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s1">&#39;your email&#39;</span>
 </pre></div>
 </div>
 </li>
-<li><p>Make sure you have a <a class="reference external" href="https://github.com/join">GitHub account</a>.</p></li>
-<li><p>Fork Flask to your GitHub account by clicking the <a class="reference external" href="https://github.com/pallets/flask/fork">Fork</a> button.</p></li>
-<li><p><a class="reference external" href="https://help.github.com/articles/fork-a-repo/#step-2-create-a-local-clone-of-your-fork">Clone</a> your GitHub fork locally:</p>
+<li><p>确保你有一个`GitHub帐户`_.</p></li>
+<li><p>单击“Fork”_按钮，将Flask刻录到GitHub帐户.</p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">`</span></a>克隆`_你的GitHub本地分叉:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="p">{</span><span class="n">username</span><span class="p">}</span><span class="o">/</span><span class="n">flask</span>
 <span class="n">cd</span> <span class="n">flask</span>
 </pre></div>
 </div>
 </li>
-<li><p>Add the main repository as a remote to update later:</p>
+<li><p>将主存储库添加为远程以便稍后更新:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">pallets</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pallets</span><span class="o">/</span><span class="n">flask</span>
 <span class="n">git</span> <span class="n">fetch</span> <span class="n">pallets</span>
 </pre></div>
 </div>
 </li>
-<li><p>Create a virtualenv:</p>
+<li><p>创建一个virtualenv:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">env</span>
 <span class="o">.</span> <span class="n">env</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
 <span class="c1"># or &quot;env\Scripts\activate&quot; on Windows</span>
 </pre></div>
 </div>
 </li>
-<li><p>Install Flask in editable mode with development dependencies:</p>
+<li><p>以可编辑模式安装Flask并具有开发依赖性:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;.[dev]&quot;</span>
 </pre></div>
 </div>
@@ -115,22 +110,19 @@ it would make the code uglier.</p></li>
 </ul>
 </div>
 <div class="section" id="start-coding">
-<h3>Start coding<a class="headerlink" href="#start-coding" title="永久链接至标题">¶</a></h3>
+<h3>开始编码<a class="headerlink" href="#start-coding" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li><p>Create a branch to identify the issue you would like to work on (e.g.
-<code class="docutils literal notranslate"><span class="pre">2287-dry-test-suite</span></code>)</p></li>
-<li><p>Using your favorite editor, make your changes, <a class="reference external" href="https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html#commit-your-changes">committing as you go</a>.</p></li>
-<li><p>Try to follow <a class="reference external" href="https://pep8.org/">PEP8</a>, but you may ignore the line length limit if following
-it would make the code uglier.</p></li>
-<li><p>Include tests that cover any code changes you make. Make sure the test fails
-without your patch. <a class="reference internal" href="#contributing-testsuite">Run the tests.</a>.</p></li>
-<li><p>Push your commits to GitHub and <a class="reference external" href="https://help.github.com/articles/creating-a-pull-request/">create a pull request</a>.</p></li>
-<li><p>Celebrate 🎉</p></li>
+<li><p>创建一个分支以确定您想要处理的问题(例如``2287-dry-test-suite``)</p></li>
+<li><p>使用您喜欢的编辑器，进行更改，“随时随地提交”.</p></li>
+<li><p>尝试遵循`PEP8`_，但是你可以忽略行长度限制，如果遵循它将使代码更加丑陋.</p></li>
+<li><p>包括涵盖您所做的任何代码更改的测试. 没有补丁，请确保测试失败.  <a class="reference internal" href="#contributing-testsuite">运行测试.</a>.</p></li>
+<li><p>将提交推送到GitHub并“创建拉取请求”.</p></li>
+<li><p>庆祝 🎉</p></li>
 </ul>
 </div>
 <div class="section" id="running-the-tests">
-<span id="contributing-testsuite"></span><h3>Running the tests<a class="headerlink" href="#running-the-tests" title="永久链接至标题">¶</a></h3>
-<p>Run the basic test suite with:</p>
+<span id="contributing-testsuite"></span><h3>运行测试<a class="headerlink" href="#running-the-tests" title="永久链接至标题">¶</a></h3>
+<p>运行基本测试套件:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span>
 </pre></div>
 </div>
@@ -145,7 +137,7 @@ combinations of Python and dependencies. You need to have Python 2.7, 3.4,
 </div>
 </div>
 <div class="section" id="running-test-coverage">
-<h3>Running test coverage<a class="headerlink" href="#running-test-coverage" title="永久链接至标题">¶</a></h3>
+<h3>运行测试覆盖率<a class="headerlink" href="#running-test-coverage" title="永久链接至标题">¶</a></h3>
 <p>Generating a report of lines that do not have test coverage can indicate
 where to start contributing. Run <code class="docutils literal notranslate"><span class="pre">pytest</span></code> using <code class="docutils literal notranslate"><span class="pre">coverage</span></code> and generate a
 report on the terminal and as an interactive HTML document:</p>
@@ -155,40 +147,38 @@ report on the terminal and as an interactive HTML document:</p>
 <span class="c1"># then open htmlcov/index.html</span>
 </pre></div>
 </div>
-<p>Read more about <a class="reference external" href="https://coverage.readthedocs.io">coverage</a>.</p>
-<p>Running the full test suite with <code class="docutils literal notranslate"><span class="pre">tox</span></code> will combine the coverage reports
-from all runs.</p>
+<p>阅读更多关于`coverage &lt;<a class="reference external" href="https://coverage.readthedocs.io">https://coverage.readthedocs.io</a>&gt;`_的信息.</p>
+<p>使用``tox``运行完整的测试套件将结合所有运行的覆盖率报告.</p>
 </div>
 <div class="section" id="building-the-docs">
-<h3>Building the docs<a class="headerlink" href="#building-the-docs" title="永久链接至标题">¶</a></h3>
-<p>Build the docs in the <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory using Sphinx:</p>
+<h3>构建文档<a class="headerlink" href="#building-the-docs" title="永久链接至标题">¶</a></h3>
+<p>使用Sphinx在``docs``目录中构建文档:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">docs</span>
 <span class="n">make</span> <span class="n">html</span>
 </pre></div>
 </div>
-<p>Open <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> in your browser to view the docs.</p>
-<p>Read more about <a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a>.</p>
+<p>在浏览器中打开``_build / html / index.html``查看文档.</p>
+<p>阅读更多关于`Sphinx &lt;<a class="reference external" href="https://www.sphinx-doc.org">https://www.sphinx-doc.org</a>&gt;`_的信息.</p>
 </div>
 <div class="section" id="make-targets">
-<h3>make targets<a class="headerlink" href="#make-targets" title="永久链接至标题">¶</a></h3>
-<p>Flask provides a <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> with various shortcuts. They will ensure that
-all dependencies are installed.</p>
+<h3>制定目标<a class="headerlink" href="#make-targets" title="永久链接至标题">¶</a></h3>
+<p>Flask提供了一个带有各种快捷方式的``Makefile``. 他们将确保安装所有依赖项.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">test</span></code> runs the basic test suite with <code class="docutils literal notranslate"><span class="pre">pytest</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">cov</span></code> runs the basic test suite with <code class="docutils literal notranslate"><span class="pre">coverage</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">test-all</span></code> runs the full test suite with <code class="docutils literal notranslate"><span class="pre">tox</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs</span></code> builds the HTML documentation</p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">``</span></a>make test``使用``pytest``运行基本测试套件</p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">``</span></a>make cov``使用``coverage``运行基本测试套件</p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">``</span></a>make test-all``用``tox``运行完整的测试套件</p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">``</span></a>make docs``构建HTML文档</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="caution-zero-padded-file-modes">
-<h2>Caution: zero-padded file modes<a class="headerlink" href="#caution-zero-padded-file-modes" title="永久链接至标题">¶</a></h2>
+<h2>警告:零填充文件模式<a class="headerlink" href="#caution-zero-padded-file-modes" title="永久链接至标题">¶</a></h2>
 <p>This repository contains several zero-padded file modes that may cause issues
 when pushing this repository to git hosts other than GitHub. Fixing this is
 destructive to the commit history, so we suggest ignoring these warnings. If it
 fails to push and you’re using a self-hosted git service like GitLab, you can
 turn off repository checks in the admin panel.</p>
-<p>These files can also cause issues while cloning. If you have</p>
+<p>这些文件也可能在克隆时导致问题. 如果你有:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">fetch</span><span class="p">]</span>
 <span class="n">fsckobjects</span> <span class="o">=</span> <span class="n">true</span>
 </pre></div>
@@ -198,9 +188,7 @@ turn off repository checks in the admin panel.</p>
 <span class="n">fsckObjects</span> <span class="o">=</span> <span class="n">true</span>
 </pre></div>
 </div>
-<p>set in your git configuration file, cloning this repository will fail. The only
-solution is to set both of the above settings to false while cloning, and then
-setting them back to true after the cloning is finished.</p>
+<p>在您的git配置文件中设置，克隆此存储库将失败. 唯一的解决方案是在克隆时将上述两个设置都设置为false，然后在克隆完成后将它们设置为true.</p>
 </div>
 </div>
 
@@ -221,18 +209,18 @@ setting them back to true after the cloning is finished.</p>
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">如何为Flask做贡献</a><ul>
-<li><a class="reference internal" href="#support-questions">Support questions</a></li>
-<li><a class="reference internal" href="#reporting-issues">Reporting issues</a></li>
-<li><a class="reference internal" href="#submitting-patches">Submitting patches</a><ul>
-<li><a class="reference internal" href="#first-time-setup">First time setup</a></li>
-<li><a class="reference internal" href="#start-coding">Start coding</a></li>
-<li><a class="reference internal" href="#running-the-tests">Running the tests</a></li>
-<li><a class="reference internal" href="#running-test-coverage">Running test coverage</a></li>
-<li><a class="reference internal" href="#building-the-docs">Building the docs</a></li>
-<li><a class="reference internal" href="#make-targets">make targets</a></li>
+<li><a class="reference internal" href="#support-questions">支持问题</a></li>
+<li><a class="reference internal" href="#reporting-issues">报告问题</a></li>
+<li><a class="reference internal" href="#submitting-patches">提交补丁</a><ul>
+<li><a class="reference internal" href="#first-time-setup">第一次设置</a></li>
+<li><a class="reference internal" href="#start-coding">开始编码</a></li>
+<li><a class="reference internal" href="#running-the-tests">运行测试</a></li>
+<li><a class="reference internal" href="#running-test-coverage">运行测试覆盖率</a></li>
+<li><a class="reference internal" href="#building-the-docs">构建文档</a></li>
+<li><a class="reference internal" href="#make-targets">制定目标</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#caution-zero-padded-file-modes">Caution: zero-padded file modes</a></li>
+<li><a class="reference internal" href="#caution-zero-padded-file-modes">警告:零填充文件模式</a></li>
 </ul>
 </li>
 </ul>
@@ -262,7 +250,7 @@ setting them back to true after the cloning is finished.</p>
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

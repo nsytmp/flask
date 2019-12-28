@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../../cli.rst:17
 msgid "Application Discovery"
-msgstr "Application Discovery"
+msgstr "应用发现"
 
 #: ../../cli.rst:19
 msgid ""
@@ -44,7 +44,7 @@ msgstr ""
 
 #: ../../cli.rst:23
 msgid "Unix Bash (Linux, Mac, etc.)::"
-msgstr "Unix Bash (Linux, Mac, etc.)::"
+msgstr "Unix Bash(Linux, Mac等)::"
 
 #: ../../cli.rst:28
 msgid "Windows CMD::"
@@ -63,7 +63,7 @@ msgstr ""
 
 #: ../../cli.rst:44
 msgid "(nothing)"
-msgstr "(nothing)"
+msgstr "(没有)"
 
 #: ../../cli.rst:42
 msgid ""
@@ -80,7 +80,7 @@ msgstr "``FLASK_APP=hello``"
 msgid ""
 "The name is imported, automatically detecting an app (``app``) or factory"
 " (``create_app``)."
-msgstr "The name is imported, automatically detecting an app (``app``) or factory (``create_app``)."
+msgstr "导入名称, 自动检测应用程序(``app``)或工厂(``create_app``). "
 
 #: ../../cli.rst:52
 msgid ""
@@ -97,7 +97,7 @@ msgstr "``FLASK_APP=src/hello``"
 
 #: ../../cli.rst:59
 msgid "Sets the current working directory to ``src`` then imports ``hello``."
-msgstr "Sets the current working directory to ``src`` then imports ``hello``."
+msgstr "将当前工作目录设置为``src``然后导入``hello``. "
 
 #: ../../cli.rst:62
 msgid "``FLASK_APP=hello.web``"
@@ -105,7 +105,7 @@ msgstr "``FLASK_APP=hello.web``"
 
 #: ../../cli.rst:62
 msgid "Imports the path ``hello.web``."
-msgstr "Imports the path ``hello.web``."
+msgstr "导入路径``hello.web``. "
 
 #: ../../cli.rst:65
 msgid "``FLASK_APP=hello:app2``"
@@ -123,7 +123,7 @@ msgstr "``FLASK_APP=\"hello:create_app('dev')\"``"
 msgid ""
 "The ``create_app`` factory in ``hello`` is called with the string "
 "``'dev'`` as the argument."
-msgstr "The ``create_app`` factory in ``hello`` is called with the string ``'dev'`` as the argument."
+msgstr "调用``hello``中的``create_app``工厂, 使用字符串``'dev'``作为参数. "
 
 #: ../../cli.rst:71
 msgid ""
@@ -154,13 +154,13 @@ msgstr ""
 
 #: ../../cli.rst:90
 msgid "Run the Development Server"
-msgstr "Run the Development Server"
+msgstr "运行开发服务器"
 
 #: ../../cli.rst:92
 msgid ""
 "The :func:`run <cli.run_command>` command will start the development "
 "server. It replaces the :meth:`Flask.run` method in most cases. ::"
-msgstr "The :func:`run <cli.run_command>` command will start the development server. It replaces the :meth:`Flask.run` method in most cases. ::"
+msgstr ":func:`run <cli.run_command>`命令将启动开发服务器. 在大多数情况下, 它取代了:meth:`Flask.run`方法. ::"
 
 #: ../../cli.rst:99
 msgid ""
@@ -184,11 +184,11 @@ msgstr ""
 
 #: ../../cli.rst:119
 msgid "Use :meth:`~Flask.shell_context_processor` to add other automatic imports."
-msgstr "Use :meth:`~Flask.shell_context_processor` to add other automatic imports."
+msgstr "使用:meth:`~Flask.shell_context_processor`来添加其他自动导入. "
 
 #: ../../cli.rst:123
 msgid "Environments"
-msgstr "Environments"
+msgstr "环境"
 
 #: ../../cli.rst:127
 msgid ""
@@ -208,7 +208,7 @@ msgstr ""
 
 #: ../../cli.rst:150
 msgid "Debug Mode"
-msgstr "Debug Mode"
+msgstr "调试模式"
 
 #: ../../cli.rst:152
 msgid ""
@@ -219,7 +219,7 @@ msgstr ""
 
 #: ../../cli.rst:160
 msgid "Environment Variables From dotenv"
-msgstr "Environment Variables From dotenv"
+msgstr "来自dotenv的环境变量"
 
 #: ../../cli.rst:162
 msgid ""
@@ -263,7 +263,7 @@ msgstr ""
 
 #: ../../cli.rst:189
 msgid "Setting Command Options"
-msgstr "Setting Command Options"
+msgstr "设置命令选项"
 
 #: ../../cli.rst:191
 msgid ""
@@ -281,7 +281,7 @@ msgstr "These can be added to the ``.flaskenv`` file just like ``FLASK_APP`` to 
 
 #: ../../cli.rst:207
 msgid "Disable dotenv"
-msgstr "Disable dotenv"
+msgstr "禁用dotenv"
 
 #: ../../cli.rst:209
 msgid ""
@@ -301,7 +301,7 @@ msgstr ""
 
 #: ../../cli.rst:231
 msgid "Environment Variables From virtualenv"
-msgstr "Environment Variables From virtualenv"
+msgstr "环境变量来自virtualenv"
 
 #: ../../cli.rst:233
 msgid ""
@@ -328,7 +328,7 @@ msgstr ""
 
 #: ../../cli.rst:251
 msgid "Custom Commands"
-msgstr "Custom Commands"
+msgstr "自定义命令"
 
 #: ../../cli.rst:253
 msgid ""
@@ -340,7 +340,7 @@ msgstr "The ``flask`` command is implemented using `Click`_. See that project's 
 msgid ""
 "This example adds the command ``create_user`` that takes the argument "
 "``name``. ::"
-msgstr "This example adds the command ``create_user`` that takes the argument ``name``. ::"
+msgstr "这个例子添加了带有参数``name``的命令``create_user``. ::"
 
 #: ../../cli.rst:273
 msgid ""
@@ -353,7 +353,7 @@ msgstr ""
 msgid ""
 "See :ref:`testing-cli` for an overview of how to test your custom "
 "commands."
-msgstr "See :ref:`testing-cli` for an overview of how to test your custom commands."
+msgstr "有关如何测试自定义命令的概述, 请参阅:ref:`testing-cli`. "
 
 #: ../../cli.rst:299
 msgid "Application Context"
@@ -371,11 +371,11 @@ msgstr ""
 
 #: ../../cli.rst:318
 msgid "If you're sure a command doesn't need the context, you can disable it::"
-msgstr "If you're sure a command doesn't need the context, you can disable it::"
+msgstr "如果您确定命令不需要上下文, 则可以禁用它::"
 
 #: ../../cli.rst:326
 msgid "Plugins"
-msgstr "Plugins"
+msgstr "插件"
 
 #: ../../cli.rst:328
 msgid ""
@@ -395,11 +395,11 @@ msgstr "Inside :file:`flask_my_extension/commands.py` you can then export a Clic
 msgid ""
 "Once that package is installed in the same virtualenv as your Flask "
 "project, you can run ``flask my-command`` to invoke the command."
-msgstr "Once that package is installed in the same virtualenv as your Flask project, you can run ``flask my-command`` to invoke the command."
+msgstr "一旦该软件包安装在与Flask项目相同的virtualenv中, 您就可以运行``flask my-command``来调用该命令. "
 
 #: ../../cli.rst:363
 msgid "Custom Scripts"
-msgstr "Custom Scripts"
+msgstr "自定义脚本"
 
 #: ../../cli.rst:365
 msgid ""
@@ -425,7 +425,7 @@ msgstr "Install the application in the virtualenv in editable mode and the custo
 
 #: ../../cli.rst:405
 msgid "Errors in Custom Scripts"
-msgstr "Errors in Custom Scripts"
+msgstr "自定义脚本中的错误"
 
 #: ../../cli.rst:407
 msgid ""
@@ -442,7 +442,7 @@ msgstr "The ``flask`` command, being separate from your code, does not have this
 
 #: ../../cli.rst:418
 msgid "PyCharm Integration"
-msgstr "PyCharm Integration"
+msgstr "PyCharm集成"
 
 #: ../../cli.rst:420
 msgid ""

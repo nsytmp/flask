@@ -53,7 +53,7 @@ application around to each function, the <a class="reference internal" href="api
 request-level data during a request. A corresponding application context
 is pushed when a request context is pushed.</p>
 <div class="section" id="purpose-of-the-context">
-<h2>Purpose of the Context<a class="headerlink" href="#purpose-of-the-context" title="永久链接至标题">¶</a></h2>
+<h2>语境的目的<a class="headerlink" href="#purpose-of-the-context" title="永久链接至标题">¶</a></h2>
 <p>The <a class="reference internal" href="api.html#flask.Flask" title="flask.Flask"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flask</span></code></a> application object has attributes, such as
 <a class="reference internal" href="api.html#flask.Flask.config" title="flask.Flask.config"><code class="xref py py-attr docutils literal notranslate"><span class="pre">config</span></code></a>, that are useful to access within views and
 <a class="reference internal" href="cli.html"><span class="doc">CLI commands</span></a>. However, importing the <code class="docutils literal notranslate"><span class="pre">app</span></code> instance
@@ -72,7 +72,7 @@ during a request will have access to <a class="reference internal" href="api.htm
 commands registered with <a class="reference internal" href="api.html#flask.Flask.cli" title="flask.Flask.cli"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Flask.cli</span></code></a> using <code class="docutils literal notranslate"><span class="pre">&#64;app.cli.command()</span></code>.</p>
 </div>
 <div class="section" id="lifetime-of-the-context">
-<h2>Lifetime of the Context<a class="headerlink" href="#lifetime-of-the-context" title="永久链接至标题">¶</a></h2>
+<h2>语境的生命周期<a class="headerlink" href="#lifetime-of-the-context" title="永久链接至标题">¶</a></h2>
 <p>The application context is created and destroyed as necessary. When a
 Flask application begins handling a request, it pushes an application
 context and a <a class="reference internal" href="reqcontext.html"><span class="doc">request context</span></a>. When the request
@@ -83,9 +83,8 @@ request.</p>
 and the full lifecycle of a request.</p>
 </div>
 <div class="section" id="manually-push-a-context">
-<h2>Manually Push a Context<a class="headerlink" href="#manually-push-a-context" title="永久链接至标题">¶</a></h2>
-<p>If you try to access <a class="reference internal" href="api.html#flask.current_app" title="flask.current_app"><code class="xref py py-data docutils literal notranslate"><span class="pre">current_app</span></code></a>, or anything that uses it,
-outside an application context, you’ll get this error message:</p>
+<h2>手动推送上下文<a class="headerlink" href="#manually-push-a-context" title="永久链接至标题">¶</a></h2>
+<p>如果您尝试访问:data:<cite>current_app</cite>，或者在应用程序上下文之外使用它的任何内容，您将收到此错误消息:</p>
 <div class="highlight-pytb notranslate"><div class="highlight"><pre><span></span><span class="x">RuntimeError: Working outside of application context.</span>
 
 <span class="x">This typically means that you attempted to use functionality that</span>
@@ -112,7 +111,7 @@ configuring the application, it most likely indicates that you should
 move that code into a view function or CLI command.</p>
 </div>
 <div class="section" id="storing-data">
-<h2>Storing Data<a class="headerlink" href="#storing-data" title="永久链接至标题">¶</a></h2>
+<h2>存储数据<a class="headerlink" href="#storing-data" title="永久链接至标题">¶</a></h2>
 <p>The application context is a good place to store common data during a
 request or CLI command. Flask provides the <a class="reference internal" href="api.html#flask.g" title="flask.g"><code class="xref py py-data docutils literal notranslate"><span class="pre">g</span> <span class="pre">object</span></code></a> for this
 purpose. It is a simple namespace object that has the same lifetime as
@@ -125,7 +124,7 @@ after the context ends, and it is not an appropriate place to store
 data between requests. Use the <a class="reference internal" href="api.html#flask.session" title="flask.session"><code class="xref py py-data docutils literal notranslate"><span class="pre">session</span></code></a> or a database to
 store data across requests.</p>
 </div>
-<p>A common use for <a class="reference internal" href="api.html#flask.g" title="flask.g"><code class="xref py py-data docutils literal notranslate"><span class="pre">g</span></code></a> is to manage resources during a request.</p>
+<p>常用于:data:<a href="#id1"><span class="problematic" id="id2">`</span></a>g`用于在请求期间管理资源.</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">get_X()</span></code> creates resource <code class="docutils literal notranslate"><span class="pre">X</span></code> if it does not exist, caching it
 as <code class="docutils literal notranslate"><span class="pre">g.X</span></code>.</p></li>
@@ -133,7 +132,7 @@ as <code class="docutils literal notranslate"><span class="pre">g.X</span></code
 exists. It is registered as a <a class="reference internal" href="api.html#flask.Flask.teardown_appcontext" title="flask.Flask.teardown_appcontext"><code class="xref py py-meth docutils literal notranslate"><span class="pre">teardown_appcontext()</span></code></a>
 handler.</p></li>
 </ol>
-<p>For example, you can manage a database connection using this pattern:</p>
+<p>例如，您可以使用此模式管理数据库连接:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">g</span>
 
 <span class="k">def</span> <span class="nf">get_db</span><span class="p">():</span>
@@ -169,7 +168,7 @@ use a sufficiently unique name. The current context is accessed with
 <a class="reference internal" href="extensiondev.html"><span class="doc">Flask 扩展开发</span></a>.</p>
 </div>
 <div class="section" id="events-and-signals">
-<h2>Events and Signals<a class="headerlink" href="#events-and-signals" title="永久链接至标题">¶</a></h2>
+<h2>事件和信号<a class="headerlink" href="#events-and-signals" title="永久链接至标题">¶</a></h2>
 <p>The application will call functions registered with
 <a class="reference internal" href="api.html#flask.Flask.teardown_appcontext" title="flask.Flask.teardown_appcontext"><code class="xref py py-meth docutils literal notranslate"><span class="pre">teardown_appcontext()</span></code></a> when the application context is
 popped.</p>
@@ -196,11 +195,11 @@ sent: <a class="reference internal" href="api.html#flask.appcontext_pushed" titl
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">应用程序上下文</a><ul>
-<li><a class="reference internal" href="#purpose-of-the-context">Purpose of the Context</a></li>
-<li><a class="reference internal" href="#lifetime-of-the-context">Lifetime of the Context</a></li>
-<li><a class="reference internal" href="#manually-push-a-context">Manually Push a Context</a></li>
-<li><a class="reference internal" href="#storing-data">Storing Data</a></li>
-<li><a class="reference internal" href="#events-and-signals">Events and Signals</a></li>
+<li><a class="reference internal" href="#purpose-of-the-context">语境的目的</a></li>
+<li><a class="reference internal" href="#lifetime-of-the-context">语境的生命周期</a></li>
+<li><a class="reference internal" href="#manually-push-a-context">手动推送上下文</a></li>
+<li><a class="reference internal" href="#storing-data">存储数据</a></li>
+<li><a class="reference internal" href="#events-and-signals">事件和信号</a></li>
 </ul>
 </li>
 </ul>
@@ -230,7 +229,7 @@ sent: <a class="reference internal" href="api.html#flask.appcontext_pushed" titl
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

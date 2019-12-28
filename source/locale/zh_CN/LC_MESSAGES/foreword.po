@@ -26,7 +26,7 @@ msgid ""
 "Read this before you get started with Flask.  This hopefully answers some"
 " questions about the purpose and goals of the project, and when you "
 "should or should not be using it."
-msgstr "在开始使用Flask之前，请先阅读此内容。这有希望回答一些关于项目的目的和目标的问题，以及何时应该或不应该使用它。"
+msgstr "在开始使用Flask之前, 请先阅读此内容. 这有希望回答一些关于项目的目的和目标的问题, 以及何时应该或不应该使用它. "
 
 #: ../../foreword.rst:9
 msgid "What does \"micro\" mean?"

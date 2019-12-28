@@ -46,8 +46,8 @@
   <div class="section" id="flask-changelog">
 <h1>Flask 更新日志<a class="headerlink" href="#flask-changelog" title="永久链接至标题">¶</a></h1>
 <div class="section" id="version-1-1">
-<h2>Version 1.1<a class="headerlink" href="#version-1-1" title="永久链接至标题">¶</a></h2>
-<p>Unreleased</p>
+<h2>版本1.1<a class="headerlink" href="#version-1-1" title="永久链接至标题">¶</a></h2>
+<p>未发行</p>
 <ul class="simple">
 <li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">flask.RequestContext.copy()</span></code> includes the current session
 object in the request context copy. This prevents <code class="docutils literal notranslate"><span class="pre">session</span></code>
@@ -63,17 +63,14 @@ described in PEP 0519, to support <a class="reference external" href="https://do
 </ul>
 </div>
 <div class="section" id="version-1-0-3">
-<h2>Version 1.0.3<a class="headerlink" href="#version-1-0-3" title="永久链接至标题">¶</a></h2>
-<p>Unreleased</p>
+<h2>版本1.0.3<a class="headerlink" href="#version-1-0-3" title="永久链接至标题">¶</a></h2>
+<p>未发行</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="api.html#flask.send_file" title="flask.send_file"><code class="xref py py-func docutils literal notranslate"><span class="pre">send_file()</span></code></a> encodes filenames as ASCII instead of Latin-1
 (ISO-8859-1). This fixes compatibility with Gunicorn, which is
 stricter about header encodings than PEP 3333. (<a class="reference external" href="https://github.com/pallets/flask/issues/2766">#2766</a>)</p></li>
-<li><p>Allow custom CLIs using <code class="docutils literal notranslate"><span class="pre">FlaskGroup</span></code> to set the debug flag without
-it always being overwritten based on environment variables.
-(<a class="reference external" href="https://github.com/pallets/flask/pull/2765">#2765</a>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">flask</span> <span class="pre">--version</span></code> outputs Werkzeug’s version and simplifies the
-Python version. (<a class="reference external" href="https://github.com/pallets/flask/pull/2825">#2825</a>)</p></li>
+<li><p>允许使用``FlaskGroup``的自定义CLI设置调试标志，而不会总是根据环境变量覆盖它.  (<a class="reference external" href="https://github.com/pallets/flask/pull/2765">＃2765</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flask</span> <span class="pre">--version</span></code> 输出Werkzeug的版本并简化Python版本.  (<a class="reference external" href="https://github.com/pallets/flask/pull/2825">#2825</a>)</p></li>
 <li><p><a class="reference internal" href="api.html#flask.send_file" title="flask.send_file"><code class="xref py py-func docutils literal notranslate"><span class="pre">send_file()</span></code></a> handles an <code class="docutils literal notranslate"><span class="pre">attachment_filename</span></code> that is a
 native Python 2 string (bytes) with UTF-8 coded bytes. (<a class="reference external" href="https://github.com/pallets/flask/issues/2933">#2933</a>)</p></li>
 <li><p>A catch-all error handler registered for <code class="docutils literal notranslate"><span class="pre">HTTPException</span></code> will not
@@ -83,8 +80,8 @@ in 1.0. (<a class="reference external" href="https://github.com/pallets/flask/pu
 </ul>
 </div>
 <div class="section" id="version-1-0-2">
-<h2>Version 1.0.2<a class="headerlink" href="#version-1-0-2" title="永久链接至标题">¶</a></h2>
-<p>Released on May 2nd 2018</p>
+<h2>版本1.0.2<a class="headerlink" href="#version-1-0-2" title="永久链接至标题">¶</a></h2>
+<p>2018年5月2日发布</p>
 <ul class="simple">
 <li><p>Fix more backwards compatibility issues with merging slashes between
 a blueprint prefix and route. (<a class="reference external" href="https://github.com/pallets/flask/pull/2748">#2748</a>)</p></li>
@@ -93,8 +90,8 @@ a blueprint prefix and route. (<a class="reference external" href="https://githu
 </ul>
 </div>
 <div class="section" id="version-1-0-1">
-<h2>Version 1.0.1<a class="headerlink" href="#version-1-0-1" title="永久链接至标题">¶</a></h2>
-<p>Released on April 29th 2018</p>
+<h2>版本1.0.1<a class="headerlink" href="#version-1-0-1" title="永久链接至标题">¶</a></h2>
+<p>发布于2018年4月29日</p>
 <ul class="simple">
 <li><p>Fix registering partials (with no <code class="docutils literal notranslate"><span class="pre">__name__</span></code>) as view functions.
 (<a class="reference external" href="https://github.com/pallets/flask/pull/2730">#2730</a>)</p></li>
@@ -111,8 +108,8 @@ to skip automatically loading dotenv files. (<a class="reference external" href=
 </ul>
 </div>
 <div class="section" id="version-1-0">
-<h2>Version 1.0<a class="headerlink" href="#version-1-0" title="永久链接至标题">¶</a></h2>
-<p>Released on April 26th 2018</p>
+<h2>版本1.0<a class="headerlink" href="#version-1-0" title="永久链接至标题">¶</a></h2>
+<p>发布于2018年4月26日</p>
 <ul class="simple">
 <li><p><strong>Python 2.6 and 3.3 are no longer supported.</strong> (<a class="reference external" href="https://github.com/pallets/meta/issues/24">pallets/meta#24</a>)</p></li>
 <li><p>Bump minimum dependency versions to the latest stable versions:
@@ -273,15 +270,15 @@ structured approach to help new users avoid common pitfalls.
 </ul>
 </div>
 <div class="section" id="version-0-12-4">
-<h2>Version 0.12.4<a class="headerlink" href="#version-0-12-4" title="永久链接至标题">¶</a></h2>
+<h2>版本0.12.4<a class="headerlink" href="#version-0-12-4" title="永久链接至标题">¶</a></h2>
 <p>Released on April 29 2018</p>
 <ul class="simple">
 <li><p>Repackage 0.12.3 to fix package layout issue. (<a class="reference external" href="https://github.com/pallets/flask/issues/2728">#2728</a>)</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-12-3">
-<h2>Version 0.12.3<a class="headerlink" href="#version-0-12-3" title="永久链接至标题">¶</a></h2>
-<p>Released on April 26th 2018</p>
+<h2>版本0.12.3<a class="headerlink" href="#version-0-12-3" title="永久链接至标题">¶</a></h2>
+<p>发布于2018年4月26日</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="api.html#flask.Request.get_json" title="flask.Request.get_json"><code class="xref py py-func docutils literal notranslate"><span class="pre">Request.get_json()</span></code></a> no longer accepts arbitrary encodings.
 Incoming JSON should be encoded using UTF-8 per <span class="target" id="index-1"></span><a class="rfc reference external" href="https://tools.ietf.org/html/rfc8259.html"><strong>RFC 8259</strong></a>, but
@@ -293,14 +290,14 @@ cases.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-12-2">
-<h2>Version 0.12.2<a class="headerlink" href="#version-0-12-2" title="永久链接至标题">¶</a></h2>
+<h2>版本0.12.2<a class="headerlink" href="#version-0-12-2" title="永久链接至标题">¶</a></h2>
 <p>Released on May 16 2017</p>
 <ul class="simple">
 <li><p>Fix a bug in <cite>safe_join</cite> on Windows.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-12-1">
-<h2>Version 0.12.1<a class="headerlink" href="#version-0-12-1" title="永久链接至标题">¶</a></h2>
+<h2>版本0.12.1<a class="headerlink" href="#version-0-12-1" title="永久链接至标题">¶</a></h2>
 <p>Bugfix release, released on March 31st 2017</p>
 <ul class="simple">
 <li><p>Prevent <cite>flask run</cite> from showing a NoAppException when an ImportError occurs
@@ -315,7 +312,7 @@ request handler.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-12">
-<h2>Version 0.12<a class="headerlink" href="#version-0-12" title="永久链接至标题">¶</a></h2>
+<h2>版本0.12<a class="headerlink" href="#version-0-12" title="永久链接至标题">¶</a></h2>
 <p>Released on December 21st 2016, codename Punsch.</p>
 <ul class="simple">
 <li><p>the cli command now responds to <cite>–version</cite>.</p></li>
@@ -336,26 +333,26 @@ directly set, instead of per <code class="docutils literal notranslate"><span cl
 </ul>
 </div>
 <div class="section" id="version-0-11-2">
-<h2>Version 0.11.2<a class="headerlink" href="#version-0-11-2" title="永久链接至标题">¶</a></h2>
+<h2>版本0.11.2<a class="headerlink" href="#version-0-11-2" title="永久链接至标题">¶</a></h2>
 <p>Bugfix release, unreleased</p>
 <ul class="simple">
 <li><p>Fix crash when running under PyPy3. (<a class="reference external" href="https://github.com/pallets/flask/pull/1814">#1814</a>)</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-11-1">
-<h2>Version 0.11.1<a class="headerlink" href="#version-0-11-1" title="永久链接至标题">¶</a></h2>
+<h2>版本0.11.1<a class="headerlink" href="#version-0-11-1" title="永久链接至标题">¶</a></h2>
 <p>Bugfix release, released on June 7th 2016.</p>
 <ul class="simple">
 <li><p>Fixed a bug that prevented <code class="docutils literal notranslate"><span class="pre">FLASK_APP=foobar/__init__.py</span></code> from working. (<a class="reference external" href="https://github.com/pallets/flask/pull/1872">#1872</a>)</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-11">
-<h2>Version 0.11<a class="headerlink" href="#version-0-11" title="永久链接至标题">¶</a></h2>
+<h2>版本0.11<a class="headerlink" href="#version-0-11" title="永久链接至标题">¶</a></h2>
 <p>Released on May 29th 2016, codename Absinthe.</p>
 <ul class="simple">
 <li><p>Added support to serializing top-level arrays to <code class="xref py py-func docutils literal notranslate"><span class="pre">flask.jsonify()</span></code>. This
 introduces a security risk in ancient browsers. See
-<a class="reference internal" href="security.html#json-security"><span class="std std-ref">JSON Security</span></a> for details.</p></li>
+<a class="reference internal" href="security.html#json-security"><span class="std std-ref">JSON安全</span></a> for details.</p></li>
 <li><p>Added before_render_template signal.</p></li>
 <li><p>Added <cite>**kwargs</cite> to <code class="xref py py-meth docutils literal notranslate"><span class="pre">flask.Test.test_client()</span></code> to support passing
 additional keyword arguments to the constructor of
@@ -427,7 +424,7 @@ contexts lingering around.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-10-2">
-<h2>Version 0.10.2<a class="headerlink" href="#version-0-10-2" title="永久链接至标题">¶</a></h2>
+<h2>版本0.10.2<a class="headerlink" href="#version-0-10-2" title="永久链接至标题">¶</a></h2>
 <p>(bugfix release, release date to be announced)</p>
 <ul class="simple">
 <li><p>Fixed broken <cite>test_appcontext_signals()</cite> test case.</p></li>
@@ -450,7 +447,7 @@ reraises the <cite>BuildError</cite>.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-10-1">
-<h2>Version 0.10.1<a class="headerlink" href="#version-0-10-1" title="永久链接至标题">¶</a></h2>
+<h2>版本0.10.1<a class="headerlink" href="#version-0-10-1" title="永久链接至标题">¶</a></h2>
 <p>(bugfix release, released on June 14th 2013)</p>
 <ul class="simple">
 <li><p>Fixed an issue where <code class="docutils literal notranslate"><span class="pre">|tojson</span></code> was not quoting single quotes which
@@ -465,12 +462,12 @@ would trigger an exception incorrectly.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-10">
-<h2>Version 0.10<a class="headerlink" href="#version-0-10" title="永久链接至标题">¶</a></h2>
+<h2>版本0.10<a class="headerlink" href="#version-0-10" title="永久链接至标题">¶</a></h2>
 <p>Released on June 13th 2013, codename Limoncello.</p>
 <ul class="simple">
 <li><p>Changed default cookie serialization format from pickle to JSON to
 limit the impact an attacker can do if the secret key leaks.  See
-<a class="reference internal" href="upgrading.html#upgrading-to-010"><span class="std std-ref">Version 0.10</span></a> for more information.</p></li>
+<a class="reference internal" href="upgrading.html#upgrading-to-010"><span class="std std-ref">版本0.10</span></a> for more information.</p></li>
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">template_test</span></code> methods in addition to the already existing
 <code class="docutils literal notranslate"><span class="pre">template_filter</span></code> method family.</p></li>
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">template_global</span></code> methods in addition to the already existing
@@ -542,7 +539,7 @@ picking the default port to run on.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-9">
-<h2>Version 0.9<a class="headerlink" href="#version-0-9" title="永久链接至标题">¶</a></h2>
+<h2>版本0.9<a class="headerlink" href="#version-0-9" title="永久链接至标题">¶</a></h2>
 <p>Released on July 1st 2012, codename Campari.</p>
 <ul class="simple">
 <li><p>The <a class="reference internal" href="api.html#flask.Request.on_json_loading_failed" title="flask.Request.on_json_loading_failed"><code class="xref py py-func docutils literal notranslate"><span class="pre">flask.Request.on_json_loading_failed()</span></code></a> now returns a JSON formatted
@@ -613,7 +610,7 @@ multiple times without producing unexpected behavior.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-8-1">
-<h2>Version 0.8.1<a class="headerlink" href="#version-0-8-1" title="永久链接至标题">¶</a></h2>
+<h2>版本0.8.1<a class="headerlink" href="#version-0-8-1" title="永久链接至标题">¶</a></h2>
 <p>Bugfix release, released on July 1st 2012</p>
 <ul class="simple">
 <li><p>Fixed an issue with the undocumented <cite>flask.session</cite> module to not
@@ -622,7 +619,7 @@ some problems for package managers.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-8">
-<h2>Version 0.8<a class="headerlink" href="#version-0-8" title="永久链接至标题">¶</a></h2>
+<h2>版本0.8<a class="headerlink" href="#version-0-8" title="永久链接至标题">¶</a></h2>
 <p>Released on September 29th 2011, codename Rakija</p>
 <ul class="simple">
 <li><p>Refactored session support into a session interface so that
@@ -648,7 +645,7 @@ are located but also an instance path which is the designated place to
 drop files that are modified at runtime (uploads etc.).  Also this is
 conceptually only instance depending and outside version control so it’s
 the perfect place to put configuration files etc.  For more information
-see <a class="reference internal" href="config.html#instance-folders"><span class="std std-ref">Instance Folders</span></a>.</p></li>
+see <a class="reference internal" href="config.html#instance-folders"><span class="std std-ref">实例文件夹</span></a>.</p></li>
 <li><p>Added the <code class="docutils literal notranslate"><span class="pre">APPLICATION_ROOT</span></code> configuration variable.</p></li>
 <li><p>Implemented <code class="xref py py-meth docutils literal notranslate"><span class="pre">session_transaction()</span></code> to
 easily modify sessions from the test environment.</p></li>
@@ -669,7 +666,7 @@ internal logic and lowers the odds of runaway request contexts in unittests.</p>
 </ul>
 </div>
 <div class="section" id="version-0-7-3">
-<h2>Version 0.7.3<a class="headerlink" href="#version-0-7-3" title="永久链接至标题">¶</a></h2>
+<h2>版本0.7.3<a class="headerlink" href="#version-0-7-3" title="永久链接至标题">¶</a></h2>
 <p>Bugfix release, release date to be decided</p>
 <ul class="simple">
 <li><p>Fixed the Jinja2 environment’s list_templates method not returning the
@@ -677,7 +674,7 @@ correct names when blueprints or modules were involved.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-7-2">
-<h2>Version 0.7.2<a class="headerlink" href="#version-0-7-2" title="永久链接至标题">¶</a></h2>
+<h2>版本0.7.2<a class="headerlink" href="#version-0-7-2" title="永久链接至标题">¶</a></h2>
 <p>Bugfix release, released on July 6th 2011</p>
 <ul class="simple">
 <li><p>Fixed an issue with URL processors not properly working on
@@ -685,7 +682,7 @@ blueprints.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-7-1">
-<h2>Version 0.7.1<a class="headerlink" href="#version-0-7-1" title="永久链接至标题">¶</a></h2>
+<h2>版本0.7.1<a class="headerlink" href="#version-0-7-1" title="永久链接至标题">¶</a></h2>
 <p>Bugfix release, released on June 29th 2011</p>
 <ul class="simple">
 <li><p>Added missing future import that broke 2.5 compatibility.</p></li>
@@ -693,7 +690,7 @@ blueprints.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-7">
-<h2>Version 0.7<a class="headerlink" href="#version-0-7" title="永久链接至标题">¶</a></h2>
+<h2>版本0.7<a class="headerlink" href="#version-0-7" title="永久链接至标题">¶</a></h2>
 <p>Released on June 28th 2011, codename Grappa</p>
 <ul class="simple">
 <li><p>Added <a class="reference internal" href="api.html#flask.Flask.make_default_options_response" title="flask.Flask.make_default_options_response"><code class="xref py py-meth docutils literal notranslate"><span class="pre">make_default_options_response()</span></code></a>
@@ -728,7 +725,7 @@ was incorrectly introduced in 0.6.</p></li>
 <li><p>Added <cite>teardown_request</cite> decorator, for functions that should run at the end
 of a request regardless of whether an exception occurred.  Also the behavior
 for <cite>after_request</cite> was changed.  It’s now no longer executed when an exception
-is raised.  See <a class="reference internal" href="upgrading.html#upgrading-to-new-teardown-handling"><span class="std std-ref">Upgrading to new Teardown Handling</span></a></p></li>
+is raised.  See <a class="reference internal" href="upgrading.html#upgrading-to-new-teardown-handling"><span class="std std-ref">升级到新的拆解处理</span></a></p></li>
 <li><p>Implemented <a class="reference internal" href="api.html#flask.has_request_context" title="flask.has_request_context"><code class="xref py py-func docutils literal notranslate"><span class="pre">flask.has_request_context()</span></code></a></p></li>
 <li><p>Deprecated <cite>init_jinja_globals</cite>.  Override the
 <a class="reference internal" href="api.html#flask.Flask.create_jinja_environment" title="flask.Flask.create_jinja_environment"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create_jinja_environment()</span></code></a> method instead to
@@ -748,7 +745,7 @@ errors, timeouts from remote resources etc.).</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-6-1">
-<h2>Version 0.6.1<a class="headerlink" href="#version-0-6-1" title="永久链接至标题">¶</a></h2>
+<h2>版本0.6.1<a class="headerlink" href="#version-0-6-1" title="永久链接至标题">¶</a></h2>
 <p>Bugfix release, released on December 31st 2010</p>
 <ul class="simple">
 <li><p>Fixed an issue where the default <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code> response was
@@ -764,7 +761,7 @@ uses backslashes to escape the directory the files where exposed from.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-6">
-<h2>Version 0.6<a class="headerlink" href="#version-0-6" title="永久链接至标题">¶</a></h2>
+<h2>版本0.6<a class="headerlink" href="#version-0-6" title="永久链接至标题">¶</a></h2>
 <p>Released on July 27th 2010, codename Whisky</p>
 <ul class="simple">
 <li><p>after request functions are now called in reverse order of
@@ -799,7 +796,7 @@ configurable subdomain.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-5-2">
-<h2>Version 0.5.2<a class="headerlink" href="#version-0-5-2" title="永久链接至标题">¶</a></h2>
+<h2>版本0.5.2<a class="headerlink" href="#version-0-5-2" title="永久链接至标题">¶</a></h2>
 <p>Bugfix Release, released on July 15th 2010</p>
 <ul class="simple">
 <li><p>fixed another issue with loading templates from directories when
@@ -807,7 +804,7 @@ modules were used.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-5-1">
-<h2>Version 0.5.1<a class="headerlink" href="#version-0-5-1" title="永久链接至标题">¶</a></h2>
+<h2>版本0.5.1<a class="headerlink" href="#version-0-5-1" title="永久链接至标题">¶</a></h2>
 <p>Bugfix Release, released on July 6th 2010</p>
 <ul class="simple">
 <li><p>fixes an issue with template loading from directories when modules
@@ -815,7 +812,7 @@ where used.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-5">
-<h2>Version 0.5<a class="headerlink" href="#version-0-5" title="永久链接至标题">¶</a></h2>
+<h2>版本0.5<a class="headerlink" href="#version-0-5" title="永久链接至标题">¶</a></h2>
 <p>Released on July 6th 2010, codename Calvados</p>
 <ul class="simple">
 <li><p>fixed a bug with subdomains that was caused by the inability to
@@ -839,7 +836,7 @@ in 0.5 due to the improved module support.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-4">
-<h2>Version 0.4<a class="headerlink" href="#version-0-4" title="永久链接至标题">¶</a></h2>
+<h2>版本0.4<a class="headerlink" href="#version-0-4" title="永久链接至标题">¶</a></h2>
 <p>Released on June 18th 2010, codename Rakia</p>
 <ul class="simple">
 <li><p>added the ability to register application wide error handlers
@@ -857,7 +854,7 @@ the logger is configurable now to better support unittests.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-3-1">
-<h2>Version 0.3.1<a class="headerlink" href="#version-0-3-1" title="永久链接至标题">¶</a></h2>
+<h2>版本0.3.1<a class="headerlink" href="#version-0-3-1" title="永久链接至标题">¶</a></h2>
 <p>Bugfix release, released on May 28th 2010</p>
 <ul class="simple">
 <li><p>fixed a error reporting bug with <a class="reference internal" href="api.html#flask.Config.from_envvar" title="flask.Config.from_envvar"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flask.Config.from_envvar()</span></code></a></p></li>
@@ -868,7 +865,7 @@ some .pyc files)</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-3">
-<h2>Version 0.3<a class="headerlink" href="#version-0-3" title="永久链接至标题">¶</a></h2>
+<h2>版本0.3<a class="headerlink" href="#version-0-3" title="永久链接至标题">¶</a></h2>
 <p>Released on May 28th 2010, codename Schnaps</p>
 <ul class="simple">
 <li><p>added support for categories for flashed messages.</p></li>
@@ -884,7 +881,7 @@ it possible to further push the request context or pop it.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-2">
-<h2>Version 0.2<a class="headerlink" href="#version-0-2" title="永久链接至标题">¶</a></h2>
+<h2>版本0.2<a class="headerlink" href="#version-0-2" title="永久链接至标题">¶</a></h2>
 <p>Released on May 12th 2010, codename Jägermeister</p>
 <ul class="simple">
 <li><p>various bugfixes</p></li>
@@ -904,7 +901,7 @@ to better support pluggable applications.</p></li>
 </ul>
 </div>
 <div class="section" id="version-0-1">
-<h2>Version 0.1<a class="headerlink" href="#version-0-1" title="永久链接至标题">¶</a></h2>
+<h2>版本0.1<a class="headerlink" href="#version-0-1" title="永久链接至标题">¶</a></h2>
 <p>First public preview release.</p>
 </div>
 </div>
@@ -926,39 +923,39 @@ to better support pluggable applications.</p></li>
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">Flask 更新日志</a><ul>
-<li><a class="reference internal" href="#version-1-1">Version 1.1</a></li>
-<li><a class="reference internal" href="#version-1-0-3">Version 1.0.3</a></li>
-<li><a class="reference internal" href="#version-1-0-2">Version 1.0.2</a></li>
-<li><a class="reference internal" href="#version-1-0-1">Version 1.0.1</a></li>
-<li><a class="reference internal" href="#version-1-0">Version 1.0</a></li>
-<li><a class="reference internal" href="#version-0-12-4">Version 0.12.4</a></li>
-<li><a class="reference internal" href="#version-0-12-3">Version 0.12.3</a></li>
-<li><a class="reference internal" href="#version-0-12-2">Version 0.12.2</a></li>
-<li><a class="reference internal" href="#version-0-12-1">Version 0.12.1</a></li>
-<li><a class="reference internal" href="#version-0-12">Version 0.12</a></li>
-<li><a class="reference internal" href="#version-0-11-2">Version 0.11.2</a></li>
-<li><a class="reference internal" href="#version-0-11-1">Version 0.11.1</a></li>
-<li><a class="reference internal" href="#version-0-11">Version 0.11</a></li>
-<li><a class="reference internal" href="#version-0-10-2">Version 0.10.2</a></li>
-<li><a class="reference internal" href="#version-0-10-1">Version 0.10.1</a></li>
-<li><a class="reference internal" href="#version-0-10">Version 0.10</a></li>
-<li><a class="reference internal" href="#version-0-9">Version 0.9</a></li>
-<li><a class="reference internal" href="#version-0-8-1">Version 0.8.1</a></li>
-<li><a class="reference internal" href="#version-0-8">Version 0.8</a></li>
-<li><a class="reference internal" href="#version-0-7-3">Version 0.7.3</a></li>
-<li><a class="reference internal" href="#version-0-7-2">Version 0.7.2</a></li>
-<li><a class="reference internal" href="#version-0-7-1">Version 0.7.1</a></li>
-<li><a class="reference internal" href="#version-0-7">Version 0.7</a></li>
-<li><a class="reference internal" href="#version-0-6-1">Version 0.6.1</a></li>
-<li><a class="reference internal" href="#version-0-6">Version 0.6</a></li>
-<li><a class="reference internal" href="#version-0-5-2">Version 0.5.2</a></li>
-<li><a class="reference internal" href="#version-0-5-1">Version 0.5.1</a></li>
-<li><a class="reference internal" href="#version-0-5">Version 0.5</a></li>
-<li><a class="reference internal" href="#version-0-4">Version 0.4</a></li>
-<li><a class="reference internal" href="#version-0-3-1">Version 0.3.1</a></li>
-<li><a class="reference internal" href="#version-0-3">Version 0.3</a></li>
-<li><a class="reference internal" href="#version-0-2">Version 0.2</a></li>
-<li><a class="reference internal" href="#version-0-1">Version 0.1</a></li>
+<li><a class="reference internal" href="#version-1-1">版本1.1</a></li>
+<li><a class="reference internal" href="#version-1-0-3">版本1.0.3</a></li>
+<li><a class="reference internal" href="#version-1-0-2">版本1.0.2</a></li>
+<li><a class="reference internal" href="#version-1-0-1">版本1.0.1</a></li>
+<li><a class="reference internal" href="#version-1-0">版本1.0</a></li>
+<li><a class="reference internal" href="#version-0-12-4">版本0.12.4</a></li>
+<li><a class="reference internal" href="#version-0-12-3">版本0.12.3</a></li>
+<li><a class="reference internal" href="#version-0-12-2">版本0.12.2</a></li>
+<li><a class="reference internal" href="#version-0-12-1">版本0.12.1</a></li>
+<li><a class="reference internal" href="#version-0-12">版本0.12</a></li>
+<li><a class="reference internal" href="#version-0-11-2">版本0.11.2</a></li>
+<li><a class="reference internal" href="#version-0-11-1">版本0.11.1</a></li>
+<li><a class="reference internal" href="#version-0-11">版本0.11</a></li>
+<li><a class="reference internal" href="#version-0-10-2">版本0.10.2</a></li>
+<li><a class="reference internal" href="#version-0-10-1">版本0.10.1</a></li>
+<li><a class="reference internal" href="#version-0-10">版本0.10</a></li>
+<li><a class="reference internal" href="#version-0-9">版本0.9</a></li>
+<li><a class="reference internal" href="#version-0-8-1">版本0.8.1</a></li>
+<li><a class="reference internal" href="#version-0-8">版本0.8</a></li>
+<li><a class="reference internal" href="#version-0-7-3">版本0.7.3</a></li>
+<li><a class="reference internal" href="#version-0-7-2">版本0.7.2</a></li>
+<li><a class="reference internal" href="#version-0-7-1">版本0.7.1</a></li>
+<li><a class="reference internal" href="#version-0-7">版本0.7</a></li>
+<li><a class="reference internal" href="#version-0-6-1">版本0.6.1</a></li>
+<li><a class="reference internal" href="#version-0-6">版本0.6</a></li>
+<li><a class="reference internal" href="#version-0-5-2">版本0.5.2</a></li>
+<li><a class="reference internal" href="#version-0-5-1">版本0.5.1</a></li>
+<li><a class="reference internal" href="#version-0-5">版本0.5</a></li>
+<li><a class="reference internal" href="#version-0-4">版本0.4</a></li>
+<li><a class="reference internal" href="#version-0-3-1">版本0.3.1</a></li>
+<li><a class="reference internal" href="#version-0-3">版本0.3</a></li>
+<li><a class="reference internal" href="#version-0-2">版本0.2</a></li>
+<li><a class="reference internal" href="#version-0-1">版本0.1</a></li>
 </ul>
 </li>
 </ul>
@@ -988,7 +985,7 @@ to better support pluggable applications.</p></li>
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

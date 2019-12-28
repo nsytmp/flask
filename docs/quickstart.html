@@ -45,7 +45,7 @@
             
   <div class="section" id="quickstart">
 <span id="id1"></span><h1>快速开始<a class="headerlink" href="#quickstart" title="永久链接至标题">¶</a></h1>
-<p>急于开始？这个页面给出了Flask的一个很好的介绍。它假设您已经安装了Flask。如果不这样做，请转到 <a class="reference internal" href="installation.html#installation"><span class="std std-ref">安装</span></a> 部分。</p>
+<p>急于开始？这个页面给出了Flask的一个很好的介绍. 它假设您已经安装了Flask. 如果不这样做，请转到 <a class="reference internal" href="installation.html#installation"><span class="std std-ref">安装</span></a> 部分.</p>
 <div class="section" id="a-minimal-application">
 <h2>最小的应用程序<a class="headerlink" href="#a-minimal-application" title="永久链接至标题">¶</a></h2>
 <p>最小的Flask应用程序看起来像这样:</p>
@@ -87,7 +87,7 @@ $ python -m flask run
 </div>
 <p>这将启动一个非常简单的内置服务器, 它足以进行测试, 但可能不是您想要在生产中使用的内容. 有关部署选项, 请参阅 <a class="reference internal" href="deploying/index.html#deployment"><span class="std std-ref">部署选项</span></a>.</p>
 <p>现在转到 <a class="reference external" href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a>, 你应该看到你的世界问候.</p>
-<div class="admonition-externally-visible-server admonition">
+<div class="admonition-externally-visible-server admonition" id="public-server">
 <p class="admonition-title">外部可见服务器</p>
 <p>如果您运行服务器, 您会注意到服务器只能从您自己的计算机访问, 而不能从网络中的任何其他计算机访问. 这是默认设置, 因为在调试模式下, 应用程序的用户可以在您的计算机上执行任意Python代码.</p>
 <p>如果禁用调试器或信任网络上的用户, 只需在命令行中添加 <code class="docutils literal notranslate"><span class="pre">--host</span> <span class="pre">=</span> <span class="pre">0.0.0.0</span></code> 即可公开服务器:</p>
@@ -114,7 +114,7 @@ $ python -m flask run
 <span id="id2"></span><h2>调试模式<a class="headerlink" href="#debug-mode" title="永久链接至标题">¶</a></h2>
 <p>(想只记录错误和堆栈跟踪？请参阅 <a class="reference internal" href="errorhandling.html#application-errors"><span class="std std-ref">应用程序错误</span></a>)</p>
 <p><strong class="command">flask</strong> 脚本很适合启动本地开发服务器,  但每次更改代码后都必须手动重启. 这不是很好,  Flask可以做得更好. 如果启用调试支持,  服务器将在代码更改时重新加载,  如果出现问题,  它还将为您提供有用的调试器.</p>
-<p>要启用所有开发功能（包括调试模式）, 您可以在运行服务器之前导出 <code class="docutils literal notranslate"><span class="pre">FLASK_ENV</span></code> 环境变量并将其设置为 <code class="docutils literal notranslate"><span class="pre">development</span></code>:</p>
+<p>要启用所有开发功能(包括调试模式), 您可以在运行服务器之前导出 <code class="docutils literal notranslate"><span class="pre">FLASK_ENV</span></code> 环境变量并将其设置为 <code class="docutils literal notranslate"><span class="pre">development</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ export FLASK_ENV=development
 $ flask run
 </pre></div>
@@ -135,7 +135,7 @@ $ flask run
 <p>正在运行的调试器的屏幕截图:</p>
 <img alt="screenshot of debugger in action" class="screenshot align-center" src="_images/debugger.png" />
 <p>有关使用调试器的更多信息, 请参阅 <a class="reference external" href="http://werkzeug.pocoo.org/docs/debug/#using-the-debugger">Werkzeug documentation</a> .</p>
-<p>还有另一个调试器吗？看到 <a class="reference internal" href="errorhandling.html#working-with-debuggers"><span class="std std-ref">Working with Debuggers</span></a>.</p>
+<p>还有另一个调试器吗？看到 <a class="reference internal" href="errorhandling.html#working-with-debuggers"><span class="std std-ref">使用调试器</span></a>.</p>
 </div>
 <div class="section" id="routing">
 <h2>路由<a class="headerlink" href="#routing" title="永久链接至标题">¶</a></h2>
@@ -476,7 +476,7 @@ $ flask run
 </pre></div>
 </div>
 <p>注意 <a class="reference internal" href="api.html#flask.render_template" title="flask.render_template"><code class="xref py py-func docutils literal notranslate"><span class="pre">render_template()</span></code></a> 之后的 <code class="docutils literal notranslate"><span class="pre">404</span></code>. 这告诉Flask该页面的状态代码应为404, 这意味着找不到. 默认情况下, 假定为200, 转换为: 一切顺利.</p>
-<p>有关详细信息, 请参阅 <a class="reference internal" href="errorhandling.html#error-handlers"><span class="std std-ref">Error handlers</span></a> .</p>
+<p>有关详细信息, 请参阅 <a class="reference internal" href="errorhandling.html#error-handlers"><span class="std std-ref">错误处理程序</span></a> .</p>
 </div>
 <div class="section" id="about-responses">
 <span id="id7"></span><h2>关于回应<a class="headerlink" href="#about-responses" title="永久链接至标题">¶</a></h2>
@@ -669,7 +669,7 @@ b&#39;_5#y2L&quot;F4Q8z\n\xec]/&#39;
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

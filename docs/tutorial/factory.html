@@ -20,7 +20,7 @@
     <link rel="next" title="定义和访问数据库" href="database.html" />
     <link rel="prev" title="项目布局" href="layout.html" />
   <script>DOCUMENTATION_OPTIONS.URL_ROOT = '../';</script>
-   
+
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
@@ -35,15 +35,15 @@
           <a href="layout.html" title="项目布局"
              accesskey="P">上一页</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Flask Documentation (1.1.x)</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">教程</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">教程</a> &#187;</li>
       </ul>
-    </div>  
+    </div>
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
-            
+
   <div class="section" id="application-setup">
 <h1>应用程序设置<a class="headerlink" href="#application-setup" title="永久链接至标题">¶</a></h1>
 <p>A Flask application is an instance of the <a class="reference internal" href="../api.html#flask.Flask" title="flask.Flask"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flask</span></code></a> class.
@@ -60,7 +60,7 @@ factory</em>. Any configuration, registration, and other setup the
 application needs will happen inside the function, then the application
 will be returned.</p>
 <div class="section" id="the-application-factory">
-<h2>The Application Factory<a class="headerlink" href="#the-application-factory" title="永久链接至标题">¶</a></h2>
+<h2>应用工厂<a class="headerlink" href="#the-application-factory" title="永久链接至标题">¶</a></h2>
 <p>It’s time to start coding! Create the <code class="docutils literal notranslate"><span class="pre">flaskr</span></code> directory and add the
 <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file. The <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> serves double duty: it will
 contain the application factory, and it tells Python that the <code class="docutils literal notranslate"><span class="pre">flaskr</span></code>
@@ -169,25 +169,25 @@ development mode. Remember, you should still be in the top-level
 exception, and restarts the server whenever you make changes to the
 code. You can leave it running and just reload the browser page as you
 follow the tutorial.</p>
-<p>For Linux and Mac:</p>
+<p>适用于Linux和Mac:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ export FLASK_APP=flaskr
 $ export FLASK_ENV=development
 $ flask run
 </pre></div>
 </div>
-<p>For Windows cmd, use <code class="docutils literal notranslate"><span class="pre">set</span></code> instead of <code class="docutils literal notranslate"><span class="pre">export</span></code>:</p>
+<p>对于Windows cmd, 使用``set``而不是``export``:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; set FLASK_APP=flaskr
 &gt; set FLASK_ENV=development
 &gt; flask run
 </pre></div>
 </div>
-<p>For Windows PowerShell, use <code class="docutils literal notranslate"><span class="pre">$env:</span></code> instead of <code class="docutils literal notranslate"><span class="pre">export</span></code>:</p>
+<p>对于Windows PowerShell, 使用`$ env:<code class="docutils literal notranslate"><span class="pre">而不是``export</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt; $env:FLASK_APP = &quot;flaskr&quot;
 &gt; $env:FLASK_ENV = &quot;development&quot;
 &gt; flask run
 </pre></div>
 </div>
-<p>You’ll see output similar to this:</p>
+<p>你会看到类似的输出:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Serving Flask app &quot;flaskr&quot;
 * Environment: development
 * Debug mode: on
@@ -200,7 +200,7 @@ $ flask run
 <p>Visit <a class="reference external" href="http://127.0.0.1:5000/hello">http://127.0.0.1:5000/hello</a> in a browser and you should see the
 “Hello, World!” message. Congratulations, you’re now running your Flask
 web application!</p>
-<p>Continue to <a class="reference internal" href="database.html"><span class="doc">定义和访问数据库</span></a>.</p>
+<p>继续 <a class="reference internal" href="database.html"><span class="doc">定义和访问数据库</span></a>.</p>
 </div>
 </div>
 
@@ -211,17 +211,17 @@ web application!</p>
   <span id="sidebar-top"></span>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  
-    
+
+
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/flask-logo-sidebar.png" alt="Logo"/>
             </a></p>
-  
+
 
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">应用程序设置</a><ul>
-<li><a class="reference internal" href="#the-application-factory">The Application Factory</a></li>
+<li><a class="reference internal" href="#the-application-factory">应用工厂</a></li>
 <li><a class="reference internal" href="#run-the-application">Run The Application</a></li>
 </ul>
 </li>
@@ -252,10 +252,10 @@ web application!</p>
       </div>
       <div class="clearer"></div>
     </div>
-  
+
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建.
     </div>
 
   </body>

@@ -30,7 +30,7 @@ msgstr ""
 
 #: ../../server.rst:13
 msgid "Command Line"
-msgstr "Command Line"
+msgstr "命令行"
 
 #: ../../server.rst:15
 msgid ""
@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../../server.rst:43
 msgid "In Code"
-msgstr "In Code"
+msgstr "在代码中"
 
 #: ../../server.rst:45
 msgid ""
@@ -75,7 +75,7 @@ msgstr ""
 
 #: ../../server.rst:49
 msgid "Example::"
-msgstr "Example::"
+msgstr "例::"
 
 #: ../../server.rst:54
 msgid ""
@@ -91,5 +91,5 @@ msgstr ""
 msgid ""
 "It is however still a perfectly valid method for invoking a non automatic"
 " reloading application."
-msgstr "It is however still a perfectly valid method for invoking a non automatic reloading application."
+msgstr "然而, 它仍然是一个非常有效的方法来调用非自动重新加载应用程序. "
 

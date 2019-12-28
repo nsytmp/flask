@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../patterns/index.rst:4
 msgid "Patterns for Flask"
-msgstr "烧瓶的模式"
+msgstr " Flask 的模式"
 
 #: ../../patterns/index.rst:6
 msgid ""

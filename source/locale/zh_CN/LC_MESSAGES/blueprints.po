@@ -35,11 +35,11 @@ msgstr ""
 
 #: ../../blueprints.rst:19
 msgid "Why Blueprints?"
-msgstr "Why Blueprints?"
+msgstr "为何选择蓝图？"
 
 #: ../../blueprints.rst:21
 msgid "Blueprints in Flask are intended for these cases:"
-msgstr "Blueprints in Flask are intended for these cases:"
+msgstr "Flask中的蓝图适用于这些情况:"
 
 #: ../../blueprints.rst:23
 msgid ""
@@ -59,7 +59,7 @@ msgstr ""
 msgid ""
 "Register a blueprint multiple times on an application with different URL "
 "rules."
-msgstr "Register a blueprint multiple times on an application with different URL rules."
+msgstr "在具有不同URL规则的应用程序上多次注册蓝图. "
 
 #: ../../blueprints.rst:31
 msgid ""
@@ -72,7 +72,7 @@ msgstr ""
 msgid ""
 "Register a blueprint on an application for any of these cases when "
 "initializing a Flask extension."
-msgstr "Register a blueprint on an application for any of these cases when initializing a Flask extension."
+msgstr "在初始化Flask扩展时, 在应用程序中为任何这些情况注册蓝图. "
 
 #: ../../blueprints.rst:37
 msgid ""
@@ -95,7 +95,7 @@ msgstr ""
 
 #: ../../blueprints.rst:50
 msgid "The Concept of Blueprints"
-msgstr "The Concept of Blueprints"
+msgstr "蓝图的概念"
 
 #: ../../blueprints.rst:52
 msgid ""
@@ -107,13 +107,13 @@ msgstr ""
 
 #: ../../blueprints.rst:58
 msgid "My First Blueprint"
-msgstr "My First Blueprint"
+msgstr "我的第一份蓝图"
 
 #: ../../blueprints.rst:60
 msgid ""
 "This is what a very basic blueprint looks like.  In this case we want to "
 "implement a blueprint that does simple rendering of static templates::"
-msgstr "This is what a very basic blueprint looks like.  In this case we want to implement a blueprint that does simple rendering of static templates::"
+msgstr "这是一个非常基本的蓝图. 在这种情况下, 我们希望实现一个简单渲染静态模板的蓝图::"
 
 #: ../../blueprints.rst:77
 msgid ""
@@ -128,17 +128,17 @@ msgstr ""
 
 #: ../../blueprints.rst:86
 msgid "Registering Blueprints"
-msgstr "Registering Blueprints"
+msgstr "注册蓝图"
 
 #: ../../blueprints.rst:88
 msgid "So how do you register that blueprint?  Like this::"
-msgstr "So how do you register that blueprint?  Like this::"
+msgstr "那么你如何注册这个蓝图？像这样::"
 
 #: ../../blueprints.rst:96
 msgid ""
 "If you check the rules registered on the application, you will find "
 "these::"
-msgstr "If you check the rules registered on the application, you will find these::"
+msgstr "如果您检查在应用程序上注册的规则, 您将找到这些规则::"
 
 #: ../../blueprints.rst:104
 msgid ""
@@ -150,11 +150,11 @@ msgstr ""
 
 #: ../../blueprints.rst:109
 msgid "Blueprints however can also be mounted at different locations::"
-msgstr "Blueprints however can also be mounted at different locations::"
+msgstr "然而, 蓝图也可以安装在不同的位置::"
 
 #: ../../blueprints.rst:113
 msgid "And sure enough, these are the generated rules::"
-msgstr "And sure enough, these are the generated rules::"
+msgstr "当然, 这些是生成的规则::"
 
 #: ../../blueprints.rst:120
 msgid ""
@@ -165,17 +165,17 @@ msgstr ""
 
 #: ../../blueprints.rst:125
 msgid "Blueprint Resources"
-msgstr "Blueprint Resources"
+msgstr "蓝图资源"
 
 #: ../../blueprints.rst:127
 msgid ""
 "Blueprints can provide resources as well.  Sometimes you might want to "
 "introduce a blueprint only for the resources it provides."
-msgstr "Blueprints can provide resources as well.  Sometimes you might want to introduce a blueprint only for the resources it provides."
+msgstr "蓝图也可以提供资源. 有时您可能只想为其提供的资源引入蓝图. "
 
 #: ../../blueprints.rst:131
 msgid "Blueprint Resource Folder"
-msgstr "Blueprint Resource Folder"
+msgstr "蓝图资源文件夹"
 
 #: ../../blueprints.rst:133
 msgid ""
@@ -199,11 +199,11 @@ msgstr ""
 msgid ""
 "To quickly open sources from this folder you can use the "
 ":meth:`~Blueprint.open_resource` function::"
-msgstr "To quickly open sources from this folder you can use the :meth:`~Blueprint.open_resource` function::"
+msgstr "要从此文件夹快速打开源, 您可以使用:meth:`~Blueprint.open_resource`函数::"
 
 #: ../../blueprints.rst:155
 msgid "Static Files"
-msgstr "Static Files"
+msgstr "静态文件"
 
 #: ../../blueprints.rst:157
 msgid ""
@@ -240,7 +240,7 @@ msgstr ""
 
 #: ../../blueprints.rst:183
 msgid "Templates"
-msgstr "Templates"
+msgstr "模板"
 
 #: ../../blueprints.rst:185
 msgid ""
@@ -253,7 +253,7 @@ msgstr ""
 msgid ""
 "For static files, the path can be absolute or relative to the blueprint "
 "resource folder."
-msgstr "For static files, the path can be absolute or relative to the blueprint resource folder."
+msgstr "对于静态文件, 路径可以是蓝图资源文件夹的绝对路径或相对路径. "
 
 #: ../../blueprints.rst:193
 msgid ""
@@ -298,7 +298,7 @@ msgstr ""
 
 #: ../../blueprints.rst:229
 msgid "Building URLs"
-msgstr "Building URLs"
+msgstr "构建网址"
 
 #: ../../blueprints.rst:231
 msgid ""
@@ -320,11 +320,11 @@ msgstr ""
 msgid ""
 "This will link to ``admin.index`` for instance in case the current "
 "request was dispatched to any other admin blueprint endpoint."
-msgstr "This will link to ``admin.index`` for instance in case the current request was dispatched to any other admin blueprint endpoint."
+msgstr "这将链接到``admin.index``, 以防万一将当前请求分派到任何其他管理蓝图端点. "
 
 #: ../../blueprints.rst:247
 msgid "Error Handlers"
-msgstr "Error Handlers"
+msgstr "错误处理程序"
 
 #: ../../blueprints.rst:249
 msgid ""
@@ -335,7 +335,7 @@ msgstr ""
 
 #: ../../blueprints.rst:253
 msgid "Here is an example for a \"404 Page Not Found\" exception::"
-msgstr "Here is an example for a \"404 Page Not Found\" exception::"
+msgstr "以下是“404找不到页面”例外的示例::"
 
 #: ../../blueprints.rst:259
 msgid ""
@@ -353,5 +353,5 @@ msgstr ""
 
 #: ../../blueprints.rst:277
 msgid "More information on error handling see :ref:`errorpages`."
-msgstr "More information on error handling see :ref:`errorpages`."
+msgstr "有关错误处理的更多信息, 请参阅:ref:`errorpages`. "
 

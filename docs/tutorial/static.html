@@ -46,22 +46,13 @@
             
   <div class="section" id="static-files">
 <h1>静态文件<a class="headerlink" href="#static-files" title="永久链接至标题">¶</a></h1>
-<p>The authentication views and templates work, but they look very plain
-right now. Some <a class="reference external" href="https://developer.mozilla.org/docs/Web/CSS">CSS</a> can be added to add style to the HTML layout you
-constructed. The style won’t change, so it’s a <em>static</em> file rather than
-a template.</p>
-<p>Flask automatically adds a <code class="docutils literal notranslate"><span class="pre">static</span></code> view that takes a path relative
-to the <code class="docutils literal notranslate"><span class="pre">flaskr/static</span></code> directory and serves it. The <code class="docutils literal notranslate"><span class="pre">base.html</span></code>
-template already has a link to the <code class="docutils literal notranslate"><span class="pre">style.css</span></code> file:</p>
+<p>身份验证视图和模板可以正常工作，但它们现在看起来很简单. 可以添加一些`CSS`_来为您构建的HTML布局添加样式. 样式不会改变，因此它是*静态*文件而不是模板.</p>
+<p>Flask自动添加一个``static``视图，该视图采用相对于``flaskr / static``目录的路径并提供服务.  <a href="#id1"><span class="problematic" id="id2">``</span></a>base.html``模板已经有一个指向``style.css``文件的链接:</p>
 <div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{{</span> <span class="nv">url_for</span><span class="o">(</span><span class="s1">&#39;static&#39;</span><span class="o">,</span> <span class="nv">filename</span><span class="o">=</span><span class="s1">&#39;style.css&#39;</span><span class="o">)</span> <span class="cp">}}</span>
 </pre></div>
 </div>
-<p>Besides CSS, other types of static files might be files with JavaScript
-functions, or a logo image. They are all placed under the
-<code class="docutils literal notranslate"><span class="pre">flaskr/static</span></code> directory and referenced with
-<code class="docutils literal notranslate"><span class="pre">url_for('static',</span> <span class="pre">filename='...')</span></code>.</p>
-<p>This tutorial isn’t focused on how to write CSS, so you can just copy
-the following into the <code class="docutils literal notranslate"><span class="pre">flaskr/static/style.css</span></code> file:</p>
+<p>除了CSS之外，其他类型的静态文件可能是具有JavaScript功能的文件或徽标图像. 它们都放在``flaskr / static``目录下，并用``url_for(‘static’，filename =’…’)``引用.</p>
+<p>本教程不关注如何编写CSS，因此您只需将以下内容复制到``flaskr / static / style.css``文件中:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">flaskr/static/style.css</span></code></span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">html</span> <span class="p">{</span> <span class="k">font-family</span><span class="p">:</span> <span class="kc">sans-serif</span><span class="p">;</span> <span class="k">background</span><span class="p">:</span> <span class="mh">#eee</span><span class="p">;</span> <span class="k">padding</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span> <span class="p">}</span>
@@ -93,15 +84,11 @@ the following into the <code class="docutils literal notranslate"><span class="p
 </pre></div>
 </div>
 </div>
-<p>You can find a less compact version of <code class="docutils literal notranslate"><span class="pre">style.css</span></code> in the
-<a class="reference external" href="https://github.com/pallets/flask/tree/1.1.dev0/examples/tutorial/flaskr/static/style.css">example code</a>.</p>
-<p>Go to <a class="reference external" href="http://127.0.0.1:5000/auth/login">http://127.0.0.1:5000/auth/login</a> and the page should look like the
-screenshot below.</p>
+<p>你可以在:gh:<a href="#id1"><span class="problematic" id="id2">`</span></a>example code &lt;examples / tutorial / flaskr / static / style.css&gt;`中找到一个不太紧凑的``style.css``版本.</p>
+<p>转到http://127.0.0.1:5000/auth/login，该页面应如下面的屏幕截图所示.</p>
 <img alt="screenshot of login page" class="screenshot align-center" src="../_images/flaskr_login.png" />
-<p>You can read more about CSS from <a class="reference external" href="https://developer.mozilla.org/docs/Web/CSS">Mozilla’s documentation</a>. If
-you change a static file, refresh the browser page. If the change
-doesn’t show up, try clearing your browser’s cache.</p>
-<p>Continue to <a class="reference internal" href="blog.html"><span class="doc">博客蓝图</span></a>.</p>
+<p>您可以从`Mozilla的文档&lt;<a class="reference external" href="https://developer.mozilla.org/docs/Web/CSS">CSS</a>&gt;`_中了解有关CSS的更多信息. 如果更改静态文件，请刷新浏览器页面. 如果更改未显示，请尝试清除浏览器的缓存.</p>
+<p>继续 <a class="reference internal" href="blog.html"><span class="doc">博客蓝图</span></a>.</p>
 </div>
 
 
@@ -146,7 +133,7 @@ doesn’t show up, try clearing your browser’s cache.</p>
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

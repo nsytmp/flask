@@ -45,26 +45,25 @@
             
   <div class="section" id="api">
 <span id="id1"></span><h1>API<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
-<span class="target" id="module-flask"></span><p>这部分文档涵盖了Flask的所有接口。对于Flask依赖于外部库的部分，我们在此处记录最重要的部分并提供规范文档的链接。</p>
+<span class="target" id="module-flask"></span><p>这部分文档涵盖了Flask的所有接口. 对于Flask依赖于外部库的部分，我们在此处记录最重要的部分并提供规范文档的链接.</p>
 <div class="section" id="application-object">
 <h2>应用对象<a class="headerlink" href="#application-object" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="flask.Flask">
 <em class="property">class </em><code class="descclassname">flask.</code><code class="descname">Flask</code><span class="sig-paren">(</span><em>import_name</em>, <em>static_url_path=None</em>, <em>static_folder='static'</em>, <em>static_host=None</em>, <em>host_matching=False</em>, <em>subdomain_matching=False</em>, <em>template_folder='templates'</em>, <em>instance_path=None</em>, <em>instance_relative_config=False</em>, <em>root_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Flask" title="永久链接至目标">¶</a></dt>
-<dd><p>flask对象实现了一个WSGI应用程序并充当中心对象。它传递了应用程序的模块或包的名称。一旦创建它，​​它将充当视图功能，URL规则，模板配置等的中央注册表。</p>
+<dd><p>flask对象实现了一个WSGI应用程序并充当中心对象. 它传递了应用程序的模块或包的名称. 一旦创建它，​​它将充当视图功能，URL规则，模板配置等的中央注册表.</p>
 <p>The name of the package is used to resolve resources from inside the
 package or the folder the module is contained in depending on if the
 package parameter resolves to an actual python package (a folder with
 an <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> file inside) or a standard module (just a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file).</p>
-<p>For more information about resource loading, see <a class="reference internal" href="#flask.Flask.open_resource" title="flask.Flask.open_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">open_resource()</span></code></a>.</p>
-<p>Usually you create a <a class="reference internal" href="#flask.Flask" title="flask.Flask"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flask</span></code></a> instance in your main module or
-in the <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> file of your package like this:</p>
+<p>有关资源加载的更多信息，请参阅 <a class="reference internal" href="#flask.Flask.open_resource" title="flask.Flask.open_resource"><code class="xref py py-func docutils literal notranslate"><span class="pre">open_resource()</span></code></a>.</p>
+<p>通常你在你的主模块或你的包的:file:<a href="#id1"><span class="problematic" id="id2">`</span></a>__init __. py`文件中创建一个:class:<a href="#id3"><span class="problematic" id="id4">`</span></a>Flask`实例，就像这样:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">Flask</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="admonition-about-the-first-parameter admonition">
-<p class="admonition-title">About the First Parameter</p>
+<p class="admonition-title">关于第一个参数</p>
 <p>The idea of the first parameter is to give Flask an idea of what
 belongs to your application.  This name is used to find resources
 on the filesystem, can be used by extensions to improve debugging
@@ -90,7 +89,7 @@ pick up SQL queries in <cite>yourapplication.app</cite> and not
 <cite>yourapplication.views.frontend</cite>)</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">1.0 新版功能: </span>The <code class="docutils literal notranslate"><span class="pre">host_matching</span></code> and <code class="docutils literal notranslate"><span class="pre">static_host</span></code> parameters were added.</p>
+<p><span class="versionmodified added">1.0 新版功能: </span>添加了``host_matching``和``static_host``参数.</p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能: </span>The <code class="docutils literal notranslate"><span class="pre">subdomain_matching</span></code> parameter was added. Subdomain
@@ -98,34 +97,26 @@ matching needs to be enabled manually now. Setting
 <a class="reference internal" href="config.html#SERVER_NAME" title="SERVER_NAME"><code class="xref py py-data docutils literal notranslate"><span class="pre">SERVER_NAME</span></code></a> does not implicitly enable it.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">0.11 新版功能: </span>The <cite>root_path</cite> parameter was added.</p>
+<p><span class="versionmodified added">0.11 新版功能: </span>添加了`root_path`参数.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">0.8 新版功能: </span>The <cite>instance_path</cite> and <cite>instance_relative_config</cite> parameters were
-added.</p>
+<p><span class="versionmodified added">0.8 新版功能: </span>添加了`instance_path`和`instance_relative_config`参数.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">0.7 新版功能: </span>The <cite>static_url_path</cite>, <cite>static_folder</cite>, and <cite>template_folder</cite>
-parameters were added.</p>
+<p><span class="versionmodified added">0.7 新版功能: </span>添加了`static_url_path`，<a href="#id1"><span class="problematic" id="id2">`</span></a>static_folder`和`template_folder`参数.</p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>import_name</strong> – the name of the application package</p></li>
-<li><p><strong>static_url_path</strong> – can be used to specify a different path for the
-static files on the web.  Defaults to the name
-of the <cite>static_folder</cite> folder.</p></li>
+<li><p><strong>import_name</strong> – 应用程序包的名称</p></li>
+<li><p><strong>static_url_path</strong> – 可用于为Web上的静态文件指定不同的路径. 默认为`static_folder`文件夹的名称.</p></li>
 <li><p><strong>static_folder</strong> – the folder with static files that should be served
 at <cite>static_url_path</cite>.  Defaults to the <code class="docutils literal notranslate"><span class="pre">'static'</span></code>
 folder in the root path of the application.</p></li>
-<li><p><strong>static_host</strong> – the host to use when adding the static route.
-Defaults to None. Required when using <code class="docutils literal notranslate"><span class="pre">host_matching=True</span></code>
-with a <code class="docutils literal notranslate"><span class="pre">static_folder</span></code> configured.</p></li>
-<li><p><strong>host_matching</strong> – set <code class="docutils literal notranslate"><span class="pre">url_map.host_matching</span></code> attribute.
-Defaults to False.</p></li>
-<li><p><strong>subdomain_matching</strong> – consider the subdomain relative to
-<a class="reference internal" href="config.html#SERVER_NAME" title="SERVER_NAME"><code class="xref py py-data docutils literal notranslate"><span class="pre">SERVER_NAME</span></code></a> when matching routes. Defaults to False.</p></li>
+<li><p><strong>static_host</strong> – 添加静态路由时使用的主机. 默认为无. 使用配置了``static_folder``的``host_matching = True``时需要.</p></li>
+<li><p><strong>host_matching</strong> – 设置``url_map.host_matching``属性. 默认为False.</p></li>
+<li><p><strong>subdomain_matching</strong> – 在匹配路由时考虑相对于:data:<a href="#id1"><span class="problematic" id="id2">`</span></a>SERVER_NAME`的子域. 默认为False.</p></li>
 <li><p><strong>template_folder</strong> – the folder that contains the templates that should
 be used by the application.  Defaults to
 <code class="docutils literal notranslate"><span class="pre">'templates'</span></code> folder in the root path of the
@@ -149,12 +140,10 @@ manually defined.</p></li>
 <dl class="method">
 <dt id="flask.Flask.add_template_filter">
 <code class="descname">add_template_filter</code><span class="sig-paren">(</span><em>f</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Flask.add_template_filter" title="永久链接至目标">¶</a></dt>
-<dd><p>Register a custom template filter.  Works exactly like the
-<a class="reference internal" href="#flask.Flask.template_filter" title="flask.Flask.template_filter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">template_filter()</span></code></a> decorator.</p>
+<dd><p>注册自定义模板过滤器. 完全像:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>template_filter`装饰器.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – the optional name of the filter, otherwise the
-function name will be used.</p>
+<dd class="field-odd"><p><strong>name</strong> – 过滤器的可选名称，否则将使用函数名称.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -162,16 +151,14 @@ function name will be used.</p>
 <dl class="method">
 <dt id="flask.Flask.add_template_global">
 <code class="descname">add_template_global</code><span class="sig-paren">(</span><em>f</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Flask.add_template_global" title="永久链接至目标">¶</a></dt>
-<dd><p>Register a custom template global function. Works exactly like the
-<a class="reference internal" href="#flask.Flask.template_global" title="flask.Flask.template_global"><code class="xref py py-meth docutils literal notranslate"><span class="pre">template_global()</span></code></a> decorator.</p>
+<dd><p>注册自定义模板全局功能. 完全像:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>template_global`装饰器.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.10 新版功能.</span></p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – the optional name of the global function, otherwise the
-function name will be used.</p>
+<dd class="field-odd"><p><strong>name</strong> – 全局函数的可选名称，否则将使用函数名称.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -179,16 +166,14 @@ function name will be used.</p>
 <dl class="method">
 <dt id="flask.Flask.add_template_test">
 <code class="descname">add_template_test</code><span class="sig-paren">(</span><em>f</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Flask.add_template_test" title="永久链接至目标">¶</a></dt>
-<dd><p>Register a custom template test.  Works exactly like the
-<a class="reference internal" href="#flask.Flask.template_test" title="flask.Flask.template_test"><code class="xref py py-meth docutils literal notranslate"><span class="pre">template_test()</span></code></a> decorator.</p>
+<dd><p>注册自定义模板测试. 完全像:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>template_test`装饰器.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.10 新版功能.</span></p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – the optional name of the test, otherwise the
-function name will be used.</p>
+<dd class="field-odd"><p><strong>name</strong> – 测试的可选名称，否则将使用函数名称.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -196,46 +181,40 @@ function name will be used.</p>
 <dl class="method">
 <dt id="flask.Flask.add_url_rule">
 <code class="descname">add_url_rule</code><span class="sig-paren">(</span><em>rule</em>, <em>endpoint=None</em>, <em>view_func=None</em>, <em>provide_automatic_options=None</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Flask.add_url_rule" title="永久链接至目标">¶</a></dt>
-<dd><p>Connects a URL rule.  Works exactly like the <a class="reference internal" href="#flask.Flask.route" title="flask.Flask.route"><code class="xref py py-meth docutils literal notranslate"><span class="pre">route()</span></code></a>
-decorator.  If a view_func is provided it will be registered with the
-endpoint.</p>
-<p>Basically this example:</p>
+<dd><p>连接URL规则. 完全像:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>route`装饰器. 如果提供了view_func，它将向端点注册.</p>
+<p>基本上这个例子:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
-<p>Is equivalent to the following:</p>
+<p>相当于以下内容:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
     <span class="k">pass</span>
 <span class="n">app</span><span class="o">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If the view_func is not provided you will need to connect the endpoint
-to a view function like so:</p>
+<p>如果未提供view_func，则需要将端点连接到视图函数，如此:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">view_functions</span><span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">index</span>
 </pre></div>
 </div>
 <p>Internally <a class="reference internal" href="#flask.Flask.route" title="flask.Flask.route"><code class="xref py py-meth docutils literal notranslate"><span class="pre">route()</span></code></a> invokes <a class="reference internal" href="#flask.Flask.add_url_rule" title="flask.Flask.add_url_rule"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_url_rule()</span></code></a> so if you want
 to customize the behavior via subclassing you only need to change
 this method.</p>
-<p>For more information refer to <a class="reference internal" href="#url-route-registrations"><span class="std std-ref">URL Route Registrations</span></a>.</p>
+<p>有关更多信息，请参阅:ref:<cite>url-route-registrations</cite>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 0.6 版更改: </span><code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code> is added automatically as method.</p>
+<p><span class="versionmodified changed">在 0.6 版更改: </span><a href="#id1"><span class="problematic" id="id2">``</span></a>OPTIONS``作为方法自动添加.</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 0.2 版更改: </span><cite>view_func</cite> parameter added.</p>
+<p><span class="versionmodified changed">在 0.2 版更改: </span>添加了`view_func`参数.</p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>rule</strong> – the URL rule as string</p></li>
-<li><p><strong>endpoint</strong> – the endpoint for the registered URL rule.  Flask
-itself assumes the name of the view function as
-endpoint</p></li>
-<li><p><strong>view_func</strong> – the function to call when serving a request to the
-provided endpoint</p></li>
+<li><p><strong>rule</strong> – URL规则为字符串</p></li>
+<li><p><strong>endpoint</strong> – 已注册URL规则的端点.  Flask本身将视图函数的名称视为端点</p></li>
+<li><p><strong>view_func</strong> – 在向提供的端点提供请求时调用的函数</p></li>
 <li><p><strong>provide_automatic_options</strong> – controls whether the <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code>
 method should be added automatically. This can also be controlled
 by setting the <code class="docutils literal notranslate"><span class="pre">view_func.provide_automatic_options</span> <span class="pre">=</span> <span class="pre">False</span></code>
@@ -256,12 +235,11 @@ added and handled by the standard request handling.</p></li>
 <dl class="method">
 <dt id="flask.Flask.after_request">
 <code class="descname">after_request</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Flask.after_request" title="永久链接至目标">¶</a></dt>
-<dd><p>Register a function to be run after each request.</p>
+<dd><p>注册每个请求后要运行的函数.</p>
 <p>Your function must take one parameter, an instance of
 <a class="reference internal" href="#flask.Flask.response_class" title="flask.Flask.response_class"><code class="xref py py-attr docutils literal notranslate"><span class="pre">response_class</span></code></a> and return a new response object or the
 same (see <a class="reference internal" href="#flask.Flask.process_response" title="flask.Flask.process_response"><code class="xref py py-meth docutils literal notranslate"><span class="pre">process_response()</span></code></a>).</p>
-<p>As of Flask 0.7 this function might not be executed at the end of the
-request in case an unhandled exception occurred.</p>
+<p>从Flask 0.7开始，如果发生未处理的异常，则可能不会在请求结束时执行此函数.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -319,8 +297,7 @@ the package.</p>
 <code class="descname">before_first_request</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Flask.before_first_request" title="永久链接至目标">¶</a></dt>
 <dd><p>Registers a function to be run before the first request to this
 instance of the application.</p>
-<p>The function will be called without any arguments and its return
-value is ignored.</p>
+<p>将在不带任何参数的情况下调用该函数，并忽略其返回值.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.8 新版功能.</span></p>
 </div>
@@ -342,9 +319,8 @@ first request to this instance. To register a function, use the
 <dl class="method">
 <dt id="flask.Flask.before_request">
 <code class="descname">before_request</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Flask.before_request" title="永久链接至目标">¶</a></dt>
-<dd><p>Registers a function to run before each request.</p>
-<p>For example, this can be used to open a database connection, or to load
-the logged in user from the session.</p>
+<dd><p>注册在每个请求之前运行的函数.</p>
+<p>例如，这可用于打开数据库连接，或从会话加载登录用户.</p>
 <p>The function will be called without any arguments. If it returns a
 non-None value, the value is handled as if it was the return value from
 the view, and further request handling is stopped.</p>
@@ -379,7 +355,7 @@ you how often they got attached.</p>
 registered here show up in the <strong class="command">flask</strong> command once the
 application has been discovered.  The default commands are
 provided by Flask itself and can be overridden.</p>
-<p>This is an instance of a <a class="reference external" href="https://click.palletsprojects.com/en/7.x/api/#click.Group" title="(在 Click v7.x)"><code class="xref py py-class docutils literal notranslate"><span class="pre">click.Group</span></code></a> object.</p>
+<p>这是一个:class:<a href="#id1"><span class="problematic" id="id2">`</span></a>click.Group`对象的实例.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -399,7 +375,7 @@ to load a config from files.</p>
 <dl class="method">
 <dt id="flask.Flask.context_processor">
 <code class="descname">context_processor</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Flask.context_processor" title="永久链接至目标">¶</a></dt>
-<dd><p>Registers a template context processor function.</p>
+<dd><p>注册模板上下文处理器功能.</p>
 </dd></dl>
 
 <dl class="method">
@@ -409,8 +385,7 @@ to load a config from files.</p>
 override just the loader and keeping the rest unchanged.  It’s
 discouraged to override this function.  Instead one should override
 the <a class="reference internal" href="#flask.Flask.jinja_loader" title="flask.Flask.jinja_loader"><code class="xref py py-meth docutils literal notranslate"><span class="pre">jinja_loader()</span></code></a> function instead.</p>
-<p>The global loader dispatches between the loaders of the application
-and the individual blueprints.</p>
+<p>全局加载程序在应用程序的加载器和各个蓝图之间进行调度.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.7 新版功能.</span></p>
 </div>
@@ -1195,14 +1170,12 @@ but is intended for decorator usage:</p>
     <span class="k">return</span> <span class="s1">&#39;Hello World&#39;</span>
 </pre></div>
 </div>
-<p>For more information refer to <a class="reference internal" href="#url-route-registrations"><span class="std std-ref">URL Route Registrations</span></a>.</p>
+<p>有关更多信息，请参阅:ref:<cite>url-route-registrations</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>rule</strong> – the URL rule as string</p></li>
-<li><p><strong>endpoint</strong> – the endpoint for the registered URL rule.  Flask
-itself assumes the name of the view function as
-endpoint</p></li>
+<li><p><strong>rule</strong> – URL规则为字符串</p></li>
+<li><p><strong>endpoint</strong> – 已注册URL规则的端点.  Flask本身将视图函数的名称视为端点</p></li>
 <li><p><strong>options</strong> – the options to be forwarded to the underlying
 <a class="reference external" href="https://werkzeug.palletsprojects.com/en/0.15.x/routing/#werkzeug.routing.Rule" title="(在 Werkzeug v0.15.x)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rule</span></code></a> object.  A change
 to Werkzeug is handling of method options.  methods
@@ -1521,8 +1494,7 @@ name will be used. Example:</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – the optional name of the filter, otherwise the
-function name will be used.</p>
+<dd class="field-odd"><p><strong>name</strong> – 过滤器的可选名称，否则将使用函数名称.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1551,8 +1523,7 @@ name will be used. Example:</p>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – the optional name of the global function, otherwise the
-function name will be used.</p>
+<dd class="field-odd"><p><strong>name</strong> – 全局函数的可选名称，否则将使用函数名称.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1579,8 +1550,7 @@ name will be used. Example:</p>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – the optional name of the test, otherwise the
-function name will be used.</p>
+<dd class="field-odd"><p><strong>name</strong> – 测试的可选名称，否则将使用函数名称.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1603,7 +1573,7 @@ already existed.</p>
 <dt id="flask.Flask.test_cli_runner">
 <code class="descname">test_cli_runner</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Flask.test_cli_runner" title="永久链接至目标">¶</a></dt>
 <dd><p>Create a CLI runner for testing CLI commands.
-See <a class="reference internal" href="testing.html#testing-cli"><span class="std std-ref">Testing CLI Commands</span></a>.</p>
+See <a class="reference internal" href="testing.html#testing-cli"><span class="std std-ref">测试CLI命令</span></a>.</p>
 <p>Returns an instance of <a class="reference internal" href="#flask.Flask.test_cli_runner_class" title="flask.Flask.test_cli_runner_class"><code class="xref py py-attr docutils literal notranslate"><span class="pre">test_cli_runner_class</span></code></a>, by default
 <a class="reference internal" href="#flask.testing.FlaskCliRunner" title="flask.testing.FlaskCliRunner"><code class="xref py py-class docutils literal notranslate"><span class="pre">FlaskCliRunner</span></code></a>. The Flask app object is
 passed as the first argument.</p>
@@ -1930,7 +1900,7 @@ can continue to call methods on it.</p>
 <p><span class="versionmodified changed">在 0.7 版更改: </span>Teardown events for the request and app contexts are called
 even if an unhandled error occurs. Other events may not be
 called depending on when an error occurs during dispatch.
-See <a class="reference internal" href="reqcontext.html#callbacks-and-errors"><span class="std std-ref">Callbacks and Errors</span></a>.</p>
+See <a class="reference internal" href="reqcontext.html#callbacks-and-errors"><span class="std std-ref">回调和错误</span></a>.</p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
@@ -1949,7 +1919,7 @@ start the response.</p></li>
 
 </div>
 <div class="section" id="blueprint-objects">
-<h2>Blueprint Objects<a class="headerlink" href="#blueprint-objects" title="永久链接至标题">¶</a></h2>
+<h2>蓝图对象<a class="headerlink" href="#blueprint-objects" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="flask.Blueprint">
 <em class="property">class </em><code class="descclassname">flask.</code><code class="descname">Blueprint</code><span class="sig-paren">(</span><em>name</em>, <em>import_name</em>, <em>static_folder=None</em>, <em>static_url_path=None</em>, <em>template_folder=None</em>, <em>url_prefix=None</em>, <em>subdomain=None</em>, <em>url_defaults=None</em>, <em>root_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Blueprint" title="永久链接至目标">¶</a></dt>
@@ -1970,8 +1940,7 @@ information.</p>
 like the <a class="reference internal" href="#flask.Blueprint.app_template_filter" title="flask.Blueprint.app_template_filter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">app_template_filter()</span></code></a> decorator.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – the optional name of the filter, otherwise the
-function name will be used.</p>
+<dd class="field-odd"><p><strong>name</strong> – 过滤器的可选名称，否则将使用函数名称.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2006,8 +1975,7 @@ like the <a class="reference internal" href="#flask.Blueprint.app_template_test"
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – the optional name of the test, otherwise the
-function name will be used.</p>
+<dd class="field-odd"><p><strong>name</strong> – 测试的可选名称，否则将使用函数名称.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2055,8 +2023,7 @@ handler is used for all requests, even if outside of the blueprint.</p>
 <a class="reference internal" href="#flask.Flask.template_filter" title="flask.Flask.template_filter"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Flask.template_filter()</span></code></a> but for a blueprint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – the optional name of the filter, otherwise the
-function name will be used.</p>
+<dd class="field-odd"><p><strong>name</strong> – 过滤器的可选名称，否则将使用函数名称.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2089,8 +2056,7 @@ function name will be used.</p>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – the optional name of the test, otherwise the
-function name will be used.</p>
+<dd class="field-odd"><p><strong>name</strong> – 测试的可选名称，否则将使用函数名称.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2296,11 +2262,9 @@ with it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>app</strong> – The application this blueprint is being registered with.</p></li>
-<li><p><strong>options</strong> – Keyword arguments forwarded from
-<a class="reference internal" href="#flask.Flask.register_blueprint" title="flask.Flask.register_blueprint"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register_blueprint()</span></code></a>.</p></li>
-<li><p><strong>first_registration</strong> – Whether this is the first time this
-blueprint has been registered on the application.</p></li>
+<li><p><strong>app</strong> – 该蓝图正在注册的应用程序.</p></li>
+<li><p><strong>options</strong> – 关键字参数转发自:meth:<cite>~Flask.register_blueprint</cite>.</p></li>
+<li><p><strong>first_registration</strong> – 这是否是第一次在应用程序上注册此蓝图.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2329,8 +2293,7 @@ resources contained in the package.</p>
 <dl class="method">
 <dt id="flask.Blueprint.route">
 <code class="descname">route</code><span class="sig-paren">(</span><em>rule</em>, <em>**options</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Blueprint.route" title="永久链接至目标">¶</a></dt>
-<dd><p>Like <a class="reference internal" href="#flask.Flask.route" title="flask.Flask.route"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Flask.route()</span></code></a> but for a blueprint.  The endpoint for the
-<a class="reference internal" href="#flask.url_for" title="flask.url_for"><code class="xref py py-func docutils literal notranslate"><span class="pre">url_for()</span></code></a> function is prefixed with the name of the blueprint.</p>
+<dd><p>喜欢:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>Flask.route`但是蓝图.  :func:<a href="#id3"><span class="problematic" id="id4">`</span></a>url_for`函数的端点以蓝图的名称为前缀.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2401,7 +2364,7 @@ can modify the url values provided.</p>
 
 </div>
 <div class="section" id="incoming-request-data">
-<h2>Incoming Request Data<a class="headerlink" href="#incoming-request-data" title="永久链接至标题">¶</a></h2>
+<h2>传入请求数据<a class="headerlink" href="#incoming-request-data" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="flask.Request">
 <em class="property">class </em><code class="descclassname">flask.</code><code class="descname">Request</code><span class="sig-paren">(</span><em>environ</em>, <em>populate_request=True</em>, <em>shallow=False</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Request" title="永久链接至目标">¶</a></dt>
@@ -2416,7 +2379,7 @@ specific ones.</p>
 <dl class="attribute">
 <dt id="flask.Request.environ">
 <code class="descname">environ</code><a class="headerlink" href="#flask.Request.environ" title="永久链接至目标">¶</a></dt>
-<dd><p>The underlying WSGI environment.</p>
+<dd><p>底层的WSGI环境.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2452,7 +2415,7 @@ listening on the following application root:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">myapplication</span>
 </pre></div>
 </div>
-<p>And a user requests the following URI:</p>
+<p>并且用户请求以下URI:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://www.example.com/myapplication/%CF%80/page.html?x=y
 </pre></div>
 </div>
@@ -2511,15 +2474,13 @@ are compression encodings such as gzip.  For charsets have a look at
 <dl class="method">
 <dt id="flask.Request.accept_mimetypes">
 <em class="property">property </em><code class="descname">accept_mimetypes</code><a class="headerlink" href="#flask.Request.accept_mimetypes" title="永久链接至目标">¶</a></dt>
-<dd><p>List of mimetypes this client supports as
-<a class="reference external" href="https://werkzeug.palletsprojects.com/en/0.15.x/datastructures/#werkzeug.datastructures.MIMEAccept" title="(在 Werkzeug v0.15.x)"><code class="xref py py-class docutils literal notranslate"><span class="pre">MIMEAccept</span></code></a> object.</p>
+<dd><p>这个客户端支持的mimetypes列表如下:class:<a href="#id1"><span class="problematic" id="id2">`</span></a>~werkzeug.datastructures.MIMEAccept`对象.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="flask.Request.access_route">
 <em class="property">property </em><code class="descname">access_route</code><a class="headerlink" href="#flask.Request.access_route" title="永久链接至目标">¶</a></dt>
-<dd><p>If a forwarded header exists this is a list of all ip addresses
-from the client ip to the last proxy server.</p>
+<dd><p>如果存在转发的头，则这是从客户端ip到最后一个代理服务器的所有IP地址的列表.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2534,14 +2495,13 @@ request object will be closed automatically:</p>
     <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>As of Werkzeug 0.14 HTTP exceptions are automatically caught and
-converted to responses instead of failing.</p>
+<p>从Werkzeug开始，0.14 HTTP异常会自动捕获并转换为响应而不是失败.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>f</strong> – the WSGI callable to decorate</p>
+<dd class="field-odd"><p><strong>f</strong> – WSGI可以调用来装饰</p>
 </dd>
 <dt class="field-even">返回</dt>
-<dd class="field-even"><p>a new WSGI callable</p>
+<dd class="field-even"><p>一个新的WSGI可调用</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2549,8 +2509,7 @@ converted to responses instead of failing.</p>
 <dl class="method">
 <dt id="flask.Request.args">
 <em class="property">property </em><code class="descname">args</code><a class="headerlink" href="#flask.Request.args" title="永久链接至目标">¶</a></dt>
-<dd><p>The parsed URL parameters (the part in the URL after the question
-mark).</p>
+<dd><p>解析的URL参数(问号后面的URL中的部分).</p>
 <p>By default an
 <a class="reference external" href="https://werkzeug.palletsprojects.com/en/0.15.x/datastructures/#werkzeug.datastructures.ImmutableMultiDict" title="(在 Werkzeug v0.15.x)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImmutableMultiDict</span></code></a>
 is returned from this function.  This can be changed by setting
@@ -2561,7 +2520,7 @@ be necessary if the order of the form data is important.</p>
 <dl class="method">
 <dt id="flask.Request.authorization">
 <em class="property">property </em><code class="descname">authorization</code><a class="headerlink" href="#flask.Request.authorization" title="永久链接至目标">¶</a></dt>
-<dd><p>The <cite>Authorization</cite> object in parsed form.</p>
+<dd><p>解析形式的`Authorization`对象.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2574,7 +2533,7 @@ See also: <code class="xref py py-attr docutils literal notranslate"><span class
 <dl class="method">
 <dt id="flask.Request.blueprint">
 <em class="property">property </em><code class="descname">blueprint</code><a class="headerlink" href="#flask.Request.blueprint" title="永久链接至目标">¶</a></dt>
-<dd><p>The name of the current blueprint</p>
+<dd><p>当前蓝图的名称</p>
 </dd></dl>
 
 <dl class="method">
@@ -2742,7 +2701,7 @@ support for cookies etc.</p>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">返回</dt>
-<dd class="field-odd"><p>request object</p>
+<dd class="field-odd"><p>请求对象</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2791,7 +2750,7 @@ and its return value is used as the return value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>force</strong> – Ignore the mimetype and always try to parse JSON.</p></li>
+<li><p><strong>force</strong> – 忽略mimetype并始终尝试解析JSON.</p></li>
 <li><p><strong>silent</strong> – Silence parsing errors and return <code class="docutils literal notranslate"><span class="pre">None</span></code>
 instead.</p></li>
 <li><p><strong>cache</strong> – Store the parsed JSON to return for subsequent
@@ -3202,7 +3161,7 @@ object.  Flask parses incoming request data for you and gives you
 access to it through that global object.  Internally Flask makes
 sure that you always get the correct data for the active thread if you
 are in a multithreaded environment.</p>
-<p>This is a proxy.  See <a class="reference internal" href="reqcontext.html#notes-on-proxies"><span class="std std-ref">Notes On Proxies</span></a> for more information.</p>
+<p>This is a proxy.  See <a class="reference internal" href="reqcontext.html#notes-on-proxies"><span class="std std-ref">关于代理的注释</span></a> for more information.</p>
 <p>The request object is an instance of a <a class="reference external" href="https://werkzeug.palletsprojects.com/en/0.15.x/wrappers/#werkzeug.wrappers.Request" title="(在 Werkzeug v0.15.x)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Request</span></code></a>
 subclass and provides all of the attributes Werkzeug defines.  This
 just shows a quick overview of the most important ones.</p>
@@ -3210,7 +3169,7 @@ just shows a quick overview of the most important ones.</p>
 
 </div>
 <div class="section" id="response-objects">
-<h2>Response Objects<a class="headerlink" href="#response-objects" title="永久链接至标题">¶</a></h2>
+<h2>响应对象<a class="headerlink" href="#response-objects" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="flask.Response">
 <em class="property">class </em><code class="descclassname">flask.</code><code class="descname">Response</code><span class="sig-paren">(</span><em>response=None</em>, <em>status=None</em>, <em>headers=None</em>, <em>mimetype=None</em>, <em>content_type=None</em>, <em>direct_passthrough=False</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Response" title="永久链接至目标">¶</a></dt>
@@ -3263,7 +3222,7 @@ and its return value is used as the return value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>force</strong> – Ignore the mimetype and always try to parse JSON.</p></li>
+<li><p><strong>force</strong> – 忽略mimetype并始终尝试解析JSON.</p></li>
 <li><p><strong>silent</strong> – Silence parsing errors and return <code class="docutils literal notranslate"><span class="pre">None</span></code>
 instead.</p></li>
 <li><p><strong>cache</strong> – Store the parsed JSON to return for subsequent
@@ -3337,7 +3296,7 @@ be attached to requests if those requests are
 
 </div>
 <div class="section" id="sessions">
-<h2>Sessions<a class="headerlink" href="#sessions" title="永久链接至标题">¶</a></h2>
+<h2>会议<a class="headerlink" href="#sessions" title="永久链接至标题">¶</a></h2>
 <p>If you have set <a class="reference internal" href="#flask.Flask.secret_key" title="flask.Flask.secret_key"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Flask.secret_key</span></code></a> (or configured it from
 <a class="reference internal" href="config.html#SECRET_KEY" title="SECRET_KEY"><code class="xref py py-data docutils literal notranslate"><span class="pre">SECRET_KEY</span></code></a>) you can use sessions in Flask applications. A session makes
 it possible to remember information from one request to another. The way Flask
@@ -3350,7 +3309,7 @@ set that to something complex and unguessable.</p>
 <em class="property">class </em><code class="descclassname">flask.</code><code class="descname">session</code><a class="headerlink" href="#flask.session" title="永久链接至目标">¶</a></dt>
 <dd><p>The session object works pretty much like an ordinary dict, with the
 difference that it keeps track of modifications.</p>
-<p>This is a proxy.  See <a class="reference internal" href="reqcontext.html#notes-on-proxies"><span class="std std-ref">Notes On Proxies</span></a> for more information.</p>
+<p>This is a proxy.  See <a class="reference internal" href="reqcontext.html#notes-on-proxies"><span class="std std-ref">关于代理的注释</span></a> for more information.</p>
 <p>The following attributes are interesting:</p>
 <dl class="attribute">
 <dt id="flask.session.new">
@@ -3387,7 +3346,7 @@ session will be deleted when the user closes the browser.</p>
 
 </div>
 <div class="section" id="session-interface">
-<h2>Session Interface<a class="headerlink" href="#session-interface" title="永久链接至标题">¶</a></h2>
+<h2>会话界面<a class="headerlink" href="#session-interface" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">0.8 新版功能.</span></p>
 </div>
@@ -3690,7 +3649,7 @@ this when that happens. The mixin default is hard coded to
 </dd></dl>
 
 <div class="admonition-notice admonition">
-<p class="admonition-title">Notice</p>
+<p class="admonition-title">注意</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">PERMANENT_SESSION_LIFETIME</span></code> config key can also be an integer
 starting with Flask 0.8.  Either catch this down yourself or use
 the <a class="reference internal" href="#flask.Flask.permanent_session_lifetime" title="flask.Flask.permanent_session_lifetime"><code class="xref py py-attr docutils literal notranslate"><span class="pre">permanent_session_lifetime</span></code></a> attribute on the
@@ -3698,7 +3657,7 @@ app which converts the result to an integer automatically.</p>
 </div>
 </div>
 <div class="section" id="test-client">
-<h2>Test Client<a class="headerlink" href="#test-client" title="永久链接至标题">¶</a></h2>
+<h2>测试客户端<a class="headerlink" href="#test-client" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="flask.testing.FlaskClient">
 <em class="property">class </em><code class="descclassname">flask.testing.</code><code class="descname">FlaskClient</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.testing.FlaskClient" title="永久链接至目标">¶</a></dt>
@@ -3713,7 +3672,7 @@ set after instantiation of the <cite>app.test_client()</cite> object in
 <cite>client.environ_base</cite>.</p>
 </div>
 <details class="changelog">
-<summary>Changelog</summary></details><p>Basic usage is outlined in the <a class="reference internal" href="testing.html#testing"><span class="std std-ref">测试Flask应用程序</span></a> chapter.</p>
+<summary>Changelog</summary></details><p>基本用法概述于:ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>testing`一章.</p>
 <dl class="method">
 <dt id="flask.testing.FlaskClient.open">
 <code class="descname">open</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.testing.FlaskClient.open" title="永久链接至目标">¶</a></dt>
@@ -3733,7 +3692,7 @@ the content type has to be called <cite>content_type</cite> now instead of
 </div></blockquote>
 </div>
 <details class="changelog">
-<summary>Changelog</summary></details><p>Additional parameters:</p>
+<summary>Changelog</summary></details><p>附加参数:</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3770,19 +3729,19 @@ passed through.</p>
 
 </div>
 <div class="section" id="test-cli-runner">
-<h2>Test CLI Runner<a class="headerlink" href="#test-cli-runner" title="永久链接至标题">¶</a></h2>
+<h2>测试CLI Runner<a class="headerlink" href="#test-cli-runner" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="flask.testing.FlaskCliRunner">
 <em class="property">class </em><code class="descclassname">flask.testing.</code><code class="descname">FlaskCliRunner</code><span class="sig-paren">(</span><em>app</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.testing.FlaskCliRunner" title="永久链接至目标">¶</a></dt>
 <dd><p>A <a class="reference external" href="https://click.palletsprojects.com/en/7.x/api/#click.testing.CliRunner" title="(在 Click v7.x)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CliRunner</span></code></a> for testing a Flask app’s
 CLI commands. Typically created using
-<a class="reference internal" href="#flask.Flask.test_cli_runner" title="flask.Flask.test_cli_runner"><code class="xref py py-meth docutils literal notranslate"><span class="pre">test_cli_runner()</span></code></a>. See <a class="reference internal" href="testing.html#testing-cli"><span class="std std-ref">Testing CLI Commands</span></a>.</p>
+<a class="reference internal" href="#flask.Flask.test_cli_runner" title="flask.Flask.test_cli_runner"><code class="xref py py-meth docutils literal notranslate"><span class="pre">test_cli_runner()</span></code></a>. See <a class="reference internal" href="testing.html#testing-cli"><span class="std std-ref">测试CLI命令</span></a>.</p>
 <dl class="method">
 <dt id="flask.testing.FlaskCliRunner.invoke">
 <code class="descname">invoke</code><span class="sig-paren">(</span><em>cli=None</em>, <em>args=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.testing.FlaskCliRunner.invoke" title="永久链接至目标">¶</a></dt>
 <dd><p>Invokes a CLI command in an isolated environment. See
 <a class="reference external" href="https://click.palletsprojects.com/en/7.x/api/#click.testing.CliRunner.invoke" title="(在 Click v7.x)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CliRunner.invoke</span></code></a> for
-full method documentation. See <a class="reference internal" href="testing.html#testing-cli"><span class="std std-ref">Testing CLI Commands</span></a> for examples.</p>
+full method documentation. See <a class="reference internal" href="testing.html#testing-cli"><span class="std std-ref">测试CLI命令</span></a> for examples.</p>
 <p>If the <code class="docutils literal notranslate"><span class="pre">obj</span></code> argument is not given, passes an instance of
 <a class="reference internal" href="#flask.cli.ScriptInfo" title="flask.cli.ScriptInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScriptInfo</span></code></a> that knows how to load the Flask
 app being tested.</p>
@@ -3804,7 +3763,7 @@ app being tested.</p>
 
 </div>
 <div class="section" id="application-globals">
-<h2>Application Globals<a class="headerlink" href="#application-globals" title="永久链接至标题">¶</a></h2>
+<h2>应用程序全局<a class="headerlink" href="#application-globals" title="永久链接至标题">¶</a></h2>
 <p>To share data that is valid for one request only from one function to
 another, a global variable is not good enough because it would break in
 threaded environments.  Flask provides you with a special object that
@@ -3819,11 +3778,11 @@ thing, like it does for <a class="reference internal" href="#flask.request" titl
 <a class="reference internal" href="#flask.Flask.app_ctx_globals_class" title="flask.Flask.app_ctx_globals_class"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Flask.app_ctx_globals_class</span></code></a>, which defaults to
 <a class="reference internal" href="#flask.ctx._AppCtxGlobals" title="flask.ctx._AppCtxGlobals"><code class="xref py py-class docutils literal notranslate"><span class="pre">ctx._AppCtxGlobals</span></code></a>.</p>
 <p>This is a good place to store resources during a request. During
-testing, you can use the <a class="reference internal" href="testing.html#faking-resources"><span class="std std-ref">Faking Resources and Context</span></a> pattern to
+testing, you can use the <a class="reference internal" href="testing.html#faking-resources"><span class="std std-ref">伪造资源和背景</span></a> pattern to
 pre-configure such resources.</p>
-<p>This is a proxy. See <a class="reference internal" href="reqcontext.html#notes-on-proxies"><span class="std std-ref">Notes On Proxies</span></a> for more information.</p>
+<p>This is a proxy. See <a class="reference internal" href="reqcontext.html#notes-on-proxies"><span class="std std-ref">关于代理的注释</span></a> for more information.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 0.10 版更改: </span>Bound to the application context instead of the request context.</p>
+<p><span class="versionmodified changed">在 0.10 版更改: </span>绑定到应用程序上下文而不是请求上下文.</p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details></dd></dl>
@@ -3831,14 +3790,12 @@ pre-configure such resources.</p>
 <dl class="class">
 <dt id="flask.ctx._AppCtxGlobals">
 <em class="property">class </em><code class="descclassname">flask.ctx.</code><code class="descname">_AppCtxGlobals</code><a class="headerlink" href="#flask.ctx._AppCtxGlobals" title="永久链接至目标">¶</a></dt>
-<dd><p>A plain object. Used as a namespace for storing data during an
-application context.</p>
-<p>Creating an app context automatically creates this object, which is
-made available as the <code class="xref py py-data docutils literal notranslate"><span class="pre">g</span></code> proxy.</p>
+<dd><p>一个普通的对象. 用作在应用程序上下文中存储数据的命名空间.</p>
+<p>创建应用程序上下文会自动创建此对象，该对象可用作:data:<a href="#id1"><span class="problematic" id="id2">`</span></a>g`代理.</p>
 <dl class="describe">
 <dt>
 <code class="descname">'key' in g</code></dt>
-<dd><p>Check whether an attribute is present.</p>
+<dd><p>检查属性是否存在.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.10 新版功能.</span></p>
 </div>
@@ -3848,7 +3805,7 @@ made available as the <code class="xref py py-data docutils literal notranslate"
 <dl class="describe">
 <dt>
 <code class="descname">iter(g)</code></dt>
-<dd><p>Return an iterator over the attribute names.</p>
+<dd><p>在属性名称上返回一个迭代器.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.10 新版功能.</span></p>
 </div>
@@ -3858,13 +3815,12 @@ made available as the <code class="xref py py-data docutils literal notranslate"
 <dl class="method">
 <dt id="flask.ctx._AppCtxGlobals.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>name</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.ctx._AppCtxGlobals.get" title="永久链接至目标">¶</a></dt>
-<dd><p>Get an attribute by name, or a default value. Like
-<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict.get" title="(在 Python v3.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dict.get()</span></code></a>.</p>
+<dd><p>按名称或默认值获取属性. 喜欢:meth:<cite>dict.get</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – Name of attribute to get.</p></li>
-<li><p><strong>default</strong> – Value to return if the attribute is not present.</p></li>
+<li><p><strong>name</strong> – 要获取的属性的名称.</p></li>
+<li><p><strong>default</strong> – 如果属性不存在则返回的值.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3877,13 +3833,12 @@ made available as the <code class="xref py py-data docutils literal notranslate"
 <dl class="method">
 <dt id="flask.ctx._AppCtxGlobals.pop">
 <code class="descname">pop</code><span class="sig-paren">(</span><em>name</em>, <em>default=&lt;object object&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.ctx._AppCtxGlobals.pop" title="永久链接至目标">¶</a></dt>
-<dd><p>Get and remove an attribute by name. Like <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict.pop" title="(在 Python v3.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dict.pop()</span></code></a>.</p>
+<dd><p>按名称获取和删除属性. 喜欢:meth:<cite>dict.pop</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – Name of attribute to pop.</p></li>
-<li><p><strong>default</strong> – Value to return if the attribute is not present,
-instead of raise a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code>.</p></li>
+<li><p><strong>name</strong> – 要弹出的属性的名称.</p></li>
+<li><p><strong>default</strong> – 如果属性不存在则返回值，而不是引发“KeyError”.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3896,15 +3851,13 @@ instead of raise a <code class="docutils literal notranslate"><span class="pre">
 <dl class="method">
 <dt id="flask.ctx._AppCtxGlobals.setdefault">
 <code class="descname">setdefault</code><span class="sig-paren">(</span><em>name</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.ctx._AppCtxGlobals.setdefault" title="永久链接至目标">¶</a></dt>
-<dd><p>Get the value of an attribute if it is present, otherwise
-set and return a default value. Like <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict.setdefault" title="(在 Python v3.7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dict.setdefault()</span></code></a>.</p>
+<dd><p>获取属性的值(如果存在)，否则设置并返回默认值. 喜欢:meth:<cite>dict.setdefault</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>name</strong> – Name of attribute to get.</p>
+<dd class="field-odd"><p><strong>name</strong> – 要获取的属性的名称.</p>
 </dd>
 <dt class="field-even">Param</dt>
-<dd class="field-even"><p>default: Value to set and return if the attribute is not
-present.</p>
+<dd class="field-even"><p>default:要设置的值，如果该属性不存在则返回.</p>
 </dd>
 </dl>
 <div class="versionadded">
@@ -3917,7 +3870,7 @@ present.</p>
 
 </div>
 <div class="section" id="useful-functions-and-classes">
-<h2>Useful Functions and Classes<a class="headerlink" href="#useful-functions-and-classes" title="永久链接至标题">¶</a></h2>
+<h2>有用的功能和类<a class="headerlink" href="#useful-functions-and-classes" title="永久链接至标题">¶</a></h2>
 <dl class="data">
 <dt id="flask.current_app">
 <code class="descclassname">flask.</code><code class="descname">current_app</code><a class="headerlink" href="#flask.current_app" title="永久链接至目标">¶</a></dt>
@@ -3929,7 +3882,7 @@ pattern or in blueprints and extensions.</p>
 <a class="reference internal" href="appcontext.html"><span class="doc">application context</span></a> is pushed. This happens
 automatically during requests and CLI commands. It can be controlled
 manually with <a class="reference internal" href="#flask.Flask.app_context" title="flask.Flask.app_context"><code class="xref py py-meth docutils literal notranslate"><span class="pre">app_context()</span></code></a>.</p>
-<p>This is a proxy. See <a class="reference internal" href="reqcontext.html#notes-on-proxies"><span class="std std-ref">Notes On Proxies</span></a> for more information.</p>
+<p>This is a proxy. See <a class="reference internal" href="reqcontext.html#notes-on-proxies"><span class="std std-ref">关于代理的注释</span></a> for more information.</p>
 </dd></dl>
 
 <dl class="function">
@@ -4009,17 +3962,17 @@ context.  You can also just do a boolean check on the
 <dl class="function">
 <dt id="flask.url_for">
 <code class="descclassname">flask.</code><code class="descname">url_for</code><span class="sig-paren">(</span><em>endpoint</em>, <em>**values</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.url_for" title="永久链接至目标">¶</a></dt>
-<dd><p>Generates a URL to the given endpoint with the method provided.</p>
+<dd><p>使用提供的方法生成指向给定端点的URL.</p>
 <p>Variable arguments that are unknown to the target endpoint are appended
 to the generated URL as query arguments.  If the value of a query argument
 is <code class="docutils literal notranslate"><span class="pre">None</span></code>, the whole pair is skipped.  In case blueprints are active
 you can shortcut references to the same blueprint by prefixing the
 local endpoint with a dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>).</p>
-<p>This will reference the index function local to the current blueprint:</p>
+<p>这将引用当前蓝图的本地索引函数:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;.index&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For more information, head over to the <a class="reference internal" href="quickstart.html#url-building"><span class="std std-ref">Quickstart</span></a>.</p>
+<p>有关更多信息，请转到:ref:<cite>Quickstart &lt;url-building&gt;</cite>.</p>
 <p>To integrate applications, <a class="reference internal" href="#flask.Flask" title="flask.Flask"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flask</span></code></a> has a hook to intercept URL build
 errors through <a class="reference internal" href="#flask.Flask.url_build_error_handlers" title="flask.Flask.url_build_error_handlers"><code class="xref py py-attr docutils literal notranslate"><span class="pre">Flask.url_build_error_handlers</span></code></a>.  The <cite>url_for</cite>
 function results in a <code class="xref py py-exc docutils literal notranslate"><span class="pre">BuildError</span></code> when the current
@@ -4054,21 +4007,20 @@ An example:</p>
 that this is for building URLs outside the current application, and not for
 handling 404 NotFound errors.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">0.10 新版功能: </span>The <cite>_scheme</cite> parameter was added.</p>
+<p><span class="versionmodified added">0.10 新版功能: </span>添加了`_scheme`参数.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">0.9 新版功能: </span>The <cite>_anchor</cite> and <cite>_method</cite> parameters were added.</p>
+<p><span class="versionmodified added">0.9 新版功能: </span>添加了`_anchor`和`_method`参数.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">0.9 新版功能: </span>Calls <code class="xref py py-meth docutils literal notranslate"><span class="pre">Flask.handle_build_error()</span></code> on
-<code class="xref py py-exc docutils literal notranslate"><span class="pre">BuildError</span></code>.</p>
+<p><span class="versionmodified added">0.9 新版功能: </span>调用:meth:<cite>Flask.handle_build_error</cite> on:exc:<cite>~werkzeug.routing.BuildError</cite>.</p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>endpoint</strong> – the endpoint of the URL (name of the function)</p></li>
-<li><p><strong>values</strong> – the variable arguments of the URL rule</p></li>
+<li><p><strong>endpoint</strong> – URL的端点(函数名称)</p></li>
+<li><p><strong>values</strong> – URL规则的变量参数</p></li>
 <li><p><strong>_external</strong> – if set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, an absolute URL is generated. Server
 address can be changed via <code class="docutils literal notranslate"><span class="pre">SERVER_NAME</span></code> configuration variable which
 defaults to <cite>localhost</cite>.</p></li>
@@ -4078,8 +4030,8 @@ behavior uses the same scheme as the current request, or
 <code class="docutils literal notranslate"><span class="pre">PREFERRED_URL_SCHEME</span></code> from the <a class="reference internal" href="config.html#config"><span class="std std-ref">app configuration</span></a> if no
 request context is available. As of Werkzeug 0.10, this also can be set
 to an empty string to build protocol-relative URLs.</p></li>
-<li><p><strong>_anchor</strong> – if provided this is added as anchor to the URL.</p></li>
-<li><p><strong>_method</strong> – if provided this explicitly specifies an HTTP method.</p></li>
+<li><p><strong>_anchor</strong> – 如果提供，则将其作为锚添加到URL.</p></li>
+<li><p><strong>_method</strong> – 如果提供，则显式指定HTTP方法.</p></li>
 </ul>
 </dd>
 </dl>
@@ -4088,8 +4040,7 @@ to an empty string to build protocol-relative URLs.</p></li>
 <dl class="function">
 <dt id="flask.abort">
 <code class="descclassname">flask.</code><code class="descname">abort</code><span class="sig-paren">(</span><em>status</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.abort" title="永久链接至目标">¶</a></dt>
-<dd><p>Raises an <code class="xref py py-exc docutils literal notranslate"><span class="pre">HTTPException</span></code> for the given status code or WSGI
-application:</p>
+<dd><p>为给定的状态代码或WSGI应用程序引发:py:exc:<cite>HTTPException</cite>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>  <span class="c1"># 404 Not Found</span>
 <span class="n">abort</span><span class="p">(</span><span class="n">Response</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">))</span>
 </pre></div>
@@ -4123,11 +4074,9 @@ the <code class="xref py py-func docutils literal notranslate"><span class="pre"
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>location</strong> – the location the response should redirect to.</p></li>
-<li><p><strong>code</strong> – the redirect status code. defaults to 302.</p></li>
-<li><p><strong>Response</strong> (<em>class</em>) – a Response class to use when instantiating a
-response. The default is <a class="reference external" href="https://werkzeug.palletsprojects.com/en/0.15.x/wrappers/#werkzeug.wrappers.Response" title="(在 Werkzeug v0.15.x)"><code class="xref py py-class docutils literal notranslate"><span class="pre">werkzeug.wrappers.Response</span></code></a> if
-unspecified.</p></li>
+<li><p><strong>location</strong> – 响应应重定向到的位置.</p></li>
+<li><p><strong>code</strong> – 重定向状态代码. 默认为302.</p></li>
+<li><p><strong>Response</strong> (<em>class</em>) – 在实例化响应时使用的Response类. 默认值为:class:<a href="#id1"><span class="problematic" id="id2">`</span></a>werkzeug.wrappers.Response`如果未指定.</p></li>
 </ul>
 </dd>
 </dl>
@@ -4141,38 +4090,32 @@ views do not have to return response objects but can return a value that
 is converted into a response object by Flask itself, it becomes tricky to
 add headers to it.  This function can be called instead of using a return
 and you will get a response object which you can use to attach headers.</p>
-<p>If view looked like this and you want to add a new header:</p>
+<p>如果视图看起来像这样，并且您想要添加新标头:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="n">foo</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can now do something like this:</p>
+<p>你现在可以这样做了:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">make_response</span><span class="p">(</span><span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="n">foo</span><span class="o">=</span><span class="mi">42</span><span class="p">))</span>
     <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;X-Parachutes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;parachutes are cool&#39;</span>
     <span class="k">return</span> <span class="n">response</span>
 </pre></div>
 </div>
-<p>This function accepts the very same arguments you can return from a
-view function.  This for example creates a response with a 404 error
-code:</p>
+<p>此函数接受可以从视图函数返回的相同参数. 例如，这会创建一个带有404错误代码的响应:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">make_response</span><span class="p">(</span><span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;not_found.html&#39;</span><span class="p">),</span> <span class="mi">404</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The other use case of this function is to force the return value of a
-view function into a response which is helpful with view
-decorators:</p>
+<p>此函数的另一个用例是将视图函数的返回值强制转换为对视图装饰器有帮助的响应:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">make_response</span><span class="p">(</span><span class="n">view_function</span><span class="p">())</span>
 <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;X-Parachutes&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;parachutes are cool&#39;</span>
 </pre></div>
 </div>
-<p>Internally this function does the following things:</p>
+<p>在内部，此功能执行以下操作:</p>
 <ul class="simple">
-<li><p>if no arguments are passed, it creates a new response argument</p></li>
-<li><p>if one argument is passed, <a class="reference internal" href="#flask.Flask.make_response" title="flask.Flask.make_response"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flask.Flask.make_response()</span></code></a>
-is invoked with it.</p></li>
-<li><p>if more than one argument is passed, the arguments are passed
-to the <a class="reference internal" href="#flask.Flask.make_response" title="flask.Flask.make_response"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flask.Flask.make_response()</span></code></a> function as tuple.</p></li>
+<li><p>如果没有传递参数，它会创建一个新的响应参数</p></li>
+<li><p>如果传递了一个参数，则使用它调用:meth:<cite>flask.Flask.make_response</cite>.</p></li>
+<li><p>如果传递了多个参数，则参数将作为元组传递给:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>flask.Flask.make_response`函数.</p></li>
 </ul>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
@@ -4440,7 +4383,7 @@ HTML entities with the characters they represent.</p>
 
 </div>
 <div class="section" id="message-flashing">
-<h2>Message Flashing<a class="headerlink" href="#message-flashing" title="永久链接至标题">¶</a></h2>
+<h2>消息闪烁<a class="headerlink" href="#message-flashing" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="flask.flash">
 <code class="descclassname">flask.</code><code class="descname">flash</code><span class="sig-paren">(</span><em>message</em>, <em>category='message'</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.flash" title="永久链接至目标">¶</a></dt>
@@ -4448,13 +4391,13 @@ HTML entities with the characters they represent.</p>
 flashed message from the session and to display it to the user,
 the template has to call <a class="reference internal" href="#flask.get_flashed_messages" title="flask.get_flashed_messages"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_flashed_messages()</span></code></a>.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 0.3 版更改: </span><cite>category</cite> parameter added.</p>
+<p><span class="versionmodified changed">在 0.3 版更改: </span><cite>category</cite> 参数已添加.</p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>message</strong> – the message to be flashed.</p></li>
+<li><p><strong>message</strong> – 要闪现的信息.</p></li>
 <li><p><strong>category</strong> – the category for the message.  The following values
 are recommended: <code class="docutils literal notranslate"><span class="pre">'message'</span></code> for any kind of message,
 <code class="docutils literal notranslate"><span class="pre">'error'</span></code> for errors, <code class="docutils literal notranslate"><span class="pre">'info'</span></code> for information
@@ -4483,7 +4426,7 @@ text (<code class="docutils literal notranslate"><span class="pre">True</span></
 <li><p><cite>category_filter</cite> filters the messages down to only those matching the
 provided categories.</p></li>
 </ul>
-<p>See <a class="reference internal" href="patterns/flashing.html#message-flashing-pattern"><span class="std std-ref">消息闪烁</span></a> for examples.</p>
+<p>有关示例，请参阅:ref:<cite>message-flashing-pattern</cite>.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 0.9 版更改: </span><cite>category_filter</cite> parameter added.</p>
 </div>
@@ -4503,13 +4446,13 @@ provided categories.</p></li>
 
 </div>
 <div class="section" id="module-flask.json">
-<span id="json-support"></span><h2>JSON Support<a class="headerlink" href="#module-flask.json" title="永久链接至标题">¶</a></h2>
+<span id="json-support"></span><h2>JSON 支持<a class="headerlink" href="#module-flask.json" title="永久链接至标题">¶</a></h2>
 <p>Flask uses <code class="docutils literal notranslate"><span class="pre">simplejson</span></code> for the JSON implementation.  Since simplejson
 is provided by both the standard library as well as extension, Flask will
 try simplejson first and then fall back to the stdlib json module.  On top
 of that it will delegate access to the current application’s JSON encoders
 and decoders for easier customization.</p>
-<p>So for starters instead of doing:</p>
+<p>所以对于初学者而不是做:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="kn">import</span> <span class="nn">simplejson</span> <span class="k">as</span> <span class="nn">json</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
@@ -4540,8 +4483,8 @@ happens automatically (but it’s harmless to include <code class="docutils lite
 </pre></div>
 </div>
 <div class="admonition-auto-sort-json-keys admonition">
-<p class="admonition-title">Auto-Sort JSON Keys</p>
-<p>The configuration variable <code class="docutils literal notranslate"><span class="pre">JSON_SORT_KEYS</span></code> (<a class="reference internal" href="config.html#config"><span class="std std-ref">Configuration Handling</span></a>) can be
+<p class="admonition-title">自动排序JSON密钥</p>
+<p>The configuration variable <code class="docutils literal notranslate"><span class="pre">JSON_SORT_KEYS</span></code> (<a class="reference internal" href="config.html#config"><span class="std std-ref">配置处理</span></a>) can be
 set to false to stop Flask from auto-sorting keys.  By default sorting
 is enabled and outside of the app context sorting is turned on.</p>
 <p>Notice that disabling key sorting can cause issues when using content
@@ -4586,7 +4529,7 @@ from <a class="reference internal" href="#flask.json.dumps" title="flask.json.du
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 0.11 版更改: </span>Added support for serializing top-level arrays. This introduces a
-security risk in ancient browsers. See <a class="reference internal" href="security.html#json-security"><span class="std std-ref">JSON Security</span></a> for details.</p>
+security risk in ancient browsers. See <a class="reference internal" href="security.html#json-security"><span class="std std-ref">JSON安全</span></a> for details.</p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details><p>This function’s response will be pretty printed if the
@@ -4671,7 +4614,7 @@ functions of this module but also <a class="reference internal" href="#flask.Req
 </dd></dl>
 
 <span class="target" id="module-flask.json.tag"></span><div class="section" id="tagged-json">
-<h3>Tagged JSON<a class="headerlink" href="#tagged-json" title="永久链接至标题">¶</a></h3>
+<h3>标记为JSON<a class="headerlink" href="#tagged-json" title="永久链接至标题">¶</a></h3>
 <p>A compact representation for lossless serialization of non-standard JSON types.
 <a class="reference internal" href="#flask.sessions.SecureCookieSessionInterface" title="flask.sessions.SecureCookieSessionInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">SecureCookieSessionInterface</span></code></a> uses this to serialize
 the session data, but it may be useful in other places. It can be extended to
@@ -4713,7 +4656,7 @@ added later using <a class="reference internal" href="#flask.json.tag.TaggedJSON
 <dl class="method">
 <dt id="flask.json.tag.TaggedJSONSerializer.register">
 <code class="descname">register</code><span class="sig-paren">(</span><em>tag_class</em>, <em>force=False</em>, <em>index=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.json.tag.TaggedJSONSerializer.register" title="永久链接至目标">¶</a></dt>
-<dd><p>Register a new tag with this serializer.</p>
+<dd><p>使用此序列化程序注册新标记.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4814,7 +4757,7 @@ processes dicts first, so insert the new tag at the front of the order since
 </div>
 </div>
 <div class="section" id="template-rendering">
-<h2>Template Rendering<a class="headerlink" href="#template-rendering" title="永久链接至标题">¶</a></h2>
+<h2>模板渲染<a class="headerlink" href="#template-rendering" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="flask.render_template">
 <code class="descclassname">flask.</code><code class="descname">render_template</code><span class="sig-paren">(</span><em>template_name_or_list</em>, <em>**context</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.render_template" title="永久链接至目标">¶</a></dt>
@@ -4880,14 +4823,14 @@ template named <code class="file docutils literal notranslate"><span class="pre"
 
 </div>
 <div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="flask.Config">
 <em class="property">class </em><code class="descclassname">flask.</code><code class="descname">Config</code><span class="sig-paren">(</span><em>root_path</em>, <em>defaults=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Config" title="永久链接至目标">¶</a></dt>
 <dd><p>Works exactly like a dict but provides ways to fill it from files
 or special dictionaries.  There are two common patterns to populate the
 config.</p>
-<p>Either you can fill the config from a config file:</p>
+<p>您可以从配置文件中填充配置:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">from_pyfile</span><span class="p">(</span><span class="s1">&#39;yourconfig.cfg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4906,8 +4849,7 @@ only uppercase keys are added to the config.  This makes it possible to use
 lowercase values in the config file for temporary values that are not added
 to the config or to define the config keys in the same file that implements
 the application.</p>
-<p>Probably the most interesting way to load configurations is from an
-environment variable pointing to a file:</p>
+<p>加载配置最有趣的方法可能是指向文件的环境变量:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">from_envvar</span><span class="p">(</span><span class="s1">&#39;YOURAPPLICATION_SETTINGS&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -4917,14 +4859,14 @@ use the export statement:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">YOURAPPLICATION_SETTINGS</span><span class="o">=</span><span class="s1">&#39;/path/to/config/file&#39;</span>
 </pre></div>
 </div>
-<p>On windows use <cite>set</cite> instead.</p>
+<p>在Windows上使用`set`代替.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>root_path</strong> – path to which files are read relative from.  When the
 config object is created by the application, this is
 the application’s <a class="reference internal" href="#flask.Flask.root_path" title="flask.Flask.root_path"><code class="xref py py-attr docutils literal notranslate"><span class="pre">root_path</span></code></a>.</p></li>
-<li><p><strong>defaults</strong> – an optional dictionary of default values</p></li>
+<li><p><strong>defaults</strong> – 可选的默认值字典</p></li>
 </ul>
 </dd>
 </dl>
@@ -4940,7 +4882,7 @@ error messages for this line of code:</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>variable_name</strong> – name of the environment variable</p></li>
+<li><p><strong>variable_name</strong> – 环境变量的名称</p></li>
 <li><p><strong>silent</strong> – set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if you want silent failure for missing
 files.</p></li>
 </ul>
@@ -4960,9 +4902,7 @@ behaves as if the JSON object was a dictionary and passed to the
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> – the filename of the JSON file.  This can either be an
-absolute filename or a filename relative to the
-root path.</p></li>
+<li><p><strong>filename</strong> – JSON文件的文件名. 这可以是绝对文件名，也可以是相对于根路径的文件名.</p></li>
 <li><p><strong>silent</strong> – set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if you want silent failure for missing
 files.</p></li>
 </ul>
@@ -4977,8 +4917,7 @@ files.</p></li>
 <dl class="method">
 <dt id="flask.Config.from_mapping">
 <code class="descname">from_mapping</code><span class="sig-paren">(</span><em>*mapping</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Config.from_mapping" title="永久链接至目标">¶</a></dt>
-<dd><p>Updates the config like <code class="xref py py-meth docutils literal notranslate"><span class="pre">update()</span></code> ignoring items with non-upper
-keys.</p>
+<dd><p>更新配置如:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>update`忽略具有非上键的项目.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">0.11 新版功能.</span></p>
 </div>
@@ -4988,17 +4927,16 @@ keys.</p>
 <dl class="method">
 <dt id="flask.Config.from_object">
 <code class="descname">from_object</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Config.from_object" title="永久链接至目标">¶</a></dt>
-<dd><p>Updates the values from the given object.  An object can be of one
-of the following two types:</p>
+<dd><p>更新给定对象的值. 对象可以是以下两种类型之一:</p>
 <ul class="simple">
-<li><p>a string: in this case the object with that name will be imported</p></li>
-<li><p>an actual object reference: that object is used directly</p></li>
+<li><p>更新给定对象的值. 对象可以是以下两种类型之一</p></li>
+<li><p>实际的对象引用:该对象直接使用</p></li>
 </ul>
 <p>Objects are usually either modules or classes. <a class="reference internal" href="#flask.Config.from_object" title="flask.Config.from_object"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_object()</span></code></a>
 loads only the uppercase attributes of the module/class. A <code class="docutils literal notranslate"><span class="pre">dict</span></code>
 object will not work with <a class="reference internal" href="#flask.Config.from_object" title="flask.Config.from_object"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_object()</span></code></a> because the keys of a
 <code class="docutils literal notranslate"><span class="pre">dict</span></code> are not attributes of the <code class="docutils literal notranslate"><span class="pre">dict</span></code> class.</p>
-<p>Example of module-based configuration:</p>
+<p>基于模块的配置示例:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">from_object</span><span class="p">(</span><span class="s1">&#39;yourapplication.default_config&#39;</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">yourapplication</span> <span class="k">import</span> <span class="n">default_config</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">from_object</span><span class="p">(</span><span class="n">default_config</span><span class="p">)</span>
@@ -5011,11 +4949,11 @@ instantiated before being passed to this method.</p>
 rather configuration defaults.  The actual config should be loaded
 with <a class="reference internal" href="#flask.Config.from_pyfile" title="flask.Config.from_pyfile"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_pyfile()</span></code></a> and ideally from a location not within the
 package because the package might be installed system wide.</p>
-<p>See <a class="reference internal" href="config.html#config-dev-prod"><span class="std std-ref">Development / Production</span></a> for an example of class-based configuration
+<p>See <a class="reference internal" href="config.html#config-dev-prod"><span class="std std-ref">开发/生产</span></a> for an example of class-based configuration
 using <a class="reference internal" href="#flask.Config.from_object" title="flask.Config.from_object"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_object()</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
-<dd class="field-odd"><p><strong>obj</strong> – an import name or object</p>
+<dd class="field-odd"><p><strong>obj</strong> – 导入名称或对象</p>
 </dd>
 </dl>
 </dd></dl>
@@ -5029,9 +4967,7 @@ behaves as if the file was imported as module with the
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filename</strong> – the filename of the config.  This can either be an
-absolute filename or a filename relative to the
-root path.</p></li>
+<li><p><strong>filename</strong> – 配置的文件名. 这可以是绝对文件名，也可以是相对于根路径的文件名.</p></li>
 <li><p><strong>silent</strong> – set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if you want silent failure for missing
 files.</p></li>
 </ul>
@@ -5046,15 +4982,14 @@ files.</p></li>
 <dl class="method">
 <dt id="flask.Config.get_namespace">
 <code class="descname">get_namespace</code><span class="sig-paren">(</span><em>namespace</em>, <em>lowercase=True</em>, <em>trim_namespace=True</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.Config.get_namespace" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns a dictionary containing a subset of configuration options
-that match the specified namespace/prefix. Example usage:</p>
+<dd><p>返回包含与指定的命名空间/前缀匹配的配置选项子集的字典. 用法示例:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;IMAGE_STORE_TYPE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;fs&#39;</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;IMAGE_STORE_PATH&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;/var/app/images&#39;</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;IMAGE_STORE_BASE_URL&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;http://img.website.com&#39;</span>
 <span class="n">image_store_config</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_namespace</span><span class="p">(</span><span class="s1">&#39;IMAGE_STORE_&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The resulting dictionary <cite>image_store_config</cite> would look like:</p>
+<p>生成的字典`image_store_config`看起来像:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;fs&#39;</span><span class="p">,</span>
     <span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;/var/app/images&#39;</span><span class="p">,</span>
@@ -5062,16 +4997,13 @@ that match the specified namespace/prefix. Example usage:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This is often useful when configuration options map directly to
-keyword arguments in functions or class constructors.</p>
+<p>当配置选项直接映射到函数或类构造函数中的关键字参数时，这通常很有用.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>namespace</strong> – a configuration namespace</p></li>
-<li><p><strong>lowercase</strong> – a flag indicating if the keys of the resulting
-dictionary should be lowercase</p></li>
-<li><p><strong>trim_namespace</strong> – a flag indicating if the keys of the resulting
-dictionary should not include the namespace</p></li>
+<li><p><strong>namespace</strong> – 配置命名空间</p></li>
+<li><p><strong>lowercase</strong> – 一个标志，指示结果字典的键是否应为小写</p></li>
+<li><p><strong>trim_namespace</strong> – 一个标志，指示结果字典的键是否不应包含命名空间</p></li>
 </ul>
 </dd>
 </dl>
@@ -5085,7 +5017,7 @@ dictionary should not include the namespace</p></li>
 
 </div>
 <div class="section" id="stream-helpers">
-<h2>Stream Helpers<a class="headerlink" href="#stream-helpers" title="永久链接至标题">¶</a></h2>
+<h2>溪流助手<a class="headerlink" href="#stream-helpers" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="flask.stream_with_context">
 <code class="descclassname">flask.</code><code class="descname">stream_with_context</code><span class="sig-paren">(</span><em>generator_or_function</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.stream_with_context" title="永久链接至目标">¶</a></dt>
@@ -5127,7 +5059,7 @@ information any more.</p>
 
 </div>
 <div class="section" id="useful-internals">
-<h2>Useful Internals<a class="headerlink" href="#useful-internals" title="永久链接至标题">¶</a></h2>
+<h2>有用的内部<a class="headerlink" href="#useful-internals" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="flask.ctx.RequestContext">
 <em class="property">class </em><code class="descclassname">flask.ctx.</code><code class="descname">RequestContext</code><span class="sig-paren">(</span><em>app</em>, <em>environ</em>, <em>request=None</em>, <em>session=None</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.ctx.RequestContext" title="永久链接至目标">¶</a></dt>
@@ -5186,7 +5118,7 @@ of the request.</p>
 also trigger the execution of functions registered by the
 <a class="reference internal" href="#flask.Flask.teardown_request" title="flask.Flask.teardown_request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">teardown_request()</span></code></a> decorator.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 0.9 版更改: </span>Added the <cite>exc</cite> argument.</p>
+<p><span class="versionmodified changed">在 0.9 版更改: </span>添加了`exc`参数.</p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details></dd></dl>
@@ -5194,7 +5126,7 @@ also trigger the execution of functions registered by the
 <dl class="method">
 <dt id="flask.ctx.RequestContext.push">
 <code class="descname">push</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flask.ctx.RequestContext.push" title="永久链接至目标">¶</a></dt>
-<dd><p>Binds the request context to the current context.</p>
+<dd><p>将请求上下文绑定到当前上下文.</p>
 </dd></dl>
 
 </dd></dl>
@@ -5207,20 +5139,19 @@ also trigger the execution of functions registered by the
 <a class="reference internal" href="#flask.request" title="flask.request"><code class="xref py py-data docutils literal notranslate"><span class="pre">request</span></code></a> and <a class="reference internal" href="#flask.session" title="flask.session"><code class="xref py py-data docutils literal notranslate"><span class="pre">session</span></code></a> proxies should be accessed
 instead of the stack. It may be useful to access the stack in
 extension code.</p>
-<p>The following attributes are always present on each layer of the
-stack:</p>
+<p>以下属性始终存在于堆栈的每个层上:</p>
 <dl class="simple">
-<dt><cite>app</cite></dt><dd><p>the active Flask application.</p>
+<dt><cite>app</cite></dt><dd><p>活跃的Flask应用程序.</p>
 </dd>
-<dt><cite>url_adapter</cite></dt><dd><p>the URL adapter that was used to match the request.</p>
+<dt><cite>url_adapter</cite></dt><dd><p>用于匹配请求的URL适配器.</p>
 </dd>
-<dt><cite>request</cite></dt><dd><p>the current request object.</p>
+<dt><cite>request</cite></dt><dd><p>当前的请求对象.</p>
 </dd>
-<dt><cite>session</cite></dt><dd><p>the active session object.</p>
+<dt><cite>session</cite></dt><dd><p>活动会话对象.</p>
 </dd>
-<dt><cite>g</cite></dt><dd><p>an object with all the attributes of the <a class="reference internal" href="#flask.g" title="flask.g"><code class="xref py py-data docutils literal notranslate"><span class="pre">flask.g</span></code></a> object.</p>
+<dt><cite>g</cite></dt><dd><p>一个具有以下所有属性的对象:data:<a href="#id1"><span class="problematic" id="id2">`</span></a>flask.g`对象. “</p>
 </dd>
-<dt><cite>flashes</cite></dt><dd><p>an internal cache for the flashed messages.</p>
+<dt><cite>flashes</cite></dt><dd><p>闪存消息的内部缓存.</p>
 </dd>
 </dl>
 <p>Example usage:</p>
@@ -5246,7 +5177,7 @@ context.</p>
 <dl class="method">
 <dt id="flask.ctx.AppContext.pop">
 <code class="descname">pop</code><span class="sig-paren">(</span><em>exc=&lt;object object&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.ctx.AppContext.pop" title="永久链接至目标">¶</a></dt>
-<dd><p>Pops the app context.</p>
+<dd><p>弹出应用程序上下文.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5339,7 +5270,7 @@ blueprint.</p>
 
 </div>
 <div class="section" id="signals">
-<span id="core-signals-list"></span><h2>Signals<a class="headerlink" href="#signals" title="永久链接至标题">¶</a></h2>
+<span id="core-signals-list"></span><h2>信号<a class="headerlink" href="#signals" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">0.6 新版功能.</span></p>
 </div>
@@ -5347,18 +5278,17 @@ blueprint.</p>
 <summary>Changelog</summary></details><dl class="data">
 <dt id="flask.signals.signals_available">
 <code class="descclassname">signals.</code><code class="descname">signals_available</code><a class="headerlink" href="#flask.signals.signals_available" title="永久链接至目标">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the signaling system is available.  This is the case
-when <a class="reference external" href="https://pypi.org/project/blinker/">blinker</a> is installed.</p>
+<dd><p>如果信号系统可用，则为“真”. 安装`blinker`_时就是这种情况.</p>
 </dd></dl>
 
-<p>The following signals exist in Flask:</p>
+<p>Flask中存在以下信号:</p>
 <dl class="data">
 <dt id="flask.template_rendered">
 <code class="descclassname">flask.</code><code class="descname">template_rendered</code><a class="headerlink" href="#flask.template_rendered" title="永久链接至目标">¶</a></dt>
 <dd><p>This signal is sent when a template was successfully rendered.  The
 signal is invoked with the instance of the template as <cite>template</cite>
 and the context as dictionary (named <cite>context</cite>).</p>
-<p>Example subscriber:</p>
+<p>示例订户:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">log_template_renders</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">template</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="o">**</span><span class="n">extra</span><span class="p">):</span>
     <span class="n">sender</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Rendering template &quot;</span><span class="si">%s</span><span class="s1">&quot; with context </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
                         <span class="n">template</span><span class="o">.</span><span class="n">name</span> <span class="ow">or</span> <span class="s1">&#39;string template&#39;</span><span class="p">,</span>
@@ -5376,7 +5306,7 @@ and the context as dictionary (named <cite>context</cite>).</p>
 <dd><p>This signal is sent before template rendering process. The
 signal is invoked with the instance of the template as <cite>template</cite>
 and the context as dictionary (named <cite>context</cite>).</p>
-<p>Example subscriber:</p>
+<p>示例订户:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">log_template_renders</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">template</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="o">**</span><span class="n">extra</span><span class="p">):</span>
     <span class="n">sender</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Rendering template &quot;</span><span class="si">%s</span><span class="s1">&quot; with context </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span>
                         <span class="n">template</span><span class="o">.</span><span class="n">name</span> <span class="ow">or</span> <span class="s1">&#39;string template&#39;</span><span class="p">,</span>
@@ -5395,7 +5325,7 @@ and the context as dictionary (named <cite>context</cite>).</p>
 any request processing happens.  Because the request context is already
 bound, the subscriber can access the request with the standard global
 proxies such as <a class="reference internal" href="#flask.request" title="flask.request"><code class="xref py py-class docutils literal notranslate"><span class="pre">request</span></code></a>.</p>
-<p>Example subscriber:</p>
+<p>示例订户:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">log_request</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="o">**</span><span class="n">extra</span><span class="p">):</span>
     <span class="n">sender</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Request context is set up&#39;</span><span class="p">)</span>
 
@@ -5410,7 +5340,7 @@ proxies such as <a class="reference internal" href="#flask.request" title="flask
 <code class="descclassname">flask.</code><code class="descname">request_finished</code><a class="headerlink" href="#flask.request_finished" title="永久链接至目标">¶</a></dt>
 <dd><p>This signal is sent right before the response is sent to the client.
 It is passed the response to be sent named <cite>response</cite>.</p>
-<p>Example subscriber:</p>
+<p>示例订户:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">log_response</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="o">**</span><span class="n">extra</span><span class="p">):</span>
     <span class="n">sender</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Request context is about to close down.  &#39;</span>
                         <span class="s1">&#39;Response: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
@@ -5428,7 +5358,7 @@ It is passed the response to be sent named <cite>response</cite>.</p>
 It is sent <em>before</em> the standard exception handling kicks in and even
 in debug mode, where no exception handling happens.  The exception
 itself is passed to the subscriber as <cite>exception</cite>.</p>
-<p>Example subscriber:</p>
+<p>示例订户:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">log_exception</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">exception</span><span class="p">,</span> <span class="o">**</span><span class="n">extra</span><span class="p">):</span>
     <span class="n">sender</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Got exception during processing: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">exception</span><span class="p">)</span>
 
@@ -5445,7 +5375,7 @@ itself is passed to the subscriber as <cite>exception</cite>.</p>
 called, even if an exception is caused.  Currently functions listening
 to this signal are called after the regular teardown handlers, but this
 is not something you can rely on.</p>
-<p>Example subscriber:</p>
+<p>示例订户:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">close_db_connection</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="o">**</span><span class="n">extra</span><span class="p">):</span>
     <span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
@@ -5465,7 +5395,7 @@ there was one.</p>
 called, even if an exception is caused.  Currently functions listening
 to this signal are called after the regular teardown handlers, but this
 is not something you can rely on.</p>
-<p>Example subscriber:</p>
+<p>示例订户:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">close_db_connection</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="o">**</span><span class="n">extra</span><span class="p">):</span>
     <span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
@@ -5496,7 +5426,7 @@ set a resource early onto the <cite>g</cite> object.</p>
         <span class="k">yield</span>
 </pre></div>
 </div>
-<p>And in the testcode:</p>
+<p>并在测试代码中:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_user_me</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">user_set</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="s1">&#39;john&#39;</span><span class="p">):</span>
         <span class="n">c</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">test_client</span><span class="p">()</span>
@@ -5528,7 +5458,7 @@ is the application.  This usually falls in line with the
 <dd><p>This signal is sent when the application is flashing a message.  The
 messages is sent as <cite>message</cite> keyword argument and the category as
 <cite>category</cite>.</p>
-<p>Example subscriber:</p>
+<p>示例订户:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">recorded</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">def</span> <span class="nf">record</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="o">**</span><span class="n">extra</span><span class="p">):</span>
     <span class="n">recorded</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">message</span><span class="p">,</span> <span class="n">category</span><span class="p">))</span>
@@ -5563,7 +5493,7 @@ operations, including connecting.</p>
 
 </div>
 <div class="section" id="class-based-views">
-<span id="id2"></span><h2>Class-Based Views<a class="headerlink" href="#class-based-views" title="永久链接至标题">¶</a></h2>
+<span id="id2"></span><h2>基于类的视图<a class="headerlink" href="#class-based-views" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">0.7 新版功能.</span></p>
 </div>
@@ -5637,13 +5567,13 @@ the arguments from the URL rule.</p>
 <dl class="attribute">
 <dt id="flask.views.View.methods">
 <code class="descname">methods</code><em class="property"> = None</em><a class="headerlink" href="#flask.views.View.methods" title="永久链接至目标">¶</a></dt>
-<dd><p>A list of methods this view can handle.</p>
+<dd><p>此视图可以处理的方法列表.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="flask.views.View.provide_automatic_options">
 <code class="descname">provide_automatic_options</code><em class="property"> = None</em><a class="headerlink" href="#flask.views.View.provide_automatic_options" title="永久链接至目标">¶</a></dt>
-<dd><p>Setting this disables or force-enables the automatic options handling.</p>
+<dd><p>设置此选项会禁用或强制启用自动选项处理.</p>
 </dd></dl>
 
 </dd></dl>
@@ -5677,20 +5607,19 @@ the arguments from the URL rule.</p>
 
 </div>
 <div class="section" id="url-route-registrations">
-<span id="id3"></span><h2>URL Route Registrations<a class="headerlink" href="#url-route-registrations" title="永久链接至标题">¶</a></h2>
-<p>Generally there are three ways to define rules for the routing system:</p>
+<span id="id3"></span><h2>URL路由注册<a class="headerlink" href="#url-route-registrations" title="永久链接至标题">¶</a></h2>
+<p>通常，有三种方法可以为路由系统定义规则:</p>
 <ol class="arabic simple">
-<li><p>You can use the <a class="reference internal" href="#flask.Flask.route" title="flask.Flask.route"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flask.Flask.route()</span></code></a> decorator.</p></li>
-<li><p>You can use the <a class="reference internal" href="#flask.Flask.add_url_rule" title="flask.Flask.add_url_rule"><code class="xref py py-meth docutils literal notranslate"><span class="pre">flask.Flask.add_url_rule()</span></code></a> function.</p></li>
-<li><p>You can directly access the underlying Werkzeug routing system
-which is exposed as <a class="reference internal" href="#flask.Flask.url_map" title="flask.Flask.url_map"><code class="xref py py-attr docutils literal notranslate"><span class="pre">flask.Flask.url_map</span></code></a>.</p></li>
+<li><p>你可以使用:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>flask.Flask.route`装饰器.</p></li>
+<li><p>您可以使用:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>flask.Flask.add_url_rule`函数.</p></li>
+<li><p>您可以直接访问底层的Werkzeug路由系统，该系统公开为:attr:<cite>flask.Flask.url_map</cite>.</p></li>
 </ol>
 <p>Variable parts in the route can be specified with angular brackets
 (<code class="docutils literal notranslate"><span class="pre">/user/&lt;username&gt;</span></code>).  By default a variable part in the URL accepts any
 string without a slash however a different converter can be specified as
 well by using <code class="docutils literal notranslate"><span class="pre">&lt;converter:name&gt;</span></code>.</p>
-<p>Variable parts are passed to the view function as keyword arguments.</p>
-<p>The following converters are available:</p>
+<p>变量部分作为关键字参数传递给视图函数.</p>
+<p>以下转换器可用:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 19%" />
@@ -5698,27 +5627,27 @@ well by using <code class="docutils literal notranslate"><span class="pre">&lt;c
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>string</cite></p></td>
-<td><p>accepts any text without a slash (the default)</p></td>
+<td><p>接受没有斜杠的任何文本(默认)</p></td>
 </tr>
 <tr class="row-even"><td><p><cite>int</cite></p></td>
 <td><p>accepts integers</p></td>
 </tr>
 <tr class="row-odd"><td><p><cite>float</cite></p></td>
-<td><p>like <cite>int</cite> but for floating point values</p></td>
+<td><p>比如`int`但是对于浮点值</p></td>
 </tr>
 <tr class="row-even"><td><p><cite>path</cite></p></td>
-<td><p>like the default but also accepts slashes</p></td>
+<td><p>像默认但也接受斜杠</p></td>
 </tr>
 <tr class="row-odd"><td><p><cite>any</cite></p></td>
-<td><p>matches one of the items provided</p></td>
+<td><p>匹配提供的其中一个项目</p></td>
 </tr>
 <tr class="row-even"><td><p><cite>uuid</cite></p></td>
-<td><p>accepts UUID strings</p></td>
+<td><p>接受UUID字符串</p></td>
 </tr>
 </tbody>
 </table>
-<p>Custom converters can be defined using <a class="reference internal" href="#flask.Flask.url_map" title="flask.Flask.url_map"><code class="xref py py-attr docutils literal notranslate"><span class="pre">flask.Flask.url_map</span></code></a>.</p>
-<p>Here are some examples:</p>
+<p>可以使用以下命令定义自定义转换器:attr:<cite>flask.Flask.url_map</cite>.</p>
+<p>这里有些例子:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
     <span class="k">pass</span>
@@ -5777,7 +5706,7 @@ instead of the <cite>view_func</cite> parameter.</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><cite>rule</cite></p></td>
-<td><p>the URL rule as string</p></td>
+<td><p>URL规则为字符串</p></td>
 </tr>
 <tr class="row-even"><td><p><cite>endpoint</cite></p></td>
 <td><p>the endpoint for the registered URL rule.  Flask itself
@@ -5814,7 +5743,7 @@ handling.  They have to be specified as keyword arguments.</p></td>
 </table>
 </div>
 <div class="section" id="view-function-options">
-<span id="view-func-options"></span><h2>View Function Options<a class="headerlink" href="#view-function-options" title="永久链接至标题">¶</a></h2>
+<span id="view-func-options"></span><h2>查看功能选项<a class="headerlink" href="#view-function-options" title="永久链接至标题">¶</a></h2>
 <p>For internal usage the view functions can have some attributes attached to
 customize behavior the view function would normally not have control over.
 The following attributes can be provided optionally to either override
@@ -5837,7 +5766,7 @@ basis.</p></li>
 these methods when registering a URL rule even if the methods were
 explicitly overridden in the <code class="docutils literal notranslate"><span class="pre">route()</span></code> call.</p></li>
 </ul>
-<p>Full example:</p>
+<p>完整的例子:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;OPTIONS&#39;</span><span class="p">:</span>
         <span class="c1"># custom options handling here</span>
@@ -5855,7 +5784,7 @@ explicitly overridden in the <code class="docutils literal notranslate"><span cl
 <details class="changelog">
 <summary>Changelog</summary></details></div>
 <div class="section" id="command-line-interface">
-<h2>Command Line Interface<a class="headerlink" href="#command-line-interface" title="永久链接至标题">¶</a></h2>
+<h2>命令行界面<a class="headerlink" href="#command-line-interface" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="flask.cli.FlaskGroup">
 <em class="property">class </em><code class="descclassname">flask.cli.</code><code class="descname">FlaskGroup</code><span class="sig-paren">(</span><em>add_default_commands=True</em>, <em>create_app=None</em>, <em>add_version_option=True</em>, <em>load_dotenv=True</em>, <em>set_debug_flag=True</em>, <em>**extra</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.cli.FlaskGroup" title="永久链接至目标">¶</a></dt>
@@ -5864,15 +5793,13 @@ loading more commands from the configured Flask app.  Normally a
 developer does not have to interface with this class but there are
 some very advanced use cases for which it makes sense to create an
 instance of this.</p>
-<p>For information as of why this is useful see <a class="reference internal" href="cli.html#custom-scripts"><span class="std std-ref">Custom Scripts</span></a>.</p>
+<p>For information as of why this is useful see <a class="reference internal" href="cli.html#custom-scripts"><span class="std std-ref">自定义脚本</span></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>add_default_commands</strong> – if this is True then the default run and
-shell commands wil be added.</p></li>
+<li><p><strong>add_default_commands</strong> – 如果这是True，那么将添加默认的run和shell命令.</p></li>
 <li><p><strong>add_version_option</strong> – adds the <code class="docutils literal notranslate"><span class="pre">--version</span></code> option.</p></li>
-<li><p><strong>create_app</strong> – an optional callback that is passed the script info and
-returns the loaded app.</p></li>
+<li><p><strong>create_app</strong> – 一个可选的回调函数，它传递脚本信息并返回加载的应用程序.</p></li>
 <li><p><strong>load_dotenv</strong> – Load the nearest <code class="file docutils literal notranslate"><span class="pre">.env</span></code> and <code class="file docutils literal notranslate"><span class="pre">.flaskenv</span></code>
 files to set environment variables. Will also change the working
 directory to the directory containing the first file found.</p></li>
@@ -5896,8 +5823,7 @@ from <code class="file docutils literal notranslate"><span class="pre">.env</spa
 <dl class="method">
 <dt id="flask.cli.FlaskGroup.list_commands">
 <code class="descname">list_commands</code><span class="sig-paren">(</span><em>ctx</em><span class="sig-paren">)</span><a class="headerlink" href="#flask.cli.FlaskGroup.list_commands" title="永久链接至目标">¶</a></dt>
-<dd><p>Returns a list of subcommand names in the order they should
-appear.</p>
+<dd><p>以它们应该出现的顺序返回子命令名称列表.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5907,20 +5833,16 @@ appear.</p>
 whistles as a command line application.  This will always terminate
 the application after a call.  If this is not wanted, <code class="docutils literal notranslate"><span class="pre">SystemExit</span></code>
 needs to be caught.</p>
-<p>This method is also available by directly calling the instance of
-a <code class="xref py py-class docutils literal notranslate"><span class="pre">Command</span></code>.</p>
+<p>通过直接调用:class:<a href="#id1"><span class="problematic" id="id2">`</span></a>Command`的实例也可以使用此方法.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">3.0 新版功能: </span>Added the <cite>standalone_mode</cite> flag to control the standalone mode.</p>
+<p><span class="versionmodified added">3.0 新版功能: </span>添加了`standalone_mode`标志来控制独立模式.</p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>args</strong> – the arguments that should be used for parsing.  If not
-provided, <code class="docutils literal notranslate"><span class="pre">sys.argv[1:]</span></code> is used.</p></li>
-<li><p><strong>prog_name</strong> – the program name that should be used.  By default
-the program name is constructed by taking the file
-name from <code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code>.</p></li>
+<li><p><strong>args</strong> – 应该用于解析的参数. 如果没有提供，则使用``sys.argv [1:]``.</p></li>
+<li><p><strong>prog_name</strong> – 应该使用的程序名称. 默认情况下，程序名称是通过从``sys.argv [0]``获取文件名来构造的.</p></li>
 <li><p><strong>complete_var</strong> – the environment variable that controls the
 bash completion support.  The default is
 <code class="docutils literal notranslate"><span class="pre">&quot;_&lt;prog_name&gt;_COMPLETE&quot;</span></code> with prog_name in
@@ -6063,8 +5985,7 @@ FLASK_ENV=development or FLASK_DEBUG=1.</p>
 <dd><p>Run an interactive Python shell in the context of a given
 Flask application.  The application will populate the default
 namespace of this shell according to it’s configuration.</p>
-<p>This is useful for executing small snippets of management code
-without having to manually configure the application.</p>
+<p>这对于执行管理代码的小片段非常有用，而无需手动配置应用程序.</p>
 </dd></dl>
 
 </div>
@@ -6088,29 +6009,29 @@ without having to manually configure the application.</p>
   <ul>
 <li><a class="reference internal" href="#">API</a><ul>
 <li><a class="reference internal" href="#application-object">应用对象</a></li>
-<li><a class="reference internal" href="#blueprint-objects">Blueprint Objects</a></li>
-<li><a class="reference internal" href="#incoming-request-data">Incoming Request Data</a></li>
-<li><a class="reference internal" href="#response-objects">Response Objects</a></li>
-<li><a class="reference internal" href="#sessions">Sessions</a></li>
-<li><a class="reference internal" href="#session-interface">Session Interface</a></li>
-<li><a class="reference internal" href="#test-client">Test Client</a></li>
-<li><a class="reference internal" href="#test-cli-runner">Test CLI Runner</a></li>
-<li><a class="reference internal" href="#application-globals">Application Globals</a></li>
-<li><a class="reference internal" href="#useful-functions-and-classes">Useful Functions and Classes</a></li>
-<li><a class="reference internal" href="#message-flashing">Message Flashing</a></li>
-<li><a class="reference internal" href="#module-flask.json">JSON Support</a><ul>
-<li><a class="reference internal" href="#tagged-json">Tagged JSON</a></li>
+<li><a class="reference internal" href="#blueprint-objects">蓝图对象</a></li>
+<li><a class="reference internal" href="#incoming-request-data">传入请求数据</a></li>
+<li><a class="reference internal" href="#response-objects">响应对象</a></li>
+<li><a class="reference internal" href="#sessions">会议</a></li>
+<li><a class="reference internal" href="#session-interface">会话界面</a></li>
+<li><a class="reference internal" href="#test-client">测试客户端</a></li>
+<li><a class="reference internal" href="#test-cli-runner">测试CLI Runner</a></li>
+<li><a class="reference internal" href="#application-globals">应用程序全局</a></li>
+<li><a class="reference internal" href="#useful-functions-and-classes">有用的功能和类</a></li>
+<li><a class="reference internal" href="#message-flashing">消息闪烁</a></li>
+<li><a class="reference internal" href="#module-flask.json">JSON 支持</a><ul>
+<li><a class="reference internal" href="#tagged-json">标记为JSON</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#template-rendering">Template Rendering</a></li>
-<li><a class="reference internal" href="#configuration">Configuration</a></li>
-<li><a class="reference internal" href="#stream-helpers">Stream Helpers</a></li>
-<li><a class="reference internal" href="#useful-internals">Useful Internals</a></li>
-<li><a class="reference internal" href="#signals">Signals</a></li>
-<li><a class="reference internal" href="#class-based-views">Class-Based Views</a></li>
-<li><a class="reference internal" href="#url-route-registrations">URL Route Registrations</a></li>
-<li><a class="reference internal" href="#view-function-options">View Function Options</a></li>
-<li><a class="reference internal" href="#command-line-interface">Command Line Interface</a></li>
+<li><a class="reference internal" href="#template-rendering">模板渲染</a></li>
+<li><a class="reference internal" href="#configuration">配置</a></li>
+<li><a class="reference internal" href="#stream-helpers">溪流助手</a></li>
+<li><a class="reference internal" href="#useful-internals">有用的内部</a></li>
+<li><a class="reference internal" href="#signals">信号</a></li>
+<li><a class="reference internal" href="#class-based-views">基于类的视图</a></li>
+<li><a class="reference internal" href="#url-route-registrations">URL路由注册</a></li>
+<li><a class="reference internal" href="#view-function-options">查看功能选项</a></li>
+<li><a class="reference internal" href="#command-line-interface">命令行界面</a></li>
 </ul>
 </li>
 </ul>
@@ -6140,7 +6061,7 @@ without having to manually configure the application.</p>
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

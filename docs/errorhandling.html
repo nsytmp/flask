@@ -55,23 +55,21 @@ exceptions from time to time.  Why?  Because everything else involved will
 fail.  Here are some situations where perfectly fine code can lead to server
 errors:</p>
 <ul class="simple">
-<li><p>the client terminated the request early and the application was still
-reading from the incoming data</p></li>
-<li><p>the database server was overloaded and could not handle the query</p></li>
-<li><p>a filesystem is full</p></li>
-<li><p>a harddrive crashed</p></li>
-<li><p>a backend server overloaded</p></li>
-<li><p>a programming error in a library you are using</p></li>
-<li><p>network connection of the server to another system failed</p></li>
+<li><p>客户端提前终止了请求，应用程序仍然从传入的数据中读取</p></li>
+<li><p>数据库服务器已重载，无法处理查询</p></li>
+<li><p>文件系统已满</p></li>
+<li><p>一个硬盘崩溃了</p></li>
+<li><p>后端服务器重载</p></li>
+<li><p>您正在使用的库中的编程错误</p></li>
+<li><p>服务器与另一个系统的网络连接失败</p></li>
 </ul>
 <p>And that’s just a small sample of issues you could be facing.  So how do we
 deal with that sort of problem?  By default if your application runs in
 production mode, Flask will display a very simple page for you and log the
 exception to the <a class="reference internal" href="api.html#flask.Flask.logger" title="flask.Flask.logger"><code class="xref py py-attr docutils literal notranslate"><span class="pre">logger</span></code></a>.</p>
-<p>But there is more you can do, and we will cover some better setups to deal
-with errors.</p>
+<p>但是你可以做的更多，我们将介绍一些更好的设置来处理错误.</p>
 <div class="section" id="error-logging-tools">
-<h2>Error Logging Tools<a class="headerlink" href="#error-logging-tools" title="永久链接至标题">¶</a></h2>
+<h2>错误记录工具<a class="headerlink" href="#error-logging-tools" title="永久链接至标题">¶</a></h2>
 <p>Sending error mails, even if just for critical ones, can become
 overwhelming if enough users are hitting the error and log files are
 typically never looked at. This is why we recommend using <a class="reference external" href="https://sentry.io/">Sentry</a> for dealing with application errors.  It’s
@@ -79,22 +77,21 @@ available as an Open Source project <a class="reference external" href="https://
 aggregates duplicate errors, captures the full stack trace and local
 variables for debugging, and sends you mails based on new errors or
 frequency thresholds.</p>
-<p>To use Sentry you need to install the <cite>sentry-sdk</cite> client with extra <cite>flask</cite> dependencies:</p>
+<p>要使用Sentry，您需要安装带有额外`fla​​sk`依赖项的`sentry-sdk`客户端:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install sentry-sdk[flask]
 </pre></div>
 </div>
-<p>And then add this to your Flask app:</p>
+<p>然后将其添加到Flask应用程序中:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sentry_sdk</span>
 <span class="kn">from</span> <span class="nn">sentry_sdk.integrations.flask</span> <span class="k">import</span> <span class="n">FlaskIntegration</span>
 
 <span class="n">sentry_sdk</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="s1">&#39;YOUR_DSN_HERE&#39;</span><span class="p">,</span><span class="n">integrations</span><span class="o">=</span><span class="p">[</span><span class="n">FlaskIntegration</span><span class="p">()])</span>
 </pre></div>
 </div>
-<p>The <cite>YOUR_DSN_HERE</cite> value needs to be replaced with the DSN value you get
-from your Sentry installation.</p>
+<p><a href="#id1"><span class="problematic" id="id2">`</span></a>YOUR_DSN_HERE`值需要替换为从Sentry安装中获得的DSN值.</p>
 <p>After installation, failures leading to an Internal Server Error are automatically reported to
 Sentry and from there you can receive error notifications.</p>
-<p>Follow-up reads:</p>
+<p>后续读取:</p>
 <ul class="simple">
 <li><p>Sentry also supports catching errors from your worker queue (RQ, Celery) in a
 similar fashion.  See the <a class="reference external" href="https://docs.sentry.io/platforms/python/">Python SDK docs</a> for more information.</p></li>
@@ -103,14 +100,13 @@ similar fashion.  See the <a class="reference external" href="https://docs.sentr
 </ul>
 </div>
 <div class="section" id="error-handlers">
-<span id="id2"></span><h2>Error handlers<a class="headerlink" href="#error-handlers" title="永久链接至标题">¶</a></h2>
-<p>You might want to show custom error pages to the user when an error occurs.
-This can be done by registering error handlers.</p>
+<span id="id2"></span><h2>错误处理程序<a class="headerlink" href="#error-handlers" title="永久链接至标题">¶</a></h2>
+<p>您可能希望在发生错误时向用户显示自定义错误页面. 这可以通过注册错误处理程序来完成.</p>
 <p>An error handler is a normal view function that returns a response, but instead
 of being registered for a route, it is registered for an exception or HTTP
 status code that would be raised while trying to handle a request.</p>
 <div class="section" id="registering">
-<h3>Registering<a class="headerlink" href="#registering" title="永久链接至标题">¶</a></h3>
+<h3>注册<a class="headerlink" href="#registering" title="永久链接至标题">¶</a></h3>
 <p>Register handlers by decorating a function with
 <a class="reference internal" href="api.html#flask.Flask.errorhandler" title="flask.Flask.errorhandler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">errorhandler()</span></code></a>. Or use
 <a class="reference internal" href="api.html#flask.Flask.register_error_handler" title="flask.Flask.register_error_handler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register_error_handler()</span></code></a> to register the function later.
@@ -145,7 +141,7 @@ codes. Handlers can be registered for a specific class, or for all subclasses
 of a parent class.</p>
 </div>
 <div class="section" id="handling">
-<h3>Handling<a class="headerlink" href="#handling" title="永久链接至标题">¶</a></h3>
+<h3>处理<a class="headerlink" href="#handling" title="永久链接至标题">¶</a></h3>
 <p>When an exception is caught by Flask while handling a request, it is first
 looked up by code. If no handler is registered for the code, it is looked up
 by its class hierarchy; the most specific handler is chosen. If no handler is
@@ -162,26 +158,24 @@ raises the exception. However, the blueprint cannot handle 404 routing errors
 because the 404 occurs at the routing level before the blueprint can be
 determined.</p>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 0.11 版更改: </span>Handlers are prioritized by specificity of the exception classes they are
-registered for instead of the order they are registered in.</p>
+<p><span class="versionmodified changed">在 0.11 版更改: </span>处理程序的优先级取决于它们注册的异常类的特殊性，而不是它们注册的顺序.</p>
 </div>
 <details class="changelog">
 <summary>Changelog</summary></details></div>
 </div>
 <div class="section" id="logging">
-<h2>Logging<a class="headerlink" href="#logging" title="永久链接至标题">¶</a></h2>
-<p>See <a class="reference internal" href="logging.html#logging"><span class="std std-ref">记录</span></a> for information on how to log exceptions, such as by
-emailing them to admins.</p>
+<h2>记录<a class="headerlink" href="#logging" title="永久链接至标题">¶</a></h2>
+<p>有关如何记录异常的信息，请参阅:ref:<cite>logging</cite>，例如通过电子邮件将其发送给管理员.</p>
 </div>
 </div>
 <div class="section" id="debugging-application-errors">
-<h1>Debugging Application Errors<a class="headerlink" href="#debugging-application-errors" title="永久链接至标题">¶</a></h1>
+<h1>调试应用程序错误<a class="headerlink" href="#debugging-application-errors" title="永久链接至标题">¶</a></h1>
 <p>For production applications, configure your application with logging and
 notifications as described in <a class="reference internal" href="#application-errors"><span class="std std-ref">应用程序错误</span></a>.  This section provides
 pointers when debugging deployment configuration and digging deeper with a
 full-featured Python debugger.</p>
 <div class="section" id="when-in-doubt-run-manually">
-<h2>When in Doubt, Run Manually<a class="headerlink" href="#when-in-doubt-run-manually" title="永久链接至标题">¶</a></h2>
+<h2>在怀疑中，手动运行<a class="headerlink" href="#when-in-doubt-run-manually" title="永久链接至标题">¶</a></h2>
 <p>Having problems getting your application configured for production?  If you
 have shell access to your host, verify that you can run your application
 manually from the shell in the deployment environment.  Be sure to run under
@@ -192,20 +186,19 @@ your production host, which is helpful in catching configuration issues, but
 production with <cite>debug=True</cite>.</p>
 </div>
 <div class="section" id="working-with-debuggers">
-<span id="id3"></span><h2>Working with Debuggers<a class="headerlink" href="#working-with-debuggers" title="永久链接至标题">¶</a></h2>
+<span id="id3"></span><h2>使用调试器<a class="headerlink" href="#working-with-debuggers" title="永久链接至标题">¶</a></h2>
 <p>To dig deeper, possibly to trace code execution, Flask provides a debugger out
-of the box (see <a class="reference internal" href="quickstart.html#debug-mode"><span class="std std-ref">Debug Mode</span></a>).  If you would like to use another Python
+of the box (see <a class="reference internal" href="quickstart.html#debug-mode"><span class="std std-ref">调试模式</span></a>).  If you would like to use another Python
 debugger, note that debuggers interfere with each other.  You have to set some
 options in order to use your favorite debugger:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">debug</span></code>        - whether to enable debug mode and catch exceptions</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">use_debugger</span></code> - whether to use the internal Flask debugger</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">use_reloader</span></code> - whether to reload and fork the process if modules were changed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">debug</span></code>        - 是否启用调试模式和捕获异常</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">use_debugger</span></code> - 是否使用内部Flask调试器</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">use_reloader</span></code> - 如果模块被更改，是否重新加载和分叉进程</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">debug</span></code> must be True (i.e., exceptions must be caught) in order for the other
 two options to have any value.</p>
-<p>If you’re using Aptana/Eclipse for debugging you’ll need to set both
-<code class="docutils literal notranslate"><span class="pre">use_debugger</span></code> and <code class="docutils literal notranslate"><span class="pre">use_reloader</span></code> to False.</p>
+<p>如果你使用Aptana / Eclipse进行调试，你需要将``use_debugger``和``use_reloader``都设置为False.</p>
 <p>A possible useful pattern for configuration is to set the following in your
 config.yaml (change the block as appropriate for your application, of course):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FLASK</span><span class="p">:</span>
@@ -213,7 +206,7 @@ config.yaml (change the block as appropriate for your application, of course):</
     <span class="n">DEBUG_WITH_APTANA</span><span class="p">:</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p>Then in your application’s entry-point (main.py), you could have something like:</p>
+<p>然后在你的应用程序的入口点(main.py)，你可以有类似的东西:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="c1"># To allow aptana to receive errors, set use_debugger=False</span>
     <span class="n">app</span> <span class="o">=</span> <span class="n">create_app</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="s2">&quot;config.yaml&quot;</span><span class="p">)</span>
@@ -243,18 +236,18 @@ config.yaml (change the block as appropriate for your application, of course):</
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">应用程序错误</a><ul>
-<li><a class="reference internal" href="#error-logging-tools">Error Logging Tools</a></li>
-<li><a class="reference internal" href="#error-handlers">Error handlers</a><ul>
-<li><a class="reference internal" href="#registering">Registering</a></li>
-<li><a class="reference internal" href="#handling">Handling</a></li>
+<li><a class="reference internal" href="#error-logging-tools">错误记录工具</a></li>
+<li><a class="reference internal" href="#error-handlers">错误处理程序</a><ul>
+<li><a class="reference internal" href="#registering">注册</a></li>
+<li><a class="reference internal" href="#handling">处理</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#logging">Logging</a></li>
+<li><a class="reference internal" href="#logging">记录</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#debugging-application-errors">Debugging Application Errors</a><ul>
-<li><a class="reference internal" href="#when-in-doubt-run-manually">When in Doubt, Run Manually</a></li>
-<li><a class="reference internal" href="#working-with-debuggers">Working with Debuggers</a></li>
+<li><a class="reference internal" href="#debugging-application-errors">调试应用程序错误</a><ul>
+<li><a class="reference internal" href="#when-in-doubt-run-manually">在怀疑中，手动运行</a></li>
+<li><a class="reference internal" href="#working-with-debuggers">使用调试器</a></li>
 </ul>
 </li>
 </ul>
@@ -284,7 +277,7 @@ config.yaml (change the block as appropriate for your application, of course):</
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

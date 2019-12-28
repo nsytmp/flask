@@ -17,8 +17,8 @@
     <link rel="shortcut icon" href="_static/flask-icon.png"/>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="Security Considerations" href="security.html" />
-    <link rel="prev" title="Design Decisions in Flask" href="design.html" />
+    <link rel="next" title="安全考虑因素" href="security.html" />
+    <link rel="prev" title="Flask中的设计决策" href="design.html" />
   <script>DOCUMENTATION_OPTIONS.URL_ROOT = './';</script>
    
   </head><body>
@@ -29,10 +29,10 @@
           <a href="genindex.html" title="总目录"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="security.html" title="Security Considerations"
+          <a href="security.html" title="安全考虑因素"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="design.html" title="Design Decisions in Flask"
+          <a href="design.html" title="Flask中的设计决策"
              accesskey="P">上一页</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Flask Documentation (1.1.x)</a> &#187;</li> 
       </ul>
@@ -51,7 +51,7 @@ not used, so that the HTML is cleaner and faster to load.  Because there
 is much confusion about HTML and XHTML among developers, this document tries
 to answer some of the major questions.</p>
 <div class="section" id="history-of-xhtml">
-<h2>History of XHTML<a class="headerlink" href="#history-of-xhtml" title="永久链接至标题">¶</a></h2>
+<h2>XHTML的历史<a class="headerlink" href="#history-of-xhtml" title="永久链接至标题">¶</a></h2>
 <p>For a while, it appeared that HTML was about to be replaced by XHTML.
 However, barely any websites on the Internet are actual XHTML (which is
 HTML processed using XML rules).  There are a couple of major reasons
@@ -84,7 +84,7 @@ programmers have to use the namespaced DOM interface with the XHTML
 namespace to query for HTML elements.</p>
 </div>
 <div class="section" id="history-of-html5">
-<h2>History of HTML5<a class="headerlink" href="#history-of-html5" title="永久链接至标题">¶</a></h2>
+<h2>HTML5的历史<a class="headerlink" href="#history-of-html5" title="永久链接至标题">¶</a></h2>
 <p>Development of the HTML5 specification was started in 2004 under the name
 “Web Applications 1.0” by the Web Hypertext Application Technology Working
 Group, or WHATWG (which was formed by the major browser vendors Apple,
@@ -101,7 +101,7 @@ it appears that XHTML is losing traction, as the XHTML 2 working group has
 been disbanded and HTML5 is being implemented by all major browser vendors.</p>
 </div>
 <div class="section" id="html-versus-xhtml">
-<h2>HTML versus XHTML<a class="headerlink" href="#html-versus-xhtml" title="永久链接至标题">¶</a></h2>
+<h2>HTML与XHTML<a class="headerlink" href="#html-versus-xhtml" title="永久链接至标题">¶</a></h2>
 <p>The following table gives you a quick overview of features available in
 HTML 4.01, XHTML 1.1 and HTML5. (XHTML 1.0 is not included, as it was
 superseded by XHTML 1.1 and the barely-used XHTML5.)</p>
@@ -146,7 +146,7 @@ superseded by XHTML 1.1 and the barely-used XHTML5.)</p>
 <td><p><img alt="Yes" src="_images/yes.png" /></p></td>
 <td><p><img alt="No" src="_images/no.png" /></p></td>
 </tr>
-<tr class="row-odd"><td><p>strict error handling</p></td>
+<tr class="row-odd"><td><p>严格的错误处理</p></td>
 <td><p><img alt="No" src="_images/no.png" /></p></td>
 <td><p><img alt="Yes" src="_images/yes.png" /></p></td>
 <td><p><img alt="No" src="_images/no.png" /></p></td>
@@ -180,21 +180,18 @@ superseded by XHTML 1.1 and the barely-used XHTML5.)</p>
 </table>
 <dl class="footnote brackets">
 <dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>This is an obscure feature inherited from SGML. It is usually not
-supported by browsers, for reasons detailed above.</p>
+<dd><p>这是从SGML继承的一个模糊特征. 由于上面详述的原因，浏览器通常不支持它.</p>
 </dd>
 <dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>This is for compatibility with server code that generates XHTML for
-tags such as <code class="docutils literal notranslate"><span class="pre">&lt;br&gt;</span></code>.  It should not be used in new code.</p>
+<dd><p>这是为了与服务器代码兼容，这些代码为`````等标签生成XHTML. 它不应该用在新代码中.</p>
 </dd>
 <dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>XHTML 1.0 is the last XHTML standard that allows to be served
-as <cite>text/html</cite> for backwards compatibility reasons.</p>
+<dd><p>XHTML 1.0是最后一个允许作为“text / html”服务的XHTML标准，出于向后兼容的原因.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="what-does-strict-mean">
-<h2>What does “strict” mean?<a class="headerlink" href="#what-does-strict-mean" title="永久链接至标题">¶</a></h2>
+<h2>“严格”是什么意思？<a class="headerlink" href="#what-does-strict-mean" title="永久链接至标题">¶</a></h2>
 <p>HTML5 has strictly defined parsing rules, but it also specifies exactly
 how a browser should react to parsing errors - unlike XHTML, which simply
 states parsing should abort. Some people are confused by apparently
@@ -205,9 +202,8 @@ when they encounter a markup error, others are actually specified.  The
 following constructs are optional in HTML5 by standard, but have to be
 supported by browsers:</p>
 <ul class="simple">
-<li><p>Wrapping the document in an <code class="docutils literal notranslate"><span class="pre">&lt;html&gt;</span></code> tag</p></li>
-<li><p>Wrapping header elements in <code class="docutils literal notranslate"><span class="pre">&lt;head&gt;</span></code> or the body elements in
-<code class="docutils literal notranslate"><span class="pre">&lt;body&gt;</span></code></p></li>
+<li><p>将文档包装在``&lt;html&gt;`标签中</p></li>
+<li><p>在``&lt;head&gt;`中包装头元素或在``&lt;body&gt;``中包含body元素</p></li>
 <li><p>Closing the <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;li&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;dt&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;dd&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;tr&gt;</span></code>,
 <code class="docutils literal notranslate"><span class="pre">&lt;td&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;th&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;tbody&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;thead&gt;</span></code>, or <code class="docutils literal notranslate"><span class="pre">&lt;tfoot&gt;</span></code> tags.</p></li>
 <li><p>Quoting attributes, so long as they contain no whitespace or
@@ -297,10 +293,10 @@ long-awaited <code class="docutils literal notranslate"><span class="pre">&lt;au
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">HTML/XHTML FAQ</a><ul>
-<li><a class="reference internal" href="#history-of-xhtml">History of XHTML</a></li>
-<li><a class="reference internal" href="#history-of-html5">History of HTML5</a></li>
-<li><a class="reference internal" href="#html-versus-xhtml">HTML versus XHTML</a></li>
-<li><a class="reference internal" href="#what-does-strict-mean">What does “strict” mean?</a></li>
+<li><a class="reference internal" href="#history-of-xhtml">XHTML的历史</a></li>
+<li><a class="reference internal" href="#history-of-html5">HTML5的历史</a></li>
+<li><a class="reference internal" href="#html-versus-xhtml">HTML与XHTML</a></li>
+<li><a class="reference internal" href="#what-does-strict-mean">“严格”是什么意思？</a></li>
 <li><a class="reference internal" href="#new-technologies-in-html5">New technologies in HTML5</a></li>
 <li><a class="reference internal" href="#what-should-be-used">What should be used?</a></li>
 </ul>
@@ -310,8 +306,8 @@ long-awaited <code class="docutils literal notranslate"><span class="pre">&lt;au
 <ul>
   <li><a href="index.html">Overview</a>
     <ul>
-          <li>Previous: <a href="design.html" title="上一章">Design Decisions in Flask</a>
-          <li>Next: <a href="security.html" title="下一章">Security Considerations</a>
+          <li>Previous: <a href="design.html" title="上一章">Flask中的设计决策</a>
+          <li>Next: <a href="security.html" title="下一章">安全考虑因素</a>
     </ul>
   </li>
 </ul>
@@ -332,7 +328,7 @@ long-awaited <code class="docutils literal notranslate"><span class="pre">&lt;au
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

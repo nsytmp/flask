@@ -23,45 +23,45 @@ msgstr "如何为Flask做贡献"
 
 #: ../../../CONTRIBUTING.rst:4
 msgid "Thank you for considering contributing to Flask!"
-msgstr "Thank you for considering contributing to Flask!"
+msgstr "感谢您考虑为Flask做出贡献！"
 
 #: ../../../CONTRIBUTING.rst:7
 msgid "Support questions"
-msgstr "Support questions"
+msgstr "支持问题"
 
 #: ../../../CONTRIBUTING.rst:9
 msgid ""
 "Please, don't use the issue tracker for this. Use one of the following "
 "resources for questions about your own code:"
-msgstr "Please, don't use the issue tracker for this. Use one of the following resources for questions about your own code:"
+msgstr "请不要使用问题跟踪器. 使用以下资源之一来解决有关您自己的代码的问题:"
 
 #: ../../../CONTRIBUTING.rst:12
 msgid "The IRC channel ``#pocoo`` on FreeNode."
-msgstr "The IRC channel ``#pocoo`` on FreeNode."
+msgstr "FreeNode上的IRC频道``#pocoo``. "
 
 #: ../../../CONTRIBUTING.rst:13
 msgid "The IRC channel ``#python`` on FreeNode for more general questions."
-msgstr "The IRC channel ``#python`` on FreeNode for more general questions."
+msgstr "关于FreeNode的IRC频道``#python``用于更一般的问题. "
 
 #: ../../../CONTRIBUTING.rst:14
 msgid ""
 "The mailing list flask@python.org for long term discussion or larger "
 "issues."
-msgstr "The mailing list flask@python.org for long term discussion or larger issues."
+msgstr "邮件列表flask@python.org用于长期讨论或更大的问题. "
 
 #: ../../../CONTRIBUTING.rst:15
 msgid ""
 "Ask on `Stack Overflow`_. Search with Google first using: "
 "``site:stackoverflow.com flask {search term, exception message, etc.}``"
-msgstr "Ask on `Stack Overflow`_. Search with Google first using: ``site:stackoverflow.com flask {search term, exception message, etc.}``"
+msgstr "询问`Stack Overflow`_. 首先使用Google搜索:``site:stackoverflow.com flask {搜索词, 异常消息等}``"
 
 #: ../../../CONTRIBUTING.rst:21
 msgid "Reporting issues"
-msgstr "Reporting issues"
+msgstr "报告问题"
 
 #: ../../../CONTRIBUTING.rst:23
 msgid "Describe what you expected to happen."
-msgstr "Describe what you expected to happen."
+msgstr "描述您期望发生的事情. "
 
 #: ../../../CONTRIBUTING.rst:24
 msgid ""
@@ -74,17 +74,17 @@ msgstr ""
 msgid ""
 "Describe what actually happened. Include the full traceback if there was "
 "an exception."
-msgstr "Describe what actually happened. Include the full traceback if there was an exception."
+msgstr "描述实际发生的事情. 如果有异常, 请包括完整的回溯. "
 
 #: ../../../CONTRIBUTING.rst:29
 msgid ""
 "List your Python, Flask, and Werkzeug versions. If possible, check if "
 "this issue is already fixed in the repository."
-msgstr "List your Python, Flask, and Werkzeug versions. If possible, check if this issue is already fixed in the repository."
+msgstr "列出您的Python, Flask和Werkzeug版本. 如果可能, 请检查存储库中是否已修复此问题. "
 
 #: ../../../CONTRIBUTING.rst:35
 msgid "Submitting patches"
-msgstr "Submitting patches"
+msgstr "提交补丁"
 
 #: ../../../CONTRIBUTING.rst:37
 msgid ""
@@ -97,79 +97,79 @@ msgstr ""
 msgid ""
 "Try to follow `PEP8`_, but you may ignore the line length limit if "
 "following it would make the code uglier."
-msgstr "Try to follow `PEP8`_, but you may ignore the line length limit if following it would make the code uglier."
+msgstr "尝试遵循`PEP8`_, 但是你可以忽略行长度限制, 如果遵循它将使代码更加丑陋. "
 
 #: ../../../CONTRIBUTING.rst:44
 msgid "First time setup"
-msgstr "First time setup"
+msgstr "第一次设置"
 
 #: ../../../CONTRIBUTING.rst:46
 msgid "Download and install the `latest version of git`_."
-msgstr "Download and install the `latest version of git`_."
+msgstr "下载并安装最新版本的git`_. "
 
 #: ../../../CONTRIBUTING.rst:47
 msgid "Configure git with your `username`_ and `email`_::"
-msgstr "Configure git with your `username`_ and `email`_::"
+msgstr "用你的`username`_和`email`_配置git::"
 
 #: ../../../CONTRIBUTING.rst:52
 msgid "Make sure you have a `GitHub account`_."
-msgstr "Make sure you have a `GitHub account`_."
+msgstr "确保你有一个`GitHub帐户`_. "
 
 #: ../../../CONTRIBUTING.rst:53
 msgid "Fork Flask to your GitHub account by clicking the `Fork`_ button."
-msgstr "Fork Flask to your GitHub account by clicking the `Fork`_ button."
+msgstr "单击“Fork”_按钮, 将Flask刻录到GitHub帐户. "
 
 #: ../../../CONTRIBUTING.rst:54
 msgid "`Clone`_ your GitHub fork locally::"
-msgstr "`Clone`_ your GitHub fork locally::"
+msgstr "`克隆`_你的GitHub本地分叉::"
 
 #: ../../../CONTRIBUTING.rst:59
 msgid "Add the main repository as a remote to update later::"
-msgstr "Add the main repository as a remote to update later::"
+msgstr "将主存储库添加为远程以便稍后更新::"
 
 #: ../../../CONTRIBUTING.rst:64
 msgid "Create a virtualenv::"
-msgstr "Create a virtualenv::"
+msgstr "创建一个virtualenv::"
 
 #: ../../../CONTRIBUTING.rst:70
 msgid "Install Flask in editable mode with development dependencies::"
-msgstr "Install Flask in editable mode with development dependencies::"
+msgstr "以可编辑模式安装Flask并具有开发依赖性::"
 
 #: ../../../CONTRIBUTING.rst:82
 msgid "Start coding"
-msgstr "Start coding"
+msgstr "开始编码"
 
 #: ../../../CONTRIBUTING.rst:84
 msgid ""
 "Create a branch to identify the issue you would like to work on (e.g. "
 "``2287-dry-test-suite``)"
-msgstr "Create a branch to identify the issue you would like to work on (e.g. ``2287-dry-test-suite``)"
+msgstr "创建一个分支以确定您想要处理的问题(例如``2287-dry-test-suite``)"
 
 #: ../../../CONTRIBUTING.rst:86
 msgid "Using your favorite editor, make your changes, `committing as you go`_."
-msgstr "Using your favorite editor, make your changes, `committing as you go`_."
+msgstr "使用您喜欢的编辑器, 进行更改, “随时随地提交”. "
 
 #: ../../../CONTRIBUTING.rst:89
 msgid ""
 "Include tests that cover any code changes you make. Make sure the test "
 "fails without your patch. `Run the tests. <contributing-testsuite_>`_."
-msgstr "Include tests that cover any code changes you make. Make sure the test fails without your patch. `Run the tests. <contributing-testsuite_>`_."
+msgstr "包括涵盖您所做的任何代码更改的测试. 没有补丁, 请确保测试失败.  `运行测试.  <贡献-testsuite_>`_. "
 
 #: ../../../CONTRIBUTING.rst:91
 msgid "Push your commits to GitHub and `create a pull request`_."
-msgstr "Push your commits to GitHub and `create a pull request`_."
+msgstr "将提交推送到GitHub并“创建拉取请求”. "
 
 #: ../../../CONTRIBUTING.rst:92
 msgid "Celebrate 🎉"
-msgstr "Celebrate 🎉"
+msgstr "庆祝 🎉"
 
 #: ../../../CONTRIBUTING.rst:101
 msgid "Running the tests"
-msgstr "Running the tests"
+msgstr "运行测试"
 
 #: ../../../CONTRIBUTING.rst:103
 msgid "Run the basic test suite with::"
-msgstr "Run the basic test suite with::"
+msgstr "运行基本测试套件::"
 
 #: ../../../CONTRIBUTING.rst:107
 msgid ""
@@ -188,7 +188,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:118
 msgid "Running test coverage"
-msgstr "Running test coverage"
+msgstr "运行测试覆盖率"
 
 #: ../../../CONTRIBUTING.rst:120
 msgid ""
@@ -199,59 +199,59 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:129
 msgid "Read more about `coverage <https://coverage.readthedocs.io>`_."
-msgstr "Read more about `coverage <https://coverage.readthedocs.io>`_."
+msgstr "阅读更多关于`coverage <https://coverage.readthedocs.io>`_的信息. "
 
 #: ../../../CONTRIBUTING.rst:131
 msgid ""
 "Running the full test suite with ``tox`` will combine the coverage "
 "reports from all runs."
-msgstr "Running the full test suite with ``tox`` will combine the coverage reports from all runs."
+msgstr "使用``tox``运行完整的测试套件将结合所有运行的覆盖率报告. "
 
 #: ../../../CONTRIBUTING.rst:136
 msgid "Building the docs"
-msgstr "Building the docs"
+msgstr "构建文档"
 
 #: ../../../CONTRIBUTING.rst:138
 msgid "Build the docs in the ``docs`` directory using Sphinx::"
-msgstr "Build the docs in the ``docs`` directory using Sphinx::"
+msgstr "使用Sphinx在``docs``目录中构建文档::"
 
 #: ../../../CONTRIBUTING.rst:143
 msgid "Open ``_build/html/index.html`` in your browser to view the docs."
-msgstr "Open ``_build/html/index.html`` in your browser to view the docs."
+msgstr "在浏览器中打开``_build / html / index.html``查看文档. "
 
 #: ../../../CONTRIBUTING.rst:145
 msgid "Read more about `Sphinx <https://www.sphinx-doc.org>`_."
-msgstr "Read more about `Sphinx <https://www.sphinx-doc.org>`_."
+msgstr "阅读更多关于`Sphinx <https://www.sphinx-doc.org>`_的信息. "
 
 #: ../../../CONTRIBUTING.rst:149
 msgid "make targets"
-msgstr "make targets"
+msgstr "制定目标"
 
 #: ../../../CONTRIBUTING.rst:151
 msgid ""
 "Flask provides a ``Makefile`` with various shortcuts. They will ensure "
 "that all dependencies are installed."
-msgstr "Flask provides a ``Makefile`` with various shortcuts. They will ensure that all dependencies are installed."
+msgstr "Flask提供了一个带有各种快捷方式的``Makefile``. 他们将确保安装所有依赖项. "
 
 #: ../../../CONTRIBUTING.rst:154
 msgid "``make test`` runs the basic test suite with ``pytest``"
-msgstr "``make test`` runs the basic test suite with ``pytest``"
+msgstr "``make test``使用``pytest``运行基本测试套件"
 
 #: ../../../CONTRIBUTING.rst:155
 msgid "``make cov`` runs the basic test suite with ``coverage``"
-msgstr "``make cov`` runs the basic test suite with ``coverage``"
+msgstr "``make cov``使用``coverage``运行基本测试套件"
 
 #: ../../../CONTRIBUTING.rst:156
 msgid "``make test-all`` runs the full test suite with ``tox``"
-msgstr "``make test-all`` runs the full test suite with ``tox``"
+msgstr "``make test-all``用``tox``运行完整的测试套件"
 
 #: ../../../CONTRIBUTING.rst:157
 msgid "``make docs`` builds the HTML documentation"
-msgstr "``make docs`` builds the HTML documentation"
+msgstr "``make docs``构建HTML文档"
 
 #: ../../../CONTRIBUTING.rst:160
 msgid "Caution: zero-padded file modes"
-msgstr "Caution: zero-padded file modes"
+msgstr "警告:零填充文件模式"
 
 #: ../../../CONTRIBUTING.rst:162
 msgid ""
@@ -265,7 +265,7 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:168
 msgid "These files can also cause issues while cloning. If you have ::"
-msgstr "These files can also cause issues while cloning. If you have ::"
+msgstr "这些文件也可能在克隆时导致问题. 如果你有::"
 
 #: ../../../CONTRIBUTING.rst:173
 msgid "or ::"
@@ -277,5 +277,5 @@ msgid ""
 "The only solution is to set both of the above settings to false while "
 "cloning, and then setting them back to true after the cloning is "
 "finished."
-msgstr ""
+msgstr "在您的git配置文件中设置, 克隆此存储库将失败. 唯一的解决方案是在克隆时将上述两个设置都设置为false, 然后在克隆完成后将它们设置为true. "
 

@@ -18,7 +18,7 @@
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="可插拔视图" href="views.html" />
-    <link rel="prev" title="Configuration Handling" href="config.html" />
+    <link rel="prev" title="配置处理" href="config.html" />
   <script>DOCUMENTATION_OPTIONS.URL_ROOT = './';</script>
    
   </head><body>
@@ -32,7 +32,7 @@
           <a href="views.html" title="可插拔视图"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="config.html" title="Configuration Handling"
+          <a href="config.html" title="配置处理"
              accesskey="P">上一页</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Flask Documentation (1.1.x)</a> &#187;</li> 
       </ul>
@@ -72,7 +72,7 @@ subscriptions are helpful for unit testing for example.  Say you want to
 know what templates were rendered as part of a request: signals allow you
 to do exactly that.</p>
 <div class="section" id="subscribing-to-signals">
-<h2>Subscribing to Signals<a class="headerlink" href="#subscribing-to-signals" title="永久链接至标题">¶</a></h2>
+<h2>订阅信号<a class="headerlink" href="#subscribing-to-signals" title="永久链接至标题">¶</a></h2>
 <p>To subscribe to a signal, you can use the
 <a class="reference external" href="https://pythonhosted.org/blinker/index.html#blinker.base.Signal.connect" title="(在 Blinker v1.4)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connect()</span></code></a> method of a signal.  The first
 argument is the function that should be called when the signal is emitted,
@@ -100,7 +100,7 @@ to the template:</p>
         <span class="n">template_rendered</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="n">record</span><span class="p">,</span> <span class="n">app</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This can now easily be paired with a test client:</p>
+<p>现在可以轻松地与测试客户端配对:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">captured_templates</span><span class="p">(</span><span class="n">app</span><span class="p">)</span> <span class="k">as</span> <span class="n">templates</span><span class="p">:</span>
     <span class="n">rv</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">test_client</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
     <span class="k">assert</span> <span class="n">rv</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
@@ -110,8 +110,7 @@ to the template:</p>
     <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">context</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="mi">10</span>
 </pre></div>
 </div>
-<p>Make sure to subscribe with an extra <code class="docutils literal notranslate"><span class="pre">**extra</span></code> argument so that your
-calls don’t fail if Flask introduces new arguments to the signals.</p>
+<p>确保订阅额外的``extra extra``参数，以便在Flask为信号引入新参数时，您的调用不会失败.</p>
 <p>All the template rendering in the code issued by the application <cite>app</cite>
 in the body of the <code class="docutils literal notranslate"><span class="pre">with</span></code> block will now be recorded in the <cite>templates</cite>
 variable.  Whenever a template is rendered, the template object as well as
@@ -129,7 +128,7 @@ specified that way, you have to pass the list in as an argument:</p>
     <span class="k">return</span> <span class="n">template_rendered</span><span class="o">.</span><span class="n">connected_to</span><span class="p">(</span><span class="n">record</span><span class="p">,</span> <span class="n">app</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The example above would then look like this:</p>
+<p>上面的例子看起来像这样:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">templates</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">with</span> <span class="n">captured_templates</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">templates</span><span class="p">,</span> <span class="o">**</span><span class="n">extra</span><span class="p">):</span>
     <span class="o">...</span>
@@ -137,13 +136,12 @@ specified that way, you have to pass the list in as an argument:</p>
 </pre></div>
 </div>
 <div class="admonition-blinker-api-changes admonition">
-<p class="admonition-title">Blinker API Changes</p>
-<p>The <a class="reference external" href="https://pythonhosted.org/blinker/index.html#blinker.base.Signal.connected_to" title="(在 Blinker v1.4)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">connected_to()</span></code></a> method arrived in Blinker
-with version 1.1.</p>
+<p class="admonition-title">Blinker API更改</p>
+<p>::〜:~~ blinker.base.Signal.connected_to`方法使用1.1版到达Blinker.</p>
 </div>
 </div>
 <div class="section" id="creating-signals">
-<h2>Creating Signals<a class="headerlink" href="#creating-signals" title="永久链接至标题">¶</a></h2>
+<h2>创建信号<a class="headerlink" href="#creating-signals" title="永久链接至标题">¶</a></h2>
 <p>If you want to use signals in your own application, you can use the
 blinker library directly.  The most common use case are named signals in a
 custom <a class="reference external" href="https://pythonhosted.org/blinker/index.html#blinker.base.Namespace" title="(在 Blinker v1.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Namespace</span></code></a>..  This is what is recommended
@@ -152,7 +150,7 @@ most of the time:</p>
 <span class="n">my_signals</span> <span class="o">=</span> <span class="n">Namespace</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Now you can create new signals like this:</p>
+<p>现在您可以创建这样的新信号:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model_saved</span> <span class="o">=</span> <span class="n">my_signals</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="s1">&#39;model-saved&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -160,14 +158,14 @@ most of the time:</p>
 debugging.  You can access the name of the signal with the
 <a class="reference external" href="https://pythonhosted.org/blinker/index.html#blinker.base.NamedSignal.name" title="(在 Blinker v1.4)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a> attribute.</p>
 <div class="admonition-for-extension-developers admonition">
-<p class="admonition-title">For Extension Developers</p>
+<p class="admonition-title">对于扩展开发人员</p>
 <p>If you are writing a Flask extension and you want to gracefully degrade for
 missing blinker installations, you can do so by using the
 <a class="reference internal" href="api.html#flask.signals.Namespace" title="flask.signals.Namespace"><code class="xref py py-class docutils literal notranslate"><span class="pre">flask.signals.Namespace</span></code></a> class.</p>
 </div>
 </div>
 <div class="section" id="sending-signals">
-<span id="signals-sending"></span><h2>Sending Signals<a class="headerlink" href="#sending-signals" title="永久链接至标题">¶</a></h2>
+<span id="signals-sending"></span><h2>发送信号<a class="headerlink" href="#sending-signals" title="永久链接至标题">¶</a></h2>
 <p>If you want to emit a signal, you can do so by calling the
 <a class="reference external" href="https://pythonhosted.org/blinker/index.html#blinker.base.Signal.send" title="(在 Blinker v1.4)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">send()</span></code></a> method.  It accepts a sender as first
 argument and optionally some keyword arguments that are forwarded to the
@@ -183,7 +181,7 @@ signal subscribers:</p>
 signal, pass <code class="docutils literal notranslate"><span class="pre">self</span></code> as sender.  If you are emitting a signal from a random
 function, you can pass <code class="docutils literal notranslate"><span class="pre">current_app._get_current_object()</span></code> as sender.</p>
 <div class="admonition-passing-proxies-as-senders admonition">
-<p class="admonition-title">Passing Proxies as Senders</p>
+<p class="admonition-title">将代理作为发件人传递</p>
 <p>Never pass <a class="reference internal" href="api.html#flask.current_app" title="flask.current_app"><code class="xref py py-data docutils literal notranslate"><span class="pre">current_app</span></code></a> as sender to a signal.  Use
 <code class="docutils literal notranslate"><span class="pre">current_app._get_current_object()</span></code> instead.  The reason for this is
 that <a class="reference internal" href="api.html#flask.current_app" title="flask.current_app"><code class="xref py py-data docutils literal notranslate"><span class="pre">current_app</span></code></a> is a proxy and not the real application
@@ -191,17 +189,16 @@ object.</p>
 </div>
 </div>
 <div class="section" id="signals-and-flask-s-request-context">
-<h2>Signals and Flask’s Request Context<a class="headerlink" href="#signals-and-flask-s-request-context" title="永久链接至标题">¶</a></h2>
+<h2>信号和Flask的请求上下文<a class="headerlink" href="#signals-and-flask-s-request-context" title="永久链接至标题">¶</a></h2>
 <p>Signals fully support <a class="reference internal" href="reqcontext.html#request-context"><span class="std std-ref">请求上下文</span></a> when receiving signals.
 Context-local variables are consistently available between
 <a class="reference internal" href="api.html#flask.request_started" title="flask.request_started"><code class="xref py py-data docutils literal notranslate"><span class="pre">request_started</span></code></a> and <a class="reference internal" href="api.html#flask.request_finished" title="flask.request_finished"><code class="xref py py-data docutils literal notranslate"><span class="pre">request_finished</span></code></a>, so you can
 rely on <a class="reference internal" href="api.html#flask.g" title="flask.g"><code class="xref py py-class docutils literal notranslate"><span class="pre">flask.g</span></code></a> and others as needed.  Note the limitations described
-in <a class="reference internal" href="#signals-sending"><span class="std std-ref">Sending Signals</span></a> and the <a class="reference internal" href="api.html#flask.request_tearing_down" title="flask.request_tearing_down"><code class="xref py py-data docutils literal notranslate"><span class="pre">request_tearing_down</span></code></a> signal.</p>
+in <a class="reference internal" href="#signals-sending"><span class="std std-ref">发送信号</span></a> and the <a class="reference internal" href="api.html#flask.request_tearing_down" title="flask.request_tearing_down"><code class="xref py py-data docutils literal notranslate"><span class="pre">request_tearing_down</span></code></a> signal.</p>
 </div>
 <div class="section" id="decorator-based-signal-subscriptions">
-<h2>Decorator Based Signal Subscriptions<a class="headerlink" href="#decorator-based-signal-subscriptions" title="永久链接至标题">¶</a></h2>
-<p>With Blinker 1.1 you can also easily subscribe to signals by using the new
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">connect_via()</span></code> decorator:</p>
+<h2>基于装饰器的信号订阅<a class="headerlink" href="#decorator-based-signal-subscriptions" title="永久链接至标题">¶</a></h2>
+<p>使用Blinker 1.1，您还可以使用new:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>~blinker.base.NamedSignal.connect_via`装饰器轻松订阅信号.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">template_rendered</span>
 
 <span class="nd">@template_rendered</span><span class="o">.</span><span class="n">connect_via</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
@@ -211,8 +208,8 @@ in <a class="reference internal" href="#signals-sending"><span class="std std-re
 </div>
 </div>
 <div class="section" id="core-signals">
-<h2>Core Signals<a class="headerlink" href="#core-signals" title="永久链接至标题">¶</a></h2>
-<p>Take a look at <a class="reference internal" href="api.html#core-signals-list"><span class="std std-ref">Signals</span></a> for a list of all builtin signals.</p>
+<h2>核心信号<a class="headerlink" href="#core-signals" title="永久链接至标题">¶</a></h2>
+<p>看一下:ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>core-signals-list`获取所有内置信号的列表.</p>
 </div>
 </div>
 
@@ -233,12 +230,12 @@ in <a class="reference internal" href="#signals-sending"><span class="std std-re
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">信号</a><ul>
-<li><a class="reference internal" href="#subscribing-to-signals">Subscribing to Signals</a></li>
-<li><a class="reference internal" href="#creating-signals">Creating Signals</a></li>
-<li><a class="reference internal" href="#sending-signals">Sending Signals</a></li>
-<li><a class="reference internal" href="#signals-and-flask-s-request-context">Signals and Flask’s Request Context</a></li>
-<li><a class="reference internal" href="#decorator-based-signal-subscriptions">Decorator Based Signal Subscriptions</a></li>
-<li><a class="reference internal" href="#core-signals">Core Signals</a></li>
+<li><a class="reference internal" href="#subscribing-to-signals">订阅信号</a></li>
+<li><a class="reference internal" href="#creating-signals">创建信号</a></li>
+<li><a class="reference internal" href="#sending-signals">发送信号</a></li>
+<li><a class="reference internal" href="#signals-and-flask-s-request-context">信号和Flask的请求上下文</a></li>
+<li><a class="reference internal" href="#decorator-based-signal-subscriptions">基于装饰器的信号订阅</a></li>
+<li><a class="reference internal" href="#core-signals">核心信号</a></li>
 </ul>
 </li>
 </ul>
@@ -246,7 +243,7 @@ in <a class="reference internal" href="#signals-sending"><span class="std std-re
 <ul>
   <li><a href="index.html">Overview</a>
     <ul>
-          <li>Previous: <a href="config.html" title="上一章">Configuration Handling</a>
+          <li>Previous: <a href="config.html" title="上一章">配置处理</a>
           <li>Next: <a href="views.html" title="下一章">可插拔视图</a>
     </ul>
   </li>
@@ -268,7 +265,7 @@ in <a class="reference internal" href="#signals-sending"><span class="std std-re
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

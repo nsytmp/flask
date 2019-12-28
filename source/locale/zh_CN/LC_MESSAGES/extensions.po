@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../extensions.rst:13
 msgid "Finding Extensions"
-msgstr "Finding Extensions"
+msgstr "寻找扩展"
 
 #: ../../extensions.rst:15
 msgid ""
@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../extensions.rst:22
 msgid "Using Extensions"
-msgstr "Using Extensions"
+msgstr "使用扩展程序"
 
 #: ../../extensions.rst:24
 msgid ""
@@ -56,7 +56,7 @@ msgstr ""
 
 #: ../../extensions.rst:44
 msgid "Building Extensions"
-msgstr "Building Extensions"
+msgstr "构建扩展"
 
 #: ../../extensions.rst:46
 msgid ""
@@ -64,5 +64,5 @@ msgid ""
 "not find an extension that fits your need. If this is the case, you can "
 "create your own. Read :ref:`extension-dev` to develop your own Flask "
 "extension."
-msgstr ""
+msgstr "虽然`Extension Registry`_包含许多Flask扩展, 但您可能找不到符合您需求的扩展. 如果是这种情况, 您可以创建自己的. 阅读:ref:`extension-dev`来开发你自己的Flask扩展. "
 

@@ -46,36 +46,13 @@
             
   <div class="section" id="templates">
 <h1>模板<a class="headerlink" href="#templates" title="永久链接至标题">¶</a></h1>
-<p>You’ve written the authentication views for your application, but if
-you’re running the server and try to go to any of the URLs, you’ll see a
-<code class="docutils literal notranslate"><span class="pre">TemplateNotFound</span></code> error. That’s because the views are calling
-<a class="reference internal" href="../api.html#flask.render_template" title="flask.render_template"><code class="xref py py-func docutils literal notranslate"><span class="pre">render_template()</span></code></a>, but you haven’t written the templates yet.
-The template files will be stored in the <code class="docutils literal notranslate"><span class="pre">templates</span></code> directory inside
-the <code class="docutils literal notranslate"><span class="pre">flaskr</span></code> package.</p>
-<p>Templates are files that contain static data as well as placeholders
-for dynamic data. A template is rendered with specific data to produce a
-final document. Flask uses the <a class="reference external" href="http://jinja.pocoo.org/docs/templates/">Jinja</a> template library to render
-templates.</p>
-<p>In your application, you will use templates to render <a class="reference external" href="https://developer.mozilla.org/docs/Web/HTML">HTML</a> which
-will display in the user’s browser. In Flask, Jinja is configured to
-<em>autoescape</em> any data that is rendered in HTML templates. This means
-that it’s safe to render user input; any characters they’ve entered that
-could mess with the HTML, such as <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> will be <em>escaped</em> with
-<em>safe</em> values that look the same in the browser but don’t cause unwanted
-effects.</p>
-<p>Jinja looks and behaves mostly like Python. Special delimiters are used
-to distinguish Jinja syntax from the static data in the template.
-Anything between <code class="docutils literal notranslate"><span class="pre">{{</span></code> and <code class="docutils literal notranslate"><span class="pre">}}</span></code> is an expression that will be output
-to the final document. <code class="docutils literal notranslate"><span class="pre">{%</span></code> and <code class="docutils literal notranslate"><span class="pre">%}</span></code> denotes a control flow
-statement like <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code>. Unlike Python, blocks are denoted
-by start and end tags rather than indentation since static text within
-a block could change indentation.</p>
+<p>您已为应用程序编写了身份验证视图，但如果您正在运行服务器并尝试转到任何URL，则会看到“TemplateNotFound”错误. 那是因为视图调用:func:<cite>render_template</cite>，但你还没有编写模板. 模板文件将存储在``flaskr``包中的``templates``目录中.</p>
+<p>模板是包含静态数据的文件以及动态数据的占位符. 使用特定数据呈现模板以生成最终文档.  Flask使用`Jinja`_模板库来渲染模板.</p>
+<p>在您的应用程序中，您将使用模板来呈现将在用户的浏览器中显示的“HTML”_. 在Flask中，Jinja被配置为* autoescape <em>在HTML模板中呈现的任何数据. 这意味着呈现用户输入是安全的;他们输入的任何字符都可能弄乱HTML，例如````````````</em> * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * .</p>
+<p>Jinja看起来和行为大多像Python. 特殊分隔符用于区分Jinja语法与模板中的静态数据.  <code class="docutils literal notranslate"><span class="pre">{{``和</span></code>}}``之间的任何东西都是一个输出到最终文档的表达式.  <code class="docutils literal notranslate"><span class="pre">{％``和</span></code>％}``表示一个控制流语句，如``if``和``for``. 与Python不同，块由开始和结束标记而不是缩进表示，因为块内的静态文本可能会更改缩进.</p>
 <div class="section" id="the-base-layout">
-<h2>The Base Layout<a class="headerlink" href="#the-base-layout" title="永久链接至标题">¶</a></h2>
-<p>Each page in the application will have the same basic layout around a
-different body. Instead of writing the entire HTML structure in each
-template, each template will <em>extend</em> a base template and override
-specific sections.</p>
+<h2>基础布局<a class="headerlink" href="#the-base-layout" title="永久链接至标题">¶</a></h2>
+<p>应用程序中的每个页面将围绕不同的主体具有相同的基本布局. 而不是在每个模板中编写整个HTML结构，每个模板将*扩展*基本模板并覆盖特定部分.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">flaskr/templates/base.html</span></code></span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!doctype html&gt;</span>
@@ -105,31 +82,18 @@ specific sections.</p>
 </pre></div>
 </div>
 </div>
-<p><a class="reference internal" href="../api.html#flask.g" title="flask.g"><code class="xref py py-data docutils literal notranslate"><span class="pre">g</span></code></a> is automatically available in templates. Based on if
-<code class="docutils literal notranslate"><span class="pre">g.user</span></code> is set (from <code class="docutils literal notranslate"><span class="pre">load_logged_in_user</span></code>), either the username
-and a log out link are displayed, otherwise links to register and log in
-are displayed. <a class="reference internal" href="../api.html#flask.url_for" title="flask.url_for"><code class="xref py py-func docutils literal notranslate"><span class="pre">url_for()</span></code></a> is also automatically available, and is
-used to generate URLs to views instead of writing them out manually.</p>
-<p>After the page title, and before the content, the template loops over
-each message returned by <a class="reference internal" href="../api.html#flask.get_flashed_messages" title="flask.get_flashed_messages"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_flashed_messages()</span></code></a>. You used
-<a class="reference internal" href="../api.html#flask.flash" title="flask.flash"><code class="xref py py-func docutils literal notranslate"><span class="pre">flash()</span></code></a> in the views to show error messages, and this is the code
-that will display them.</p>
-<p>There are three blocks defined here that will be overridden in the other
-templates:</p>
+<p><code class="xref py py-data docutils literal notranslate"><span class="pre">g`在模板中自动可用.</span> <span class="pre">基于是否设置``g.user``(来自``load_logged_in_user`</span></code>)，显示用户名和注销链接，否则显示注册和登录的链接.  :func:<a href="#id1"><span class="problematic" id="id2">`</span></a>url_for`也是自动可用的，用于生成视图的URL而不是手动写出来.</p>
+<p>在页面标题之后，在内容之前，模板循环返回由:func:<a href="#id1"><span class="problematic" id="id2">`</span></a>get_flashed_messages`返回的每条消息. 您在视图中使用:func:<a href="#id3"><span class="problematic" id="id4">`</span></a>flash`来显示错误消息，这是显示它们的代码.</p>
+<p>此处定义的三个块将在其他模板中被覆盖:</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">title</span> <span class="pre">%}</span></code> will change the title displayed in the
-browser’s tab and window title.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">header</span> <span class="pre">%}</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">title</span></code> but will change the
-title displayed on the page.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">content</span> <span class="pre">%}</span></code> is where the content of each page goes, such
-as the login form or a blog post.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">title</span> <span class="pre">%}</span></code> 将更改浏览器选项卡和窗口标题中显示的标题.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">header</span> <span class="pre">%}</span></code> 类似于``title``但会改变页面上显示的标题.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">content</span> <span class="pre">%}</span></code> 是每个页面的内容，例如登录表单或博客文章.</p></li>
 </ol>
-<p>The base template is directly in the <code class="docutils literal notranslate"><span class="pre">templates</span></code> directory. To keep
-the others organized, the templates for a blueprint will be placed in a
-directory with the same name as the blueprint.</p>
+<p>基本模板直接位于``templates``目录中. 为了保持其他组织的有序性，蓝图的模板将放置在与蓝图同名的目录中.</p>
 </div>
 <div class="section" id="register">
-<h2>Register<a class="headerlink" href="#register" title="永久链接至标题">¶</a></h2>
+<h2>寄存器<a class="headerlink" href="#register" title="永久链接至标题">¶</a></h2>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">flaskr/templates/auth/register.html</span></code></span><a class="headerlink" href="#id2" title="永久链接至代码">¶</a></div>
 <div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;base.html&#39;</span> <span class="cp">%}</span>
@@ -150,26 +114,13 @@ directory with the same name as the blueprint.</p>
 </pre></div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">extends</span> <span class="pre">'base.html'</span> <span class="pre">%}</span></code> tells Jinja that this template should
-replace the blocks from the base template. All the rendered content must
-appear inside <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">%}</span></code> tags that override blocks from the base
-template.</p>
-<p>A useful pattern used here is to place <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">title</span> <span class="pre">%}</span></code> inside
-<code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">header</span> <span class="pre">%}</span></code>. This will set the title block and then output
-the value of it into the header block, so that both the window and page
-share the same title without writing it twice.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">input</span></code> tags are using the <code class="docutils literal notranslate"><span class="pre">required</span></code> attribute here. This tells
-the browser not to submit the form until those fields are filled in. If
-the user is using an older browser that doesn’t support that attribute,
-or if they are using something besides a browser to make requests, you
-still want to validate the data in the Flask view. It’s important to
-always fully validate the data on the server, even if the client does
-some validation as well.</p>
+<p><cite>{% extends ‘base.html’ %}`</cite> 告诉Jinja这个模板应该替换基础模板中的块. 所有呈现的内容必须出现在``{％block％}``标签内，这些标签会覆盖基本模板中的块.</p>
+<p>这里使用的有用模式是在``{％block header％}``里面放置``{％block title％}``. 这将设置标题栏，然后将其值输出到标题栏中，这样窗口和页面共享相同的标题而不写两次.</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>input``标签在这里使用``required``属性. 这告诉浏览器在填写这些字段之前不要提交表单. 如果用户使用的旧浏览器不支持该属性，或者他们使用浏览器之外的其他内容来发出请求，那么您仍然需要验证Flask视图中的数据. 始终完全验证服务器上的数据非常重要，即使客户端也进行了一些验证.</p>
 </div>
 <div class="section" id="log-in">
-<h2>Log In<a class="headerlink" href="#log-in" title="永久链接至标题">¶</a></h2>
-<p>This is identical to the register template except for the title and
-submit button.</p>
+<h2>登录<a class="headerlink" href="#log-in" title="永久链接至标题">¶</a></h2>
+<p>除了标题和提交按钮之外，这与寄存器模板相同.</p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">flaskr/templates/auth/login.html</span></code></span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s1">&#39;base.html&#39;</span> <span class="cp">%}</span>
@@ -192,20 +143,11 @@ submit button.</p>
 </div>
 </div>
 <div class="section" id="register-a-user">
-<h2>Register A User<a class="headerlink" href="#register-a-user" title="永久链接至标题">¶</a></h2>
-<p>Now that the authentication templates are written, you can register a
-user. Make sure the server is still running (<code class="docutils literal notranslate"><span class="pre">flask</span> <span class="pre">run</span></code> if it’s not),
-then go to <a class="reference external" href="http://127.0.0.1:5000/auth/register">http://127.0.0.1:5000/auth/register</a>.</p>
-<p>Try clicking the “Register” button without filling out the form and see
-that the browser shows an error message. Try removing the <code class="docutils literal notranslate"><span class="pre">required</span></code>
-attributes from the <code class="docutils literal notranslate"><span class="pre">register.html</span></code> template and click “Register”
-again. Instead of the browser showing an error, the page will reload and
-the error from <a class="reference internal" href="../api.html#flask.flash" title="flask.flash"><code class="xref py py-func docutils literal notranslate"><span class="pre">flash()</span></code></a> in the view will be shown.</p>
-<p>Fill out a username and password and you’ll be redirected to the login
-page. Try entering an incorrect username, or the correct username and
-incorrect password. If you log in you’ll get an error because there’s
-no <code class="docutils literal notranslate"><span class="pre">index</span></code> view to redirect to yet.</p>
-<p>Continue to <a class="reference internal" href="static.html"><span class="doc">静态文件</span></a>.</p>
+<h2>注册用户<a class="headerlink" href="#register-a-user" title="永久链接至标题">¶</a></h2>
+<p>现在已经编写了身份验证模板，您可以注册用户. 确保服务器仍在运行(如果不是“ Flask 运行”)，则转到http://127.0.0.1:5000/auth/register.</p>
+<p>尝试单击“注册”按钮而不填写表单，并看到浏览器显示错误消息. 尝试从``register.html``模板中删除``required``属性，然后再次单击“Register ”. 页面将重新加载，而不是浏览器显示错误，将显示视图中的错误:func:<cite>flash</cite>.</p>
+<p>填写用户名和密码，您将被重定向到登录页面. 尝试输入错误的用户名，或正确的用户名和错误的密码. 如果你登录你就会收到一个错误，因为没有``index``视图可以重定向到.</p>
+<p>继续 <a class="reference internal" href="static.html"><span class="doc">静态文件</span></a>.</p>
 </div>
 </div>
 
@@ -226,10 +168,10 @@ no <code class="docutils literal notranslate"><span class="pre">index</span></co
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">模板</a><ul>
-<li><a class="reference internal" href="#the-base-layout">The Base Layout</a></li>
-<li><a class="reference internal" href="#register">Register</a></li>
-<li><a class="reference internal" href="#log-in">Log In</a></li>
-<li><a class="reference internal" href="#register-a-user">Register A User</a></li>
+<li><a class="reference internal" href="#the-base-layout">基础布局</a></li>
+<li><a class="reference internal" href="#register">寄存器</a></li>
+<li><a class="reference internal" href="#log-in">登录</a></li>
+<li><a class="reference internal" href="#register-a-user">注册用户</a></li>
 </ul>
 </li>
 </ul>
@@ -262,7 +204,7 @@ no <code class="docutils literal notranslate"><span class="pre">index</span></co
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

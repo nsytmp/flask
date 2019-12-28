@@ -54,8 +54,8 @@ author of a post to edit or delete it.</p>
 save your changes, try going to the URL in your browser and testing them
 out.</p>
 <div class="section" id="the-blueprint">
-<h2>The Blueprint<a class="headerlink" href="#the-blueprint" title="永久链接至标题">¶</a></h2>
-<p>Define the blueprint and register it in the application factory.</p>
+<h2>蓝图<a class="headerlink" href="#the-blueprint" title="永久链接至标题">¶</a></h2>
+<p>定义蓝图并在应用程序工厂中注册它.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">flaskr/blog.py</span></code></span><a class="headerlink" href="#id1" title="永久链接至代码">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="p">(</span>
@@ -104,9 +104,7 @@ factory, similar to the <code class="docutils literal notranslate"><span class="
 </div>
 <div class="section" id="index">
 <h2>Index<a class="headerlink" href="#index" title="永久链接至标题">¶</a></h2>
-<p>The index will show all of the posts, most recent first. A <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> is
-used so that the author information from the <code class="docutils literal notranslate"><span class="pre">user</span></code> table is
-available in the result.</p>
+<p>索引将显示所有帖子，最近的帖子. 使用 <code class="docutils literal notranslate"><span class="pre">JOIN</span></code>，以便结果中有 <code class="docutils literal notranslate"><span class="pre">user</span></code> 表中的作者信息.</p>
 <div class="literal-block-wrapper docutils container" id="id3">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">flaskr/blog.py</span></code></span><a class="headerlink" href="#id3" title="永久链接至代码">¶</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@bp.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
@@ -162,10 +160,8 @@ display a line after each post except the last one, to visually separate
 them.</p>
 </div>
 <div class="section" id="create">
-<h2>Create<a class="headerlink" href="#create" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">create</span></code> view works the same as the auth <code class="docutils literal notranslate"><span class="pre">register</span></code> view. Either
-the form is displayed, or the posted data is validated and the post is
-added to the database or an error is shown.</p>
+<h2>创建<a class="headerlink" href="#create" title="永久链接至标题">¶</a></h2>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>create``视图与auth``register``视图的工作方式相同. 显示表单，或验证发布的数据，并将帖子添加到数据库或显示错误.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">login_required</span></code> decorator you wrote earlier is used on the blog
 views. A user must be logged in to visit these views, otherwise they
 will be redirected to the login page.</p>
@@ -220,7 +216,7 @@ will be redirected to the login page.</p>
 </div>
 </div>
 <div class="section" id="update">
-<h2>Update<a class="headerlink" href="#update" title="永久链接至标题">¶</a></h2>
+<h2>更新<a class="headerlink" href="#update" title="永久链接至标题">¶</a></h2>
 <p>Both the <code class="docutils literal notranslate"><span class="pre">update</span></code> and <code class="docutils literal notranslate"><span class="pre">delete</span></code> views will need to fetch a <code class="docutils literal notranslate"><span class="pre">post</span></code>
 by <code class="docutils literal notranslate"><span class="pre">id</span></code> and check if the author matches the logged in user. To avoid
 duplicating code, you can write a function to get the <code class="docutils literal notranslate"><span class="pre">post</span></code> and call
@@ -337,7 +333,7 @@ was posted you want to display that so the user can fix the error, so
 that’s automatically available in templates.</p>
 </div>
 <div class="section" id="delete">
-<h2>Delete<a class="headerlink" href="#delete" title="永久链接至标题">¶</a></h2>
+<h2>删除<a class="headerlink" href="#delete" title="永久链接至标题">¶</a></h2>
 <p>The delete view doesn’t have its own template, the delete button is part
 of <code class="docutils literal notranslate"><span class="pre">update.html</span></code> and posts to the <code class="docutils literal notranslate"><span class="pre">/&lt;id&gt;/delete</span></code> URL. Since there
 is no template, it will only handle the <code class="docutils literal notranslate"><span class="pre">POST</span></code> method and then redirect
@@ -358,7 +354,7 @@ to the <code class="docutils literal notranslate"><span class="pre">index</span>
 <p>Congratulations, you’ve now finished writing your application! Take some
 time to try out everything in the browser. However, there’s still more
 to do before the project is complete.</p>
-<p>Continue to <a class="reference internal" href="install.html"><span class="doc">使项目可安装</span></a>.</p>
+<p>继续 <a class="reference internal" href="install.html"><span class="doc">使项目可安装</span></a>.</p>
 </div>
 </div>
 
@@ -379,11 +375,11 @@ to do before the project is complete.</p>
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">博客蓝图</a><ul>
-<li><a class="reference internal" href="#the-blueprint">The Blueprint</a></li>
+<li><a class="reference internal" href="#the-blueprint">蓝图</a></li>
 <li><a class="reference internal" href="#index">Index</a></li>
-<li><a class="reference internal" href="#create">Create</a></li>
-<li><a class="reference internal" href="#update">Update</a></li>
-<li><a class="reference internal" href="#delete">Delete</a></li>
+<li><a class="reference internal" href="#create">创建</a></li>
+<li><a class="reference internal" href="#update">更新</a></li>
+<li><a class="reference internal" href="#delete">删除</a></li>
 </ul>
 </li>
 </ul>
@@ -416,7 +412,7 @@ to do before the project is complete.</p>
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

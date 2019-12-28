@@ -39,11 +39,11 @@ msgstr ""
 
 #: ../../templating.rst:18
 msgid "Jinja Setup"
-msgstr "Jinja Setup"
+msgstr "Jinja 设置"
 
 #: ../../templating.rst:20
 msgid "Unless customized, Jinja2 is configured by Flask as follows:"
-msgstr "Unless customized, Jinja2 is configured by Flask as follows:"
+msgstr "除非定制, 否则Jinja2由Flask配置如下:"
 
 #: ../../templating.rst:22
 msgid ""
@@ -56,37 +56,37 @@ msgstr ""
 msgid ""
 "autoescaping is enabled for all strings when using "
 ":func:`~flask.templating.render_template_string`."
-msgstr "autoescaping is enabled for all strings when using :func:`~flask.templating.render_template_string`."
+msgstr "使用时, 对所有字符串启用autoescaping:func:`~flask.templating.render_template_string`. "
 
 #: ../../templating.rst:27
 msgid ""
 "a template has the ability to opt in/out autoescaping with the ``{% "
 "autoescape %}`` tag."
-msgstr "a template has the ability to opt in/out autoescaping with the ``{% autoescape %}`` tag."
+msgstr "模板可以使用``{％autoescape％}``标签选择加入/退出自动加载. "
 
 #: ../../templating.rst:29
 msgid ""
 "Flask inserts a couple of global functions and helpers into the Jinja2 "
 "context, additionally to the values that are present by default."
-msgstr "Flask inserts a couple of global functions and helpers into the Jinja2 context, additionally to the values that are present by default."
+msgstr "除了默认存在的值之外, Flask还将一些全局函数和帮助程序插入到Jinja2上下文中. "
 
 #: ../../templating.rst:34
 msgid "Standard Context"
-msgstr "Standard Context"
+msgstr "标准背景"
 
 #: ../../templating.rst:36
 msgid ""
 "The following global variables are available within Jinja2 templates by "
 "default:"
-msgstr "The following global variables are available within Jinja2 templates by default:"
+msgstr "默认情况下, Jinja2模板中提供以下全局变量:"
 
 #: ../../templating.rst:42
 msgid "The current configuration object (:data:`flask.config`)"
-msgstr "The current configuration object (:data:`flask.config`)"
+msgstr "当前配置对象(:data:`flask.config`)"
 
 #: ../../templating.rst:46
 msgid "This is now always available, even in imported templates."
-msgstr "This is now always available, even in imported templates."
+msgstr "即使在导入的模板中, 现在也始终可用. "
 
 #: ../../templating.rst:52
 msgid ""
@@ -119,7 +119,7 @@ msgstr "The :func:`flask.get_flashed_messages` function."
 
 #: ../../templating.rst:80
 msgid "The Jinja Context Behavior"
-msgstr "The Jinja Context Behavior"
+msgstr "金贾语境行为"
 
 #: ../../templating.rst:82
 msgid ""
@@ -133,13 +133,13 @@ msgstr ""
 msgid ""
 "What does this mean for you?  If you have a macro you want to import, "
 "that needs to access the request object you have two possibilities:"
-msgstr "What does this mean for you?  If you have a macro you want to import, that needs to access the request object you have two possibilities:"
+msgstr "这对你意味着什么？如果您有要导入的宏, 则需要访问请求对象, 您有两种可能:"
 
 #: ../../templating.rst:90
 msgid ""
 "you explicitly pass the request to the macro as parameter, or the "
 "attribute of the request object you are interested in."
-msgstr "you explicitly pass the request to the macro as parameter, or the attribute of the request object you are interested in."
+msgstr "您将请求显式传递给宏作为参数, 或您感兴趣的请求对象的属性. "
 
 #: ../../templating.rst:92
 msgid "you import the macro \"with context\"."
@@ -147,29 +147,29 @@ msgstr "you import the macro \"with context\"."
 
 #: ../../templating.rst:94
 msgid "Importing with context looks like this:"
-msgstr "Importing with context looks like this:"
+msgstr "使用上下文导入如下所示:"
 
 #: ../../templating.rst:101
 msgid "Standard Filters"
-msgstr "Standard Filters"
+msgstr "标准过滤器"
 
 #: ../../templating.rst:103
 msgid ""
 "These filters are available in Jinja2 additionally to the filters "
 "provided by Jinja2 itself:"
-msgstr "These filters are available in Jinja2 additionally to the filters provided by Jinja2 itself:"
+msgstr "除了Jinja2本身提供的过滤器之外, Jinja2还提供这些过滤器:"
 
 #: ../../templating.rst:109
 msgid ""
 "This function converts the given object into JSON representation.  This "
 "is for example very helpful if you try to generate JavaScript on the fly."
-msgstr "This function converts the given object into JSON representation.  This is for example very helpful if you try to generate JavaScript on the fly."
+msgstr "此函数将给定对象转换为JSON表示. 例如, 如果您尝试动态生成JavaScript, 这将非常有用. "
 
 #: ../../templating.rst:119
 msgid ""
 "It is also safe to use the output of `|tojson` in a *single-quoted* HTML "
 "attribute:"
-msgstr "It is also safe to use the output of `|tojson` in a *single-quoted* HTML attribute:"
+msgstr "在*单引号* HTML属性中使用`| tojson`的输出也是安全的:"
 
 #: ../../templating.rst:128
 msgid ""
@@ -180,7 +180,7 @@ msgstr ""
 
 #: ../../templating.rst:133
 msgid "Controlling Autoescaping"
-msgstr "Controlling Autoescaping"
+msgstr "控制自动调整"
 
 #: ../../templating.rst:135
 msgid ""
@@ -204,7 +204,7 @@ msgstr ""
 
 #: ../../templating.rst:149
 msgid "There are three ways to accomplish that:"
-msgstr "There are three ways to accomplish that:"
+msgstr "有三种方法可以实现这一目标:"
 
 #: ../../templating.rst:151
 msgid ""
@@ -221,23 +221,23 @@ msgstr "Inside the template, use the ``|safe`` filter to explicitly mark a strin
 
 #: ../../templating.rst:156
 msgid "Temporarily disable the autoescape system altogether."
-msgstr "Temporarily disable the autoescape system altogether."
+msgstr "暂时禁用autoescape系统. "
 
 #: ../../templating.rst:158
 msgid ""
 "To disable the autoescape system in templates, you can use the ``{% "
 "autoescape %}`` block:"
-msgstr "To disable the autoescape system in templates, you can use the ``{% autoescape %}`` block:"
+msgstr "要在模板中禁用autoescape系统, 可以使用``{％autoescape％}``块:"
 
 #: ../../templating.rst:168
 msgid ""
 "Whenever you do this, please be very cautious about the variables you are"
 " using in this block."
-msgstr "Whenever you do this, please be very cautious about the variables you are using in this block."
+msgstr "无论何时执行此操作, 请对此块中使用的变量非常谨慎. "
 
 #: ../../templating.rst:174
 msgid "Registering Filters"
-msgstr "Registering Filters"
+msgstr "注册过滤器"
 
 #: ../../templating.rst:176
 msgid ""
@@ -249,7 +249,7 @@ msgstr ""
 
 #: ../../templating.rst:181
 msgid "The two following examples work the same and both reverse an object::"
-msgstr "The two following examples work the same and both reverse an object::"
+msgstr "以下两个示例的工作方式相同, 都反转了一个对象::"
 
 #: ../../templating.rst:191
 msgid ""
@@ -261,7 +261,7 @@ msgstr ""
 
 #: ../../templating.rst:201
 msgid "Context Processors"
-msgstr "Context Processors"
+msgstr "上下文处理器"
 
 #: ../../templating.rst:203
 msgid ""
@@ -292,7 +292,7 @@ msgstr ""
 msgid ""
 "The context processor above makes the `format_price` function available "
 "to all templates::"
-msgstr "The context processor above makes the `format_price` function available to all templates::"
+msgstr "上面的上下文处理器使`format_price`函数可用于所有模板::"
 
 #: ../../templating.rst:234
 msgid ""

@@ -57,8 +57,8 @@ A <a class="reference internal" href="api.html#flask.Blueprint" title="flask.Blu
 application object, but it is not actually an application.  Rather it is a
 <em>blueprint</em> of how to construct or extend an application.</p>
 <div class="section" id="why-blueprints">
-<h2>Why Blueprints?<a class="headerlink" href="#why-blueprints" title="永久链接至标题">¶</a></h2>
-<p>Blueprints in Flask are intended for these cases:</p>
+<h2>为何选择蓝图？<a class="headerlink" href="#why-blueprints" title="永久链接至标题">¶</a></h2>
+<p>Flask中的蓝图适用于这些情况:</p>
 <ul class="simple">
 <li><p>Factor an application into a set of blueprints.  This is ideal for
 larger applications; a project could instantiate an application object,
@@ -66,18 +66,16 @@ initialize several extensions, and register a collection of blueprints.</p></li>
 <li><p>Register a blueprint on an application at a URL prefix and/or subdomain.
 Parameters in the URL prefix/subdomain become common view arguments
 (with defaults) across all view functions in the blueprint.</p></li>
-<li><p>Register a blueprint multiple times on an application with different URL
-rules.</p></li>
+<li><p>在具有不同URL规则的应用程序上多次注册蓝图.</p></li>
 <li><p>Provide template filters, static files, templates, and other utilities
 through blueprints.  A blueprint does not have to implement applications
 or view functions.</p></li>
-<li><p>Register a blueprint on an application for any of these cases when
-initializing a Flask extension.</p></li>
+<li><p>在初始化Flask扩展时，在应用程序中为任何这些情况注册蓝图.</p></li>
 </ul>
 <p>A blueprint in Flask is not a pluggable app because it is not actually an
 application – it’s a set of operations which can be registered on an
 application, even multiple times.  Why not have multiple application
-objects?  You can do that (see <a class="reference internal" href="patterns/appdispatch.html#app-dispatch"><span class="std std-ref">Application Dispatching</span></a>), but your applications
+objects?  You can do that (see <a class="reference internal" href="patterns/appdispatch.html#app-dispatch"><span class="std std-ref">应用程序调度</span></a>), but your applications
 will have separate configs and will be managed at the WSGI layer.</p>
 <p>Blueprints instead provide separation at the Flask level, share
 application config, and can change an application object as necessary with
@@ -86,16 +84,15 @@ once an application was created without having to destroy the whole
 application object.</p>
 </div>
 <div class="section" id="the-concept-of-blueprints">
-<h2>The Concept of Blueprints<a class="headerlink" href="#the-concept-of-blueprints" title="永久链接至标题">¶</a></h2>
+<h2>蓝图的概念<a class="headerlink" href="#the-concept-of-blueprints" title="永久链接至标题">¶</a></h2>
 <p>The basic concept of blueprints is that they record operations to execute
 when registered on an application.  Flask associates view functions with
 blueprints when dispatching requests and generating URLs from one endpoint
 to another.</p>
 </div>
 <div class="section" id="my-first-blueprint">
-<h2>My First Blueprint<a class="headerlink" href="#my-first-blueprint" title="永久链接至标题">¶</a></h2>
-<p>This is what a very basic blueprint looks like.  In this case we want to
-implement a blueprint that does simple rendering of static templates:</p>
+<h2>我的第一份蓝图<a class="headerlink" href="#my-first-blueprint" title="永久链接至标题">¶</a></h2>
+<p>这是一个非常基本的蓝图. 在这种情况下，我们希望实现一个简单渲染静态模板的蓝图:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">Blueprint</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">abort</span>
 <span class="kn">from</span> <span class="nn">jinja2</span> <span class="k">import</span> <span class="n">TemplateNotFound</span>
 
@@ -120,8 +117,8 @@ constructor (in this case also <code class="docutils literal notranslate"><span 
 does not modify the URL, only the endpoint.</p>
 </div>
 <div class="section" id="registering-blueprints">
-<h2>Registering Blueprints<a class="headerlink" href="#registering-blueprints" title="永久链接至标题">¶</a></h2>
-<p>So how do you register that blueprint?  Like this:</p>
+<h2>注册蓝图<a class="headerlink" href="#registering-blueprints" title="永久链接至标题">¶</a></h2>
+<p>那么你如何注册这个蓝图？像这样:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">Flask</span>
 <span class="kn">from</span> <span class="nn">yourapplication.simple_page</span> <span class="k">import</span> <span class="n">simple_page</span>
 
@@ -129,8 +126,7 @@ does not modify the URL, only the endpoint.</p>
 <span class="n">app</span><span class="o">.</span><span class="n">register_blueprint</span><span class="p">(</span><span class="n">simple_page</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If you check the rules registered on the application, you will find
-these:</p>
+<p>如果您检查在应用程序上注册的规则，您将找到这些规则:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">app</span><span class="o">.</span><span class="n">url_map</span>
 <span class="go">Map([&lt;Rule &#39;/static/&lt;filename&gt;&#39; (HEAD, OPTIONS, GET) -&gt; static&gt;,</span>
 <span class="go"> &lt;Rule &#39;/&lt;page&gt;&#39; (HEAD, OPTIONS, GET) -&gt; simple_page.show&gt;,</span>
@@ -141,11 +137,11 @@ these:</p>
 files.  The other two are for the <cite>show</cite> function of the <code class="docutils literal notranslate"><span class="pre">simple_page</span></code>
 blueprint.  As you can see, they are also prefixed with the name of the
 blueprint and separated by a dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>).</p>
-<p>Blueprints however can also be mounted at different locations:</p>
+<p>然而，蓝图也可以安装在不同的位置:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">register_blueprint</span><span class="p">(</span><span class="n">simple_page</span><span class="p">,</span> <span class="n">url_prefix</span><span class="o">=</span><span class="s1">&#39;/pages&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>And sure enough, these are the generated rules:</p>
+<p>当然，这些是生成的规则:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">app</span><span class="o">.</span><span class="n">url_map</span>
 <span class="go">Map([&lt;Rule &#39;/static/&lt;filename&gt;&#39; (HEAD, OPTIONS, GET) -&gt; static&gt;,</span>
 <span class="go"> &lt;Rule &#39;/pages/&lt;page&gt;&#39; (HEAD, OPTIONS, GET) -&gt; simple_page.show&gt;,</span>
@@ -157,11 +153,10 @@ blueprint might respond properly to that.  In fact it depends on how the
 blueprint is implemented if it can be mounted more than once.</p>
 </div>
 <div class="section" id="blueprint-resources">
-<h2>Blueprint Resources<a class="headerlink" href="#blueprint-resources" title="永久链接至标题">¶</a></h2>
-<p>Blueprints can provide resources as well.  Sometimes you might want to
-introduce a blueprint only for the resources it provides.</p>
+<h2>蓝图资源<a class="headerlink" href="#blueprint-resources" title="永久链接至标题">¶</a></h2>
+<p>蓝图也可以提供资源. 有时您可能只想为其提供的资源引入蓝图.</p>
 <div class="section" id="blueprint-resource-folder">
-<h3>Blueprint Resource Folder<a class="headerlink" href="#blueprint-resource-folder" title="永久链接至标题">¶</a></h3>
+<h3>蓝图资源文件夹<a class="headerlink" href="#blueprint-resource-folder" title="永久链接至标题">¶</a></h3>
 <p>Like for regular applications, blueprints are considered to be contained
 in a folder.  While multiple blueprints can originate from the same folder,
 it does not have to be the case and it’s usually not recommended.</p>
@@ -176,15 +171,14 @@ will be the resource folder.  You can access the
 <span class="go">&#39;/Users/username/TestProject/yourapplication&#39;</span>
 </pre></div>
 </div>
-<p>To quickly open sources from this folder you can use the
-<a class="reference internal" href="api.html#flask.Blueprint.open_resource" title="flask.Blueprint.open_resource"><code class="xref py py-meth docutils literal notranslate"><span class="pre">open_resource()</span></code></a> function:</p>
+<p>要从此文件夹快速打开源，您可以使用:meth:<a href="#id1"><span class="problematic" id="id2">`</span></a>~Blueprint.open_resource`函数:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">simple_page</span><span class="o">.</span><span class="n">open_resource</span><span class="p">(</span><span class="s1">&#39;static/style.css&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">code</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="static-files">
-<h3>Static Files<a class="headerlink" href="#static-files" title="永久链接至标题">¶</a></h3>
+<h3>静态文件<a class="headerlink" href="#static-files" title="永久链接至标题">¶</a></h3>
 <p>A blueprint can expose a folder with static files by providing the path
 to the folder on the filesystem with the <code class="docutils literal notranslate"><span class="pre">static_folder</span></code> argument.
 It is either an absolute path or relative to the blueprint’s location:</p>
@@ -210,14 +204,13 @@ folders are not searched if the file does not exist in the application
 static folder.</p>
 </div>
 <div class="section" id="templates">
-<h3>Templates<a class="headerlink" href="#templates" title="永久链接至标题">¶</a></h3>
+<h3>模板<a class="headerlink" href="#templates" title="永久链接至标题">¶</a></h3>
 <p>If you want the blueprint to expose templates you can do that by providing
 the <cite>template_folder</cite> parameter to the <a class="reference internal" href="api.html#flask.Blueprint" title="flask.Blueprint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Blueprint</span></code></a> constructor:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">admin</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">,</span> <span class="n">template_folder</span><span class="o">=</span><span class="s1">&#39;templates&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>For static files, the path can be absolute or relative to the blueprint
-resource folder.</p>
+<p>对于静态文件，路径可以是蓝图资源文件夹的绝对路径或相对路径.</p>
 <p>The template folder is added to the search path of templates but with a lower
 priority than the actual application’s template folder. That way you can
 easily override templates that a blueprint provides in the actual application.
@@ -252,7 +245,7 @@ to locate templates on every <code class="docutils literal notranslate"><span cl
 </div>
 </div>
 <div class="section" id="building-urls">
-<h2>Building URLs<a class="headerlink" href="#building-urls" title="永久链接至标题">¶</a></h2>
+<h2>构建网址<a class="headerlink" href="#building-urls" title="永久链接至标题">¶</a></h2>
 <p>If you want to link from one page to another you can use the
 <a class="reference internal" href="api.html#flask.url_for" title="flask.url_for"><code class="xref py py-func docutils literal notranslate"><span class="pre">url_for()</span></code></a> function just like you normally would do just that you
 prefix the URL endpoint with the name of the blueprint and a dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>):</p>
@@ -265,15 +258,14 @@ you can use relative redirects by prefixing the endpoint with a dot only:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;.index&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This will link to <code class="docutils literal notranslate"><span class="pre">admin.index</span></code> for instance in case the current request
-was dispatched to any other admin blueprint endpoint.</p>
+<p>这将链接到``admin.index``，以防万一将当前请求分派到任何其他管理蓝图端点.</p>
 </div>
 <div class="section" id="error-handlers">
-<h2>Error Handlers<a class="headerlink" href="#error-handlers" title="永久链接至标题">¶</a></h2>
+<h2>错误处理程序<a class="headerlink" href="#error-handlers" title="永久链接至标题">¶</a></h2>
 <p>Blueprints support the errorhandler decorator just like the <a class="reference internal" href="api.html#flask.Flask" title="flask.Flask"><code class="xref py py-class docutils literal notranslate"><span class="pre">Flask</span></code></a>
 application object, so it is easy to make Blueprint-specific custom error
 pages.</p>
-<p>Here is an example for a “404 Page Not Found” exception:</p>
+<p>以下是“404找不到页面”例外的示例:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@simple_page</span><span class="o">.</span><span class="n">errorhandler</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">page_not_found</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;pages/404.html&#39;</span><span class="p">)</span>
@@ -297,7 +289,7 @@ at the application level using the <code class="docutils literal notranslate"><s
         <span class="k">return</span> <span class="n">ex</span>
 </pre></div>
 </div>
-<p>More information on error handling see <a class="reference internal" href="patterns/errorpages.html#errorpages"><span class="std std-ref">Custom Error Pages</span></a>.</p>
+<p>有关错误处理的更多信息，请参阅:ref:<cite>errorpages</cite>.</p>
 </div>
 </div>
 
@@ -318,18 +310,18 @@ at the application level using the <code class="docutils literal notranslate"><s
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">具有蓝图的模块化应用程序</a><ul>
-<li><a class="reference internal" href="#why-blueprints">Why Blueprints?</a></li>
-<li><a class="reference internal" href="#the-concept-of-blueprints">The Concept of Blueprints</a></li>
-<li><a class="reference internal" href="#my-first-blueprint">My First Blueprint</a></li>
-<li><a class="reference internal" href="#registering-blueprints">Registering Blueprints</a></li>
-<li><a class="reference internal" href="#blueprint-resources">Blueprint Resources</a><ul>
-<li><a class="reference internal" href="#blueprint-resource-folder">Blueprint Resource Folder</a></li>
-<li><a class="reference internal" href="#static-files">Static Files</a></li>
-<li><a class="reference internal" href="#templates">Templates</a></li>
+<li><a class="reference internal" href="#why-blueprints">为何选择蓝图？</a></li>
+<li><a class="reference internal" href="#the-concept-of-blueprints">蓝图的概念</a></li>
+<li><a class="reference internal" href="#my-first-blueprint">我的第一份蓝图</a></li>
+<li><a class="reference internal" href="#registering-blueprints">注册蓝图</a></li>
+<li><a class="reference internal" href="#blueprint-resources">蓝图资源</a><ul>
+<li><a class="reference internal" href="#blueprint-resource-folder">蓝图资源文件夹</a></li>
+<li><a class="reference internal" href="#static-files">静态文件</a></li>
+<li><a class="reference internal" href="#templates">模板</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#building-urls">Building URLs</a></li>
-<li><a class="reference internal" href="#error-handlers">Error Handlers</a></li>
+<li><a class="reference internal" href="#building-urls">构建网址</a></li>
+<li><a class="reference internal" href="#error-handlers">错误处理程序</a></li>
 </ul>
 </li>
 </ul>
@@ -359,7 +351,7 @@ at the application level using the <code class="docutils literal notranslate"><s
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

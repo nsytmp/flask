@@ -26,7 +26,7 @@ msgid ""
 "Eager to get started?  This page gives a good introduction to Flask.  It "
 "assumes you already have Flask installed.  If you do not, head over to "
 "the :ref:`installation` section."
-msgstr "急于开始？这个页面给出了Flask的一个很好的介绍。它假设您已经安装了Flask。如果不这样做，请转到 :ref:`installation` 部分。"
+msgstr "急于开始？这个页面给出了Flask的一个很好的介绍. 它假设您已经安装了Flask. 如果不这样做, 请转到 :ref:`installation` 部分. "
 
 #: ../../quickstart.rst:12
 msgid "A Minimal Application"
@@ -201,7 +201,7 @@ msgid ""
 "To enable all development features (including debug mode) you can export "
 "the ``FLASK_ENV`` environment variable and set it to ``development`` "
 "before running the server::"
-msgstr "要启用所有开发功能（包括调试模式）, 您可以在运行服务器之前导出 ``FLASK_ENV`` 环境变量并将其设置为 ``development``::"
+msgstr "要启用所有开发功能(包括调试模式), 您可以在运行服务器之前导出 ``FLASK_ENV`` 环境变量并将其设置为 ``development``::"
 
 #: ../../quickstart.rst:140
 msgid "(On Windows you need to use ``set`` instead of ``export``.)"

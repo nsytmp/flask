@@ -51,11 +51,11 @@ msgstr "Use the :command:`pip` command to upgrade your existing Flask installati
 
 #: ../../upgrading.rst:25
 msgid "Version 0.12"
-msgstr "Version 0.12"
+msgstr "版本0.12"
 
 #: ../../upgrading.rst:28
 msgid "Changes to send_file"
-msgstr "Changes to send_file"
+msgstr "对send_file的更改"
 
 #: ../../upgrading.rst:30
 msgid ""
@@ -66,7 +66,7 @@ msgstr ""
 
 #: ../../upgrading.rst:36
 msgid "Any of the following is functionally equivalent::"
-msgstr "Any of the following is functionally equivalent::"
+msgstr "以下任何一个在功能上是等效的::"
 
 #: ../../upgrading.rst:52
 msgid ""
@@ -84,7 +84,7 @@ msgstr ""
 
 #: ../../upgrading.rst:63
 msgid "Version 0.11"
-msgstr "Version 0.11"
+msgstr "版本0.11"
 
 #: ../../upgrading.rst:65
 msgid ""
@@ -104,7 +104,7 @@ msgstr ""
 
 #: ../../upgrading.rst:76
 msgid "Debugging"
-msgstr "Debugging"
+msgstr "调试"
 
 #: ../../upgrading.rst:78
 msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 
 #: ../../upgrading.rst:84
 msgid "Error handling"
-msgstr "Error handling"
+msgstr "错误处理"
 
 #: ../../upgrading.rst:86
 msgid ""
@@ -131,7 +131,7 @@ msgstr ""
 
 #: ../../upgrading.rst:94
 msgid "Trying to register a handler on an instance now raises :exc:`ValueError`."
-msgstr "Trying to register a handler on an instance now raises :exc:`ValueError`."
+msgstr "尝试在实例上注册一个处理程序现在引发:exc:`ValueError`. "
 
 #: ../../upgrading.rst:98
 msgid ""
@@ -143,7 +143,7 @@ msgstr ""
 
 #: ../../upgrading.rst:104
 msgid "Templating"
-msgstr "Templating"
+msgstr "模板"
 
 #: ../../upgrading.rst:106
 msgid ""
@@ -154,13 +154,13 @@ msgstr ""
 
 #: ../../upgrading.rst:111
 msgid "Extension imports"
-msgstr "Extension imports"
+msgstr "扩展进口"
 
 #: ../../upgrading.rst:113
 msgid ""
 "Extension imports of the form ``flask.ext.foo`` are deprecated, you "
 "should use ``flask_foo``."
-msgstr "Extension imports of the form ``flask.ext.foo`` are deprecated, you should use ``flask_foo``."
+msgstr "不推荐使用``flask.ext.foo``形式的扩展导入, 你应该使用``flask_foo``. "
 
 #: ../../upgrading.rst:116
 msgid ""
@@ -173,7 +173,7 @@ msgstr ""
 
 #: ../../upgrading.rst:125
 msgid "Version 0.10"
-msgstr "Version 0.10"
+msgstr "版本0.10"
 
 #: ../../upgrading.rst:127
 msgid ""
@@ -192,7 +192,7 @@ msgstr ""
 msgid ""
 "In order to not break people's sessions it is possible to continue using "
 "the old session system by using the `Flask-OldSessions`_ extension."
-msgstr "In order to not break people's sessions it is possible to continue using the old session system by using the `Flask-OldSessions`_ extension."
+msgstr "为了不破坏人们的会话, 可以使用`Flask-OldSessions`_扩展继续使用旧的会话系统. "
 
 #: ../../upgrading.rst:139
 msgid ""
@@ -206,7 +206,7 @@ msgstr ""
 
 #: ../../upgrading.rst:149
 msgid "Version 0.9"
-msgstr "Version 0.9"
+msgstr "版本0.9"
 
 #: ../../upgrading.rst:151
 msgid ""
@@ -230,7 +230,7 @@ msgstr ""
 
 #: ../../upgrading.rst:171
 msgid "Version 0.8"
-msgstr "Version 0.8"
+msgstr "版本0.8"
 
 #: ../../upgrading.rst:173
 msgid ""
@@ -263,7 +263,7 @@ msgstr ""
 
 #: ../../upgrading.rst:193
 msgid "Version 0.7"
-msgstr "Version 0.7"
+msgstr "版本0.7"
 
 #: ../../upgrading.rst:195
 msgid ""
@@ -349,7 +349,7 @@ msgstr ""
 
 #: ../../upgrading.rst:248
 msgid "Bug in Request Locals"
-msgstr "Bug in Request Locals"
+msgstr "请求当地人的错误"
 
 #: ../../upgrading.rst:250
 msgid ""
@@ -380,7 +380,7 @@ msgstr "New code::"
 
 #: ../../upgrading.rst:275
 msgid "Upgrading to new Teardown Handling"
-msgstr "Upgrading to new Teardown Handling"
+msgstr "升级到新的拆解处理"
 
 #: ../../upgrading.rst:277
 msgid ""
@@ -416,7 +416,7 @@ msgstr ""
 
 #: ../../upgrading.rst:316
 msgid "Manual Error Handler Attaching"
-msgstr "Manual Error Handler Attaching"
+msgstr "手动错误处理程序附加"
 
 #: ../../upgrading.rst:318
 msgid ""
@@ -430,23 +430,23 @@ msgstr ""
 
 #: ../../upgrading.rst:325
 msgid "The proper upgrade is to change this::"
-msgstr "The proper upgrade is to change this::"
+msgstr "适当的升级是改变这一点::"
 
 #: ../../upgrading.rst:329
 msgid "Into this::"
-msgstr "Into this::"
+msgstr "进入这个::"
 
 #: ../../upgrading.rst:333
 msgid "Alternatively you should just attach the function with a decorator::"
-msgstr "Alternatively you should just attach the function with a decorator::"
+msgstr "或者, 您应该只使用装饰器附加该功能::"
 
 #: ../../upgrading.rst:339
 msgid "(Note that :meth:`register_error_handler` is new in Flask 0.7)"
-msgstr "(Note that :meth:`register_error_handler` is new in Flask 0.7)"
+msgstr "(请注意:meth:`register_error_handler`是Flask 0.7中的新功能)"
 
 #: ../../upgrading.rst:342
 msgid "Blueprint Support"
-msgstr "Blueprint Support"
+msgstr "蓝图支持"
 
 #: ../../upgrading.rst:344
 msgid ""
@@ -506,7 +506,7 @@ msgstr ""
 
 #: ../../upgrading.rst:383
 msgid "Version 0.6"
-msgstr "Version 0.6"
+msgstr "版本0.6"
 
 #: ../../upgrading.rst:385
 msgid ""
@@ -532,7 +532,7 @@ msgstr ""
 
 #: ../../upgrading.rst:402
 msgid "Version 0.5"
-msgstr "Version 0.5"
+msgstr "版本0.5"
 
 #: ../../upgrading.rst:404
 msgid ""
@@ -544,7 +544,7 @@ msgstr ""
 
 #: ../../upgrading.rst:409
 msgid "The following changes may be relevant to your application:"
-msgstr "The following changes may be relevant to your application:"
+msgstr "以下更改可能与您的申请相关:"
 
 #: ../../upgrading.rst:411
 msgid ""
@@ -573,7 +573,7 @@ msgstr ""
 
 #: ../../upgrading.rst:426
 msgid "Version 0.4"
-msgstr "Version 0.4"
+msgstr "版本0.4"
 
 #: ../../upgrading.rst:428
 msgid ""
@@ -585,7 +585,7 @@ msgstr ""
 
 #: ../../upgrading.rst:434
 msgid "Version 0.3"
-msgstr "Version 0.3"
+msgstr "版本0.3"
 
 #: ../../upgrading.rst:436
 msgid ""
@@ -596,7 +596,7 @@ msgstr ""
 
 #: ../../upgrading.rst:441
 msgid "Configuration Support"
-msgstr "Configuration Support"
+msgstr "配置支持"
 
 #: ../../upgrading.rst:443
 msgid ""
@@ -607,7 +607,7 @@ msgstr ""
 
 #: ../../upgrading.rst:447
 msgid "If you previously had code like this::"
-msgstr "If you previously had code like this::"
+msgstr "如果您之前有这样的代码::"
 
 #: ../../upgrading.rst:452
 msgid ""
@@ -617,7 +617,7 @@ msgstr "You no longer have to do that, instead you can just load a configuration
 
 #: ../../upgrading.rst:456
 msgid "Logging Integration"
-msgstr "Logging Integration"
+msgstr "记录集成"
 
 #: ../../upgrading.rst:458
 msgid ""
@@ -631,7 +631,7 @@ msgstr ""
 
 #: ../../upgrading.rst:466
 msgid "Categories for Flash Messages"
-msgstr "Categories for Flash Messages"
+msgstr "Flash消息的类别"
 
 #: ../../upgrading.rst:468
 msgid ""
@@ -643,5 +643,5 @@ msgstr ""
 
 #: ../../upgrading.rst:472
 msgid "Read all about that in the :ref:`message-flashing-pattern` pattern."
-msgstr "Read all about that in the :ref:`message-flashing-pattern` pattern."
+msgstr "在:ref:`message-flashing-pattern`模式中阅读所有相关内容. "
 

@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../appcontext.rst:18
 msgid "Purpose of the Context"
-msgstr "Purpose of the Context"
+msgstr "语境的目的"
 
 #: ../../appcontext.rst:20
 msgid ""
@@ -73,7 +73,7 @@ msgstr "Flask will also automatically push an app context when running CLI comma
 
 #: ../../appcontext.rst:42
 msgid "Lifetime of the Context"
-msgstr "Lifetime of the Context"
+msgstr "语境的生命周期"
 
 #: ../../appcontext.rst:44
 msgid ""
@@ -92,13 +92,13 @@ msgstr "See :doc:`/reqcontext` for more information about how the contexts work 
 
 #: ../../appcontext.rst:56
 msgid "Manually Push a Context"
-msgstr "Manually Push a Context"
+msgstr "手动推送上下文"
 
 #: ../../appcontext.rst:58
 msgid ""
 "If you try to access :data:`current_app`, or anything that uses it, "
 "outside an application context, you'll get this error message:"
-msgstr "If you try to access :data:`current_app`, or anything that uses it, outside an application context, you'll get this error message:"
+msgstr "如果您尝试访问:data:`current_app`, 或者在应用程序上下文之外使用它的任何内容, 您将收到此错误消息:"
 
 #: ../../appcontext.rst:69
 msgid ""
@@ -118,7 +118,7 @@ msgstr ""
 
 #: ../../appcontext.rst:89
 msgid "Storing Data"
-msgstr "Storing Data"
+msgstr "存储数据"
 
 #: ../../appcontext.rst:91
 msgid ""
@@ -139,7 +139,7 @@ msgstr ""
 
 #: ../../appcontext.rst:103
 msgid "A common use for :data:`g` is to manage resources during a request."
-msgstr "A common use for :data:`g` is to manage resources during a request."
+msgstr "常用于:data:`g`用于在请求期间管理资源. "
 
 #: ../../appcontext.rst:105
 msgid ""
@@ -155,7 +155,7 @@ msgstr "``teardown_X()`` closes or otherwise deallocates the resource if it exis
 
 #: ../../appcontext.rst:111
 msgid "For example, you can manage a database connection using this pattern::"
-msgstr "For example, you can manage a database connection using this pattern::"
+msgstr "例如, 您可以使用此模式管理数据库连接::"
 
 #: ../../appcontext.rst:128
 msgid ""
@@ -187,7 +187,7 @@ msgstr ""
 
 #: ../../appcontext.rst:151
 msgid "Events and Signals"
-msgstr "Events and Signals"
+msgstr "事件和信号"
 
 #: ../../appcontext.rst:153
 msgid ""

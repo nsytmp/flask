@@ -55,7 +55,7 @@ shouldn’t use it for hosting a real public application. See
 <a class="reference internal" href="../deploying/index.html"><span class="doc">部署选项</span></a> for a list of many different ways to host your
 application.</p>
 <div class="section" id="build-and-install">
-<h2>Build and Install<a class="headerlink" href="#build-and-install" title="永久链接至标题">¶</a></h2>
+<h2>构建和安装<a class="headerlink" href="#build-and-install" title="永久链接至标题">¶</a></h2>
 <p>When you want to deploy your application elsewhere, you build a
 distribution file. The current standard for Python distribution is the
 <em>wheel</em> format, with the <code class="docutils literal notranslate"><span class="pre">.whl</span></code> extension. Make sure the wheel library
@@ -78,7 +78,7 @@ file with <code class="docutils literal notranslate"><span class="pre">pip</span
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pip install flaskr-1.0.0-py3-none-any.whl
 </pre></div>
 </div>
-<p>Pip will install your project along with its dependencies.</p>
+<p>Pip将安装您的项目及其依赖项.</p>
 <p>Since this is a different machine, you need to run <code class="docutils literal notranslate"><span class="pre">init-db</span></code> again to
 create the database in the instance folder.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ export FLASK_APP=flaskr
@@ -90,12 +90,12 @@ a different directory for the instance folder. You can find it at
 <code class="docutils literal notranslate"><span class="pre">venv/var/flaskr-instance</span></code> instead.</p>
 </div>
 <div class="section" id="configure-the-secret-key">
-<h2>Configure the Secret Key<a class="headerlink" href="#configure-the-secret-key" title="永久链接至标题">¶</a></h2>
+<h2>配置密钥<a class="headerlink" href="#configure-the-secret-key" title="永久链接至标题">¶</a></h2>
 <p>In the beginning of the tutorial that you gave a default value for
 <a class="reference internal" href="../config.html#SECRET_KEY" title="SECRET_KEY"><code class="xref py py-data docutils literal notranslate"><span class="pre">SECRET_KEY</span></code></a>. This should be changed to some random bytes in
 production. Otherwise, attackers could use the public <code class="docutils literal notranslate"><span class="pre">'dev'</span></code> key to
 modify the session cookie, or anything else that uses the secret key.</p>
-<p>You can use the following command to output a random secret key:</p>
+<p>您可以使用以下命令输出随机密钥:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python -c &#39;import os; print(os.urandom(16))&#39;
 
 b&#39;_5#y2L&quot;F4Q8z\n\xec]/&#39;
@@ -113,7 +113,7 @@ will read from if it exists. Copy the generated value into it.</p>
 <code class="docutils literal notranslate"><span class="pre">SECRET_KEY</span></code> is the only one needed for Flaskr.</p>
 </div>
 <div class="section" id="run-with-a-production-server">
-<h2>Run with a Production Server<a class="headerlink" href="#run-with-a-production-server" title="永久链接至标题">¶</a></h2>
+<h2>使用Production Server运行<a class="headerlink" href="#run-with-a-production-server" title="永久链接至标题">¶</a></h2>
 <p>When running publicly rather than in development, you should not use the
 built-in development server (<code class="docutils literal notranslate"><span class="pre">flask</span> <span class="pre">run</span></code>). The development server is
 provided by Werkzeug for convenience, but is not designed to be
@@ -135,7 +135,7 @@ Serving on http://0.0.0.0:8080
 your application. Waitress is just an example, chosen for the tutorial
 because it supports both Windows and Linux. There are many more WSGI
 servers and deployment options that you may choose for your project.</p>
-<p>Continue to <a class="reference internal" href="next.html"><span class="doc">继续发展！</span></a>.</p>
+<p>继续 <a class="reference internal" href="next.html"><span class="doc">继续发展！</span></a>.</p>
 </div>
 </div>
 
@@ -156,9 +156,9 @@ servers and deployment options that you may choose for your project.</p>
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">部署到生产</a><ul>
-<li><a class="reference internal" href="#build-and-install">Build and Install</a></li>
-<li><a class="reference internal" href="#configure-the-secret-key">Configure the Secret Key</a></li>
-<li><a class="reference internal" href="#run-with-a-production-server">Run with a Production Server</a></li>
+<li><a class="reference internal" href="#build-and-install">构建和安装</a></li>
+<li><a class="reference internal" href="#configure-the-secret-key">配置密钥</a></li>
+<li><a class="reference internal" href="#run-with-a-production-server">使用Production Server运行</a></li>
 </ul>
 </li>
 </ul>
@@ -191,7 +191,7 @@ servers and deployment options that you may choose for your project.</p>
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

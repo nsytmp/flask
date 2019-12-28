@@ -104,11 +104,11 @@ msgstr ""
 
 #: ../../tutorial/install.rst:77
 msgid "Install the Project"
-msgstr "Install the Project"
+msgstr "安装项目"
 
 #: ../../tutorial/install.rst:79
 msgid "Use ``pip`` to install your project in the virtual environment."
-msgstr "Use ``pip`` to install your project in the virtual environment."
+msgstr "使用``pip``在虚拟环境中安装项目. "
 
 #: ../../tutorial/install.rst:85
 msgid ""
@@ -120,7 +120,7 @@ msgstr ""
 
 #: ../../tutorial/install.rst:90
 msgid "You can observe that the project is now installed with ``pip list``."
-msgstr "You can observe that the project is now installed with ``pip list``."
+msgstr "你可以观察到项目现在安装了``pip list``. "
 
 #: ../../tutorial/install.rst:109
 msgid ""
@@ -132,5 +132,5 @@ msgstr ""
 
 #: ../../tutorial/install.rst:114
 msgid "Continue to :doc:`tests`."
-msgstr "Continue to :doc:`tests`."
+msgstr "继续 :doc:`tests`."
 

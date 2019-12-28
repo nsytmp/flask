@@ -61,7 +61,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:38
 msgid "Setup and Fixtures"
-msgstr "Setup and Fixtures"
+msgstr "设置和固定装置"
 
 #: ../../tutorial/tests.rst:40
 msgid ""
@@ -138,7 +138,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:137
 msgid "Factory"
-msgstr "Factory"
+msgstr "厂"
 
 #: ../../tutorial/tests.rst:139
 msgid ""
@@ -167,7 +167,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:168
 msgid "Database"
-msgstr "Database"
+msgstr "数据库"
 
 #: ../../tutorial/tests.rst:170
 msgid ""
@@ -196,7 +196,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:218
 msgid "Authentication"
-msgstr "Authentication"
+msgstr "认证"
 
 #: ../../tutorial/tests.rst:220
 msgid ""
@@ -286,7 +286,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:357
 msgid "Blog"
-msgstr "Blog"
+msgstr "博客"
 
 #: ../../tutorial/tests.rst:359
 msgid ""
@@ -340,7 +340,7 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:491
 msgid "Running the Tests"
-msgstr "Running the Tests"
+msgstr "运行测试"
 
 #: ../../tutorial/tests.rst:493
 msgid ""
@@ -373,11 +373,11 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:537
 msgid "You can either view a simple coverage report in the terminal:"
-msgstr "You can either view a simple coverage report in the terminal:"
+msgstr "您可以在终端中查看简单的覆盖率报告:"
 
 #: ../../tutorial/tests.rst:552
 msgid "An HTML report allows you to see which lines were covered in each file:"
-msgstr "An HTML report allows you to see which lines were covered in each file:"
+msgstr "HTML报告允许您查看每个文件中包含的行:"
 
 #: ../../tutorial/tests.rst:558
 msgid ""
@@ -387,5 +387,5 @@ msgstr ""
 
 #: ../../tutorial/tests.rst:561
 msgid "Continue to :doc:`deploy`."
-msgstr "Continue to :doc:`deploy`."
+msgstr "继续 :doc:`deploy`."
 

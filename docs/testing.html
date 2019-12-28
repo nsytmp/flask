@@ -46,7 +46,7 @@
   <div class="section" id="testing-flask-applications">
 <span id="testing"></span><h1>测试Flask应用程序<a class="headerlink" href="#testing-flask-applications" title="永久链接至标题">¶</a></h1>
 <blockquote>
-<div><p><strong>Something that is untested is broken.</strong></p>
+<div><p><strong>未经测试的东西被打破了.</strong></p>
 </div></blockquote>
 <p>The origin of this quote is unknown and while it is not entirely correct, it
 is also not far from the truth.  Untested applications make it hard to
@@ -56,26 +56,23 @@ safely make changes and instantly know if anything breaks.</p>
 <p>Flask provides a way to test your application by exposing the Werkzeug
 test <a class="reference external" href="https://werkzeug.palletsprojects.com/en/0.15.x/test/#werkzeug.test.Client" title="(在 Werkzeug v0.15.x)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Client</span></code></a> and handling the context locals for you.
 You can then use that with your favourite testing solution.</p>
-<p>In this documentation we will use the <a class="reference external" href="https://pytest.org">pytest</a> package as the base
-framework for our tests. You can install it with <code class="docutils literal notranslate"><span class="pre">pip</span></code>, like so:</p>
+<p>在本文档中，我们将使用`pytest`_包作为测试的基础框架. 您可以使用``pip``安装它，就像这样:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install pytest
 </pre></div>
 </div>
 <div class="section" id="the-application">
-<h2>The Application<a class="headerlink" href="#the-application" title="永久链接至标题">¶</a></h2>
+<h2>应用程序<a class="headerlink" href="#the-application" title="永久链接至标题">¶</a></h2>
 <p>First, we need an application to test; we will use the application from
-the <a class="reference internal" href="tutorial/index.html#tutorial"><span class="std std-ref">Tutorial</span></a>.  If you don’t have that application yet, get the
+the <a class="reference internal" href="tutorial/index.html#tutorial"><span class="std std-ref">教程</span></a>.  If you don’t have that application yet, get the
 source code from <a class="reference external" href="https://github.com/pallets/flask/tree/1.1.dev0/examples/tutorial">the examples</a>.</p>
 </div>
 <div class="section" id="the-testing-skeleton">
-<h2>The Testing Skeleton<a class="headerlink" href="#the-testing-skeleton" title="永久链接至标题">¶</a></h2>
+<h2>测试骨架<a class="headerlink" href="#the-testing-skeleton" title="永久链接至标题">¶</a></h2>
 <p>We begin by adding a tests directory under the application root.  Then
 create a Python file to store our tests (<code class="file docutils literal notranslate"><span class="pre">test_flaskr.py</span></code>). When we
 format the filename like <code class="docutils literal notranslate"><span class="pre">test_*.py</span></code>, it will be auto-discoverable by
 pytest.</p>
-<p>Next, we create a <a class="reference external" href="https://docs.pytest.org/en/latest/fixture.html">pytest fixture</a> called
-<code class="xref py py-func docutils literal notranslate"><span class="pre">client()</span></code> that configures
-the application for testing and initializes a new database:</p>
+<p>接下来，我们创建一个`pytest fixture``，名为:func:<cite>client</cite>，用于配置应用程序以进行测试并初始化新数据库:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">tempfile</span>
 
@@ -112,9 +109,8 @@ to create a temporary database and initialize it.  The
 low-level file handle and a random file name, the latter we use as
 database name.  We just have to keep the <cite>db_fd</cite> around so that we can use
 the <a class="reference external" href="https://docs.python.org/3/library/os.html#os.close" title="(在 Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">os.close()</span></code></a> function to close the file.</p>
-<p>To delete the database after the test, the fixture closes the file and removes
-it from the filesystem.</p>
-<p>If we now run the test suite, we should see the following output:</p>
+<p>要在测试后删除数据库，fixture会关闭文件并将其从文件系统中删除.</p>
+<p>如果我们现在运行测试套件，我们应该看到以下输出:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pytest
 
 ================ test session starts ================
@@ -129,7 +125,7 @@ application is syntactically valid, otherwise the import would have died
 with an exception.</p>
 </div>
 <div class="section" id="the-first-test">
-<h2>The First Test<a class="headerlink" href="#the-first-test" title="永久链接至标题">¶</a></h2>
+<h2>第一次测试<a class="headerlink" href="#the-first-test" title="永久链接至标题">¶</a></h2>
 <p>Now it’s time to start testing the functionality of the application.
 Let’s check that the application shows “No entries here so far” if we
 access the root of the application (<code class="docutils literal notranslate"><span class="pre">/</span></code>).  To do this, we add a new
@@ -141,14 +137,13 @@ test function to <code class="file docutils literal notranslate"><span class="pr
     <span class="k">assert</span> <span class="sa">b</span><span class="s1">&#39;No entries here so far&#39;</span> <span class="ow">in</span> <span class="n">rv</span><span class="o">.</span><span class="n">data</span>
 </pre></div>
 </div>
-<p>Notice that our test functions begin with the word <cite>test</cite>; this allows
-<a class="reference external" href="https://pytest.org">pytest</a> to automatically identify the function as a test to run.</p>
+<p>请注意，我们的测试函数以“test”开头;这允许`pytest`_自动将该函数识别为要运行的测试.</p>
 <p>By using <code class="docutils literal notranslate"><span class="pre">client.get</span></code> we can send an HTTP <code class="docutils literal notranslate"><span class="pre">GET</span></code> request to the application with
 the given path.  The return value will be a <a class="reference internal" href="api.html#flask.Flask.response_class" title="flask.Flask.response_class"><code class="xref py py-class docutils literal notranslate"><span class="pre">response_class</span></code></a> object.
 We can now use the <a class="reference external" href="https://werkzeug.palletsprojects.com/en/0.15.x/wrappers/#werkzeug.wrappers.BaseResponse.data" title="(在 Werkzeug v0.15.x)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">data</span></code></a> attribute to inspect
 the return value (as string) from the application.  In this case, we ensure that
 <code class="docutils literal notranslate"><span class="pre">'No</span> <span class="pre">entries</span> <span class="pre">here</span> <span class="pre">so</span> <span class="pre">far'</span></code> is part of the output.</p>
-<p>Run it again and you should see one passing test:</p>
+<p>再次运行它，你应该看到一个通过测试:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pytest -v
 
 ================ test session starts ================
@@ -162,13 +157,13 @@ tests/test_flaskr.py::test_empty_db PASSED
 </div>
 </div>
 <div class="section" id="logging-in-and-out">
-<h2>Logging In and Out<a class="headerlink" href="#logging-in-and-out" title="永久链接至标题">¶</a></h2>
+<h2>登录和注销<a class="headerlink" href="#logging-in-and-out" title="永久链接至标题">¶</a></h2>
 <p>The majority of the functionality of our application is only available for
 the administrative user, so we need a way to log our test client in and out
 of the application.  To do this, we fire some requests to the login and logout
 pages with the required form data (username and password).  And because the
 login and logout pages redirect, we tell the client to <cite>follow_redirects</cite>.</p>
-<p>Add the following two functions to your <code class="file docutils literal notranslate"><span class="pre">test_flaskr.py</span></code> file:</p>
+<p>将以下两个函数添加到:file:<a href="#id1"><span class="problematic" id="id2">`</span></a>test_flaskr.py`文件中:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
         <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span>
@@ -180,8 +175,7 @@ login and logout pages redirect, we tell the client to <cite>follow_redirects</c
     <span class="k">return</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/logout&#39;</span><span class="p">,</span> <span class="n">follow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Now we can easily test that logging in and out works and that it fails with
-invalid credentials.  Add this new test function:</p>
+<p>现在，我们可以轻松地测试登录和注销是否正常工作，以及它是否因无效凭据而失败. 添加这个新的测试功能:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_login_logout</span><span class="p">(</span><span class="n">client</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Make sure login and logout works.&quot;&quot;&quot;</span>
 
@@ -200,9 +194,8 @@ invalid credentials.  Add this new test function:</p>
 </div>
 </div>
 <div class="section" id="test-adding-messages">
-<h2>Test Adding Messages<a class="headerlink" href="#test-adding-messages" title="永久链接至标题">¶</a></h2>
-<p>We should also test that adding messages works.  Add a new test function
-like this:</p>
+<h2>测试添加消息<a class="headerlink" href="#test-adding-messages" title="永久链接至标题">¶</a></h2>
+<p>我们还应该测试添加消息是否有效. 像这样添加一个新的测试函数:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_messages</span><span class="p">(</span><span class="n">client</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Test that messages work.&quot;&quot;&quot;</span>
 
@@ -216,9 +209,8 @@ like this:</p>
     <span class="k">assert</span> <span class="sa">b</span><span class="s1">&#39;&lt;strong&gt;HTML&lt;/strong&gt; allowed here&#39;</span> <span class="ow">in</span> <span class="n">rv</span><span class="o">.</span><span class="n">data</span>
 </pre></div>
 </div>
-<p>Here we check that HTML is allowed in the text but not in the title,
-which is the intended behavior.</p>
-<p>Running that should now give us three passing tests:</p>
+<p>在这里，我们检查文本中是否允许HTML，而不是标题中的HTML，这是预期的行为.</p>
+<p>运行它现在应该给我们三个通过测试:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pytest -v
 
 ================ test session starts ================
@@ -234,7 +226,7 @@ tests/test_flaskr.py::test_messages PASSED
 </div>
 </div>
 <div class="section" id="other-testing-tricks">
-<h2>Other Testing Tricks<a class="headerlink" href="#other-testing-tricks" title="永久链接至标题">¶</a></h2>
+<h2>其他测试技巧<a class="headerlink" href="#other-testing-tricks" title="永久链接至标题">¶</a></h2>
 <p>Besides using the test client as shown above, there is also the
 <a class="reference internal" href="api.html#flask.Flask.test_request_context" title="flask.Flask.test_request_context"><code class="xref py py-meth docutils literal notranslate"><span class="pre">test_request_context()</span></code></a> method that can be used
 in combination with the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement to activate a request context
@@ -250,11 +242,10 @@ functions.  Here is a full example that demonstrates this approach:</p>
     <span class="k">assert</span> <span class="n">flask</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Peter&#39;</span>
 </pre></div>
 </div>
-<p>All the other objects that are context bound can be used in the same
-way.</p>
+<p>可以以相同的方式使用上下文绑定的所有其他对象.</p>
 <p>If you want to test your application with different configurations and
 there does not seem to be a good way to do that, consider switching to
-application factories (see <a class="reference internal" href="patterns/appfactories.html#app-factories"><span class="std std-ref">Application Factories</span></a>).</p>
+application factories (see <a class="reference internal" href="patterns/appfactories.html#app-factories"><span class="std std-ref">应用工厂</span></a>).</p>
 <p>Note however that if you are using a test request context, the
 <a class="reference internal" href="api.html#flask.Flask.before_request" title="flask.Flask.before_request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">before_request()</span></code></a> and <a class="reference internal" href="api.html#flask.Flask.after_request" title="flask.Flask.after_request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">after_request()</span></code></a>
 functions are not called automatically.  However
@@ -269,8 +260,7 @@ need to call <a class="reference internal" href="api.html#flask.Flask.preprocess
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>This can be necessary to open database connections or something similar
-depending on how your application was designed.</p>
+<p>根据应用程序的设计方式，这可能是打开数据库连接或类似连接所必需的.</p>
 <p>If you want to call the <a class="reference internal" href="api.html#flask.Flask.after_request" title="flask.Flask.after_request"><code class="xref py py-meth docutils literal notranslate"><span class="pre">after_request()</span></code></a> functions you
 need to call into <a class="reference internal" href="api.html#flask.Flask.process_response" title="flask.Flask.process_response"><code class="xref py py-meth docutils literal notranslate"><span class="pre">process_response()</span></code></a> which however
 requires that you pass it a response object:</p>
@@ -286,7 +276,7 @@ requires that you pass it a response object:</p>
 start using the test client.</p>
 </div>
 <div class="section" id="faking-resources-and-context">
-<span id="faking-resources"></span><h2>Faking Resources and Context<a class="headerlink" href="#faking-resources-and-context" title="永久链接至标题">¶</a></h2>
+<span id="faking-resources"></span><h2>伪造资源和背景<a class="headerlink" href="#faking-resources-and-context" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">0.10 新版功能.</span></p>
 </div>
@@ -318,7 +308,7 @@ hooking the <a class="reference internal" href="api.html#flask.appcontext_pushed
         <span class="k">yield</span>
 </pre></div>
 </div>
-<p>And then to use it:</p>
+<p>然后使用它:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="k">import</span> <span class="n">json</span><span class="p">,</span> <span class="n">jsonify</span>
 
 <span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/users/me&#39;</span><span class="p">)</span>
@@ -334,7 +324,7 @@ hooking the <a class="reference internal" href="api.html#flask.appcontext_pushed
 </div>
 </div>
 <div class="section" id="keeping-the-context-around">
-<h2>Keeping the Context Around<a class="headerlink" href="#keeping-the-context-around" title="永久链接至标题">¶</a></h2>
+<h2>保持环境<a class="headerlink" href="#keeping-the-context-around" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">0.4 新版功能.</span></p>
 </div>
@@ -355,7 +345,7 @@ the <code class="docutils literal notranslate"><span class="pre">with</span></co
 is no longer available (because you are trying to use it outside of the actual request).</p>
 </div>
 <div class="section" id="accessing-and-modifying-sessions">
-<h2>Accessing and Modifying Sessions<a class="headerlink" href="#accessing-and-modifying-sessions" title="永久链接至标题">¶</a></h2>
+<h2>访问和修改会话<a class="headerlink" href="#accessing-and-modifying-sessions" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">0.8 新版功能.</span></p>
 </div>
@@ -387,7 +377,7 @@ independently of the session backend used:</p>
 same interface.</p>
 </div>
 <div class="section" id="testing-json-apis">
-<h2>Testing JSON APIs<a class="headerlink" href="#testing-json-apis" title="永久链接至标题">¶</a></h2>
+<h2>测试JSON API<a class="headerlink" href="#testing-json-apis" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0 新版功能.</span></p>
 </div>
@@ -418,7 +408,7 @@ to the JSON-serialized object and sets the content type to
 with <code class="docutils literal notranslate"><span class="pre">get_json</span></code>.</p>
 </div>
 <div class="section" id="testing-cli-commands">
-<span id="testing-cli"></span><h2>Testing CLI Commands<a class="headerlink" href="#testing-cli-commands" title="永久链接至标题">¶</a></h2>
+<span id="testing-cli"></span><h2>测试CLI命令<a class="headerlink" href="#testing-cli-commands" title="永久链接至标题">¶</a></h2>
 <p>Click comes with <a class="reference external" href="http://click.pocoo.org/testing">utilities for testing</a> your CLI commands. A
 <a class="reference external" href="https://click.palletsprojects.com/en/7.x/api/#click.testing.CliRunner" title="(在 Click v7.x)"><code class="xref py py-class docutils literal notranslate"><span class="pre">CliRunner</span></code></a> runs commands in isolation and
 captures the output in a <a class="reference external" href="https://click.palletsprojects.com/en/7.x/api/#click.testing.Result" title="(在 Click v7.x)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Result</span></code></a> object.</p>
@@ -446,8 +436,7 @@ command line.</p>
     <span class="k">assert</span> <span class="s1">&#39;World&#39;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">output</span>
 </pre></div>
 </div>
-<p>In the example above, invoking the command by name is useful because it
-verifies that the command was correctly registered with the app.</p>
+<p>在上面的示例中，按名称调用命令很有用，因为它验证命令是否已正确注册到应用程序.</p>
 <p>If you want to test how your command parses parameters, without running
 the command, use its <a class="reference external" href="https://click.palletsprojects.com/en/7.x/api/#click.BaseCommand.make_context" title="(在 Click v7.x)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">make_context()</span></code></a> method.
 This is useful for testing complex validation rules and custom types.</p>
@@ -485,17 +474,17 @@ This is useful for testing complex validation rules and custom types.</p>
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">测试Flask应用程序</a><ul>
-<li><a class="reference internal" href="#the-application">The Application</a></li>
-<li><a class="reference internal" href="#the-testing-skeleton">The Testing Skeleton</a></li>
-<li><a class="reference internal" href="#the-first-test">The First Test</a></li>
-<li><a class="reference internal" href="#logging-in-and-out">Logging In and Out</a></li>
-<li><a class="reference internal" href="#test-adding-messages">Test Adding Messages</a></li>
-<li><a class="reference internal" href="#other-testing-tricks">Other Testing Tricks</a></li>
-<li><a class="reference internal" href="#faking-resources-and-context">Faking Resources and Context</a></li>
-<li><a class="reference internal" href="#keeping-the-context-around">Keeping the Context Around</a></li>
-<li><a class="reference internal" href="#accessing-and-modifying-sessions">Accessing and Modifying Sessions</a></li>
-<li><a class="reference internal" href="#testing-json-apis">Testing JSON APIs</a></li>
-<li><a class="reference internal" href="#testing-cli-commands">Testing CLI Commands</a></li>
+<li><a class="reference internal" href="#the-application">应用程序</a></li>
+<li><a class="reference internal" href="#the-testing-skeleton">测试骨架</a></li>
+<li><a class="reference internal" href="#the-first-test">第一次测试</a></li>
+<li><a class="reference internal" href="#logging-in-and-out">登录和注销</a></li>
+<li><a class="reference internal" href="#test-adding-messages">测试添加消息</a></li>
+<li><a class="reference internal" href="#other-testing-tricks">其他测试技巧</a></li>
+<li><a class="reference internal" href="#faking-resources-and-context">伪造资源和背景</a></li>
+<li><a class="reference internal" href="#keeping-the-context-around">保持环境</a></li>
+<li><a class="reference internal" href="#accessing-and-modifying-sessions">访问和修改会话</a></li>
+<li><a class="reference internal" href="#testing-json-apis">测试JSON API</a></li>
+<li><a class="reference internal" href="#testing-cli-commands">测试CLI命令</a></li>
 </ul>
 </li>
 </ul>
@@ -525,7 +514,7 @@ This is useful for testing complex validation rules and custom types.</p>
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

@@ -48,7 +48,7 @@ msgstr ""
 
 #: ../../tutorial/factory.rst:24
 msgid "The Application Factory"
-msgstr "The Application Factory"
+msgstr "应用工厂"
 
 #: ../../tutorial/factory.rst:26
 msgid ""
@@ -165,19 +165,19 @@ msgstr ""
 
 #: ../../tutorial/factory.rst:138
 msgid "For Linux and Mac:"
-msgstr "For Linux and Mac:"
+msgstr "适用于Linux和Mac:"
 
 #: ../../tutorial/factory.rst:146
 msgid "For Windows cmd, use ``set`` instead of ``export``:"
-msgstr "For Windows cmd, use ``set`` instead of ``export``:"
+msgstr "对于Windows cmd, 使用``set``而不是``export``:"
 
 #: ../../tutorial/factory.rst:154
 msgid "For Windows PowerShell, use ``$env:`` instead of ``export``:"
-msgstr "For Windows PowerShell, use ``$env:`` instead of ``export``:"
+msgstr "对于Windows PowerShell, 使用`$ env:``而不是``export``:"
 
 #: ../../tutorial/factory.rst:162
 msgid "You'll see output similar to this:"
-msgstr "You'll see output similar to this:"
+msgstr "你会看到类似的输出:"
 
 #: ../../tutorial/factory.rst:174
 msgid ""
@@ -188,5 +188,5 @@ msgstr ""
 
 #: ../../tutorial/factory.rst:178
 msgid "Continue to :doc:`database`."
-msgstr "Continue to :doc:`database`."
+msgstr "继续 :doc:`database`."
 

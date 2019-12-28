@@ -56,7 +56,7 @@ msgstr "Generally it's recommended that you read the :ref:`request-context` chap
 
 #: ../../shell.rst:30
 msgid "Command Line Interface"
-msgstr "Command Line Interface"
+msgstr "命令行界面"
 
 #: ../../shell.rst:32
 msgid ""
@@ -68,11 +68,11 @@ msgstr ""
 
 #: ../../shell.rst:37
 msgid "For more information see :ref:`cli`."
-msgstr "For more information see :ref:`cli`."
+msgstr "有关更多信息, 请参阅:ref:`cli`. "
 
 #: ../../shell.rst:40
 msgid "Creating a Request Context"
-msgstr "Creating a Request Context"
+msgstr "创建请求上下文"
 
 #: ../../shell.rst:42
 msgid ""
@@ -93,11 +93,11 @@ msgstr ""
 msgid ""
 "From that point onwards you can work with the request object until you "
 "call `pop`:"
-msgstr "From that point onwards you can work with the request object until you call `pop`:"
+msgstr "从那时起, 您可以使用请求对象, 直到您调用`pop`:"
 
 #: ../../shell.rst:61
 msgid "Firing Before/After Request"
-msgstr "Firing Before/After Request"
+msgstr "在请求之前/之后发射"
 
 #: ../../shell.rst:63
 msgid ""
@@ -112,13 +112,13 @@ msgstr ""
 msgid ""
 "This however can easily be done yourself.  Just call "
 ":meth:`~flask.Flask.preprocess_request`:"
-msgstr "This however can easily be done yourself.  Just call :meth:`~flask.Flask.preprocess_request`:"
+msgstr "然而, 这可以很容易地自己完成. 只需调用:meth:`~flask.Flask.preprocess_request`:"
 
 #: ../../shell.rst:76
 msgid ""
 "Keep in mind that the :meth:`~flask.Flask.preprocess_request` function "
 "might return a response object, in that case just ignore it."
-msgstr "Keep in mind that the :meth:`~flask.Flask.preprocess_request` function might return a response object, in that case just ignore it."
+msgstr "请记住:meth:`~flask.Flask.preprocess_request`函数可能会返回一个响应对象, 在这种情况下只需忽略它. "
 
 #: ../../shell.rst:79
 msgid ""
@@ -137,7 +137,7 @@ msgstr ""
 
 #: ../../shell.rst:94
 msgid "Further Improving the Shell Experience"
-msgstr "Further Improving the Shell Experience"
+msgstr "进一步改善壳牌体验"
 
 #: ../../shell.rst:96
 msgid ""
@@ -149,5 +149,5 @@ msgstr ""
 
 #: ../../shell.rst:101
 msgid "Just put them into a module (like `shelltools`) and import from there:"
-msgstr "Just put them into a module (like `shelltools`) and import from there:"
+msgstr "只需将它们放入一个模块(如`shelltools`)并从那里导入:"
 

@@ -36,19 +36,19 @@ msgstr "In general the Pocoo Styleguide closely follows :pep:`8` with some small
 
 #: ../../styleguide.rst:12
 msgid "General Layout"
-msgstr "General Layout"
+msgstr "总体布局"
 
 #: ../../styleguide.rst:15
 msgid "Indentation:"
-msgstr "Indentation:"
+msgstr "缩进:"
 
 #: ../../styleguide.rst:15
 msgid "4 real spaces.  No tabs, no exceptions."
-msgstr "4 real spaces.  No tabs, no exceptions."
+msgstr "4个真实空间. 没有标签, 没有例外. "
 
 #: ../../styleguide.rst:20
 msgid "Maximum line length:"
-msgstr "Maximum line length:"
+msgstr "最大线长:"
 
 #: ../../styleguide.rst:18
 msgid ""
@@ -59,7 +59,7 @@ msgstr ""
 
 #: ../../styleguide.rst:46
 msgid "Continuing long statements:"
-msgstr "Continuing long statements:"
+msgstr "持续的长篇陈述:"
 
 #: ../../styleguide.rst:23
 msgid ""
@@ -72,17 +72,17 @@ msgstr ""
 msgid ""
 "If you break in a statement with parentheses or braces, align to the "
 "braces::"
-msgstr "If you break in a statement with parentheses or braces, align to the braces::"
+msgstr "如果您使用括号或大括号括起来, 请与大括号对齐::"
 
 #: ../../styleguide.rst:40
 msgid ""
 "For lists or tuples with many items, break immediately after the opening "
 "brace::"
-msgstr "For lists or tuples with many items, break immediately after the opening brace::"
+msgstr "对于包含许多项目的列表或元组, 请在左大括号后立即中断::"
 
 #: ../../styleguide.rst:68
 msgid "Blank lines:"
-msgstr "Blank lines:"
+msgstr "空白行:"
 
 #: ../../styleguide.rst:49
 msgid ""
@@ -93,11 +93,11 @@ msgstr ""
 
 #: ../../styleguide.rst:71
 msgid "Expressions and Statements"
-msgstr "Expressions and Statements"
+msgstr "表达和陈述"
 
 #: ../../styleguide.rst:92
 msgid "General whitespace rules:"
-msgstr "General whitespace rules:"
+msgstr "一般的空白规则:"
 
 #: ../../styleguide.rst:74
 msgid ""
@@ -107,7 +107,7 @@ msgstr "No whitespace for unary operators that are not words (e.g.: ``-``, ``~``
 
 #: ../../styleguide.rst:76
 msgid "Whitespace is placed between binary operators."
-msgstr "Whitespace is placed between binary operators."
+msgstr "空格位于二元运算符之间. "
 
 #: ../../styleguide.rst:78 ../../styleguide.rst:97
 msgid "Good::"
@@ -123,7 +123,7 @@ msgstr "Yoda statements are a no-go:"
 
 #: ../../styleguide.rst:95
 msgid "Never compare constant with variable, always variable with constant:"
-msgstr "Never compare constant with variable, always variable with constant:"
+msgstr "永远不要将常数与变量进行比较, 总是随常数变化:"
 
 #: ../../styleguide.rst:112
 msgid "Comparisons:"
@@ -153,7 +153,7 @@ msgstr "use ``foo not in bar`` instead of ``not foo in bar``"
 
 #: ../../styleguide.rst:120
 msgid "Instance checks:"
-msgstr "Instance checks:"
+msgstr "实例检查:"
 
 #: ../../styleguide.rst:118
 msgid ""
@@ -163,7 +163,7 @@ msgstr "``isinstance(a, C)`` instead of ``type(A) is C``, but try to avoid insta
 
 #: ../../styleguide.rst:123
 msgid "Naming Conventions"
-msgstr "Naming Conventions"
+msgstr "命名约定"
 
 #: ../../styleguide.rst:125
 msgid ""
@@ -239,7 +239,7 @@ msgstr ""
 
 #: ../../styleguide.rst:187
 msgid "Module header:"
-msgstr "Module header:"
+msgstr "模块标题:"
 
 #: ../../styleguide.rst:170
 msgid ""
@@ -252,11 +252,11 @@ msgstr ""
 msgid ""
 "Please keep in mind that proper copyrights and license files are a "
 "requirement for approved Flask extensions."
-msgstr "Please keep in mind that proper copyrights and license files are a requirement for approved Flask extensions."
+msgstr "请记住, 正确的版权和许可文件是经批准的Flask扩展的要求. "
 
 #: ../../styleguide.rst:190
 msgid "Comments"
-msgstr "Comments"
+msgstr "评论"
 
 #: ../../styleguide.rst:192
 msgid ""

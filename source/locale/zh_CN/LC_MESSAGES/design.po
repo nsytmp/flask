@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../design.rst:13
 msgid "The Explicit Application Object"
-msgstr "The Explicit Application Object"
+msgstr "显式应用程序对象"
 
 #: ../../design.rst:15
 msgid ""
@@ -44,11 +44,11 @@ msgstr ""
 
 #: ../../design.rst:21
 msgid "Without such an explicit application object the following code::"
-msgstr "Without such an explicit application object the following code::"
+msgstr "没有这样一个显式应用程序对象的代码如下::"
 
 #: ../../design.rst:30
 msgid "Would look like this instead::"
-msgstr "Would look like this instead::"
+msgstr "看起来会像这样::"
 
 #: ../../design.rst:38
 msgid ""
@@ -111,7 +111,7 @@ msgstr ""
 
 #: ../../design.rst:83
 msgid "The Routing System"
-msgstr "The Routing System"
+msgstr "路由系统"
 
 #: ../../design.rst:85
 msgid ""
@@ -133,7 +133,7 @@ msgstr ""
 
 #: ../../design.rst:99
 msgid "One Template Engine"
-msgstr "One Template Engine"
+msgstr "一个模板引擎"
 
 #: ../../design.rst:101
 msgid ""
@@ -188,7 +188,7 @@ msgstr ""
 
 #: ../../design.rst:136
 msgid "Micro with Dependencies"
-msgstr "Micro with Dependencies"
+msgstr "微观与依赖"
 
 #: ../../design.rst:138
 msgid ""
@@ -218,7 +218,7 @@ msgstr ""
 
 #: ../../design.rst:159
 msgid "Thread Locals"
-msgstr "Thread Locals"
+msgstr "线程本地"
 
 #: ../../design.rst:161
 msgid ""
@@ -245,7 +245,7 @@ msgstr "Also see the :ref:`becomingbig` section of the documentation for some in
 
 #: ../../design.rst:177
 msgid "What Flask is, What Flask is Not"
-msgstr "What Flask is, What Flask is Not"
+msgstr "Flask是什么, Flask不是什么"
 
 #: ../../design.rst:179
 msgid ""
@@ -268,5 +268,5 @@ msgstr ""
 msgid ""
 "The idea of Flask is to build a good foundation for all applications. "
 "Everything else is up to you or extensions."
-msgstr "The idea of Flask is to build a good foundation for all applications. Everything else is up to you or extensions."
+msgstr "Flask的想法是为所有应用程序构建良好的基础. 其他一切都取决于您或扩展. "
 

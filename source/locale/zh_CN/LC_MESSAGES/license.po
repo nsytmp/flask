@@ -34,21 +34,21 @@ msgstr ""
 msgid ""
 "The full license text can be found below (:ref:`flask-license`).  For the"
 " documentation and artwork different licenses apply."
-msgstr "The full license text can be found below (:ref:`flask-license`).  For the documentation and artwork different licenses apply."
+msgstr "完整的许可证文本可以在下面找到(:ref:`flask-license`). 对于文档和图稿, 适用不同的许可证. "
 
 #: ../../license.rst:16
 msgid "Authors"
-msgstr "Authors"
+msgstr "作者"
 
 #: ../../../AUTHORS:1
 msgid ""
 "Flask is developed and maintained by the Pallets team and community "
 "contributors. It was created by Armin Ronacher. The core maintainers are:"
-msgstr "Flask is developed and maintained by the Pallets team and community contributors. It was created by Armin Ronacher. The core maintainers are:"
+msgstr "Flask由Pallets团队和社区贡献者开发和维护. 它由Armin Ronacher创建. 核心维护者是:"
 
 #: ../../../AUTHORS:5
 msgid "David Lord (davidism)"
-msgstr "David Lord (davidism)"
+msgstr "大卫勋爵(大卫)"
 
 #: ../../../AUTHORS:6
 msgid "Adrian Mönnich (ThiefMaster)"
@@ -64,23 +64,23 @@ msgstr "Marcus Unterwaditzer (untitaker)"
 
 #: ../../../AUTHORS:10
 msgid "A full list of contributors is available from git with::"
-msgstr "A full list of contributors is available from git with::"
+msgstr "完整的贡献者列表可以从git获得::"
 
 #: ../../license.rst:21
 msgid "General License Definitions"
-msgstr "General License Definitions"
+msgstr "一般许可证定义"
 
 #: ../../license.rst:23
 msgid ""
 "The following section contains the full license texts for Flask and the "
 "documentation."
-msgstr "The following section contains the full license texts for Flask and the documentation."
+msgstr "以下部分包含Flask的完整许可文本和文档. "
 
 #: ../../license.rst:26
 msgid ""
 "\"AUTHORS\" hereby refers to all the authors listed in the :ref:`authors`"
 " section."
-msgstr "\"AUTHORS\" hereby refers to all the authors listed in the :ref:`authors` section."
+msgstr "“作者”在此指的是:ref:`authors`部分中列出的所有作者. "
 
 #: ../../license.rst:29
 msgid ""
@@ -91,11 +91,11 @@ msgstr ""
 
 #: ../../license.rst:33
 msgid "The \":ref:`artwork-license`\" applies to the project's Horn-Logo."
-msgstr "The \":ref:`artwork-license`\" applies to the project's Horn-Logo."
+msgstr "\“:ref:`artwork-license` \”适用于该项目的Horn-Logo. "
 
 #: ../../license.rst:38
 msgid "Flask License"
-msgstr "Flask License"
+msgstr "Flask许可证"
 
 #: ../../../LICENSE:1
 msgid "Copyright © 2010 by the Pallets team."
@@ -103,7 +103,7 @@ msgstr "Copyright © 2010 by the Pallets team."
 
 #: ../../../LICENSE:3 ../../../artwork/LICENSE:3
 msgid "Some rights reserved."
-msgstr "Some rights reserved."
+msgstr "保留一些权利. "
 
 #: ../../../LICENSE:5
 msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 msgid ""
 "Redistributions of source code must retain the above copyright notice, "
 "this list of conditions and the following disclaimer."
-msgstr "Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer."
+msgstr "源代码的重新分发必须保留上述版权声明, 此条件列表和以下免责声明. "
 
 #: ../../../LICENSE:12
 msgid ""
@@ -150,17 +150,17 @@ msgstr ""
 
 #: ../../license.rst:46
 msgid "Flask Artwork License"
-msgstr "Flask Artwork License"
+msgstr " Flask 艺术品许可证"
 
 #: ../../../artwork/LICENSE:1
 msgid "Copyright (c) 2010 by Armin Ronacher."
-msgstr "Copyright (c) 2010 by Armin Ronacher."
+msgstr "版权所有(c)2010 Armin Ronacher. "
 
 #: ../../../artwork/LICENSE:5
 msgid ""
 "This logo or a modified version may be used by anyone to refer to the "
 "Flask project, but does not indicate endorsement by the project."
-msgstr "This logo or a modified version may be used by anyone to refer to the Flask project, but does not indicate endorsement by the project."
+msgstr "任何人都可以使用此徽标或修改后的版本来引用Flask项目, 但不表示该项目的认可. "
 
 #: ../../../artwork/LICENSE:8
 msgid ""
@@ -173,7 +173,7 @@ msgstr ""
 msgid ""
 "Redistributions of source code must retain the above copyright notice and"
 " this list of conditions."
-msgstr "Redistributions of source code must retain the above copyright notice and this list of conditions."
+msgstr "源代码的重新分发必须保留上述版权声明和此条件列表. "
 
 #: ../../../artwork/LICENSE:15
 msgid ""
@@ -186,5 +186,5 @@ msgstr ""
 msgid ""
 "Note: we would appreciate that you make the image a link to "
 "http://flask.pocoo.org/ if you use it on a web page."
-msgstr "Note: we would appreciate that you make the image a link to http://flask.pocoo.org/ if you use it on a web page."
+msgstr "注意:如果您在网页上使用图片, 我们将非常感谢您将图片链接到http://flask.pocoo.org/. "
 

@@ -108,7 +108,7 @@ msgstr ""
 
 #: ../../tutorial/database.rst:89
 msgid "Create the Tables"
-msgstr "Create the Tables"
+msgstr "创建表"
 
 #: ../../tutorial/database.rst:91
 msgid ""
@@ -146,7 +146,7 @@ msgstr ""
 
 #: ../../tutorial/database.rst:149
 msgid "Register with the Application"
-msgstr "Register with the Application"
+msgstr "注册申请"
 
 #: ../../tutorial/database.rst:151
 msgid ""
@@ -181,7 +181,7 @@ msgstr "``flaskr/__init__.py``"
 
 #: ../../tutorial/database.rst:188
 msgid "Initialize the Database File"
-msgstr "Initialize the Database File"
+msgstr "初始化数据库文件"
 
 #: ../../tutorial/database.rst:190
 msgid ""
@@ -207,9 +207,9 @@ msgstr "Run the ``init-db`` command:"
 msgid ""
 "There will now be a ``flaskr.sqlite`` file in the ``instance`` folder in "
 "your project."
-msgstr ""
+msgstr "现在, 项目中的 ``instance`` 文件夹中会出现一个 ``flaskr.sqlite`` 文件. "
 
 #: ../../tutorial/database.rst:213
 msgid "Continue to :doc:`views`."
-msgstr "Continue to :doc:`views`."
+msgstr "继续 :doc:`views`."
 

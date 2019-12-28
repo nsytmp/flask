@@ -38,11 +38,11 @@ msgstr ""
 
 #: ../../tutorial/blog.rst:16
 msgid "The Blueprint"
-msgstr "The Blueprint"
+msgstr "蓝图"
 
 #: ../../tutorial/blog.rst:18
 msgid "Define the blueprint and register it in the application factory."
-msgstr "Define the blueprint and register it in the application factory."
+msgstr "定义蓝图并在应用程序工厂中注册它. "
 
 #: ../../tutorial/blog.rst:20 ../../tutorial/blog.rst:76
 #: ../../tutorial/blog.rst:142 ../../tutorial/blog.rst:198
@@ -96,7 +96,7 @@ msgid ""
 "The index will show all of the posts, most recent first. A ``JOIN`` is "
 "used so that the author information from the ``user`` table is available "
 "in the result."
-msgstr ""
+msgstr "索引将显示所有帖子, 最近的帖子. 使用 ``JOIN``, 以便结果中有 ``user`` 表中的作者信息. "
 
 #: ../../tutorial/blog.rst:89
 msgid "``flaskr/templates/blog/index.html``"
@@ -114,14 +114,14 @@ msgstr ""
 
 #: ../../tutorial/blog.rst:132
 msgid "Create"
-msgstr "Create"
+msgstr "创建"
 
 #: ../../tutorial/blog.rst:134
 msgid ""
 "The ``create`` view works the same as the auth ``register`` view. Either "
 "the form is displayed, or the posted data is validated and the post is "
 "added to the database or an error is shown."
-msgstr ""
+msgstr "``create``视图与auth``register``视图的工作方式相同. 显示表单, 或验证发布的数据, 并将帖子添加到数据库或显示错误. "
 
 #: ../../tutorial/blog.rst:138
 msgid ""
@@ -136,7 +136,7 @@ msgstr "``flaskr/templates/blog/create.html``"
 
 #: ../../tutorial/blog.rst:191
 msgid "Update"
-msgstr "Update"
+msgstr "更新"
 
 #: ../../tutorial/blog.rst:193
 msgid ""
@@ -209,7 +209,7 @@ msgstr ""
 
 #: ../../tutorial/blog.rst:313
 msgid "Delete"
-msgstr "Delete"
+msgstr "删除"
 
 #: ../../tutorial/blog.rst:315
 msgid ""
@@ -228,5 +228,5 @@ msgstr ""
 
 #: ../../tutorial/blog.rst:336
 msgid "Continue to :doc:`install`."
-msgstr "Continue to :doc:`install`."
+msgstr "继续 :doc:`install`."
 

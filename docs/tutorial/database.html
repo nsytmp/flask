@@ -115,7 +115,7 @@ tell your application about the <code class="docutils literal notranslate"><span
 factory so that it is called after each request.</p>
 </div>
 <div class="section" id="create-the-tables">
-<h2>Create the Tables<a class="headerlink" href="#create-the-tables" title="永久链接至标题">¶</a></h2>
+<h2>创建表<a class="headerlink" href="#create-the-tables" title="永久链接至标题">¶</a></h2>
 <p>In SQLite, data is stored in <em>tables</em> and <em>columns</em>. These need to be
 created before you can store and retrieve data. Flaskr will store users
 in the <code class="docutils literal notranslate"><span class="pre">user</span></code> table, and posts in the <code class="docutils literal notranslate"><span class="pre">post</span></code> table. Create a file
@@ -172,7 +172,7 @@ that calls the <code class="docutils literal notranslate"><span class="pre">init
 user. You can read <a class="reference internal" href="../cli.html#cli"><span class="std std-ref">命令行界面</span></a> to learn more about writing commands.</p>
 </div>
 <div class="section" id="register-with-the-application">
-<h2>Register with the Application<a class="headerlink" href="#register-with-the-application" title="永久链接至标题">¶</a></h2>
+<h2>注册申请<a class="headerlink" href="#register-with-the-application" title="永久链接至标题">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">close_db</span></code> and <code class="docutils literal notranslate"><span class="pre">init_db_command</span></code> functions need to be registered
 with the application instance; otherwise, they won’t be used by the
 application. However, since you’re using a factory function, that
@@ -208,7 +208,7 @@ the end of the factory function before returning the app.</p>
 </div>
 </div>
 <div class="section" id="initialize-the-database-file">
-<h2>Initialize the Database File<a class="headerlink" href="#initialize-the-database-file" title="永久链接至标题">¶</a></h2>
+<h2>初始化数据库文件<a class="headerlink" href="#initialize-the-database-file" title="永久链接至标题">¶</a></h2>
 <p>Now that <code class="docutils literal notranslate"><span class="pre">init-db</span></code> has been registered with the app, it can be called
 using the <code class="docutils literal notranslate"><span class="pre">flask</span></code> command, similar to the <code class="docutils literal notranslate"><span class="pre">run</span></code> command from the
 previous page.</p>
@@ -226,9 +226,8 @@ the previous page.</p>
 Initialized the database.
 </pre></div>
 </div>
-<p>There will now be a <code class="docutils literal notranslate"><span class="pre">flaskr.sqlite</span></code> file in the <code class="docutils literal notranslate"><span class="pre">instance</span></code> folder in
-your project.</p>
-<p>Continue to <a class="reference internal" href="views.html"><span class="doc">蓝图和视图</span></a>.</p>
+<p>现在，项目中的 <code class="docutils literal notranslate"><span class="pre">instance</span></code> 文件夹中会出现一个 <code class="docutils literal notranslate"><span class="pre">flaskr.sqlite</span></code> 文件.</p>
+<p>继续 <a class="reference internal" href="views.html"><span class="doc">蓝图和视图</span></a>.</p>
 </div>
 </div>
 
@@ -250,9 +249,9 @@ your project.</p>
   <ul>
 <li><a class="reference internal" href="#">定义和访问数据库</a><ul>
 <li><a class="reference internal" href="#connect-to-the-database">Connect to the Database</a></li>
-<li><a class="reference internal" href="#create-the-tables">Create the Tables</a></li>
-<li><a class="reference internal" href="#register-with-the-application">Register with the Application</a></li>
-<li><a class="reference internal" href="#initialize-the-database-file">Initialize the Database File</a></li>
+<li><a class="reference internal" href="#create-the-tables">创建表</a></li>
+<li><a class="reference internal" href="#register-with-the-application">注册申请</a></li>
+<li><a class="reference internal" href="#initialize-the-database-file">初始化数据库文件</a></li>
 </ul>
 </li>
 </ul>
@@ -285,7 +284,7 @@ your project.</p>
   
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建。
     </div>
 
   </body>

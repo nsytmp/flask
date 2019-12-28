@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../security.rst:11
 msgid "Cross-Site Scripting (XSS)"
-msgstr "Cross-Site Scripting (XSS)"
+msgstr "跨站点脚本(XSS)"
 
 #: ../../security.rst:13
 msgid ""
@@ -53,17 +53,17 @@ msgstr ""
 
 #: ../../security.rst:25
 msgid "generating HTML without the help of Jinja2"
-msgstr "generating HTML without the help of Jinja2"
+msgstr "在没有Jinja2帮助的情况下生成HTML"
 
 #: ../../security.rst:26
 msgid "calling :class:`~flask.Markup` on data submitted by users"
-msgstr "calling :class:`~flask.Markup` on data submitted by users"
+msgstr "对用户提交的数据调用:class:`~flask.Markup`"
 
 #: ../../security.rst:27
 msgid ""
 "sending out HTML from uploaded files, never do that, use the ``Content-"
 "Disposition: attachment`` header to prevent that problem."
-msgstr "sending out HTML from uploaded files, never do that, use the ``Content-Disposition: attachment`` header to prevent that problem."
+msgstr "从上传的文件发送HTML, 从不这样做, 使用``Content-Disposition:attachment``标题来防止这个问题. "
 
 #: ../../security.rst:29
 msgid ""
@@ -110,11 +110,11 @@ msgstr ""
 msgid ""
 "To prevent this, you'll need to set the :ref:`security-csp` response "
 "header."
-msgstr "To prevent this, you'll need to set the :ref:`security-csp` response header."
+msgstr "为防止这种情况, 您需要设置:ref:`security-csp`响应头. "
 
 #: ../../security.rst:70
 msgid "Cross-Site Request Forgery (CSRF)"
-msgstr "Cross-Site Request Forgery (CSRF)"
+msgstr "跨站请求伪造(CSRF)"
 
 #: ../../security.rst:72
 msgid ""
@@ -164,11 +164,11 @@ msgstr ""
 msgid ""
 "Why does Flask not do that for you?  The ideal place for this to happen "
 "is the form validation framework, which does not exist in Flask."
-msgstr "Why does Flask not do that for you?  The ideal place for this to happen is the form validation framework, which does not exist in Flask."
+msgstr "为什么Flask不适合你呢？发生这种情况的理想之处是表单验证框架, 它在Flask中不存在. "
 
 #: ../../security.rst:107
 msgid "JSON Security"
-msgstr "JSON Security"
+msgstr "JSON安全"
 
 #: ../../security.rst:109
 msgid ""
@@ -189,7 +189,7 @@ msgstr ""
 
 #: ../../security.rst:120
 msgid "Security Headers"
-msgstr "Security Headers"
+msgstr "安全标题"
 
 #: ../../security.rst:122
 msgid ""
@@ -201,13 +201,13 @@ msgstr ""
 
 #: ../../security.rst:130
 msgid "HTTP Strict Transport Security (HSTS)"
-msgstr "HTTP Strict Transport Security (HSTS)"
+msgstr "HTTP严格传输安全(HSTS)"
 
 #: ../../security.rst:132
 msgid ""
 "Tells the browser to convert all HTTP requests to HTTPS, preventing man-"
 "in-the-middle (MITM) attacks. ::"
-msgstr "Tells the browser to convert all HTTP requests to HTTPS, preventing man-in-the-middle (MITM) attacks. ::"
+msgstr "告诉浏览器将所有HTTP请求转换为HTTPS, 防止中间人(MITM)攻击. ::"
 
 #: ../../security.rst:137
 msgid ""
@@ -217,7 +217,7 @@ msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transpo
 
 #: ../../security.rst:142
 msgid "Content Security Policy (CSP)"
-msgstr "Content Security Policy (CSP)"
+msgstr "内容安全政策(CSP)"
 
 #: ../../security.rst:144
 msgid ""
@@ -286,7 +286,7 @@ msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protecti
 
 #: ../../security.rst:191
 msgid "Set-Cookie options"
-msgstr "Set-Cookie options"
+msgstr "Set-Cookie选项"
 
 #: ../../security.rst:193
 msgid ""
@@ -297,13 +297,13 @@ msgstr ""
 
 #: ../../security.rst:197
 msgid "``Secure`` limits cookies to HTTPS traffic only."
-msgstr "``Secure`` limits cookies to HTTPS traffic only."
+msgstr "``Secure``仅限cookie到HTTPS流量. "
 
 #: ../../security.rst:198
 msgid ""
 "``HttpOnly`` protects the contents of cookies from being read with "
 "JavaScript."
-msgstr "``HttpOnly`` protects the contents of cookies from being read with JavaScript."
+msgstr "``HttpOnly``保护cookie的内容不被JavaScript读取. "
 
 #: ../../security.rst:200
 msgid ""
@@ -336,7 +336,7 @@ msgstr ""
 msgid ""
 "Use :class:`itsdangerous.TimedSerializer` to sign and validate other "
 "cookie values (or any values that need secure signatures)."
-msgstr "Use :class:`itsdangerous.TimedSerializer` to sign and validate other cookie values (or any values that need secure signatures)."
+msgstr "使用:class:`itsdangerous.TimedSerializer`来签名并验证其他cookie值(或任何需要安全签名的值). "
 
 #: ../../security.rst:244
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
@@ -348,19 +348,19 @@ msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
 
 #: ../../security.rst:251
 msgid "HTTP Public Key Pinning (HPKP)"
-msgstr "HTTP Public Key Pinning (HPKP)"
+msgstr "HTTP公钥固定(HPKP)"
 
 #: ../../security.rst:253
 msgid ""
 "This tells the browser to authenticate with the server using only the "
 "specific certificate key to prevent MITM attacks."
-msgstr "This tells the browser to authenticate with the server using only the specific certificate key to prevent MITM attacks."
+msgstr "这告诉浏览器仅使用特定证书密钥对服务器进行身份验证, 以防止MITM攻击. "
 
 #: ../../security.rst:257
 msgid ""
 "Be careful when enabling this, as it is very difficult to undo if you set"
 " up or upgrade your key incorrectly."
-msgstr "Be careful when enabling this, as it is very difficult to undo if you set up or upgrade your key incorrectly."
+msgstr "启用此功能时要小心, 因为如果您错误地设置或升级密钥, 则很难撤消. "
 
 #: ../../security.rst:260
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning"

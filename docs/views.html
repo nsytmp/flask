@@ -20,7 +20,7 @@
     <link rel="next" title="应用程序上下文" href="appcontext.html" />
     <link rel="prev" title="信号" href="signals.html" />
   <script>DOCUMENTATION_OPTIONS.URL_ROOT = './';</script>
-   
+
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
@@ -34,15 +34,15 @@
         <li class="right" >
           <a href="signals.html" title="信号"
              accesskey="P">上一页</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Flask Documentation (1.1.x)</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Flask Documentation (1.1.x)</a> &#187;</li>
       </ul>
-    </div>  
+    </div>
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
-            
+
   <div class="section" id="pluggable-views">
 <span id="views"></span><h1>可插拔视图<a class="headerlink" href="#pluggable-views" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
@@ -54,9 +54,8 @@ Django which are based on classes instead of functions.  The main
 intention is that you can replace parts of the implementations and this
 way have customizable pluggable views.</p>
 <div class="section" id="basic-principle">
-<h2>Basic Principle<a class="headerlink" href="#basic-principle" title="永久链接至标题">¶</a></h2>
-<p>Consider you have a function that loads a list of objects from the
-database and renders into a template:</p>
+<h2>基本原则<a class="headerlink" href="#basic-principle" title="永久链接至标题">¶</a></h2>
+<p>假设您有一个函数可以从数据库中加载对象列表并将其呈现到模板中:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/users/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">show_users</span><span class="p">(</span><span class="n">page</span><span class="p">):</span>
     <span class="n">users</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
@@ -124,14 +123,14 @@ For instance you can write a class like this:</p>
         <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">template_name</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>And then you can register it like this:</p>
+<p>然后你可以像这样注册它:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="s1">&#39;/about&#39;</span><span class="p">,</span> <span class="n">view_func</span><span class="o">=</span><span class="n">RenderTemplateView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span>
     <span class="s1">&#39;about_page&#39;</span><span class="p">,</span> <span class="n">template_name</span><span class="o">=</span><span class="s1">&#39;about.html&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="method-hints">
-<h2>Method Hints<a class="headerlink" href="#method-hints" title="永久链接至标题">¶</a></h2>
+<h2>方法提示<a class="headerlink" href="#method-hints" title="永久链接至标题">¶</a></h2>
 <p>Pluggable views are attached to the application like a regular function by
 either using <a class="reference internal" href="api.html#flask.Flask.route" title="flask.Flask.route"><code class="xref py py-func docutils literal notranslate"><span class="pre">route()</span></code></a> or better
 <a class="reference internal" href="api.html#flask.Flask.add_url_rule" title="flask.Flask.add_url_rule"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_url_rule()</span></code></a>.  That however also means that you would
@@ -152,7 +151,7 @@ information:</p>
 </div>
 </div>
 <div class="section" id="method-based-dispatching">
-<h2>Method Based Dispatching<a class="headerlink" href="#method-based-dispatching" title="永久链接至标题">¶</a></h2>
+<h2>基于方法的调度<a class="headerlink" href="#method-based-dispatching" title="永久链接至标题">¶</a></h2>
 <p>For RESTful APIs it’s especially helpful to execute a different function
 for each HTTP method.  With the <a class="reference internal" href="api.html#flask.views.MethodView" title="flask.views.MethodView"><code class="xref py py-class docutils literal notranslate"><span class="pre">flask.views.MethodView</span></code></a> you can
 easily do that.  Each HTTP method maps to a function with the same name
@@ -177,7 +176,7 @@ easily do that.  Each HTTP method maps to a function with the same name
 on the methods defined in the class.</p>
 </div>
 <div class="section" id="decorating-views">
-<h2>Decorating Views<a class="headerlink" href="#decorating-views" title="永久链接至标题">¶</a></h2>
+<h2>装饰视图<a class="headerlink" href="#decorating-views" title="永久链接至标题">¶</a></h2>
 <p>Since the view class itself is not the view function that is added to the
 routing system it does not make much sense to decorate the class itself.
 Instead you either have to decorate the return value of
@@ -194,8 +193,7 @@ Instead you either have to decorate the return value of
 <span class="n">app</span><span class="o">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="s1">&#39;/users/&#39;</span><span class="p">,</span> <span class="n">view_func</span><span class="o">=</span><span class="n">view</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Starting with Flask 0.8 there is also an alternative way where you can
-specify a list of decorators to apply in the class declaration:</p>
+<p>从Flask 0.8开始, 还有另一种方法可以指定要在类声明中应用的装饰器列表:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UserAPI</span><span class="p">(</span><span class="n">MethodView</span><span class="p">):</span>
     <span class="n">decorators</span> <span class="o">=</span> <span class="p">[</span><span class="n">user_required</span><span class="p">]</span>
 </pre></div>
@@ -205,7 +203,7 @@ regular view decorators on the individual methods of the view however,
 keep this in mind.</p>
 </div>
 <div class="section" id="method-views-for-apis">
-<h2>Method Views for APIs<a class="headerlink" href="#method-views-for-apis" title="永久链接至标题">¶</a></h2>
+<h2>API的方法视图<a class="headerlink" href="#method-views-for-apis" title="永久链接至标题">¶</a></h2>
 <p>Web APIs are often working very closely with HTTP verbs so it makes a lot
 of sense to implement such an API based on the
 <a class="reference internal" href="api.html#flask.views.MethodView" title="flask.views.MethodView"><code class="xref py py-class docutils literal notranslate"><span class="pre">MethodView</span></code></a>.  That said, you will notice that the API
@@ -220,35 +218,35 @@ the web:</p>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>URL</p></td>
-<td><p>Method</p></td>
-<td><p>Description</p></td>
+<td><p>方法</p></td>
+<td><p>描述</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/users/</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">GET</span></code></p></td>
-<td><p>Gives a list of all users</p></td>
+<td><p>提供所有用户的列表</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/users/</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">POST</span></code></p></td>
-<td><p>Creates a new user</p></td>
+<td><p>创建一个新用户</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/users/&lt;id&gt;</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">GET</span></code></p></td>
-<td><p>Shows a single user</p></td>
+<td><p>显示单个用户</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">/users/&lt;id&gt;</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">PUT</span></code></p></td>
-<td><p>Updates a single user</p></td>
+<td><p>更新单个用户</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/users/&lt;id&gt;</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">DELETE</span></code></p></td>
-<td><p>Deletes a single user</p></td>
+<td><p>删除单个用户</p></td>
 </tr>
 </tbody>
 </table>
 <p>So how would you go about doing that with the
 <a class="reference internal" href="api.html#flask.views.MethodView" title="flask.views.MethodView"><code class="xref py py-class docutils literal notranslate"><span class="pre">MethodView</span></code></a>?  The trick is to take advantage of the
 fact that you can provide multiple rules to the same view.</p>
-<p>Let’s assume for the moment the view would look like this:</p>
+<p>我们暂时假设视图看起来像这样:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UserAPI</span><span class="p">(</span><span class="n">MethodView</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
@@ -272,8 +270,7 @@ fact that you can provide multiple rules to the same view.</p>
         <span class="k">pass</span>
 </pre></div>
 </div>
-<p>So how do we hook this up with the routing system?  By adding two rules
-and explicitly mentioning the methods for each:</p>
+<p>那么我们如何将其与路由系统联系起来呢？通过添加两个规则并明确提到每个规则的方法:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">user_view</span> <span class="o">=</span> <span class="n">UserAPI</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="s1">&#39;user_api&#39;</span><span class="p">)</span>
 <span class="n">app</span><span class="o">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="s1">&#39;/users/&#39;</span><span class="p">,</span> <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
                  <span class="n">view_func</span><span class="o">=</span><span class="n">user_view</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,])</span>
@@ -282,8 +279,7 @@ and explicitly mentioning the methods for each:</p>
                  <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;PUT&#39;</span><span class="p">,</span> <span class="s1">&#39;DELETE&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>If you have a lot of APIs that look similar you can refactor that
-registration code:</p>
+<p>如果您有许多看似相似的API, 则可以重构该注册码:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">register_api</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">endpoint</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="n">pk_type</span><span class="o">=</span><span class="s1">&#39;int&#39;</span><span class="p">):</span>
     <span class="n">view_func</span> <span class="o">=</span> <span class="n">view</span><span class="o">.</span><span class="n">as_view</span><span class="p">(</span><span class="n">endpoint</span><span class="p">)</span>
     <span class="n">app</span><span class="o">.</span><span class="n">add_url_rule</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="n">pk</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
@@ -305,21 +301,21 @@ registration code:</p>
   <span id="sidebar-top"></span>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  
-    
+
+
             <p class="logo"><a href="index.html">
               <img class="logo" src="_static/flask-logo-sidebar.png" alt="Logo"/>
             </a></p>
-  
+
 
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">可插拔视图</a><ul>
-<li><a class="reference internal" href="#basic-principle">Basic Principle</a></li>
-<li><a class="reference internal" href="#method-hints">Method Hints</a></li>
-<li><a class="reference internal" href="#method-based-dispatching">Method Based Dispatching</a></li>
-<li><a class="reference internal" href="#decorating-views">Decorating Views</a></li>
-<li><a class="reference internal" href="#method-views-for-apis">Method Views for APIs</a></li>
+<li><a class="reference internal" href="#basic-principle">基本原则</a></li>
+<li><a class="reference internal" href="#method-hints">方法提示</a></li>
+<li><a class="reference internal" href="#method-based-dispatching">基于方法的调度</a></li>
+<li><a class="reference internal" href="#decorating-views">装饰视图</a></li>
+<li><a class="reference internal" href="#method-views-for-apis">API的方法视图</a></li>
 </ul>
 </li>
 </ul>
@@ -346,10 +342,10 @@ registration code:</p>
       </div>
       <div class="clearer"></div>
     </div>
-  
+
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建.
     </div>
 
   </body>

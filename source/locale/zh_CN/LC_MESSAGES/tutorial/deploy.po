@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../tutorial/deploy.rst:15
 msgid "Build and Install"
-msgstr "Build and Install"
+msgstr "构建和安装"
 
 #: ../../tutorial/deploy.rst:17
 msgid ""
@@ -67,7 +67,7 @@ msgstr ""
 
 #: ../../tutorial/deploy.rst:46
 msgid "Pip will install your project along with its dependencies."
-msgstr "Pip will install your project along with its dependencies."
+msgstr "Pip将安装您的项目及其依赖项. "
 
 #: ../../tutorial/deploy.rst:48
 msgid ""
@@ -84,7 +84,7 @@ msgstr ""
 
 #: ../../tutorial/deploy.rst:62
 msgid "Configure the Secret Key"
-msgstr "Configure the Secret Key"
+msgstr "配置密钥"
 
 #: ../../tutorial/deploy.rst:64
 msgid ""
@@ -96,7 +96,7 @@ msgstr ""
 
 #: ../../tutorial/deploy.rst:69
 msgid "You can use the following command to output a random secret key:"
-msgstr "You can use the following command to output a random secret key:"
+msgstr "您可以使用以下命令输出随机密钥:"
 
 #: ../../tutorial/deploy.rst:77
 msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 
 #: ../../tutorial/deploy.rst:90
 msgid "Run with a Production Server"
-msgstr "Run with a Production Server"
+msgstr "使用Production Server运行"
 
 #: ../../tutorial/deploy.rst:92
 msgid ""
@@ -149,5 +149,5 @@ msgstr ""
 
 #: ../../tutorial/deploy.rst:121
 msgid "Continue to :doc:`next`."
-msgstr "Continue to :doc:`next`."
+msgstr "继续 :doc:`next`."
 

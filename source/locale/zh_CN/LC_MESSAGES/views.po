@@ -31,13 +31,13 @@ msgstr ""
 
 #: ../../views.rst:14
 msgid "Basic Principle"
-msgstr "Basic Principle"
+msgstr "基本原则"
 
 #: ../../views.rst:16
 msgid ""
 "Consider you have a function that loads a list of objects from the "
 "database and renders into a template::"
-msgstr "Consider you have a function that loads a list of objects from the database and renders into a template::"
+msgstr "假设您有一个函数可以从数据库中加载对象列表并将其呈现到模板中::"
 
 #: ../../views.rst:24
 msgid ""
@@ -74,11 +74,11 @@ msgstr ""
 
 #: ../../views.rst:87
 msgid "And then you can register it like this::"
-msgstr "And then you can register it like this::"
+msgstr "然后你可以像这样注册它::"
 
 #: ../../views.rst:93
 msgid "Method Hints"
-msgstr "Method Hints"
+msgstr "方法提示"
 
 #: ../../views.rst:95
 msgid ""
@@ -93,7 +93,7 @@ msgstr ""
 
 #: ../../views.rst:114
 msgid "Method Based Dispatching"
-msgstr "Method Based Dispatching"
+msgstr "基于方法的调度"
 
 #: ../../views.rst:116
 msgid ""
@@ -112,7 +112,7 @@ msgstr ""
 
 #: ../../views.rst:140
 msgid "Decorating Views"
-msgstr "Decorating Views"
+msgstr "装饰视图"
 
 #: ../../views.rst:142
 msgid ""
@@ -126,7 +126,7 @@ msgstr ""
 msgid ""
 "Starting with Flask 0.8 there is also an alternative way where you can "
 "specify a list of decorators to apply in the class declaration::"
-msgstr "Starting with Flask 0.8 there is also an alternative way where you can specify a list of decorators to apply in the class declaration::"
+msgstr "从Flask 0.8开始, 还有另一种方法可以指定要在类声明中应用的装饰器列表::"
 
 #: ../../views.rst:164
 msgid ""
@@ -137,7 +137,7 @@ msgstr ""
 
 #: ../../views.rst:169
 msgid "Method Views for APIs"
-msgstr "Method Views for APIs"
+msgstr "API的方法视图"
 
 #: ../../views.rst:171
 msgid ""
@@ -155,11 +155,11 @@ msgstr "URL"
 
 #: ../../views.rst:179
 msgid "Method"
-msgstr "Method"
+msgstr "方法"
 
 #: ../../views.rst:179
 msgid "Description"
-msgstr "Description"
+msgstr "描述"
 
 #: ../../views.rst:181 ../../views.rst:182
 msgid "``/users/``"
@@ -171,7 +171,7 @@ msgstr "``GET``"
 
 #: ../../views.rst:181
 msgid "Gives a list of all users"
-msgstr "Gives a list of all users"
+msgstr "提供所有用户的列表"
 
 #: ../../views.rst:182
 msgid "``POST``"
@@ -179,7 +179,7 @@ msgstr "``POST``"
 
 #: ../../views.rst:182
 msgid "Creates a new user"
-msgstr "Creates a new user"
+msgstr "创建一个新用户"
 
 #: ../../views.rst:183 ../../views.rst:184 ../../views.rst:185
 msgid "``/users/<id>``"
@@ -187,7 +187,7 @@ msgstr "``/users/<id>``"
 
 #: ../../views.rst:183
 msgid "Shows a single user"
-msgstr "Shows a single user"
+msgstr "显示单个用户"
 
 #: ../../views.rst:184
 msgid "``PUT``"
@@ -195,7 +195,7 @@ msgstr "``PUT``"
 
 #: ../../views.rst:184
 msgid "Updates a single user"
-msgstr "Updates a single user"
+msgstr "更新单个用户"
 
 #: ../../views.rst:185
 msgid "``DELETE``"
@@ -203,7 +203,7 @@ msgstr "``DELETE``"
 
 #: ../../views.rst:185
 msgid "Deletes a single user"
-msgstr "Deletes a single user"
+msgstr "删除单个用户"
 
 #: ../../views.rst:188
 msgid ""
@@ -214,17 +214,17 @@ msgstr ""
 
 #: ../../views.rst:192
 msgid "Let's assume for the moment the view would look like this::"
-msgstr "Let's assume for the moment the view would look like this::"
+msgstr "我们暂时假设视图看起来像这样::"
 
 #: ../../views.rst:216
 msgid ""
 "So how do we hook this up with the routing system?  By adding two rules "
 "and explicitly mentioning the methods for each::"
-msgstr "So how do we hook this up with the routing system?  By adding two rules and explicitly mentioning the methods for each::"
+msgstr "那么我们如何将其与路由系统联系起来呢？通过添加两个规则并明确提到每个规则的方法::"
 
 #: ../../views.rst:226
 msgid ""
 "If you have a lot of APIs that look similar you can refactor that "
 "registration code::"
-msgstr "If you have a lot of APIs that look similar you can refactor that registration code::"
+msgstr "如果您有许多看似相似的API, 则可以重构该注册码::"
 

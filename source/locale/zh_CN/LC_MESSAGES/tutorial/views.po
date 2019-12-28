@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../../tutorial/views.rst:14
 msgid "Create a Blueprint"
-msgstr "Create a Blueprint"
+msgstr "创建蓝图"
 
 #: ../../tutorial/views.rst:16
 msgid ""
@@ -84,7 +84,7 @@ msgstr ""
 
 #: ../../tutorial/views.rst:67
 msgid "The First View: Register"
-msgstr "The First View: Register"
+msgstr "第一种观点:注册"
 
 #: ../../tutorial/views.rst:69
 msgid ""
@@ -102,7 +102,7 @@ msgstr ""
 
 #: ../../tutorial/views.rst:111
 msgid "Here's what the ``register`` view function is doing:"
-msgstr "Here's what the ``register`` view function is doing:"
+msgstr "这是 ``register`` 视图函数正在做的事情:"
 
 #: ../../tutorial/views.rst:113
 msgid ""
@@ -127,7 +127,7 @@ msgstr ""
 
 #: ../../tutorial/views.rst:126
 msgid "Validate that ``username`` and ``password`` are not empty."
-msgstr "Validate that ``username`` and ``password`` are not empty."
+msgstr "验证``username``和``password``不为空. "
 
 #: ../../tutorial/views.rst:128
 msgid ""
@@ -182,19 +182,19 @@ msgstr ""
 
 #: ../../tutorial/views.rst:167
 msgid "Login"
-msgstr "Login"
+msgstr "登录"
 
 #: ../../tutorial/views.rst:169
 msgid "This view follows the same pattern as the ``register`` view above."
-msgstr "This view follows the same pattern as the ``register`` view above."
+msgstr "该视图遵循与上面“寄存器”视图相同的模式. "
 
 #: ../../tutorial/views.rst:199
 msgid "There are a few differences from the ``register`` view:"
-msgstr "There are a few differences from the ``register`` view:"
+msgstr "与``register``视图有一些区别:"
 
 #: ../../tutorial/views.rst:201
 msgid "The user is queried first and stored in a variable for later use."
-msgstr "The user is queried first and stored in a variable for later use."
+msgstr "首先查询用户并将其存储在变量中以供以后使用. "
 
 #: ../../tutorial/views.rst:203
 msgid ""
@@ -233,7 +233,7 @@ msgstr ""
 
 #: ../../tutorial/views.rst:242
 msgid "Logout"
-msgstr "Logout"
+msgstr "登出"
 
 #: ../../tutorial/views.rst:244
 msgid ""
@@ -243,7 +243,7 @@ msgstr ""
 
 #: ../../tutorial/views.rst:257
 msgid "Require Authentication in Other Views"
-msgstr "Require Authentication in Other Views"
+msgstr "在其他视图中需要身份验证"
 
 #: ../../tutorial/views.rst:259
 msgid ""
@@ -263,7 +263,7 @@ msgstr ""
 
 #: ../../tutorial/views.rst:283
 msgid "Endpoints and URLs"
-msgstr "Endpoints and URLs"
+msgstr "端点和URL"
 
 #: ../../tutorial/views.rst:285
 msgid ""
@@ -291,5 +291,5 @@ msgstr ""
 
 #: ../../tutorial/views.rst:301
 msgid "Continue to :doc:`templates`."
-msgstr "Continue to :doc:`templates`."
+msgstr "继续 :doc:`templates`."
 

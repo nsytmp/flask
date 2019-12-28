@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../patterns/subclassing.rst:2
 msgid "Subclassing Flask"
-msgstr "继承烧瓶"
+msgstr "继承 Flask "
 
 #: ../../patterns/subclassing.rst:4
 msgid "The :class:`~flask.Flask` class is designed for subclassing."

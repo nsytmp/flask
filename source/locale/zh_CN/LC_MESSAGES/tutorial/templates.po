@@ -29,7 +29,7 @@ msgid ""
 ":func:`render_template`, but you haven't written the templates yet. The "
 "template files will be stored in the ``templates`` directory inside the "
 "``flaskr`` package."
-msgstr ""
+msgstr "您已为应用程序编写了身份验证视图, 但如果您正在运行服务器并尝试转到任何URL, 则会看到“TemplateNotFound”错误. 那是因为视图调用:func:`render_template`, 但你还没有编写模板. 模板文件将存储在``flaskr``包中的``templates``目录中. "
 
 #: ../../tutorial/templates.rst:13
 msgid ""
@@ -37,7 +37,7 @@ msgid ""
 "dynamic data. A template is rendered with specific data to produce a "
 "final document. Flask uses the `Jinja`_ template library to render "
 "templates."
-msgstr ""
+msgstr "模板是包含静态数据的文件以及动态数据的占位符. 使用特定数据呈现模板以生成最终文档.  Flask使用`Jinja`_模板库来渲染模板. "
 
 #: ../../tutorial/templates.rst:18
 msgid ""
@@ -48,7 +48,7 @@ msgid ""
 "could mess with the HTML, such as ``<`` and ``>`` will be *escaped* with "
 "*safe* values that look the same in the browser but don't cause unwanted "
 "effects."
-msgstr ""
+msgstr "在您的应用程序中, 您将使用模板来呈现将在用户的浏览器中显示的“HTML”_. 在Flask中, Jinja被配置为* autoescape *在HTML模板中呈现的任何数据. 这意味着呈现用户输入是安全的;他们输入的任何字符都可能弄乱HTML, 例如````````````* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * . "
 
 #: ../../tutorial/templates.rst:26
 msgid ""
@@ -59,11 +59,11 @@ msgid ""
 " like ``if`` and ``for``. Unlike Python, blocks are denoted by start and "
 "end tags rather than indentation since static text within a block could "
 "change indentation."
-msgstr ""
+msgstr "Jinja看起来和行为大多像Python. 特殊分隔符用于区分Jinja语法与模板中的静态数据.  ``{{``和``}}``之间的任何东西都是一个输出到最终文档的表达式.  ``{％``和``％}``表示一个控制流语句, 如``if``和``for``. 与Python不同, 块由开始和结束标记而不是缩进表示, 因为块内的静态文本可能会更改缩进. "
 
 #: ../../tutorial/templates.rst:39
 msgid "The Base Layout"
-msgstr "The Base Layout"
+msgstr "基础布局"
 
 #: ../../tutorial/templates.rst:41
 msgid ""
@@ -71,7 +71,7 @@ msgid ""
 "different body. Instead of writing the entire HTML structure in each "
 "template, each template will *extend* a base template and override "
 "specific sections."
-msgstr ""
+msgstr "应用程序中的每个页面将围绕不同的主体具有相同的基本布局. 而不是在每个模板中编写整个HTML结构, 每个模板将*扩展*基本模板并覆盖特定部分. "
 
 #: ../../tutorial/templates.rst:46
 msgid "``flaskr/templates/base.html``"
@@ -84,7 +84,7 @@ msgid ""
 " link are displayed, otherwise links to register and log in are "
 "displayed. :func:`url_for` is also automatically available, and is used "
 "to generate URLs to views instead of writing them out manually."
-msgstr ""
+msgstr ":data:`g`在模板中自动可用. 基于是否设置``g.user``(来自``load_logged_in_user``), 显示用户名和注销链接, 否则显示注册和登录的链接.  :func:`url_for`也是自动可用的, 用于生成视图的URL而不是手动写出来. "
 
 #: ../../tutorial/templates.rst:80
 msgid ""
@@ -92,42 +92,42 @@ msgid ""
 "each message returned by :func:`get_flashed_messages`. You used "
 ":func:`flash` in the views to show error messages, and this is the code "
 "that will display them."
-msgstr ""
+msgstr "在页面标题之后, 在内容之前, 模板循环返回由:func:`get_flashed_messages`返回的每条消息. 您在视图中使用:func:`flash`来显示错误消息, 这是显示它们的代码. "
 
 #: ../../tutorial/templates.rst:85
 msgid ""
 "There are three blocks defined here that will be overridden in the other "
 "templates:"
-msgstr ""
+msgstr "此处定义的三个块将在其他模板中被覆盖:"
 
 #: ../../tutorial/templates.rst:88
 msgid ""
 "``{% block title %}`` will change the title displayed in the browser's "
 "tab and window title."
-msgstr ""
+msgstr "``{% block title %}`` 将更改浏览器选项卡和窗口标题中显示的标题. "
 
 #: ../../tutorial/templates.rst:91
 msgid ""
 "``{% block header %}`` is similar to ``title`` but will change the title "
 "displayed on the page."
-msgstr ""
+msgstr "``{% block header %}`` 类似于``title``但会改变页面上显示的标题. "
 
 #: ../../tutorial/templates.rst:94
 msgid ""
 "``{% block content %}`` is where the content of each page goes, such as "
 "the login form or a blog post."
-msgstr ""
+msgstr "``{% block content %}`` 是每个页面的内容, 例如登录表单或博客文章. "
 
 #: ../../tutorial/templates.rst:97
 msgid ""
 "The base template is directly in the ``templates`` directory. To keep the"
 " others organized, the templates for a blueprint will be placed in a "
 "directory with the same name as the blueprint."
-msgstr ""
+msgstr "基本模板直接位于``templates``目录中. 为了保持其他组织的有序性, 蓝图的模板将放置在与蓝图同名的目录中. "
 
 #: ../../tutorial/templates.rst:103
 msgid "Register"
-msgstr "Register"
+msgstr "寄存器"
 
 #: ../../tutorial/templates.rst:105
 msgid "``flaskr/templates/auth/register.html``"
@@ -140,7 +140,7 @@ msgid ""
 "replace the blocks from the base template. All the rendered content must "
 "appear inside ``{% block %}`` tags that override blocks from the base "
 "template."
-msgstr ""
+msgstr "`{% extends 'base.html' %}`` 告诉Jinja这个模板应该替换基础模板中的块. 所有呈现的内容必须出现在``{％block％}``标签内, 这些标签会覆盖基本模板中的块. "
 
 #: ../../tutorial/templates.rst:129
 msgid ""
@@ -148,7 +148,7 @@ msgid ""
 "block header %}``. This will set the title block and then output the "
 "value of it into the header block, so that both the window and page share"
 " the same title without writing it twice."
-msgstr ""
+msgstr "这里使用的有用模式是在``{％block header％}``里面放置``{％block title％}``. 这将设置标题栏, 然后将其值输出到标题栏中, 这样窗口和页面共享相同的标题而不写两次. "
 
 #: ../../tutorial/templates.rst:134
 msgid ""
@@ -159,17 +159,17 @@ msgid ""
 "still want to validate the data in the Flask view. It's important to "
 "always fully validate the data on the server, even if the client does "
 "some validation as well."
-msgstr ""
+msgstr "``input``标签在这里使用``required``属性. 这告诉浏览器在填写这些字段之前不要提交表单. 如果用户使用的旧浏览器不支持该属性, 或者他们使用浏览器之外的其他内容来发出请求, 那么您仍然需要验证Flask视图中的数据. 始终完全验证服务器上的数据非常重要, 即使客户端也进行了一些验证. "
 
 #: ../../tutorial/templates.rst:144
 msgid "Log In"
-msgstr "Log In"
+msgstr "登录"
 
 #: ../../tutorial/templates.rst:146
 msgid ""
 "This is identical to the register template except for the title and "
 "submit button."
-msgstr ""
+msgstr "除了标题和提交按钮之外, 这与寄存器模板相同. "
 
 #: ../../tutorial/templates.rst:149
 msgid "``flaskr/templates/auth/login.html``"
@@ -177,14 +177,14 @@ msgstr "``flaskr/templates/auth/login.html``"
 
 #: ../../tutorial/templates.rst:170
 msgid "Register A User"
-msgstr "Register A User"
+msgstr "注册用户"
 
 #: ../../tutorial/templates.rst:172
 msgid ""
 "Now that the authentication templates are written, you can register a "
 "user. Make sure the server is still running (``flask run`` if it's not), "
 "then go to http://127.0.0.1:5000/auth/register."
-msgstr ""
+msgstr "现在已经编写了身份验证模板, 您可以注册用户. 确保服务器仍在运行(如果不是“ Flask 运行”), 则转到http://127.0.0.1:5000/auth/register. "
 
 #: ../../tutorial/templates.rst:176
 msgid ""
@@ -193,7 +193,7 @@ msgid ""
 "attributes from the ``register.html`` template and click \"Register\" "
 "again. Instead of the browser showing an error, the page will reload and "
 "the error from :func:`flash` in the view will be shown."
-msgstr ""
+msgstr "尝试单击“注册”按钮而不填写表单, 并看到浏览器显示错误消息. 尝试从``register.html``模板中删除``required``属性, 然后再次单击\“Register \”. 页面将重新加载, 而不是浏览器显示错误, 将显示视图中的错误:func:`flash`. "
 
 #: ../../tutorial/templates.rst:182
 msgid ""
@@ -201,9 +201,9 @@ msgid ""
 "page. Try entering an incorrect username, or the correct username and "
 "incorrect password. If you log in you'll get an error because there's no "
 "``index`` view to redirect to yet."
-msgstr ""
+msgstr "填写用户名和密码, 您将被重定向到登录页面. 尝试输入错误的用户名, 或正确的用户名和错误的密码. 如果你登录你就会收到一个错误, 因为没有``index``视图可以重定向到. "
 
 #: ../../tutorial/templates.rst:187
 msgid "Continue to :doc:`static`."
-msgstr "Continue to :doc:`static`."
+msgstr "继续 :doc:`static`."
 

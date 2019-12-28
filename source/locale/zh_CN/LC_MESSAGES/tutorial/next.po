@@ -28,7 +28,7 @@ msgid ""
 " steps you took to get there. Compare your project to the :gh:`example "
 "project <examples/tutorial>`, which might look a bit different due to the"
 " step-by-step nature of the tutorial."
-msgstr ""
+msgstr "在整个教程中, 您已经了解了很多Flask和Python概念. 返回并查看教程, 并将您的代码与您实现的步骤进行比较. 将您的项目与:gh:`example project <examples / tutorial>`进行比较, 由于本教程的逐步特性, 这可能看起来有点不同. "
 
 #: ../../tutorial/next.rst:10
 msgid ""
@@ -40,53 +40,53 @@ msgid ""
 "their own documentation too. You'll also be interested in "
 ":ref:`extensions` which make tasks like working with the database or "
 "validating form data easier and more powerful."
-msgstr ""
+msgstr "Flask比你到目前为止看到的要多得多. 即便如此, 您现在已经准备好开始开发自己的Web应用程序了. 查看:ref:`quickstart`, 了解Flask可以做些什么, 然后深入了解文档以继续学习.  Flask在幕后使用`Jinja`_, `Click`_, `Werkzeug`_和`ItsDangerous`_, 它们都有自己的文档. 您还会对:ref:`extensions`感兴趣, 它们可以使用数据库或验证表单数据等任务变得更容易, 更强大. "
 
 #: ../../tutorial/next.rst:19
 msgid ""
 "If you want to keep developing your Flaskr project, here are some ideas "
 "for what to try next:"
-msgstr ""
+msgstr "如果您想继续开发Flaskr项目, 可以参考以下内容:"
 
 #: ../../tutorial/next.rst:22
 msgid ""
 "A detail view to show a single post. Click a post's title to go to its "
 "page."
-msgstr ""
+msgstr "显示单个帖子的详细视图. 点击帖子的标题转到其页面. "
 
 #: ../../tutorial/next.rst:24
 msgid "Like / unlike a post."
-msgstr "Like / unlike a post."
+msgstr "喜欢/不像帖子. "
 
 #: ../../tutorial/next.rst:25
 msgid "Comments."
-msgstr "Comments."
+msgstr "评论. "
 
 #: ../../tutorial/next.rst:26
 msgid "Tags. Clicking a tag shows all the posts with that tag."
-msgstr "Tags. Clicking a tag shows all the posts with that tag."
+msgstr "标签. 单击标签会显示包含该标签的所有帖子. "
 
 #: ../../tutorial/next.rst:27
 msgid "A search box that filters the index page by name."
-msgstr "A search box that filters the index page by name."
+msgstr "一个按名称过滤索引页面的搜索框. "
 
 #: ../../tutorial/next.rst:28
 msgid "Paged display. Only show 5 posts per page."
-msgstr "Paged display. Only show 5 posts per page."
+msgstr "分页显示. 每页只显示5个帖子. "
 
 #: ../../tutorial/next.rst:29
 msgid "Upload an image to go along with a post."
-msgstr "Upload an image to go along with a post."
+msgstr "上传图片以配合帖子. "
 
 #: ../../tutorial/next.rst:30
 msgid "Format posts using Markdown."
-msgstr "Format posts using Markdown."
+msgstr "使用Markdown格式化帖子. "
 
 #: ../../tutorial/next.rst:31
 msgid "An RSS feed of new posts."
-msgstr "An RSS feed of new posts."
+msgstr "新帖子的RSS提要. "
 
 #: ../../tutorial/next.rst:33
 msgid "Have fun and make awesome applications!"
-msgstr "Have fun and make awesome applications!"
+msgstr "玩得开心, 制作出色的应用程序！"
 

@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../config.rst:4
 msgid "Configuration Handling"
-msgstr "Configuration Handling"
+msgstr "配置处理"
 
 #: ../../config.rst:6
 msgid ""
@@ -49,7 +49,7 @@ msgstr ""
 
 #: ../../config.rst:25
 msgid "Configuration Basics"
-msgstr "Configuration Basics"
+msgstr "配置基础知识"
 
 #: ../../config.rst:27
 msgid ""
@@ -61,7 +61,7 @@ msgstr "The :attr:`~flask.Flask.config` is actually a subclass of a dictionary a
 msgid ""
 "Certain configuration values are also forwarded to the "
 ":attr:`~flask.Flask` object so you can read and write them from there::"
-msgstr "Certain configuration values are also forwarded to the :attr:`~flask.Flask` object so you can read and write them from there::"
+msgstr "某些配置值也会转发到:attr:`~flask.Flask`对象, 以便您可以从那里读取和写入它们::"
 
 #: ../../config.rst:38
 msgid ""
@@ -71,7 +71,7 @@ msgstr "To update multiple keys at once you can use the :meth:`dict.update` meth
 
 #: ../../config.rst:48
 msgid "Environment and Debug Features"
-msgstr "Environment and Debug Features"
+msgstr "环境和调试功能"
 
 #: ../../config.rst:50
 msgid ""
@@ -101,13 +101,13 @@ msgstr ""
 msgid ""
 "Added :envvar:`FLASK_ENV` to control the environment separately from "
 "debug mode. The development environment enables debug mode."
-msgstr "Added :envvar:`FLASK_ENV` to control the environment separately from debug mode. The development environment enables debug mode."
+msgstr "补充:envvar:`FLASK_ENV`与调试模式分开控制环境. 开发环境启用调试模式. "
 
 #: ../../config.rst:69
 msgid ""
 "To switch Flask to the development environment and enable debug mode, set"
 " :envvar:`FLASK_ENV`::"
-msgstr "To switch Flask to the development environment and enable debug mode, set :envvar:`FLASK_ENV`::"
+msgstr "要将Flask切换到开发环境并启用调试模式, 请设置:envvar:`FLASK_ENV` ::"
 
 #: ../../config.rst:75
 msgid "(On Windows, use ``set`` instead of ``export``.)"
@@ -124,11 +124,11 @@ msgstr ""
 
 #: ../../config.rst:85
 msgid "Builtin Configuration Values"
-msgstr "Builtin Configuration Values"
+msgstr "内置配置值"
 
 #: ../../config.rst:87
 msgid "The following configuration values are used internally by Flask:"
-msgstr "The following configuration values are used internally by Flask:"
+msgstr "Flask内部使用以下配置值:"
 
 #: ../../config.rst:91
 msgid ""
@@ -141,11 +141,11 @@ msgstr ""
 
 #: ../../config.rst:97
 msgid "**Do not enable development when deploying in production.**"
-msgstr "**Do not enable development when deploying in production.**"
+msgstr "**在生产中部署时不要启用开发. **"
 
 #: ../../config.rst:99
 msgid "Default: ``'production'``"
-msgstr "Default: ``'production'``"
+msgstr "默认: ``'production'``"
 
 #: ../../config.rst:105
 msgid ""
@@ -160,7 +160,7 @@ msgstr ""
 
 #: ../../config.rst:113
 msgid "**Do not enable debug mode when deploying in production.**"
-msgstr "**Do not enable debug mode when deploying in production.**"
+msgstr "**在生产中部署时, 请勿启用调试模式. **"
 
 #: ../../config.rst:115
 msgid ""
@@ -173,12 +173,12 @@ msgid ""
 "Enable testing mode. Exceptions are propagated rather than handled by the"
 " the app's error handlers. Extensions may also change their behavior to "
 "facilitate easier testing. You should enable this in your own tests."
-msgstr ""
+msgstr "启用测试模式. 异常传播而不是由应用程序的错误处理程序处理. 扩展也可能会改变其行为, 以方便测试. 您应该在自己的测试中启用它. "
 
 #: ../../config.rst:124 ../../config.rst:148 ../../config.rst:209
 #: ../../config.rst:247 ../../config.rst:323 ../../config.rst:344
 msgid "Default: ``False``"
-msgstr "Default: ``False``"
+msgstr "默认: ``False``"
 
 #: ../../config.rst:128
 msgid ""
@@ -192,7 +192,7 @@ msgstr ""
 #: ../../config.rst:217 ../../config.rst:274 ../../config.rst:298
 #: ../../config.rst:336
 msgid "Default: ``None``"
-msgstr "Default: ``None``"
+msgstr "默认: ``None``"
 
 #: ../../config.rst:136
 msgid ""
@@ -230,17 +230,17 @@ msgstr ""
 msgid ""
 "**Do not reveal the secret key when posting questions or committing "
 "code.**"
-msgstr "**Do not reveal the secret key when posting questions or committing code.**"
+msgstr "**发布问题或提交代码时不要泄露密钥. **"
 
 #: ../../config.rst:176
 msgid ""
 "The name of the session cookie. Can be changed in case you already have a"
 " cookie with the same name."
-msgstr "The name of the session cookie. Can be changed in case you already have a cookie with the same name."
+msgstr "会话cookie的名称. 如果您已经拥有相同名称的cookie, 则可以更改. "
 
 #: ../../config.rst:179
 msgid "Default: ``'session'``"
-msgstr "Default: ``'session'``"
+msgstr "默认: ``'session'``"
 
 #: ../../config.rst:183
 msgid ""
@@ -260,12 +260,12 @@ msgstr ""
 msgid ""
 "Browsers will not allow JavaScript access to cookies marked as \"HTTP "
 "only\" for security."
-msgstr "Browsers will not allow JavaScript access to cookies marked as \"HTTP only\" for security."
+msgstr "浏览器不允许JavaScript访问标记为“仅限HTTP”的cookie以确保安全性. "
 
 #: ../../config.rst:201 ../../config.rst:239 ../../config.rst:307
 #: ../../config.rst:316
 msgid "Default: ``True``"
-msgstr "Default: ``True``"
+msgstr "默认: ``True``"
 
 #: ../../config.rst:205
 msgid ""
@@ -292,11 +292,11 @@ msgstr ""
 msgid ""
 "Flask's default cookie implementation validates that the cryptographic "
 "signature is not older than this value."
-msgstr "Flask's default cookie implementation validates that the cryptographic signature is not older than this value."
+msgstr "Flask的默认cookie实现验证加密签名不​​早于此值. "
 
 #: ../../config.rst:230
 msgid "Default: ``timedelta(days=31)`` (``2678400`` seconds)"
-msgstr "Default: ``timedelta(days=31)`` (``2678400`` seconds)"
+msgstr "默认: ``timedelta(days=31)`` (``2678400`` seconds)"
 
 #: ../../config.rst:234
 msgid ""
@@ -325,13 +325,13 @@ msgstr ""
 
 #: ../../config.rst:256
 msgid "Default: ``timedelta(hours=12)`` (``43200`` seconds)"
-msgstr "Default: ``timedelta(hours=12)`` (``43200`` seconds)"
+msgstr "默认: ``timedelta(hours=12)`` (``43200`` seconds)"
 
 #: ../../config.rst:260
 msgid ""
 "Inform the application what host and port it is bound to. Required for "
 "subdomain route matching support."
-msgstr "Inform the application what host and port it is bound to. Required for subdomain route matching support."
+msgstr "通知应用程序绑定的主机和端口. 子域路由匹配支持所必需的. "
 
 #: ../../config.rst:263
 msgid ""
@@ -345,7 +345,7 @@ msgstr ""
 msgid ""
 "If set, ``url_for`` can generate external URLs with only an application "
 "context instead of a request context."
-msgstr "If set, ``url_for`` can generate external URLs with only an application context instead of a request context."
+msgstr "如果设置, ``url_for``可以生成仅包含应用程序上下文而不是请求上下文的外部URL. “"
 
 #: ../../config.rst:278
 msgid ""
@@ -367,7 +367,7 @@ msgstr "Default: ``'/'``"
 msgid ""
 "Use this scheme for generating external URLs when not in a request "
 "context."
-msgstr "Use this scheme for generating external URLs when not in a request context."
+msgstr "不在请求上下文中时, 使用此方案生成外部URL. "
 
 #: ../../config.rst:290
 msgid "Default: ``'http'``"
@@ -404,7 +404,7 @@ msgstr "``jsonify`` responses will be output with newlines, spaces, and indentat
 
 #: ../../config.rst:327
 msgid "The mimetype of ``jsonify`` responses."
-msgstr "The mimetype of ``jsonify`` responses."
+msgstr "'jsonify``响应的mimetype. "
 
 #: ../../config.rst:329
 msgid "Default: ``'application/json'``"
@@ -414,7 +414,7 @@ msgstr "Default: ``'application/json'``"
 msgid ""
 "Reload templates when they are changed. If not set, it will be enabled in"
 " debug mode."
-msgstr "Reload templates when they are changed. If not set, it will be enabled in debug mode."
+msgstr "更改模板时重新加载模板. 如果未设置, 将在调试模式下启用. "
 
 #: ../../config.rst:340
 msgid ""
@@ -489,7 +489,7 @@ msgstr "``LOGGER_NAME``"
 
 #: ../../config.rst:394
 msgid "Configuring from Files"
-msgstr "Configuring from Files"
+msgstr "从文件配置"
 
 #: ../../config.rst:396
 msgid ""
@@ -502,7 +502,7 @@ msgstr ""
 
 #: ../../config.rst:402
 msgid "So a common pattern is this::"
-msgstr "So a common pattern is this::"
+msgstr "所以一个共同的模式就是这个::"
 
 #: ../../config.rst:408
 msgid ""
@@ -516,7 +516,7 @@ msgstr ""
 
 #: ../../config.rst:420 ../../config.rst:456
 msgid "On Windows systems use the `set` builtin instead::"
-msgstr "On Windows systems use the `set` builtin instead::"
+msgstr "在Windows系统上使用`set`内置::"
 
 #: ../../config.rst:424
 msgid ""
@@ -527,7 +527,7 @@ msgstr ""
 
 #: ../../config.rst:428
 msgid "Here is an example of a configuration file::"
-msgstr "Here is an example of a configuration file::"
+msgstr "以下是配置文件的示例::"
 
 #: ../../config.rst:434
 msgid ""
@@ -540,7 +540,7 @@ msgstr ""
 
 #: ../../config.rst:441
 msgid "Configuring from Environment Variables"
-msgstr "Configuring from Environment Variables"
+msgstr "从环境变量配置"
 
 #: ../../config.rst:443
 msgid ""
@@ -553,7 +553,7 @@ msgstr ""
 msgid ""
 "Environment variables can be set on Linux or OS X with the export command"
 " in the shell before starting the server::"
-msgstr "Environment variables can be set on Linux or OS X with the export command in the shell before starting the server::"
+msgstr "在启动服务器之前, 可以使用shell中的export命令在Linux或OS X上设置环境变量::"
 
 #: ../../config.rst:461
 msgid ""
@@ -566,7 +566,7 @@ msgstr ""
 msgid ""
 "Here is an example of a configuration file that uses environment "
 "variables::"
-msgstr "Here is an example of a configuration file that uses environment variables::"
+msgstr "以下是使用环境变量的配置文件的示例::"
 
 #: ../../config.rst:480
 msgid ""
@@ -586,7 +586,7 @@ msgstr ""
 
 #: ../../config.rst:490
 msgid "Configuration Best Practices"
-msgstr "Configuration Best Practices"
+msgstr "配置最佳实践"
 
 #: ../../config.rst:492
 #, python-format
@@ -614,7 +614,7 @@ msgstr ""
 
 #: ../../config.rst:509
 msgid "Development / Production"
-msgstr "Development / Production"
+msgstr "开发/生产"
 
 #: ../../config.rst:511
 msgid ""
@@ -648,13 +648,13 @@ msgstr ""
 msgid ""
 "An interesting pattern is also to use classes and inheritance for "
 "configuration::"
-msgstr "An interesting pattern is also to use classes and inheritance for configuration::"
+msgstr "一个有趣的模式也是使用类和继承进行配置::"
 
 #: ../../config.rst:551
 msgid ""
 "To enable such a config you just have to call into "
 ":meth:`~flask.Config.from_object`::"
-msgstr "To enable such a config you just have to call into :meth:`~flask.Config.from_object`::"
+msgstr "要启用这样的配置, 您只需调用:meth:`~flask.Config.from_object`::"
 
 #: ../../config.rst:556
 msgid ""
@@ -668,13 +668,13 @@ msgstr ""
 msgid ""
 "Instantiating the configuration object allows you to use ``@property`` in"
 " your configuration classes::"
-msgstr "Instantiating the configuration object allows you to use ``@property`` in your configuration classes::"
+msgstr "实例化配置对象允许您在配置类中使用``@ property``::"
 
 #: ../../config.rst:594
 msgid ""
 "There are many different ways and it's up to you how you want to manage "
 "your configuration files.  However here a list of good recommendations:"
-msgstr "There are many different ways and it's up to you how you want to manage your configuration files.  However here a list of good recommendations:"
+msgstr "有许多不同的方法, 由您决定如何管理配置文件. 不过这里列出了很好的建议:"
 
 #: ../../config.rst:597
 msgid ""
@@ -703,7 +703,7 @@ msgstr ""
 
 #: ../../config.rst:618
 msgid "Instance Folders"
-msgstr "Instance Folders"
+msgstr "实例文件夹"
 
 #: ../../config.rst:622
 msgid ""
@@ -734,25 +734,25 @@ msgstr ""
 
 #: ../../config.rst:642
 msgid "Please keep in mind that this path *must* be absolute when provided."
-msgstr "Please keep in mind that this path *must* be absolute when provided."
+msgstr "请记住, 这条路径*在提供时必须是绝对的. "
 
 #: ../../config.rst:644
 msgid ""
 "If the `instance_path` parameter is not provided the following default "
 "locations are used:"
-msgstr "If the `instance_path` parameter is not provided the following default locations are used:"
+msgstr "如果未提供`instance_path`参数, 则使用以下默认位置:"
 
 #: ../../config.rst:647
 msgid "Uninstalled module::"
-msgstr "Uninstalled module::"
+msgstr "卸载模块::"
 
 #: ../../config.rst:652
 msgid "Uninstalled package::"
-msgstr "Uninstalled package::"
+msgstr "卸载包::"
 
 #: ../../config.rst:658
 msgid "Installed module or package::"
-msgstr "Installed module or package::"
+msgstr "已安装的模块或包::"
 
 #: ../../config.rst:663
 msgid ""
@@ -787,5 +787,5 @@ msgstr ""
 
 #: ../../config.rst:688
 msgid "Example usage for both::"
-msgstr "Example usage for both::"
+msgstr "两者的示例用法::"
 

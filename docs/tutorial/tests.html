@@ -20,7 +20,7 @@
     <link rel="next" title="部署到生产" href="deploy.html" />
     <link rel="prev" title="使项目可安装" href="install.html" />
   <script>DOCUMENTATION_OPTIONS.URL_ROOT = '../';</script>
-   
+
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>导航</h3>
@@ -35,15 +35,15 @@
           <a href="install.html" title="使项目可安装"
              accesskey="P">上一页</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Flask Documentation (1.1.x)</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">教程</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">教程</a> &#187;</li>
       </ul>
-    </div>  
+    </div>
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
-            
+
   <div class="section" id="test-coverage">
 <h1>测试覆盖率<a class="headerlink" href="#test-coverage" title="永久链接至标题">¶</a></h1>
 <p>Writing unit tests for your application lets you check that the code
@@ -70,7 +70,7 @@ Install them both:</p>
 </pre></div>
 </div>
 <div class="section" id="setup-and-fixtures">
-<h2>Setup and Fixtures<a class="headerlink" href="#setup-and-fixtures" title="永久链接至标题">¶</a></h2>
+<h2>设置和固定装置<a class="headerlink" href="#setup-and-fixtures" title="永久链接至标题">¶</a></h2>
 <p>The test code is located in the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory. This directory is
 <em>next to</em> the <code class="docutils literal notranslate"><span class="pre">flaskr</span></code> package, not inside it. The
 <code class="docutils literal notranslate"><span class="pre">tests/conftest.py</span></code> file contains setup functions called <em>fixtures</em>
@@ -162,7 +162,7 @@ that with the <code class="docutils literal notranslate"><span class="pre">clien
 returned value to the test function.</p>
 </div>
 <div class="section" id="factory">
-<h2>Factory<a class="headerlink" href="#factory" title="永久链接至标题">¶</a></h2>
+<h2>厂<a class="headerlink" href="#factory" title="永久链接至标题">¶</a></h2>
 <p>There’s not much to test about the factory itself. Most of the code will
 be executed for each test already, so if something fails the other tests
 will notice.</p>
@@ -190,7 +190,7 @@ the beginning of the tutorial. It returns “Hello, World!”, so the test
 checks that the response data matches.</p>
 </div>
 <div class="section" id="database">
-<h2>Database<a class="headerlink" href="#database" title="永久链接至标题">¶</a></h2>
+<h2>数据库<a class="headerlink" href="#database" title="永久链接至标题">¶</a></h2>
 <p>Within an application context, <code class="docutils literal notranslate"><span class="pre">get_db</span></code> should return the same
 connection each time it’s called. After the context, the connection
 should be closed.</p>
@@ -238,7 +238,7 @@ a message.</p>
 command by name.</p>
 </div>
 <div class="section" id="authentication">
-<h2>Authentication<a class="headerlink" href="#authentication" title="永久链接至标题">¶</a></h2>
+<h2>认证<a class="headerlink" href="#authentication" title="永久链接至标题">¶</a></h2>
 <p>For most of the views, a user needs to be logged in. The easiest way to
 do this in tests is to make a <code class="docutils literal notranslate"><span class="pre">POST</span></code> request to the <code class="docutils literal notranslate"><span class="pre">login</span></code> view
 with the client. Rather than writing that out every time, you can write
@@ -369,7 +369,7 @@ not contain <code class="docutils literal notranslate"><span class="pre">user_id
 </div>
 </div>
 <div class="section" id="blog">
-<h2>Blog<a class="headerlink" href="#blog" title="永久链接至标题">¶</a></h2>
+<h2>博客<a class="headerlink" href="#blog" title="永久链接至标题">¶</a></h2>
 <p>All the blog views use the <code class="docutils literal notranslate"><span class="pre">auth</span></code> fixture you wrote earlier. Call
 <code class="docutils literal notranslate"><span class="pre">auth.login()</span></code> and subsequent requests from the client will be logged
 in as the <code class="docutils literal notranslate"><span class="pre">test</span></code> user.</p>
@@ -500,7 +500,7 @@ no longer exist in the database.</p>
 </div>
 </div>
 <div class="section" id="running-the-tests">
-<h2>Running the Tests<a class="headerlink" href="#running-the-tests" title="永久链接至标题">¶</a></h2>
+<h2>运行测试<a class="headerlink" href="#running-the-tests" title="永久链接至标题">¶</a></h2>
 <p>Some extra configuration, which is not required but makes running
 tests with coverage less verbose, can be added to the project’s
 <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> file.</p>
@@ -540,7 +540,7 @@ to run pytest instead of running it directly.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ coverage run -m pytest
 </pre></div>
 </div>
-<p>You can either view a simple coverage report in the terminal:</p>
+<p>您可以在终端中查看简单的覆盖率报告:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ coverage report
 
 Name                 Stmts   Miss Branch BrPart  Cover
@@ -553,13 +553,13 @@ flaskr/db.py            24      0      4      0   100%
 TOTAL                  153      0     44      0   100%
 </pre></div>
 </div>
-<p>An HTML report allows you to see which lines were covered in each file:</p>
+<p>HTML报告允许您查看每个文件中包含的行:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ coverage html
 </pre></div>
 </div>
 <p>This generates files in the <code class="docutils literal notranslate"><span class="pre">htmlcov</span></code> directory. Open
 <code class="docutils literal notranslate"><span class="pre">htmlcov/index.html</span></code> in your browser to see the report.</p>
-<p>Continue to <a class="reference internal" href="deploy.html"><span class="doc">部署到生产</span></a>.</p>
+<p>继续 <a class="reference internal" href="deploy.html"><span class="doc">部署到生产</span></a>.</p>
 </div>
 </div>
 
@@ -570,22 +570,22 @@ TOTAL                  153      0     44      0   100%
   <span id="sidebar-top"></span>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  
-    
+
+
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/flask-logo-sidebar.png" alt="Logo"/>
             </a></p>
-  
+
 
   <h3>Contents</h3>
   <ul>
 <li><a class="reference internal" href="#">测试覆盖率</a><ul>
-<li><a class="reference internal" href="#setup-and-fixtures">Setup and Fixtures</a></li>
-<li><a class="reference internal" href="#factory">Factory</a></li>
-<li><a class="reference internal" href="#database">Database</a></li>
-<li><a class="reference internal" href="#authentication">Authentication</a></li>
-<li><a class="reference internal" href="#blog">Blog</a></li>
-<li><a class="reference internal" href="#running-the-tests">Running the Tests</a></li>
+<li><a class="reference internal" href="#setup-and-fixtures">设置和固定装置</a></li>
+<li><a class="reference internal" href="#factory">厂</a></li>
+<li><a class="reference internal" href="#database">数据库</a></li>
+<li><a class="reference internal" href="#authentication">认证</a></li>
+<li><a class="reference internal" href="#blog">博客</a></li>
+<li><a class="reference internal" href="#running-the-tests">运行测试</a></li>
 </ul>
 </li>
 </ul>
@@ -615,10 +615,10 @@ TOTAL                  153      0     44      0   100%
       </div>
       <div class="clearer"></div>
     </div>
-  
+
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2010 Pallets Team.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/86bf9dca 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/31d45d9d 创建.
     </div>
 
   </body>

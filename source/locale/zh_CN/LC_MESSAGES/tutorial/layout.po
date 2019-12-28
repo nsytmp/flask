@@ -29,18 +29,18 @@ msgstr "创建一个项目目录并输入它:"
 msgid ""
 "Then follow the :doc:`installation instructions </installation>` to set "
 "up a Python virtual environment and install Flask for your project."
-msgstr ""
+msgstr "然后按照 :doc:`安装说明 </installation>` 设置Python虚拟环境并为您的项目安装Flask. "
 
 #: ../../tutorial/layout.rst:14
 msgid ""
 "The tutorial will assume you're working from the ``flask-tutorial`` "
 "directory from now on. The file names at the top of each code block are "
 "relative to this directory."
-msgstr ""
+msgstr "本教程将假设您从现在开始使用 ``flask-tutorial`` 目录. 每个代码块顶部的文件名都与该目录相关. "
 
 #: ../../tutorial/layout.rst:20
 msgid "A Flask application can be as simple as a single file."
-msgstr "A Flask application can be as simple as a single file."
+msgstr "Flask应用程序可以像单个文件一样简单. "
 
 #: ../../tutorial/layout.rst:22
 msgid "``hello.py``"
@@ -52,43 +52,43 @@ msgid ""
 "the code in one file. Python projects use *packages* to organize code "
 "into multiple modules that can be imported where needed, and the tutorial"
 " will do this as well."
-msgstr ""
+msgstr "但是, 随着项目变得越来越大, 将所有代码保存在一个文件中变得势不可挡.  Python项目使用 *packages* 将代码组织到可以在需要的地方导入的多个模块中, 教程也会这样做. "
 
 #: ../../tutorial/layout.rst:39
 msgid "The project directory will contain:"
-msgstr "The project directory will contain:"
+msgstr "项目目录将包含:"
 
 #: ../../tutorial/layout.rst:41
 msgid "``flaskr/``, a Python package containing your application code and files."
-msgstr "``flaskr/``, a Python package containing your application code and files."
+msgstr "``flaskr/``, 包含应用程序代码和文件的Python包. "
 
 #: ../../tutorial/layout.rst:43
 msgid "``tests/``, a directory containing test modules."
-msgstr "``tests/``, a directory containing test modules."
+msgstr "``tests/``, 包含测试模块的目录. "
 
 #: ../../tutorial/layout.rst:44
 msgid ""
 "``venv/``, a Python virtual environment where Flask and other "
 "dependencies are installed."
-msgstr ""
+msgstr "``venv/``, 安装Flask和其他依赖项的Python虚拟环境. "
 
 #: ../../tutorial/layout.rst:46
 msgid "Installation files telling Python how to install your project."
-msgstr "Installation files telling Python how to install your project."
+msgstr "安装文件告诉Python如何安装项目. "
 
 #: ../../tutorial/layout.rst:47
 msgid ""
 "Version control config, such as `git`_. You should make a habit of using "
 "some type of version control for all your projects, no matter the size."
-msgstr ""
+msgstr "版本控制配置, 例如 `git`_. 您应养成为所有项目使用某种类型的版本控制的习惯, 无论大小如何. "
 
 #: ../../tutorial/layout.rst:50
 msgid "Any other project files you might add in the future."
-msgstr "Any other project files you might add in the future."
+msgstr "您将来可能添加的任何其他项目文件. "
 
 #: ../../tutorial/layout.rst:54
 msgid "By the end, your project layout will look like this:"
-msgstr "By the end, your project layout will look like this:"
+msgstr "最后, 您的项目布局将如下所示:"
 
 #: ../../tutorial/layout.rst:87
 msgid ""
@@ -96,7 +96,7 @@ msgid ""
 "while running your project should be ignored. There may be other files "
 "based on the editor you use. In general, ignore files that you didn't "
 "write. For example, with git:"
-msgstr ""
+msgstr "如果您正在使用版本控制, 则应忽略在运行项目时生成的以下文件. 根据您使用的编辑器, 可能还有其他文件. 通常, 忽略您未编写的文件. 例如, 使用git:"
 
 #: ../../tutorial/layout.rst:92
 msgid "``.gitignore``"
@@ -104,5 +104,5 @@ msgstr "``.gitignore``"
 
 #: ../../tutorial/layout.rst:110
 msgid "Continue to :doc:`factory`."
-msgstr "Continue to :doc:`factory`."
+msgstr "继续 :doc:`factory`."
 

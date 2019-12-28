@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../../htmlfaq.rst:12
 msgid "History of XHTML"
-msgstr "History of XHTML"
+msgstr "XHTML的历史"
 
 #: ../../htmlfaq.rst:14
 msgid ""
@@ -81,7 +81,7 @@ msgstr ""
 
 #: ../../htmlfaq.rst:49
 msgid "History of HTML5"
-msgstr "History of HTML5"
+msgstr "HTML5的历史"
 
 #: ../../htmlfaq.rst:51
 msgid ""
@@ -113,7 +113,7 @@ msgstr ""
 
 #: ../../htmlfaq.rst:69
 msgid "HTML versus XHTML"
-msgstr "HTML versus XHTML"
+msgstr "HTML与XHTML"
 
 #: ../../htmlfaq.rst:71
 msgid ""
@@ -182,7 +182,7 @@ msgstr "should be served as `application/xhtml+xml`"
 
 #: ../../htmlfaq.rst:91
 msgid "strict error handling"
-msgstr "strict error handling"
+msgstr "严格的错误处理"
 
 #: ../../htmlfaq.rst:93
 msgid "inline SVG"
@@ -208,23 +208,23 @@ msgstr "New semantic tags like ``<article>``"
 msgid ""
 "This is an obscure feature inherited from SGML. It is usually not "
 "supported by browsers, for reasons detailed above."
-msgstr "This is an obscure feature inherited from SGML. It is usually not supported by browsers, for reasons detailed above."
+msgstr "这是从SGML继承的一个模糊特征. 由于上面详述的原因, 浏览器通常不支持它. "
 
 #: ../../htmlfaq.rst:106
 msgid ""
 "This is for compatibility with server code that generates XHTML for tags "
 "such as ``<br>``.  It should not be used in new code."
-msgstr "This is for compatibility with server code that generates XHTML for tags such as ``<br>``.  It should not be used in new code."
+msgstr "这是为了与服务器代码兼容, 这些代码为`````等标签生成XHTML. 它不应该用在新代码中. "
 
 #: ../../htmlfaq.rst:108
 msgid ""
 "XHTML 1.0 is the last XHTML standard that allows to be served as "
 "`text/html` for backwards compatibility reasons."
-msgstr "XHTML 1.0 is the last XHTML standard that allows to be served as `text/html` for backwards compatibility reasons."
+msgstr "XHTML 1.0是最后一个允许作为“text / html”服务的XHTML标准, 出于向后兼容的原因. "
 
 #: ../../htmlfaq.rst:117
 msgid "What does \"strict\" mean?"
-msgstr "What does \"strict\" mean?"
+msgstr "“严格”是什么意思？"
 
 #: ../../htmlfaq.rst:119
 msgid ""
@@ -245,11 +245,11 @@ msgstr ""
 
 #: ../../htmlfaq.rst:130
 msgid "Wrapping the document in an ``<html>`` tag"
-msgstr "Wrapping the document in an ``<html>`` tag"
+msgstr "将文档包装在``<html>`标签中"
 
 #: ../../htmlfaq.rst:131
 msgid "Wrapping header elements in ``<head>`` or the body elements in ``<body>``"
-msgstr "Wrapping header elements in ``<head>`` or the body elements in ``<body>``"
+msgstr "在``<head>`中包装头元素或在``<body>``中包含body元素"
 
 #: ../../htmlfaq.rst:133
 msgid ""

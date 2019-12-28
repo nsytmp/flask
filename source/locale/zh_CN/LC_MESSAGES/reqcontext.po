@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../../reqcontext.rst:19
 msgid "Purpose of the Context"
-msgstr "Purpose of the Context"
+msgstr "语境的目的"
 
 #: ../../reqcontext.rst:21
 msgid ""
@@ -60,7 +60,7 @@ msgstr ""
 
 #: ../../reqcontext.rst:35
 msgid "Lifetime of the Context"
-msgstr "Lifetime of the Context"
+msgstr "语境的生命周期"
 
 #: ../../reqcontext.rst:37
 msgid ""
@@ -81,17 +81,17 @@ msgstr ""
 msgid ""
 "Context locals are implemented in Werkzeug. See :doc:`werkzeug:local` for"
 " more information on how this works internally."
-msgstr "Context locals are implemented in Werkzeug. See :doc:`werkzeug:local` for more information on how this works internally."
+msgstr "上下文本地在Werkzeug中实现. 有关内部如何工作的更多信息, 请参阅:doc:`werkzeug:local`. "
 
 #: ../../reqcontext.rst:51
 msgid "Manually Push a Context"
-msgstr "Manually Push a Context"
+msgstr "手动推送上下文"
 
 #: ../../reqcontext.rst:53
 msgid ""
 "If you try to access :data:`request`, or anything that uses it, outside a"
 " request context, you'll get this error message:"
-msgstr "If you try to access :data:`request`, or anything that uses it, outside a request context, you'll get this error message:"
+msgstr "如果您尝试访问:data:`request`, 或者在请求上下文之外使用它的任何内容, 您将收到此错误消息:"
 
 #: ../../reqcontext.rst:64
 msgid ""
@@ -114,11 +114,11 @@ msgstr ""
 msgid ""
 "For information on how to use the request context from the interactive "
 "Python shell, see :doc:`/shell`."
-msgstr "For information on how to use the request context from the interactive Python shell, see :doc:`/shell`."
+msgstr "有关如何使用交互式Python shell中的请求上下文的信息, 请参阅:doc:`/ shell`. "
 
 #: ../../reqcontext.rst:88
 msgid "How the Context Works"
-msgstr "How the Context Works"
+msgstr "语境如何运作"
 
 #: ../../reqcontext.rst:90
 msgid ""
@@ -159,7 +159,7 @@ msgstr ""
 
 #: ../../reqcontext.rst:119
 msgid "Callbacks and Errors"
-msgstr "Callbacks and Errors"
+msgstr "回调和错误"
 
 #: ../../reqcontext.rst:121
 msgid ""
@@ -225,7 +225,7 @@ msgstr ""
 
 #: ../../reqcontext.rst:161
 msgid "Teardown Callbacks"
-msgstr "Teardown Callbacks"
+msgstr "拆解回调"
 
 #: ../../reqcontext.rst:163
 msgid ""
@@ -248,7 +248,7 @@ msgstr ""
 
 #: ../../reqcontext.rst:205
 msgid "Signals"
-msgstr "Signals"
+msgstr "信号"
 
 #: ../../reqcontext.rst:207
 msgid ""
@@ -260,13 +260,13 @@ msgstr "If :data:`~signals.signals_available` is true, the following signals are
 msgid ""
 ":data:`request_started` is sent before the :meth:`~Flask.before_request` "
 "functions are called."
-msgstr ":data:`request_started` is sent before the :meth:`~Flask.before_request` functions are called."
+msgstr ":data:`request_started`在调用:meth:`~Flask.before_request`函数之前发送. "
 
 #: ../../reqcontext.rst:213
 msgid ""
 ":data:`request_finished` is sent after the :meth:`~Flask.after_request` "
 "functions are called."
-msgstr ":data:`request_finished` is sent after the :meth:`~Flask.after_request` functions are called."
+msgstr ":data:`request_finished`在调用:meth:`~Flask.after_request`函数后发送. "
 
 #: ../../reqcontext.rst:216
 msgid ""
@@ -279,11 +279,11 @@ msgstr ""
 msgid ""
 ":data:`request_tearing_down` is sent after the "
 ":meth:`~Flask.teardown_request` functions are called."
-msgstr ":data:`request_tearing_down` is sent after the :meth:`~Flask.teardown_request` functions are called."
+msgstr ":data:`request_tearing_down`在调用:meth:`~Flask.teardown_request`函数后发送. "
 
 #: ../../reqcontext.rst:225
 msgid "Context Preservation on Error"
-msgstr "Context Preservation on Error"
+msgstr "上下文保留错误"
 
 #: ../../reqcontext.rst:227
 msgid ""
@@ -310,11 +310,11 @@ msgstr ""
 msgid ""
 "Do not enable :data:`PRESERVE_CONTEXT_ON_EXCEPTION` in production, as it "
 "will cause your application to leak memory on exceptions."
-msgstr "Do not enable :data:`PRESERVE_CONTEXT_ON_EXCEPTION` in production, as it will cause your application to leak memory on exceptions."
+msgstr "不要在生产中启用:data:`PRESERVE_CONTEXT_ON_EXCEPTION`, 因为它会导致应用程序在异常时泄漏内存. "
 
 #: ../../reqcontext.rst:246
 msgid "Notes On Proxies"
-msgstr "Notes On Proxies"
+msgstr "关于代理的注释"
 
 #: ../../reqcontext.rst:248
 msgid ""
@@ -328,7 +328,7 @@ msgstr ""
 msgid ""
 "Most of the time you don't have to care about that, but there are some "
 "exceptions where it is good to know that this object is an actual proxy:"
-msgstr "Most of the time you don't have to care about that, but there are some exceptions where it is good to know that this object is an actual proxy:"
+msgstr "大多数情况下你不必关心它, 但有一些例外情况, 知道这个对象是一个真正的代理是很好的:"
 
 #: ../../reqcontext.rst:256
 msgid ""
@@ -341,11 +341,11 @@ msgstr ""
 msgid ""
 "If the specific object reference is important, for example for sending "
 ":ref:`signals` or passing data to a background thread."
-msgstr "If the specific object reference is important, for example for sending :ref:`signals` or passing data to a background thread."
+msgstr "如果特定对象引用很重要, 例如发送:ref:`signals`或将数据传递给后台线程. "
 
 #: ../../reqcontext.rst:262
 msgid ""
 "If you need to access the underlying object that is proxied, use the "
 ":meth:`~werkzeug.local.LocalProxy._get_current_object` method::"
-msgstr "If you need to access the underlying object that is proxied, use the :meth:`~werkzeug.local.LocalProxy._get_current_object` method::"
+msgstr "如果需要访问代理的基础对象, 请使用:meth:`~werkzeug.local.LocalProxy._get_current_object`方法::"
 

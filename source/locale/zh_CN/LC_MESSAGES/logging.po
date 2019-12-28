@@ -31,7 +31,7 @@ msgstr ""
 
 #: ../../logging.rst:25
 msgid "Basic Configuration"
-msgstr "Basic Configuration"
+msgstr "基本配置"
 
 #: ../../logging.rst:27
 msgid ""
@@ -46,11 +46,11 @@ msgstr ""
 msgid ""
 "This example uses :func:`~logging.config.dictConfig` to create a logging "
 "configuration similar to Flask's default, except for all logs::"
-msgstr "This example uses :func:`~logging.config.dictConfig` to create a logging configuration similar to Flask's default, except for all logs::"
+msgstr "此示例使用:func:`~logging.config.dictConfig`创建类似于Flask默认的日志记录配置, 但所有日志除外::"
 
 #: ../../logging.rst:57
 msgid "Default Configuration"
-msgstr "Default Configuration"
+msgstr "默认配置"
 
 #: ../../logging.rst:59
 msgid ""
@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../../logging.rst:67
 msgid "Removing the Default Handler"
-msgstr "Removing the Default Handler"
+msgstr "删除默认处理程序"
 
 #: ../../logging.rst:69
 msgid ""
@@ -75,7 +75,7 @@ msgstr ""
 
 #: ../../logging.rst:79
 msgid "Email Errors to Admins"
-msgstr "Email Errors to Admins"
+msgstr "向管理员发送电子邮件错误"
 
 #: ../../logging.rst:81
 msgid ""
@@ -100,7 +100,7 @@ msgstr "This requires that you have an SMTP server set up on the same server. Se
 
 #: ../../logging.rst:112
 msgid "Injecting Request Information"
-msgstr "Injecting Request Information"
+msgstr "注入请求信息"
 
 #: ../../logging.rst:114
 msgid ""
@@ -113,7 +113,7 @@ msgstr ""
 
 #: ../../logging.rst:138
 msgid "Other Libraries"
-msgstr "Other Libraries"
+msgstr "其他图书馆"
 
 #: ../../logging.rst:140
 msgid ""
@@ -142,7 +142,7 @@ msgstr ""
 
 #: ../../logging.rst:171
 msgid "Flask Extensions"
-msgstr "Flask Extensions"
+msgstr " Flask 扩展"
 
 #: ../../logging.rst:173
 msgid ""

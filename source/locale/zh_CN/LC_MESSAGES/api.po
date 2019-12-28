@@ -26,7 +26,7 @@ msgid ""
 "This part of the documentation covers all the interfaces of Flask.  For "
 "parts where Flask depends on external libraries, we document the most "
 "important right here and provide links to the canonical documentation."
-msgstr "这部分文档涵盖了Flask的所有接口。对于Flask依赖于外部库的部分，我们在此处记录最重要的部分并提供规范文档的链接。"
+msgstr "这部分文档涵盖了Flask的所有接口. 对于Flask依赖于外部库的部分, 我们在此处记录最重要的部分并提供规范文档的链接. "
 
 #: ../../api.rst:14
 msgid "Application Object"
@@ -38,7 +38,7 @@ msgid ""
 "object.  It is passed the name of the module or package of the "
 "application.  Once it is created it will act as a central registry for "
 "the view functions, the URL rules, template configuration and much more."
-msgstr "flask对象实现了一个WSGI应用程序并充当中心对象。它传递了应用程序的模块或包的名称。一旦创建它，​​它将充当视图功能，URL规则，模板配置等的中央注册表。"
+msgstr "flask对象实现了一个WSGI应用程序并充当中心对象. 它传递了应用程序的模块或包的名称. 一旦创建它, ​​它将充当视图功能, URL规则, 模板配置等的中央注册表. "
 
 #: flask.Flask:6 of
 msgid ""
@@ -51,17 +51,17 @@ msgstr ""
 
 #: flask.Flask:11 of
 msgid "For more information about resource loading, see :func:`open_resource`."
-msgstr "For more information about resource loading, see :func:`open_resource`."
+msgstr "有关资源加载的更多信息, 请参阅 :func:`open_resource`."
 
 #: flask.Flask:13 of
 msgid ""
 "Usually you create a :class:`Flask` instance in your main module or in "
 "the :file:`__init__.py` file of your package like this::"
-msgstr "Usually you create a :class:`Flask` instance in your main module or in the :file:`__init__.py` file of your package like this::"
+msgstr "通常你在你的主模块或你的包的:file:`__init __. py`文件中创建一个:class:`Flask`实例, 就像这样::"
 
 #: flask.Flask:19 of
 msgid "About the First Parameter"
-msgstr "About the First Parameter"
+msgstr "关于第一个参数"
 
 #: flask.Flask:21 of
 msgid ""
@@ -100,7 +100,7 @@ msgstr ""
 
 #: flask.Flask:58 of
 msgid "The ``host_matching`` and ``static_host`` parameters were added."
-msgstr "The ``host_matching`` and ``static_host`` parameters were added."
+msgstr "添加了``host_matching``和``static_host``参数. "
 
 #: flask.Flask:61 of
 msgid ""
@@ -111,17 +111,17 @@ msgstr ""
 
 #: flask.Flask:55 of
 msgid "The `root_path` parameter was added."
-msgstr "The `root_path` parameter was added."
+msgstr "添加了`root_path`参数. "
 
 #: flask.Flask:51 of
 msgid "The `instance_path` and `instance_relative_config` parameters were added."
-msgstr "The `instance_path` and `instance_relative_config` parameters were added."
+msgstr "添加了`instance_path`和`instance_relative_config`参数. "
 
 #: flask.Flask:47 of
 msgid ""
 "The `static_url_path`, `static_folder`, and `template_folder` parameters "
 "were added."
-msgstr "The `static_url_path`, `static_folder`, and `template_folder` parameters were added."
+msgstr "添加了`static_url_path`, `static_folder`和`template_folder`参数. "
 
 #: flask.Blueprint.add_app_template_filter
 #: flask.Blueprint.add_app_template_global
@@ -155,13 +155,13 @@ msgstr "参数"
 
 #: flask.Flask:66 of
 msgid "the name of the application package"
-msgstr "the name of the application package"
+msgstr "应用程序包的名称"
 
 #: flask.Flask:67 of
 msgid ""
 "can be used to specify a different path for the static files on the web."
 "  Defaults to the name of the `static_folder` folder."
-msgstr "can be used to specify a different path for the static files on the web.  Defaults to the name of the `static_folder` folder."
+msgstr "可用于为Web上的静态文件指定不同的路径. 默认为`static_folder`文件夹的名称. "
 
 #: flask.Flask:70 of
 msgid ""
@@ -174,17 +174,17 @@ msgstr ""
 msgid ""
 "the host to use when adding the static route. Defaults to None. Required "
 "when using ``host_matching=True`` with a ``static_folder`` configured."
-msgstr "the host to use when adding the static route. Defaults to None. Required when using ``host_matching=True`` with a ``static_folder`` configured."
+msgstr "添加静态路由时使用的主机. 默认为无. 使用配置了``static_folder``的``host_matching = True``时需要. "
 
 #: flask.Flask:76 of
 msgid "set ``url_map.host_matching`` attribute. Defaults to False."
-msgstr "set ``url_map.host_matching`` attribute. Defaults to False."
+msgstr "设置``url_map.host_matching``属性. 默认为False. "
 
 #: flask.Flask:78 of
 msgid ""
 "consider the subdomain relative to :data:`SERVER_NAME` when matching "
 "routes. Defaults to False."
-msgstr "consider the subdomain relative to :data:`SERVER_NAME` when matching routes. Defaults to False."
+msgstr "在匹配路由时考虑相对于:data:`SERVER_NAME`的子域. 默认为False. "
 
 #: flask.Flask:80 of
 msgid ""
@@ -218,56 +218,56 @@ msgstr ""
 msgid ""
 "Register a custom template filter.  Works exactly like the "
 ":meth:`template_filter` decorator."
-msgstr "Register a custom template filter.  Works exactly like the :meth:`template_filter` decorator."
+msgstr "注册自定义模板过滤器. 完全像:meth:`template_filter`装饰器. "
 
 #: flask.Blueprint.add_app_template_filter:5
 #: flask.Blueprint.app_template_filter:4 flask.Flask.add_template_filter:4
 #: flask.Flask.template_filter:9 of
 msgid "the optional name of the filter, otherwise the function name will be used."
-msgstr "the optional name of the filter, otherwise the function name will be used."
+msgstr "过滤器的可选名称, 否则将使用函数名称. "
 
 #: flask.Flask.add_template_global:1 of
 msgid ""
 "Register a custom template global function. Works exactly like the "
 ":meth:`template_global` decorator."
-msgstr "Register a custom template global function. Works exactly like the :meth:`template_global` decorator."
+msgstr "注册自定义模板全局功能. 完全像:meth:`template_global`装饰器. "
 
 #: flask.Flask.add_template_global:6 flask.Flask.template_global:11 of
 msgid ""
 "the optional name of the global function, otherwise the function name "
 "will be used."
-msgstr "the optional name of the global function, otherwise the function name will be used."
+msgstr "全局函数的可选名称, 否则将使用函数名称. "
 
 #: flask.Flask.add_template_test:1 of
 msgid ""
 "Register a custom template test.  Works exactly like the "
 ":meth:`template_test` decorator."
-msgstr "Register a custom template test.  Works exactly like the :meth:`template_test` decorator."
+msgstr "注册自定义模板测试. 完全像:meth:`template_test`装饰器. "
 
 #: flask.Blueprint.add_app_template_test:7 flask.Blueprint.app_template_test:6
 #: flask.Flask.add_template_test:6 flask.Flask.template_test:16 of
 msgid "the optional name of the test, otherwise the function name will be used."
-msgstr "the optional name of the test, otherwise the function name will be used."
+msgstr "测试的可选名称, 否则将使用函数名称. "
 
 #: flask.Flask.add_url_rule:1 of
 msgid ""
 "Connects a URL rule.  Works exactly like the :meth:`route` decorator.  If"
 " a view_func is provided it will be registered with the endpoint."
-msgstr "Connects a URL rule.  Works exactly like the :meth:`route` decorator.  If a view_func is provided it will be registered with the endpoint."
+msgstr "连接URL规则. 完全像:meth:`route`装饰器. 如果提供了view_func, 它将向端点注册. "
 
 #: flask.Flask.add_url_rule:5 of
 msgid "Basically this example::"
-msgstr "Basically this example::"
+msgstr "基本上这个例子::"
 
 #: flask.Flask.add_url_rule:11 of
 msgid "Is equivalent to the following::"
-msgstr "Is equivalent to the following::"
+msgstr "相当于以下内容::"
 
 #: flask.Flask.add_url_rule:17 of
 msgid ""
 "If the view_func is not provided you will need to connect the endpoint to"
 " a view function like so::"
-msgstr "If the view_func is not provided you will need to connect the endpoint to a view function like so::"
+msgstr "如果未提供view_func, 则需要将端点连接到视图函数, 如此::"
 
 #: flask.Flask.add_url_rule:22 of
 msgid ""
@@ -278,29 +278,29 @@ msgstr ""
 
 #: flask.Flask.add_url_rule:26 flask.Flask.route:9 of
 msgid "For more information refer to :ref:`url-route-registrations`."
-msgstr "For more information refer to :ref:`url-route-registrations`."
+msgstr "有关更多信息, 请参阅:ref:`url-route-registrations`. "
 
 #: flask.Flask.add_url_rule:31 of
 msgid "``OPTIONS`` is added automatically as method."
-msgstr "``OPTIONS`` is added automatically as method."
+msgstr "``OPTIONS``作为方法自动添加. "
 
 #: flask.Flask.add_url_rule:28 of
 msgid "`view_func` parameter added."
-msgstr "`view_func` parameter added."
+msgstr "添加了`view_func`参数. "
 
 #: ../../api.rst:739 flask.Flask.add_url_rule:34 flask.Flask.route:11 of
 msgid "the URL rule as string"
-msgstr "the URL rule as string"
+msgstr "URL规则为字符串"
 
 #: flask.Flask.add_url_rule:35 flask.Flask.route:12 of
 msgid ""
 "the endpoint for the registered URL rule.  Flask itself assumes the name "
 "of the view function as endpoint"
-msgstr "the endpoint for the registered URL rule.  Flask itself assumes the name of the view function as endpoint"
+msgstr "已注册URL规则的端点.  Flask本身将视图函数的名称视为端点"
 
 #: flask.Flask.add_url_rule:38 of
 msgid "the function to call when serving a request to the provided endpoint"
-msgstr "the function to call when serving a request to the provided endpoint"
+msgstr "在向提供的端点提供请求时调用的函数"
 
 #: flask.Flask.add_url_rule:40 of
 msgid ""
@@ -321,7 +321,7 @@ msgstr ""
 
 #: flask.Flask.after_request:1 of
 msgid "Register a function to be run after each request."
-msgstr "Register a function to be run after each request."
+msgstr "注册每个请求后要运行的函数. "
 
 #: flask.Flask.after_request:3 of
 msgid ""
@@ -334,7 +334,7 @@ msgstr ""
 msgid ""
 "As of Flask 0.7 this function might not be executed at the end of the "
 "request in case an unhandled exception occurred."
-msgstr "As of Flask 0.7 this function might not be executed at the end of the request in case an unhandled exception occurred."
+msgstr "从Flask 0.7开始, 如果发生未处理的异常, 则可能不会在请求结束时执行此函数. "
 
 #: flask.Flask.after_request_funcs:1 of
 msgid ""
@@ -382,7 +382,7 @@ msgstr "Registers a function to be run before the first request to this instance
 msgid ""
 "The function will be called without any arguments and its return value is"
 " ignored."
-msgstr "The function will be called without any arguments and its return value is ignored."
+msgstr "将在不带任何参数的情况下调用该函数, 并忽略其返回值. "
 
 #: flask.Flask.before_first_request_funcs:1 of
 msgid ""
@@ -393,13 +393,13 @@ msgstr ""
 
 #: flask.Flask.before_request:1 of
 msgid "Registers a function to run before each request."
-msgstr "Registers a function to run before each request."
+msgstr "注册在每个请求之前运行的函数. "
 
 #: flask.Flask.before_request:3 of
 msgid ""
 "For example, this can be used to open a database connection, or to load "
 "the logged in user from the session."
-msgstr "For example, this can be used to open a database connection, or to load the logged in user from the session."
+msgstr "例如, 这可用于打开数据库连接, 或从会话加载登录用户. "
 
 #: flask.Flask.before_request:6 of
 msgid ""
@@ -433,7 +433,7 @@ msgstr ""
 
 #: flask.Flask.cli:6 of
 msgid "This is an instance of a :class:`click.Group` object."
-msgstr "This is an instance of a :class:`click.Group` object."
+msgstr "这是一个:class:`click.Group`对象的实例. "
 
 #: flask.Flask.config:1 of
 msgid ""
@@ -444,7 +444,7 @@ msgstr ""
 
 #: flask.Flask.context_processor:1 of
 msgid "Registers a template context processor function."
-msgstr "Registers a template context processor function."
+msgstr "注册模板上下文处理器功能. "
 
 #: flask.Flask.create_global_jinja_loader:1 of
 msgid ""
@@ -458,7 +458,7 @@ msgstr ""
 msgid ""
 "The global loader dispatches between the loaders of the application and "
 "the individual blueprints."
-msgstr "The global loader dispatches between the loaders of the application and the individual blueprints."
+msgstr "全局加载程序在应用程序的加载器和各个蓝图之间进行调度. "
 
 #: flask.Flask.create_jinja_environment:1 of
 msgid ""
@@ -1846,7 +1846,7 @@ msgstr "A callable accepting a status code, a list of headers, and an optional e
 
 #: ../../api.rst:22
 msgid "Blueprint Objects"
-msgstr "Blueprint Objects"
+msgstr "蓝图对象"
 
 #: flask.Blueprint:1 of
 msgid ""
@@ -2033,17 +2033,17 @@ msgstr ""
 
 #: flask.Blueprint.register:6 of
 msgid "The application this blueprint is being registered with."
-msgstr "The application this blueprint is being registered with."
+msgstr "该蓝图正在注册的应用程序. "
 
 #: flask.Blueprint.register:7 of
 msgid "Keyword arguments forwarded from :meth:`~Flask.register_blueprint`."
-msgstr "Keyword arguments forwarded from :meth:`~Flask.register_blueprint`."
+msgstr "关键字参数转发自:meth:`~Flask.register_blueprint`. "
 
 #: flask.Blueprint.register:9 of
 msgid ""
 "Whether this is the first time this blueprint has been registered on the "
 "application."
-msgstr "Whether this is the first time this blueprint has been registered on the application."
+msgstr "这是否是第一次在应用程序上注册此蓝图. "
 
 #: flask.Blueprint.register_error_handler:1 of
 msgid ""
@@ -2057,7 +2057,7 @@ msgstr ""
 msgid ""
 "Like :meth:`Flask.route` but for a blueprint.  The endpoint for the "
 ":func:`url_for` function is prefixed with the name of the blueprint."
-msgstr "Like :meth:`Flask.route` but for a blueprint.  The endpoint for the :func:`url_for` function is prefixed with the name of the blueprint."
+msgstr "喜欢:meth:`Flask.route`但是蓝图.  :func:`url_for`函数的端点以蓝图的名称为前缀. "
 
 #: flask.Blueprint.teardown_app_request:1 of
 msgid ""
@@ -2089,7 +2089,7 @@ msgstr ""
 
 #: ../../api.rst:29
 msgid "Incoming Request Data"
-msgstr "Incoming Request Data"
+msgstr "传入请求数据"
 
 #: flask.Request:1 of
 msgid ""
@@ -2113,7 +2113,7 @@ msgstr ""
 
 #: ../../api.rst:37
 msgid "The underlying WSGI environment."
-msgstr "The underlying WSGI environment."
+msgstr "底层的WSGI环境. "
 
 #: ../../api.rst:46
 msgid ""
@@ -2124,7 +2124,7 @@ msgstr ""
 
 #: ../../api.rst:52
 msgid "And a user requests the following URI::"
-msgstr "And a user requests the following URI::"
+msgstr "并且用户请求以下URI::"
 
 #: ../../api.rst:56
 msgid ""
@@ -2203,13 +2203,13 @@ msgstr "List of languages this client accepts as :class:`~werkzeug.datastructure
 msgid ""
 "List of mimetypes this client supports as "
 ":class:`~werkzeug.datastructures.MIMEAccept` object."
-msgstr "List of mimetypes this client supports as :class:`~werkzeug.datastructures.MIMEAccept` object."
+msgstr "这个客户端支持的mimetypes列表如下:class:`~werkzeug.datastructures.MIMEAccept`对象. "
 
 #: flask.Request.access_route:1 of
 msgid ""
 "If a forwarded header exists this is a list of all ip addresses from the "
 "client ip to the last proxy server."
-msgstr "If a forwarded header exists this is a list of all ip addresses from the client ip to the last proxy server."
+msgstr "如果存在转发的头, 则这是从客户端ip到最后一个代理服务器的所有IP地址的列表. "
 
 #: flask.Request.application:1 of
 msgid ""
@@ -2223,19 +2223,19 @@ msgstr ""
 msgid ""
 "As of Werkzeug 0.14 HTTP exceptions are automatically caught and "
 "converted to responses instead of failing."
-msgstr "As of Werkzeug 0.14 HTTP exceptions are automatically caught and converted to responses instead of failing."
+msgstr "从Werkzeug开始, 0.14 HTTP异常会自动捕获并转换为响应而不是失败. "
 
 #: flask.Request.application:13 of
 msgid "the WSGI callable to decorate"
-msgstr "the WSGI callable to decorate"
+msgstr "WSGI可以调用来装饰"
 
 #: flask.Request.application:14 of
 msgid "a new WSGI callable"
-msgstr "a new WSGI callable"
+msgstr "一个新的WSGI可调用"
 
 #: flask.Request.args:1 of
 msgid "The parsed URL parameters (the part in the URL after the question mark)."
-msgstr "The parsed URL parameters (the part in the URL after the question mark)."
+msgstr "解析的URL参数(问号后面的URL中的部分). "
 
 #: flask.Request.args:4 of
 msgid ""
@@ -2247,7 +2247,7 @@ msgstr ""
 
 #: flask.Request.authorization:1 of
 msgid "The `Authorization` object in parsed form."
-msgstr "The `Authorization` object in parsed form."
+msgstr "解析形式的`Authorization`对象. "
 
 #: flask.Request.base_url:1 of
 msgid ""
@@ -2257,7 +2257,7 @@ msgstr "Like :attr:`url` but without the querystring See also: :attr:`trusted_ho
 
 #: flask.Request.blueprint:1 of
 msgid "The name of the current blueprint"
-msgstr "The name of the current blueprint"
+msgstr "当前蓝图的名称"
 
 #: flask.Request.cache_control:1 of
 msgid ""
@@ -2406,7 +2406,7 @@ msgstr ""
 
 #: flask.Request.from_values:16 of
 msgid "request object"
-msgstr "request object"
+msgstr "请求对象"
 
 #: flask.Request.full_path:1 of
 msgid "Requested path as unicode, including the query string."
@@ -2456,7 +2456,7 @@ msgstr ""
 
 #: flask.Request.get_json:7 flask.Response.get_json:7 of
 msgid "Ignore the mimetype and always try to parse JSON."
-msgstr "Ignore the mimetype and always try to parse JSON."
+msgstr "忽略mimetype并始终尝试解析JSON. "
 
 #: flask.Request.get_json:8 flask.Response.get_json:8 of
 msgid "Silence parsing errors and return ``None`` instead."
@@ -2770,7 +2770,7 @@ msgstr ""
 
 #: ../../api.rst:85
 msgid "Response Objects"
-msgstr "Response Objects"
+msgstr "响应对象"
 
 #: flask.Response:1 of
 msgid ""
@@ -2891,7 +2891,7 @@ msgstr "Limits the scope of the cookie such that it will only be attached to req
 
 #: ../../api.rst:104
 msgid "Sessions"
-msgstr "Sessions"
+msgstr "会议"
 
 #: ../../api.rst:106
 msgid ""
@@ -2939,7 +2939,7 @@ msgstr ""
 
 #: ../../api.rst:150
 msgid "Session Interface"
-msgstr "Session Interface"
+msgstr "会话界面"
 
 #: ../../api.rst:154
 msgid ""
@@ -3193,7 +3193,7 @@ msgstr "This reflects the ``'_permanent'`` key in the dict."
 
 #: ../../api.rst:174
 msgid "Notice"
-msgstr "Notice"
+msgstr "注意"
 
 #: ../../api.rst:176
 msgid ""
@@ -3205,7 +3205,7 @@ msgstr ""
 
 #: ../../api.rst:183
 msgid "Test Client"
-msgstr "Test Client"
+msgstr "测试客户端"
 
 #: flask.testing.FlaskClient:1 of
 msgid ""
@@ -3225,7 +3225,7 @@ msgstr ""
 
 #: flask.testing.FlaskClient:12 of
 msgid "Basic usage is outlined in the :ref:`testing` chapter."
-msgstr "Basic usage is outlined in the :ref:`testing` chapter."
+msgstr "基本用法概述于:ref:`testing`一章. "
 
 #: flask.testing.FlaskClient.open:1 of
 msgid ""
@@ -3250,7 +3250,7 @@ msgstr "The `follow_redirects` parameter was added to :func:`open`."
 
 #: flask.testing.FlaskClient.open:16 of
 msgid "Additional parameters:"
-msgstr "Additional parameters:"
+msgstr "附加参数:"
 
 #: flask.testing.FlaskClient.open:18 of
 msgid "Returns a tuple in the form ``(environ, result)``"
@@ -3284,7 +3284,7 @@ msgstr ""
 
 #: ../../api.rst:192
 msgid "Test CLI Runner"
-msgstr "Test CLI Runner"
+msgstr "测试CLI Runner"
 
 #: flask.testing.FlaskCliRunner:1 of
 msgid ""
@@ -3323,7 +3323,7 @@ msgstr "a :class:`~click.testing.Result` object."
 
 #: ../../api.rst:201
 msgid "Application Globals"
-msgstr "Application Globals"
+msgstr "应用程序全局"
 
 #: ../../api.rst:205
 msgid ""
@@ -3356,59 +3356,59 @@ msgstr "This is a proxy. See :ref:`notes-on-proxies` for more information."
 
 #: ../../api.rst:225
 msgid "Bound to the application context instead of the request context."
-msgstr "Bound to the application context instead of the request context."
+msgstr "绑定到应用程序上下文而不是请求上下文. "
 
 #: flask.ctx._AppCtxGlobals:1 of
 msgid ""
 "A plain object. Used as a namespace for storing data during an "
 "application context."
-msgstr "A plain object. Used as a namespace for storing data during an application context."
+msgstr "一个普通的对象. 用作在应用程序上下文中存储数据的命名空间. "
 
 #: flask.ctx._AppCtxGlobals:4 of
 msgid ""
 "Creating an app context automatically creates this object, which is made "
 "available as the :data:`g` proxy."
-msgstr "Creating an app context automatically creates this object, which is made available as the :data:`g` proxy."
+msgstr "创建应用程序上下文会自动创建此对象, 该对象可用作:data:`g`代理. "
 
 #: flask.ctx._AppCtxGlobals:9 of
 msgid "Check whether an attribute is present."
-msgstr "Check whether an attribute is present."
+msgstr "检查属性是否存在. "
 
 #: flask.ctx._AppCtxGlobals:15 of
 msgid "Return an iterator over the attribute names."
-msgstr "Return an iterator over the attribute names."
+msgstr "在属性名称上返回一个迭代器. "
 
 #: flask.ctx._AppCtxGlobals.get:1 of
 msgid "Get an attribute by name, or a default value. Like :meth:`dict.get`."
-msgstr "Get an attribute by name, or a default value. Like :meth:`dict.get`."
+msgstr "按名称或默认值获取属性. 喜欢:meth:`dict.get`. "
 
 #: flask.ctx._AppCtxGlobals.get:4 flask.ctx._AppCtxGlobals.setdefault:4 of
 msgid "Name of attribute to get."
-msgstr "Name of attribute to get."
+msgstr "要获取的属性的名称. "
 
 #: flask.ctx._AppCtxGlobals.get:5 of
 msgid "Value to return if the attribute is not present."
-msgstr "Value to return if the attribute is not present."
+msgstr "如果属性不存在则返回的值. "
 
 #: flask.ctx._AppCtxGlobals.pop:1 of
 msgid "Get and remove an attribute by name. Like :meth:`dict.pop`."
-msgstr "Get and remove an attribute by name. Like :meth:`dict.pop`."
+msgstr "按名称获取和删除属性. 喜欢:meth:`dict.pop`. "
 
 #: flask.ctx._AppCtxGlobals.pop:3 of
 msgid "Name of attribute to pop."
-msgstr "Name of attribute to pop."
+msgstr "要弹出的属性的名称. "
 
 #: flask.ctx._AppCtxGlobals.pop:4 of
 msgid ""
 "Value to return if the attribute is not present, instead of raise a "
 "``KeyError``."
-msgstr "Value to return if the attribute is not present, instead of raise a ``KeyError``."
+msgstr "如果属性不存在则返回值, 而不是引发“KeyError”. "
 
 #: flask.ctx._AppCtxGlobals.setdefault:1 of
 msgid ""
 "Get the value of an attribute if it is present, otherwise set and return "
 "a default value. Like :meth:`dict.setdefault`."
-msgstr "Get the value of an attribute if it is present, otherwise set and return a default value. Like :meth:`dict.setdefault`."
+msgstr "获取属性的值(如果存在), 否则设置并返回默认值. 喜欢:meth:`dict.setdefault`. "
 
 #: flask.ctx._AppCtxGlobals.setdefault of
 msgid "param"
@@ -3416,11 +3416,11 @@ msgstr "param"
 
 #: flask.ctx._AppCtxGlobals.setdefault:5 of
 msgid "default: Value to set and return if the attribute is not present."
-msgstr "default: Value to set and return if the attribute is not present."
+msgstr "default:要设置的值, 如果该属性不存在则返回. "
 
 #: ../../api.rst:233
 msgid "Useful Functions and Classes"
-msgstr "Useful Functions and Classes"
+msgstr "有用的功能和类"
 
 #: ../../api.rst:237
 msgid ""
@@ -3469,7 +3469,7 @@ msgstr ""
 
 #: flask.url_for:1 of
 msgid "Generates a URL to the given endpoint with the method provided."
-msgstr "Generates a URL to the given endpoint with the method provided."
+msgstr "使用提供的方法生成指向给定端点的URL. "
 
 #: flask.url_for:3 of
 msgid ""
@@ -3482,11 +3482,11 @@ msgstr ""
 
 #: flask.url_for:9 of
 msgid "This will reference the index function local to the current blueprint::"
-msgstr "This will reference the index function local to the current blueprint::"
+msgstr "这将引用当前蓝图的本地索引函数::"
 
 #: flask.url_for:13 of
 msgid "For more information, head over to the :ref:`Quickstart <url-building>`."
-msgstr "For more information, head over to the :ref:`Quickstart <url-building>`."
+msgstr "有关更多信息, 请转到:ref:`Quickstart <url-building>`. "
 
 #: flask.url_for:15 of
 msgid ""
@@ -3511,25 +3511,25 @@ msgstr ""
 
 #: flask.url_for:49 of
 msgid "The `_scheme` parameter was added."
-msgstr "The `_scheme` parameter was added."
+msgstr "添加了`_scheme`参数. "
 
 #: flask.url_for:52 of
 msgid "The `_anchor` and `_method` parameters were added."
-msgstr "The `_anchor` and `_method` parameters were added."
+msgstr "添加了`_anchor`和`_method`参数. "
 
 #: flask.url_for:55 of
 msgid ""
 "Calls :meth:`Flask.handle_build_error` on "
 ":exc:`~werkzeug.routing.BuildError`."
-msgstr "Calls :meth:`Flask.handle_build_error` on :exc:`~werkzeug.routing.BuildError`."
+msgstr "调用:meth:`Flask.handle_build_error` on:exc:`~werkzeug.routing.BuildError`. "
 
 #: flask.url_for:59 of
 msgid "the endpoint of the URL (name of the function)"
-msgstr "the endpoint of the URL (name of the function)"
+msgstr "URL的端点(函数名称)"
 
 #: flask.url_for:60 of
 msgid "the variable arguments of the URL rule"
-msgstr "the variable arguments of the URL rule"
+msgstr "URL规则的变量参数"
 
 #: flask.url_for:61 of
 msgid ""
@@ -3550,17 +3550,17 @@ msgstr ""
 
 #: flask.url_for:70 of
 msgid "if provided this is added as anchor to the URL."
-msgstr "if provided this is added as anchor to the URL."
+msgstr "如果提供, 则将其作为锚添加到URL. "
 
 #: flask.url_for:71 of
 msgid "if provided this explicitly specifies an HTTP method."
-msgstr "if provided this explicitly specifies an HTTP method."
+msgstr "如果提供, 则显式指定HTTP方法. "
 
 #: flask.abort:1 of
 msgid ""
 "Raises an :py:exc:`HTTPException` for the given status code or WSGI "
 "application::"
-msgstr "Raises an :py:exc:`HTTPException` for the given status code or WSGI application::"
+msgstr "为给定的状态代码或WSGI应用程序引发:py:exc:`HTTPException`::"
 
 #: flask.abort:7 of
 msgid ""
@@ -3591,17 +3591,17 @@ msgstr "The location can now be a unicode string that is encoded using the :func
 
 #: flask.redirect:14 of
 msgid "the location the response should redirect to."
-msgstr "the location the response should redirect to."
+msgstr "响应应重定向到的位置. "
 
 #: flask.redirect:15 of
 msgid "the redirect status code. defaults to 302."
-msgstr "the redirect status code. defaults to 302."
+msgstr "重定向状态代码. 默认为302. "
 
 #: flask.redirect:16 of
 msgid ""
 "a Response class to use when instantiating a response. The default is "
 ":class:`werkzeug.wrappers.Response` if unspecified."
-msgstr "a Response class to use when instantiating a response. The default is :class:`werkzeug.wrappers.Response` if unspecified."
+msgstr "在实例化响应时使用的Response类. 默认值为:class:`werkzeug.wrappers.Response`如果未指定. "
 
 #: flask.make_response:1 of
 msgid ""
@@ -3615,43 +3615,43 @@ msgstr ""
 
 #: flask.make_response:7 of
 msgid "If view looked like this and you want to add a new header::"
-msgstr "If view looked like this and you want to add a new header::"
+msgstr "如果视图看起来像这样, 并且您想要添加新标头::"
 
 #: flask.make_response:12 of
 msgid "You can now do something like this::"
-msgstr "You can now do something like this::"
+msgstr "你现在可以这样做了::"
 
 #: flask.make_response:19 of
 msgid ""
 "This function accepts the very same arguments you can return from a view "
 "function.  This for example creates a response with a 404 error code::"
-msgstr "This function accepts the very same arguments you can return from a view function.  This for example creates a response with a 404 error code::"
+msgstr "此函数接受可以从视图函数返回的相同参数. 例如, 这会创建一个带有404错误代码的响应::"
 
 #: flask.make_response:25 of
 msgid ""
 "The other use case of this function is to force the return value of a "
 "view function into a response which is helpful with view decorators::"
-msgstr "The other use case of this function is to force the return value of a view function into a response which is helpful with view decorators::"
+msgstr "此函数的另一个用例是将视图函数的返回值强制转换为对视图装饰器有帮助的响应::"
 
 #: flask.make_response:32 of
 msgid "Internally this function does the following things:"
-msgstr "Internally this function does the following things:"
+msgstr "在内部, 此功能执行以下操作:"
 
 #: flask.make_response:34 of
 msgid "if no arguments are passed, it creates a new response argument"
-msgstr "if no arguments are passed, it creates a new response argument"
+msgstr "如果没有传递参数, 它会创建一个新的响应参数"
 
 #: flask.make_response:35 of
 msgid ""
 "if one argument is passed, :meth:`flask.Flask.make_response` is invoked "
 "with it."
-msgstr "if one argument is passed, :meth:`flask.Flask.make_response` is invoked with it."
+msgstr "如果传递了一个参数, 则使用它调用:meth:`flask.Flask.make_response`. "
 
 #: flask.make_response:37 of
 msgid ""
 "if more than one argument is passed, the arguments are passed to the "
 ":meth:`flask.Flask.make_response` function as tuple."
-msgstr "if more than one argument is passed, the arguments are passed to the :meth:`flask.Flask.make_response` function as tuple."
+msgstr "如果传递了多个参数, 则参数将作为元组传递给:meth:`flask.Flask.make_response`函数. "
 
 #: flask.after_this_request:1 of
 msgid ""
@@ -3915,7 +3915,7 @@ msgstr "Convert escaped markup back into a text string. This replaces HTML entit
 
 #: ../../api.rst:277
 msgid "Message Flashing"
-msgstr "Message Flashing"
+msgstr "消息闪烁"
 
 #: flask.flash:1 of
 msgid ""
@@ -3926,11 +3926,11 @@ msgstr ""
 
 #: flask.flash:5 of
 msgid "`category` parameter added."
-msgstr "`category` parameter added."
+msgstr "`category` 参数已添加. "
 
 #: flask.flash:8 of
 msgid "the message to be flashed."
-msgstr "the message to be flashed."
+msgstr "要闪现的信息. "
 
 #: flask.flash:9 of
 msgid ""
@@ -3972,7 +3972,7 @@ msgstr "`category_filter` filters the messages down to only those matching the p
 
 #: flask.get_flashed_messages:17 of
 msgid "See :ref:`message-flashing-pattern` for examples."
-msgstr "See :ref:`message-flashing-pattern` for examples."
+msgstr "有关示例, 请参阅:ref:`message-flashing-pattern`. "
 
 #: flask.get_flashed_messages:22 of
 msgid "`category_filter` parameter added."
@@ -3992,7 +3992,7 @@ msgstr "whitelist of categories to limit return values"
 
 #: ../../api.rst:284
 msgid "JSON Support"
-msgstr "JSON Support"
+msgstr "JSON 支持"
 
 #: ../../api.rst:288
 msgid ""
@@ -4005,7 +4005,7 @@ msgstr ""
 
 #: ../../api.rst:294
 msgid "So for starters instead of doing::"
-msgstr "So for starters instead of doing::"
+msgstr "所以对于初学者而不是做::"
 
 #: ../../api.rst:301
 msgid "You can instead just do this::"
@@ -4041,7 +4041,7 @@ msgstr ""
 
 #: ../../api.rst:326
 msgid "Auto-Sort JSON Keys"
-msgstr "Auto-Sort JSON Keys"
+msgstr "自动排序JSON密钥"
 
 #: ../../api.rst:328
 msgid ""
@@ -4172,7 +4172,7 @@ msgstr ""
 
 #: flask.json.tag:2 of
 msgid "Tagged JSON"
-msgstr "Tagged JSON"
+msgstr "标记为JSON"
 
 #: flask.json.tag:4 of
 msgid ""
@@ -4233,7 +4233,7 @@ msgstr "Load data from a JSON string and deserialized any tagged objects."
 
 #: flask.json.tag.TaggedJSONSerializer.register:1 of
 msgid "Register a new tag with this serializer."
-msgstr "Register a new tag with this serializer."
+msgstr "使用此序列化程序注册新标记. "
 
 #: flask.json.tag.TaggedJSONSerializer.register:3 of
 msgid "tag class to register. Will be instantiated with this serializer instance."
@@ -4329,7 +4329,7 @@ msgstr "BSD, see LICENSE for more details."
 
 #: ../../api.rst:354
 msgid "Template Rendering"
-msgstr "Template Rendering"
+msgstr "模板渲染"
 
 #: flask.render_template:1 of
 msgid "Renders a template from the template folder with the given context."
@@ -4376,7 +4376,7 @@ msgstr "the name of the variable of macro to access"
 
 #: ../../api.rst:365
 msgid "Configuration"
-msgstr "Configuration"
+msgstr "配置"
 
 #: flask.Config:1 of
 msgid ""
@@ -4387,7 +4387,7 @@ msgstr ""
 
 #: flask.Config:5 of
 msgid "Either you can fill the config from a config file::"
-msgstr "Either you can fill the config from a config file::"
+msgstr "您可以从配置文件中填充配置::"
 
 #: flask.Config:9 of
 msgid ""
@@ -4410,7 +4410,7 @@ msgstr ""
 msgid ""
 "Probably the most interesting way to load configurations is from an "
 "environment variable pointing to a file::"
-msgstr "Probably the most interesting way to load configurations is from an environment variable pointing to a file::"
+msgstr "加载配置最有趣的方法可能是指向文件的环境变量::"
 
 #: flask.Config:30 of
 msgid ""
@@ -4421,7 +4421,7 @@ msgstr ""
 
 #: flask.Config:36 of
 msgid "On windows use `set` instead."
-msgstr "On windows use `set` instead."
+msgstr "在Windows上使用`set`代替. "
 
 #: flask.Config:38 of
 msgid ""
@@ -4432,7 +4432,7 @@ msgstr ""
 
 #: flask.Config:41 of
 msgid "an optional dictionary of default values"
-msgstr "an optional dictionary of default values"
+msgstr "可选的默认值字典"
 
 #: flask.Config.from_envvar:1 of
 msgid ""
@@ -4443,7 +4443,7 @@ msgstr ""
 
 #: flask.Config.from_envvar:7 of
 msgid "name of the environment variable"
-msgstr "name of the environment variable"
+msgstr "环境变量的名称"
 
 #: flask.Config.from_envvar:8 flask.Config.from_json:8
 #: flask.Config.from_pyfile:8 of
@@ -4465,25 +4465,25 @@ msgstr ""
 msgid ""
 "the filename of the JSON file.  This can either be an absolute filename "
 "or a filename relative to the root path."
-msgstr "the filename of the JSON file.  This can either be an absolute filename or a filename relative to the root path."
+msgstr "JSON文件的文件名. 这可以是绝对文件名, 也可以是相对于根路径的文件名. "
 
 #: flask.Config.from_mapping:1 of
 msgid "Updates the config like :meth:`update` ignoring items with non-upper keys."
-msgstr "Updates the config like :meth:`update` ignoring items with non-upper keys."
+msgstr "更新配置如:meth:`update`忽略具有非上键的项目. "
 
 #: flask.Config.from_object:1 of
 msgid ""
 "Updates the values from the given object.  An object can be of one of the"
 " following two types:"
-msgstr "Updates the values from the given object.  An object can be of one of the following two types:"
+msgstr "更新给定对象的值. 对象可以是以下两种类型之一:"
 
 #: flask.Config.from_object:4 of
 msgid "a string: in this case the object with that name will be imported"
-msgstr "a string: in this case the object with that name will be imported"
+msgstr "更新给定对象的值. 对象可以是以下两种类型之一"
 
 #: flask.Config.from_object:5 of
 msgid "an actual object reference: that object is used directly"
-msgstr "an actual object reference: that object is used directly"
+msgstr "实际的对象引用:该对象直接使用"
 
 #: flask.Config.from_object:7 of
 msgid ""
@@ -4495,7 +4495,7 @@ msgstr ""
 
 #: flask.Config.from_object:12 of
 msgid "Example of module-based configuration::"
-msgstr "Example of module-based configuration::"
+msgstr "基于模块的配置示例::"
 
 #: flask.Config.from_object:18 of
 msgid ""
@@ -4520,7 +4520,7 @@ msgstr "See :ref:`config-dev-prod` for an example of class-based configuration u
 
 #: flask.Config.from_object:30 of
 msgid "an import name or object"
-msgstr "an import name or object"
+msgstr "导入名称或对象"
 
 #: flask.Config.from_pyfile:1 of
 msgid ""
@@ -4533,7 +4533,7 @@ msgstr ""
 msgid ""
 "the filename of the config.  This can either be an absolute filename or a"
 " filename relative to the root path."
-msgstr "the filename of the config.  This can either be an absolute filename or a filename relative to the root path."
+msgstr "配置的文件名. 这可以是绝对文件名, 也可以是相对于根路径的文件名. "
 
 #: flask.Config.from_pyfile:11 of
 msgid "`silent` parameter."
@@ -4543,37 +4543,37 @@ msgstr "`silent` parameter."
 msgid ""
 "Returns a dictionary containing a subset of configuration options that "
 "match the specified namespace/prefix. Example usage::"
-msgstr "Returns a dictionary containing a subset of configuration options that match the specified namespace/prefix. Example usage::"
+msgstr "返回包含与指定的命名空间/前缀匹配的配置选项子集的字典. 用法示例::"
 
 #: flask.Config.get_namespace:9 of
 msgid "The resulting dictionary `image_store_config` would look like::"
-msgstr "The resulting dictionary `image_store_config` would look like::"
+msgstr "生成的字典`image_store_config`看起来像::"
 
 #: flask.Config.get_namespace:17 of
 msgid ""
 "This is often useful when configuration options map directly to keyword "
 "arguments in functions or class constructors."
-msgstr "This is often useful when configuration options map directly to keyword arguments in functions or class constructors."
+msgstr "当配置选项直接映射到函数或类构造函数中的关键字参数时, 这通常很有用. "
 
 #: flask.Config.get_namespace:20 of
 msgid "a configuration namespace"
-msgstr "a configuration namespace"
+msgstr "配置命名空间"
 
 #: flask.Config.get_namespace:21 of
 msgid ""
 "a flag indicating if the keys of the resulting dictionary should be "
 "lowercase"
-msgstr "a flag indicating if the keys of the resulting dictionary should be lowercase"
+msgstr "一个标志, 指示结果字典的键是否应为小写"
 
 #: flask.Config.get_namespace:23 of
 msgid ""
 "a flag indicating if the keys of the resulting dictionary should not "
 "include the namespace"
-msgstr "a flag indicating if the keys of the resulting dictionary should not include the namespace"
+msgstr "一个标志, 指示结果字典的键是否不应包含命名空间"
 
 #: ../../api.rst:372
 msgid "Stream Helpers"
-msgstr "Stream Helpers"
+msgstr "溪流助手"
 
 #: flask.stream_with_context:1 of
 msgid ""
@@ -4594,7 +4594,7 @@ msgstr "Alternatively it can also be used around a specific generator::"
 
 #: ../../api.rst:377
 msgid "Useful Internals"
-msgstr "Useful Internals"
+msgstr "有用的内部"
 
 #: flask.ctx.RequestContext:1 of
 msgid ""
@@ -4667,11 +4667,11 @@ msgstr ""
 
 #: flask.ctx.RequestContext.pop:5 of
 msgid "Added the `exc` argument."
-msgstr "Added the `exc` argument."
+msgstr "添加了`exc`参数. "
 
 #: flask.ctx.RequestContext.push:1 of
 msgid "Binds the request context to the current context."
-msgstr "Binds the request context to the current context."
+msgstr "将请求上下文绑定到当前上下文. "
 
 #: ../../api.rst:384
 msgid ""
@@ -4683,7 +4683,7 @@ msgstr ""
 
 #: ../../api.rst:390
 msgid "The following attributes are always present on each layer of the stack:"
-msgstr "The following attributes are always present on each layer of the stack:"
+msgstr "以下属性始终存在于堆栈的每个层上:"
 
 #: ../../api.rst:394
 msgid "`app`"
@@ -4691,7 +4691,7 @@ msgstr "`app`"
 
 #: ../../api.rst:394
 msgid "the active Flask application."
-msgstr "the active Flask application."
+msgstr "活跃的Flask应用程序. "
 
 #: ../../api.rst:397
 msgid "`url_adapter`"
@@ -4699,7 +4699,7 @@ msgstr "`url_adapter`"
 
 #: ../../api.rst:397
 msgid "the URL adapter that was used to match the request."
-msgstr "the URL adapter that was used to match the request."
+msgstr "用于匹配请求的URL适配器. "
 
 #: ../../api.rst:400
 msgid "`request`"
@@ -4707,7 +4707,7 @@ msgstr "`request`"
 
 #: ../../api.rst:400
 msgid "the current request object."
-msgstr "the current request object."
+msgstr "当前的请求对象. "
 
 #: ../../api.rst:403
 msgid "`session`"
@@ -4715,7 +4715,7 @@ msgstr "`session`"
 
 #: ../../api.rst:403
 msgid "the active session object."
-msgstr "the active session object."
+msgstr "活动会话对象. "
 
 #: ../../api.rst:406
 msgid "`g`"
@@ -4723,7 +4723,7 @@ msgstr "`g`"
 
 #: ../../api.rst:406
 msgid "an object with all the attributes of the :data:`flask.g` object."
-msgstr "an object with all the attributes of the :data:`flask.g` object."
+msgstr "一个具有以下所有属性的对象:data:`flask.g`对象. “"
 
 #: ../../api.rst:409
 msgid "`flashes`"
@@ -4731,7 +4731,7 @@ msgstr "`flashes`"
 
 #: ../../api.rst:409
 msgid "an internal cache for the flashed messages."
-msgstr "an internal cache for the flashed messages."
+msgstr "闪存消息的内部缓存. "
 
 #: flask.ctx.AppContext:1 of
 msgid ""
@@ -4744,7 +4744,7 @@ msgstr ""
 
 #: flask.ctx.AppContext.pop:1 of
 msgid "Pops the app context."
-msgstr "Pops the app context."
+msgstr "弹出应用程序上下文. "
 
 #: flask.ctx.AppContext.push:1 of
 msgid "Binds the app context to the current context."
@@ -4812,17 +4812,17 @@ msgstr "The prefix that should be used for all URLs defined on the blueprint."
 
 #: ../../api.rst:439
 msgid "Signals"
-msgstr "Signals"
+msgstr "信号"
 
 #: ../../api.rst:445
 msgid ""
 "``True`` if the signaling system is available.  This is the case when "
 "`blinker`_ is installed."
-msgstr "``True`` if the signaling system is available.  This is the case when `blinker`_ is installed."
+msgstr "如果信号系统可用, 则为“真”. 安装`blinker`_时就是这种情况. "
 
 #: ../../api.rst:448
 msgid "The following signals exist in Flask:"
-msgstr "The following signals exist in Flask:"
+msgstr "Flask中存在以下信号:"
 
 #: ../../api.rst:452
 msgid ""
@@ -4834,7 +4834,7 @@ msgstr ""
 #: ../../api.rst:456 ../../api.rst:473 ../../api.rst:490 ../../api.rst:503
 #: ../../api.rst:519 ../../api.rst:534 ../../api.rst:553 ../../api.rst:608
 msgid "Example subscriber::"
-msgstr "Example subscriber::"
+msgstr "示例订户::"
 
 #: ../../api.rst:469
 msgid ""
@@ -4904,7 +4904,7 @@ msgstr ""
 
 #: ../../api.rst:583
 msgid "And in the testcode::"
-msgstr "And in the testcode::"
+msgstr "并在测试代码中::"
 
 #: ../../api.rst:595
 msgid ""
@@ -4938,7 +4938,7 @@ msgstr ""
 
 #: ../../api.rst:639
 msgid "Class-Based Views"
-msgstr "Class-Based Views"
+msgstr "基于类的视图"
 
 #: flask.views.View:1 of
 msgid ""
@@ -5002,11 +5002,11 @@ msgstr ""
 
 #: flask.views.View.methods:1 of
 msgid "A list of methods this view can handle."
-msgstr "A list of methods this view can handle."
+msgstr "此视图可以处理的方法列表. "
 
 #: flask.views.View.provide_automatic_options:1 of
 msgid "Setting this disables or force-enables the automatic options handling."
-msgstr "Setting this disables or force-enables the automatic options handling."
+msgstr "设置此选项会禁用或强制启用自动选项处理. "
 
 #: flask.views.MethodView:1 of
 msgid ""
@@ -5017,25 +5017,25 @@ msgstr ""
 
 #: ../../api.rst:654
 msgid "URL Route Registrations"
-msgstr "URL Route Registrations"
+msgstr "URL路由注册"
 
 #: ../../api.rst:656
 msgid "Generally there are three ways to define rules for the routing system:"
-msgstr "Generally there are three ways to define rules for the routing system:"
+msgstr "通常, 有三种方法可以为路由系统定义规则:"
 
 #: ../../api.rst:658
 msgid "You can use the :meth:`flask.Flask.route` decorator."
-msgstr "You can use the :meth:`flask.Flask.route` decorator."
+msgstr "你可以使用:meth:`flask.Flask.route`装饰器. "
 
 #: ../../api.rst:659
 msgid "You can use the :meth:`flask.Flask.add_url_rule` function."
-msgstr "You can use the :meth:`flask.Flask.add_url_rule` function."
+msgstr "您可以使用:meth:`flask.Flask.add_url_rule`函数. "
 
 #: ../../api.rst:660
 msgid ""
 "You can directly access the underlying Werkzeug routing system which is "
 "exposed as :attr:`flask.Flask.url_map`."
-msgstr "You can directly access the underlying Werkzeug routing system which is exposed as :attr:`flask.Flask.url_map`."
+msgstr "您可以直接访问底层的Werkzeug路由系统, 该系统公开为:attr:`flask.Flask.url_map`. "
 
 #: ../../api.rst:663
 msgid ""
@@ -5047,11 +5047,11 @@ msgstr ""
 
 #: ../../api.rst:668
 msgid "Variable parts are passed to the view function as keyword arguments."
-msgstr "Variable parts are passed to the view function as keyword arguments."
+msgstr "变量部分作为关键字参数传递给视图函数. "
 
 #: ../../api.rst:670
 msgid "The following converters are available:"
-msgstr "The following converters are available:"
+msgstr "以下转换器可用:"
 
 #: ../../api.rst:673
 msgid "`string`"
@@ -5059,7 +5059,7 @@ msgstr "`string`"
 
 #: ../../api.rst:673
 msgid "accepts any text without a slash (the default)"
-msgstr "accepts any text without a slash (the default)"
+msgstr "接受没有斜杠的任何文本(默认)"
 
 #: ../../api.rst:674
 msgid "`int`"
@@ -5075,11 +5075,11 @@ msgstr "`float`"
 
 #: ../../api.rst:675
 msgid "like `int` but for floating point values"
-msgstr "like `int` but for floating point values"
+msgstr "比如`int`但是对于浮点值"
 
 #: ../../api.rst:676
 msgid "like the default but also accepts slashes"
-msgstr "like the default but also accepts slashes"
+msgstr "像默认但也接受斜杠"
 
 #: ../../api.rst:677
 msgid "`any`"
@@ -5087,7 +5087,7 @@ msgstr "`any`"
 
 #: ../../api.rst:677
 msgid "matches one of the items provided"
-msgstr "matches one of the items provided"
+msgstr "匹配提供的其中一个项目"
 
 #: ../../api.rst:678
 msgid "`uuid`"
@@ -5095,15 +5095,15 @@ msgstr "`uuid`"
 
 #: ../../api.rst:678
 msgid "accepts UUID strings"
-msgstr "accepts UUID strings"
+msgstr "接受UUID字符串"
 
 #: ../../api.rst:681
 msgid "Custom converters can be defined using :attr:`flask.Flask.url_map`."
-msgstr "Custom converters can be defined using :attr:`flask.Flask.url_map`."
+msgstr "可以使用以下命令定义自定义转换器:attr:`flask.Flask.url_map`. "
 
 #: ../../api.rst:683
 msgid "Here are some examples::"
-msgstr "Here are some examples::"
+msgstr "这里有些例子::"
 
 #: ../../api.rst:697
 msgid ""
@@ -5225,7 +5225,7 @@ msgstr ""
 
 #: ../../api.rst:766
 msgid "View Function Options"
-msgstr "View Function Options"
+msgstr "查看功能选项"
 
 #: ../../api.rst:768
 msgid ""
@@ -5269,7 +5269,7 @@ msgstr ""
 
 #: ../../api.rst:793
 msgid "Full example::"
-msgstr "Full example::"
+msgstr "完整的例子::"
 
 #: ../../api.rst:805
 msgid "The `provide_automatic_options` functionality was added."
@@ -5277,7 +5277,7 @@ msgstr "The `provide_automatic_options` functionality was added."
 
 #: ../../api.rst:809
 msgid "Command Line Interface"
-msgstr "Command Line Interface"
+msgstr "命令行界面"
 
 #: flask.cli.FlaskGroup:1 of
 msgid ""
@@ -5293,7 +5293,7 @@ msgstr "For information as of why this is useful see :ref:`custom-scripts`."
 
 #: flask.cli.FlaskGroup:9 of
 msgid "if this is True then the default run and shell commands wil be added."
-msgstr "if this is True then the default run and shell commands wil be added."
+msgstr "如果这是True, 那么将添加默认的run和shell命令. "
 
 #: flask.cli.FlaskGroup:11 of
 msgid "adds the ``--version`` option."
@@ -5303,7 +5303,7 @@ msgstr "adds the ``--version`` option."
 msgid ""
 "an optional callback that is passed the script info and returns the "
 "loaded app."
-msgstr "an optional callback that is passed the script info and returns the loaded app."
+msgstr "一个可选的回调函数, 它传递脚本信息并返回加载的应用程序. "
 
 #: flask.cli.FlaskGroup:17 of
 msgid "Set the app's debug flag based on the active environment"
@@ -5317,7 +5317,7 @@ msgstr "Given a context and a command name, this returns a :class:`Command` obje
 
 #: flask.cli.FlaskGroup.list_commands:1 of
 msgid "Returns a list of subcommand names in the order they should appear."
-msgstr "Returns a list of subcommand names in the order they should appear."
+msgstr "以它们应该出现的顺序返回子命令名称列表. "
 
 #: flask.cli.FlaskGroup.main:1 of
 msgid ""
@@ -5330,23 +5330,23 @@ msgstr ""
 msgid ""
 "This method is also available by directly calling the instance of a "
 ":class:`Command`."
-msgstr "This method is also available by directly calling the instance of a :class:`Command`."
+msgstr "通过直接调用:class:`Command`的实例也可以使用此方法. "
 
 #: flask.cli.FlaskGroup.main:9 of
 msgid "Added the `standalone_mode` flag to control the standalone mode."
-msgstr "Added the `standalone_mode` flag to control the standalone mode."
+msgstr "添加了`standalone_mode`标志来控制独立模式. "
 
 #: flask.cli.FlaskGroup.main:12 of
 msgid ""
 "the arguments that should be used for parsing.  If not provided, "
 "``sys.argv[1:]`` is used."
-msgstr "the arguments that should be used for parsing.  If not provided, ``sys.argv[1:]`` is used."
+msgstr "应该用于解析的参数. 如果没有提供, 则使用``sys.argv [1:]``. "
 
 #: flask.cli.FlaskGroup.main:14 of
 msgid ""
 "the program name that should be used.  By default the program name is "
 "constructed by taking the file name from ``sys.argv[0]``."
-msgstr "the program name that should be used.  By default the program name is constructed by taking the file name from ``sys.argv[0]``."
+msgstr "应该使用的程序名称. 默认情况下, 程序名称是通过从``sys.argv [0]``获取文件名来构造的. "
 
 #: flask.cli.FlaskGroup.main:17 of
 msgid ""
@@ -5496,5 +5496,5 @@ msgstr ""
 msgid ""
 "This is useful for executing small snippets of management code without "
 "having to manually configure the application."
-msgstr "This is useful for executing small snippets of management code without having to manually configure the application."
+msgstr "这对于执行管理代码的小片段非常有用, 而无需手动配置应用程序. "
 

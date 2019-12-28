@@ -23,7 +23,7 @@ msgstr "测试Flask应用程序"
 
 #: ../../testing.rst:6
 msgid "**Something that is untested is broken.**"
-msgstr "**Something that is untested is broken.**"
+msgstr "**未经测试的东西被打破了.**"
 
 #: ../../testing.rst:8
 msgid ""
@@ -45,11 +45,11 @@ msgstr ""
 msgid ""
 "In this documentation we will use the `pytest`_ package as the base "
 "framework for our tests. You can install it with ``pip``, like so::"
-msgstr "In this documentation we will use the `pytest`_ package as the base framework for our tests. You can install it with ``pip``, like so::"
+msgstr "在本文档中, 我们将使用`pytest`_包作为测试的基础框架. 您可以使用``pip``安装它, 就像这样::"
 
 #: ../../testing.rst:27
 msgid "The Application"
-msgstr "The Application"
+msgstr "应用程序"
 
 #: ../../testing.rst:29
 msgid ""
@@ -60,7 +60,7 @@ msgstr ""
 
 #: ../../testing.rst:34
 msgid "The Testing Skeleton"
-msgstr "The Testing Skeleton"
+msgstr "测试骨架"
 
 #: ../../testing.rst:36
 msgid ""
@@ -74,7 +74,7 @@ msgstr ""
 msgid ""
 "Next, we create a `pytest fixture`_ called :func:`client` that configures"
 " the application for testing and initializes a new database::"
-msgstr "Next, we create a `pytest fixture`_ called :func:`client` that configures the application for testing and initializes a new database::"
+msgstr "接下来, 我们创建一个`pytest fixture``, 名为:func:`client`, 用于配置应用程序以进行测试并初始化新数据库::"
 
 #: ../../testing.rst:67
 msgid ""
@@ -104,11 +104,11 @@ msgstr ""
 msgid ""
 "To delete the database after the test, the fixture closes the file and "
 "removes it from the filesystem."
-msgstr "To delete the database after the test, the fixture closes the file and removes it from the filesystem."
+msgstr "要在测试后删除数据库, fixture会关闭文件并将其从文件系统中删除. "
 
 #: ../../testing.rst:86
 msgid "If we now run the test suite, we should see the following output::"
-msgstr "If we now run the test suite, we should see the following output::"
+msgstr "如果我们现在运行测试套件, 我们应该看到以下输出::"
 
 #: ../../testing.rst:96
 msgid ""
@@ -119,7 +119,7 @@ msgstr ""
 
 #: ../../testing.rst:104
 msgid "The First Test"
-msgstr "The First Test"
+msgstr "第一次测试"
 
 #: ../../testing.rst:106
 msgid ""
@@ -133,7 +133,7 @@ msgstr ""
 msgid ""
 "Notice that our test functions begin with the word `test`; this allows "
 "`pytest`_ to automatically identify the function as a test to run."
-msgstr "Notice that our test functions begin with the word `test`; this allows `pytest`_ to automatically identify the function as a test to run."
+msgstr "请注意, 我们的测试函数以“test”开头;这允许`pytest`_自动将该函数识别为要运行的测试. "
 
 #: ../../testing.rst:120
 msgid ""
@@ -147,11 +147,11 @@ msgstr ""
 
 #: ../../testing.rst:126
 msgid "Run it again and you should see one passing test::"
-msgstr "Run it again and you should see one passing test::"
+msgstr "再次运行它, 你应该看到一个通过测试::"
 
 #: ../../testing.rst:139
 msgid "Logging In and Out"
-msgstr "Logging In and Out"
+msgstr "登录和注销"
 
 #: ../../testing.rst:141
 msgid ""
@@ -165,37 +165,37 @@ msgstr ""
 
 #: ../../testing.rst:147
 msgid "Add the following two functions to your :file:`test_flaskr.py` file::"
-msgstr "Add the following two functions to your :file:`test_flaskr.py` file::"
+msgstr "将以下两个函数添加到:file:`test_flaskr.py`文件中::"
 
 #: ../../testing.rst:159
 msgid ""
 "Now we can easily test that logging in and out works and that it fails "
 "with invalid credentials.  Add this new test function::"
-msgstr "Now we can easily test that logging in and out works and that it fails with invalid credentials.  Add this new test function::"
+msgstr "现在, 我们可以轻松地测试登录和注销是否正常工作, 以及它是否因无效凭据而失败. 添加这个新的测试功能::"
 
 #: ../../testing.rst:178
 msgid "Test Adding Messages"
-msgstr "Test Adding Messages"
+msgstr "测试添加消息"
 
 #: ../../testing.rst:180
 msgid ""
 "We should also test that adding messages works.  Add a new test function "
 "like this::"
-msgstr "We should also test that adding messages works.  Add a new test function like this::"
+msgstr "我们还应该测试添加消息是否有效. 像这样添加一个新的测试函数::"
 
 #: ../../testing.rst:195
 msgid ""
 "Here we check that HTML is allowed in the text but not in the title, "
 "which is the intended behavior."
-msgstr "Here we check that HTML is allowed in the text but not in the title, which is the intended behavior."
+msgstr "在这里, 我们检查文本中是否允许HTML, 而不是标题中的HTML, 这是预期的行为. "
 
 #: ../../testing.rst:198
 msgid "Running that should now give us three passing tests::"
-msgstr "Running that should now give us three passing tests::"
+msgstr "运行它现在应该给我们三个通过测试::"
 
 #: ../../testing.rst:214
 msgid "Other Testing Tricks"
-msgstr "Other Testing Tricks"
+msgstr "其他测试技巧"
 
 #: ../../testing.rst:216
 msgid ""
@@ -209,7 +209,7 @@ msgstr ""
 
 #: ../../testing.rst:231
 msgid "All the other objects that are context bound can be used in the same way."
-msgstr "All the other objects that are context bound can be used in the same way."
+msgstr "可以以相同的方式使用上下文绑定的所有其他对象. "
 
 #: ../../testing.rst:234
 msgid ""
@@ -234,7 +234,7 @@ msgstr ""
 msgid ""
 "This can be necessary to open database connections or something similar "
 "depending on how your application was designed."
-msgstr "This can be necessary to open database connections or something similar depending on how your application was designed."
+msgstr "根据应用程序的设计方式, 这可能是打开数据库连接或类似连接所必需的. "
 
 #: ../../testing.rst:255
 msgid ""
@@ -251,7 +251,7 @@ msgstr "This in general is less useful because at that point you can directly st
 
 #: ../../testing.rst:272
 msgid "Faking Resources and Context"
-msgstr "Faking Resources and Context"
+msgstr "伪造资源和背景"
 
 #: ../../testing.rst:276
 msgid ""
@@ -271,11 +271,11 @@ msgstr ""
 
 #: ../../testing.rst:303
 msgid "And then to use it::"
-msgstr "And then to use it::"
+msgstr "然后使用它::"
 
 #: ../../testing.rst:319
 msgid "Keeping the Context Around"
-msgstr "Keeping the Context Around"
+msgstr "保持环境"
 
 #: ../../testing.rst:323
 msgid ""
@@ -295,7 +295,7 @@ msgstr ""
 
 #: ../../testing.rst:340
 msgid "Accessing and Modifying Sessions"
-msgstr "Accessing and Modifying Sessions"
+msgstr "访问和修改会话"
 
 #: ../../testing.rst:344
 msgid ""
@@ -324,7 +324,7 @@ msgstr ""
 
 #: ../../testing.rst:372
 msgid "Testing JSON APIs"
-msgstr "Testing JSON APIs"
+msgstr "测试JSON API"
 
 #: ../../testing.rst:376
 msgid ""
@@ -343,7 +343,7 @@ msgstr ""
 
 #: ../../testing.rst:405
 msgid "Testing CLI Commands"
-msgstr "Testing CLI Commands"
+msgstr "测试CLI命令"
 
 #: ../../testing.rst:407
 msgid ""
@@ -365,7 +365,7 @@ msgstr ""
 msgid ""
 "In the example above, invoking the command by name is useful because it "
 "verifies that the command was correctly registered with the app."
-msgstr "In the example above, invoking the command by name is useful because it verifies that the command was correctly registered with the app."
+msgstr "在上面的示例中, 按名称调用命令很有用, 因为它验证命令是否已正确注册到应用程序. "
 
 #: ../../testing.rst:438
 msgid ""

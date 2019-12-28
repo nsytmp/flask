@@ -25,11 +25,11 @@ msgstr "变得很大"
 msgid ""
 "Here are your options when growing your codebase or scaling your "
 "application."
-msgstr "Here are your options when growing your codebase or scaling your application."
+msgstr "在扩展代码库或扩展应用程序时, 您可以选择以下选项. "
 
 #: ../../becomingbig.rst:9
 msgid "Read the Source."
-msgstr "Read the Source."
+msgstr "阅读来源. "
 
 #: ../../becomingbig.rst:11
 msgid ""
@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../../becomingbig.rst:21
 msgid "Hook. Extend."
-msgstr "Hook. Extend."
+msgstr "钩. 延伸. "
 
 #: ../../becomingbig.rst:23
 msgid ""
@@ -62,7 +62,7 @@ msgstr ""
 
 #: ../../becomingbig.rst:33
 msgid "Subclass."
-msgstr "Subclass."
+msgstr "子类. "
 
 #: ../../becomingbig.rst:35
 msgid ""
@@ -76,7 +76,7 @@ msgstr ""
 
 #: ../../becomingbig.rst:41
 msgid "Wrap with middleware."
-msgstr "Wrap with middleware."
+msgstr "用中间件包装. "
 
 #: ../../becomingbig.rst:43
 msgid ""
@@ -89,7 +89,7 @@ msgstr ""
 
 #: ../../becomingbig.rst:50
 msgid "Fork."
-msgstr "Fork."
+msgstr "叉子. "
 
 #: ../../becomingbig.rst:52
 msgid ""
@@ -122,7 +122,7 @@ msgstr ""
 
 #: ../../becomingbig.rst:72
 msgid "Scale like a pro."
-msgstr "Scale like a pro."
+msgstr "像专业人士一样扩展. "
 
 #: ../../becomingbig.rst:74
 msgid ""
@@ -151,11 +151,11 @@ msgid ""
 "the majority of servers are using either threads, greenlets or separate "
 "processes to achieve concurrency which are all methods well supported by "
 "the underlying Werkzeug library."
-msgstr ""
+msgstr "关于Flask中缩放的唯一限制因素是上下文本地代理. 它们取决于Flask中被定义为线程, 进程或greenlet的上下文. 如果您的服务器使用某种不基于线程或greenlet的并发, Flask将无法再支持这些全局代理. 但是, 大多数服务器使用线程, greenlet或单独的进程来实现并发性, 这些都是底层Werkzeug库所支持的所有方法. "
 
 #: ../../becomingbig.rst:95
 msgid "Discuss with the community."
-msgstr "Discuss with the community."
+msgstr "与社区讨论. "
 
 #: ../../becomingbig.rst:97
 msgid ""
@@ -164,5 +164,5 @@ msgid ""
 "Flask, don't hesitate to contact the developers on the mailinglist or IRC"
 " channel.  The best way for the Flask and Flask extension developers to "
 "improve the tools for larger applications is getting feedback from users."
-msgstr ""
+msgstr "Flask开发人员使用大小代码的用户可以访问框架. 如果您发现由Flask引起的障碍, 请不要犹豫与邮件列表或IRC频道上的开发人员联系.  Flask和Flask扩展开发人员改进大型应用程序工具的最佳方法是从用户那里获得反馈. "
 
